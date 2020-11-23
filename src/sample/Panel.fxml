@@ -8,7 +8,6 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.PanelController">
    <children>
       <ImageView fitHeight="607.0" fitWidth="1000.0" pickOnBounds="true">
@@ -44,8 +43,17 @@
             <Font name="System Bold" size="28.0" />
          </font>
       </Label>
-      <Button layoutX="93.0" layoutY="227.0" mnemonicParsing="false" onAction="#pressDonor" opacity="0.06" prefHeight="210.0" prefWidth="216.0" text="pressDonor" />
-      <Button layoutX="392.0" layoutY="227.0" mnemonicParsing="false" onAction="#pressDonee" opacity="0.06" prefHeight="210.0" prefWidth="216.0" text="pressDonee" />
-      <Button layoutX="692.0" layoutY="225.0" mnemonicParsing="false" onAction="#pressOrganization" opacity="0.06" prefHeight="210.0" prefWidth="216.0" text="pressOrganization" />
+      <Button layoutX="93.0" layoutY="227.0" mnemonicParsing="false" onAction="#pressDonor" opacity="0.15" prefHeight="210.0" prefWidth="216.0" text="pressDonor" textFill="#c70000">
+         <font>
+            <Font size="1.0" />
+         </font></Button>
+      <Button layoutX="392.0" layoutY="227.0" mnemonicParsing="false" onAction="#pressDonee" opacity="0.15" prefHeight="210.0" prefWidth="216.0" text="pressDonee" textFill="#c70000">
+         <font>
+            <Font size="1.0" />
+         </font></Button>
+      <Button layoutX="692.0" layoutY="225.0" mnemonicParsing="false" onAction="#pressOrganization" opacity="0.15" prefHeight="210.0" prefWidth="216.0" text="pressOrganization" textFill="#c70000">
+         <font>
+            <Font size="1.0" />
+         </font></Button>
    </children>
 </AnchorPane>
