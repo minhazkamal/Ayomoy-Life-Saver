@@ -1,0 +1,70 @@
+	String username = "user31";
+        String password = "test123";
+        String url = "jdbc:oracle:thin:@localhost:1521/XE";
+        String sqlQuery = "SELECT A_ID FROM ACCOUNT";
+        int a_id=0; //FOR STORING ACC_ID FROM ACCOUNT TABLE
+        String a=""; //FOR CONVERTING INTEGER TO STRING
+        int count_CIP=0;
+        int count_VIP=0;
+        int count_Ordinary=0;
+        int count_Uncat=0;
+        int count_Account=0;
+        int totalAmount=0;
+        int totalTransac=0;
+
+        try
+        {
+            Class.forName("oracle.jdbc.driver.OracleDriver");
+
+            Connection con = DriverManager.getConnection(url,username,password);
+
+            Statement statement = con.createStatement();
+
+            Statement stm = con.createStatement();
+
+            System.out.println("Connection to database successful");
+
+            ResultSet result = statement.executeQuery(sqlQuery);
+
+
+            while(result.next())
+            {
+                a_id=result.getInt(1);
+                a=Integer.toString(a_id);
+                count_Account++;
+                ResultSet r1 = stm.executeQuery("SELECT S0-S1 AS DIFF,SUM(AMOUNT) FROM TRANSACTIONS,(SELECT SUM(AMOUNT) AS S0 FROM TRANSACTIONS WHERE A_ID="+a+" AND TYPE='0'),(SELECT SUM(AMOUNT) AS S1 FROM TRANSACTIONS WHERE A_ID="+a+" AND TYPE='1') WHERE A_ID="+a+" GROUP BY S0-S1");
+
+                while(r1.next())
+                {
+                    totalAmount = r1.getInt(1);
+                    totalTransac =r1.getInt(2);
+                    if(totalAmount>1000000 && totalTransac>5000000) count_CIP++;
+                    else if((totalAmount>500000 && totalAmount<900000) && (totalTransac>3500000 && totalTransac<4500000)) count_VIP++;
+                    else if (totalAmount<40000 && totalTransac<3000000) count_Ordinary++;
+                    else count_Uncat++;
+                }
+                r1.close();
+            }
+//            if(count_Account==(count_CIP+count_VIP+count_Uncat+count_Ordinary)) System.out.println("Thank You");
+//            else System.out.println("Code has bug!!!");
+            System.out.println("\n\t Total Number of Accounts\t: "+count_Account);
+            System.out.println("\t CIP Count\t: "+count_CIP);
+            System.out.println("\t VIP Count\t: "+count_VIP);
+            System.out.println("\t Ordinary Count\t: "+count_Ordinary);
+            System.out.println("\t Uncategorized\t: "+count_Uncat);
+
+            con.close();
+            statement.close();
+            stm.close();
+            result.close();
+        }
+        catch(SQLException e)
+        {
+            System.out.println("Error while connecting to database. Exception code: "+e);
+        }
+        catch(ClassNotFoundException e)
+        {
+            System.out.println("Failed to register driver. Exception code: "+e);
+        }
+    }
+}

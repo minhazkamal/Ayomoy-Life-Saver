@@ -57,6 +57,7 @@
             <Font name="Cambria Bold" size="19.0" />
          </font>
       </Label>
+      <TextField fx:id="doneeLocation" layoutX="257.0" layoutY="228.0" promptText="Dhaka" />
       <TextField fx:id="complications" layoutX="737.0" layoutY="228.0" promptText="Accident" />
       <TextField fx:id="quantity" layoutX="737.0" layoutY="296.0" prefHeight="26.0" prefWidth="58.0" promptText="4" />
       <DatePicker fx:id="date" layoutX="256.0" layoutY="363.0" />
@@ -87,6 +88,5 @@
             <Font name="Cambria Bold" size="18.0" />
          </font>
       </Button>
-      <TextField fx:id="doneeLocation" layoutX="257.0" layoutY="231.0" promptText="Dhaka" />
    </children>
 </AnchorPane>
