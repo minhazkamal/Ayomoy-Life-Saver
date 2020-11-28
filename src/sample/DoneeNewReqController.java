@@ -19,8 +19,47 @@ import java.sql.*;
 
 public class DoneeNewReqController {
     ObservableList<String> BGList = FXCollections.observableArrayList("A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-");
+    ObservableList<String> LocList = FXCollections.observableArrayList();
+
+    public void getLoc()
+    {
+        String username = "als";
+        String password = "iutcse18";
+        String url = "jdbc:oracle:thin:@localhost:1521/XE";
+        String query = "SELECT NAME FROM LOCATIONS ORDER BY NAME";
+
+//        Statement pst = null;
+//        ResultSet rs = null;
+        try{
+            Class.forName("oracle.jdbc.driver.OracleDriver");
+            Connection con = DriverManager.getConnection(url,username,password);
+            Statement pst = con.createStatement();
+
+            ResultSet rs = pst.executeQuery(query);
+
+            while(rs.next())
+            {
+//                System.out.println(1);
+//                String a = rs.getString("NAME");
+//                System.out.println(a);
+                LocList.add(rs.getString(1));
+            }
+            rs.close();
+            con.close();
+        } catch (Exception e)
+        {
+//           System.out.println(e);
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Error Dialog");
+            alert.setHeaderText("Look, an Error Dialog");
+            alert.setContentText(String.valueOf(e));
+
+            alert.showAndWait();
+        }
+    }
+
     @FXML
-    private TextField doneeLocation;
+    private ChoiceBox doneeLocation;
     @FXML
     private ChoiceBox BG_choice;
     @FXML
@@ -52,7 +91,9 @@ public class DoneeNewReqController {
 
     public void initialize()
     {
+        getLoc();
         BG_choice.setItems(BGList);
+        doneeLocation.setItems(LocList);
     }
 
    public void submitNewReq(ActionEvent even) {
@@ -69,6 +110,7 @@ public class DoneeNewReqController {
        String password = "iutcse18";
        String url = "jdbc:oracle:thin:@localhost:1521/XE";
        String query = "INSERT INTO NEW_DONEE (NAME, MOBILE, BLOOD_GROUP, LOCATION, COMPLICATIONS, QUANTITY, APPROX_DATE, EM_PERSON, EM_MOBILE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+       String query2 = "SELECT * FROM LOCATIONS ORDER BY NAME";
 
        PreparedStatement pst = null;
        ResultSet rs = null;
@@ -80,7 +122,7 @@ public class DoneeNewReqController {
            pst.setString(1, name.getText());
            pst.setString(2, mobile.getText());
            pst.setString(3, BG_choice.getValue().toString());
-           pst.setString(4, doneeLocation.getText());
+           pst.setString(4, doneeLocation.getValue().toString());
            pst.setString(5, complications.getText());
            pst.setInt(6, Integer.parseInt(quantity.getText()));
            pst.setDate(7, Date.valueOf(date.getValue()));
