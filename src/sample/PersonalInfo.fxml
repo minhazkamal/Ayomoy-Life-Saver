@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.PersonalInfoController">
+    <children>
+        <ImageView fitHeight="600.0" fitWidth="1000.0" pickOnBounds="true">
+            <image>
+                <Image url="@images/Presentation1_Proposal.jpg" />
+            </image>
+        </ImageView>
+        <Button fx:id="back_button" layoutX="27.0" layoutY="25.0" mnemonicParsing="false" onAction="#pressBack" prefHeight="42.0" prefWidth="69.0" text="Back" textFill="#c70000">
+            <font>
+                <Font name="Cambria Bold" size="18.0" />
+            </font>
+        </Button>
+        <Label fx:id="title_label" layoutX="230.0" layoutY="5.0" prefHeight="82.0" prefWidth="540.0" text="Personal Information" textAlignment="JUSTIFY" textFill="#c70000">
+            <font>
+                <Font name="Cambria Bold" size="54.0" />
+            </font>
+        </Label>
+      <Label layoutX="88.0" layoutY="219.0" text="Name" textFill="#c70000">
+         <font>
+            <Font name="Cambria Bold" size="19.0" />
+         </font>
+      </Label>
+      <TextField fx:id="name" layoutX="245.0" layoutY="218.0" prefHeight="26.0" prefWidth="174.0" promptText="Enter your full name" />
+      <Label layoutX="573.0" layoutY="219.0" text="Mobile No" textFill="#c70000">
+         <font>
+            <Font name="Cambria Bold" size="19.0" />
+         </font>
+      </Label>
+      <TextField fx:id="MobileNo" layoutX="716.0" layoutY="218.0" prefHeight="26.0" prefWidth="174.0" promptText="Enter your mobile number" />
+        <Label layoutX="571.0" layoutY="359.0" text="Blood Group" textFill="#c70000">
+            <font>
+                <Font name="Cambria Bold" size="19.0" />
+            </font></Label>
+        <ChoiceBox fx:id="BG_choice" layoutX="715.0" layoutY="358.0" prefHeight="26.0" prefWidth="174.0" />
+        <Label layoutX="573.0" layoutY="289.0" text="Location" textFill="#c70000">
+            <font>
+                <Font name="Cambria Bold" size="19.0" />
+            </font>
+        </Label>
+        <ChoiceBox fx:id="AddressLocation" layoutX="716.0" layoutY="287.0" prefHeight="26.0" prefWidth="174.0" />
+      <Label layoutX="88.0" layoutY="290.0" text="Date of Birth" textFill="#c70000">
+         <font>
+            <Font name="Cambria Bold" size="19.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="DOB" layoutX="245.0" layoutY="289.0" />
+      <Label layoutX="88.0" layoutY="150.0" text="Userame" textFill="#c70000">
+         <font>
+            <Font name="Cambria Bold" size="19.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtUsername" editable="false" layoutX="245.0" layoutY="148.0" prefHeight="26.0" prefWidth="174.0" />
+      <Label layoutX="88.0" layoutY="370.0" text="Gender" textFill="#c70000">
+         <font>
+            <Font name="Cambria Bold" size="19.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="Gender_Choice" layoutX="245.0" layoutY="368.0" prefHeight="26.0" prefWidth="174.0" />
+      <Button fx:id="SubmitButton" layoutX="442.0" layoutY="465.0" mnemonicParsing="false" onAction="#pressSubmit" prefHeight="42.0" prefWidth="88.0" text="Submit" textFill="#c70000">
+         <font>
+            <Font name="Cambria Bold" size="18.0" />
+         </font>
+      </Button>
+      <Label layoutX="573.0" layoutY="149.0" text="Email" textFill="#c70000">
+         <font>
+            <Font name="Cambria Bold" size="19.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtEmail" layoutX="716.0" layoutY="148.0" prefHeight="26.0" prefWidth="174.0" promptText="abc@example.com" />
+    </children>
+
+</AnchorPane>

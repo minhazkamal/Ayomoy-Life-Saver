@@ -55,7 +55,7 @@ public class sampleController implements Initializable {
         ((Node) even.getSource()).getScene().getWindow().hide();
 
         Stage primaryStage = new Stage();
-        Parent root = FXMLLoader.load(getClass().getResource("Panel.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("LogINpanel.fxml"));
         primaryStage.setTitle("Ayomoy Life Saver");
         primaryStage.setScene(new Scene(root, 1000, 600));
         primaryStage.show();

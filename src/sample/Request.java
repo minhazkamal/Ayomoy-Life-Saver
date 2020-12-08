@@ -99,6 +99,4 @@ public class Request {
         this.search_button = new Button("Search");
     }
 
-
-
 }

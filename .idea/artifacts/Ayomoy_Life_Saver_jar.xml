@@ -1,0 +1,21 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Ayomoy-Life-Saver:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Ayomoy_Life_Saver_jar</output-path>
+    <root id="archive" name="Ayomoy-Life-Saver.jar">
+      <element id="module-output" name="Ayomoy-Life-Saver" />
+      <element id="extracted-dir" path="C:/javafx-sdk-15/lib/src.zip" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/javafx-sdk-15/lib/javafx-swt.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/javafx-sdk-15/lib/javafx.web.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/javafx-sdk-15/lib/javafx.base.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/javafx-sdk-15/lib/javafx.fxml.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/javafx-sdk-15/lib/javafx.media.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/javafx-sdk-15/lib/javafx.swing.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/javafx-sdk-15/lib/javafx.controls.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/javafx-sdk-15/lib/javafx.graphics.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/opencv/build/java/opencv-450.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../Course Details/2-1/DBMS_Lab/JDBC Jar File/ojdbc6.jar" path-in-jar="/" />
+      <element id="library" level="project" name="ojdbc6" />
+      <element id="library" level="project" name="javafx-sdk-15" />
+    </root>
+  </artifact>
+</component>

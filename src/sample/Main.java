@@ -5,6 +5,10 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import net.sourceforge.tess4j.Tesseract;
+import net.sourceforge.tess4j.TesseractException;
+
+import java.io.File;
 
 public class Main extends Application {
 
@@ -19,5 +23,24 @@ public class Main extends Application {
 
     public static void main(String[] args) {
         launch(args);
+//        Tesseract tesseract = new Tesseract();
+//        try {
+//
+//            tesseract.setDatapath("D:\\Ayomoy-Life-Saver\\Tess4J-3.4.8-src\\Tess4J\\tessdata");
+//
+//            // the path of your tess data folder
+//            // inside the extracted file
+//            String text
+//                    = tesseract.doOCR(new File("D:\\Ayomoy-Life-Saver\\src\\sample\\images\\cover.jpg"));
+//
+//            // path of your image file
+//            System.out.print(text);
+//
+//
+//        }
+//        catch (TesseractException e) {
+//            e.printStackTrace();
+//        }
+
     }
 }
