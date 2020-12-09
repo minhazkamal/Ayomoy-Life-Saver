@@ -12,17 +12,25 @@ import java.io.File;
 
 public class Main extends Application {
 
+    public static String text;
+
     @Override
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
         primaryStage.setTitle("Ayomoy Life Saver");
         primaryStage.setScene(new Scene(root, 1000, 600));
         primaryStage.show();
+
+//        primaryStage = new Stage();
+//        Parent root = FXMLLoader.load(getClass().getResource("Demo.fxml"));
+//        primaryStage.setTitle("Ayomoy Life Saver");
+//        primaryStage.setScene(new Scene(root, 1000, 600));
+//        primaryStage.show();
     }
 
 
     public static void main(String[] args) {
-        launch(args);
+
 //        Tesseract tesseract = new Tesseract();
 //        try {
 //
@@ -30,17 +38,16 @@ public class Main extends Application {
 //
 //            // the path of your tess data folder
 //            // inside the extracted file
-//            String text
-//                    = tesseract.doOCR(new File("D:\\Ayomoy-Life-Saver\\src\\sample\\images\\cover.jpg"));
+//            text = tesseract.doOCR(new File("D:\\Ayomoy-Life-Saver\\src\\sample\\images\\cover.jpg"));
 //
 //            // path of your image file
 //            System.out.print(text);
-//
 //
 //        }
 //        catch (TesseractException e) {
 //            e.printStackTrace();
 //        }
+        launch(args);
 
     }
 }

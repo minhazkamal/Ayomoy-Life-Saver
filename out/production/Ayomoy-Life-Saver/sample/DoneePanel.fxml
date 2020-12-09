@@ -20,29 +20,40 @@
                <Font name="Cambria Bold" size="18.0" />
            </font>
        </Button>
-       <Label fx:id="title_label" layoutX="341.0" layoutY="14.0" prefHeight="82.0" prefWidth="365.0" text="DONEE PANEL" textAlignment="JUSTIFY" textFill="#c70000">
+       <Label fx:id="title_label" layoutX="317.0" layoutY="14.0" prefHeight="82.0" prefWidth="365.0" text="DONEE PANEL" textAlignment="JUSTIFY" textFill="#c70000">
            <font>
                <Font name="Cambria Bold" size="54.0" />
            </font>
        </Label>
-       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#c70000" height="118.0" layoutX="324.0" layoutY="161.0" stroke="BLACK" strokeType="INSIDE" width="352.0" />
-       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#c70000" height="118.0" layoutX="324.0" layoutY="321.0" stroke="BLACK" strokeType="INSIDE" width="352.0" />
-       <Label layoutX="337.0" layoutY="161.0" prefHeight="118.0" prefWidth="325.0" text="Previous Request" textFill="WHITE">
+       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#c70000" height="118.0" layoutX="324.0" layoutY="124.0" stroke="BLACK" strokeType="INSIDE" width="352.0" />
+       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#c70000" height="118.0" layoutX="324.0" layoutY="275.0" stroke="BLACK" strokeType="INSIDE" width="352.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#c70000" height="118.0" layoutX="324.0" layoutY="434.0" stroke="BLACK" strokeType="INSIDE" width="352.0" />
+       <Label layoutX="337.0" layoutY="124.0" prefHeight="118.0" prefWidth="325.0" text="Previous Request" textFill="WHITE">
            <font>
                <Font name="System Bold" size="40.0" />
            </font>
        </Label>
-       <Label layoutX="369.0" layoutY="321.0" prefHeight="118.0" prefWidth="262.0" text="NEW Request" textFill="WHITE">
+       <Label layoutX="369.0" layoutY="275.0" prefHeight="118.0" prefWidth="262.0" text="NEW Request" textFill="WHITE">
            <font>
                <Font name="System Bold" size="40.0" />
            </font>
        </Label>
-      <Button layoutX="324.0" layoutY="161.0" mnemonicParsing="false" onAction="#pressPrevReq" opacity="0.15" prefHeight="118.0" prefWidth="352.0" text="PrevReq" textFill="#c70000">
+      <Label layoutX="324.0" layoutY="433.0" prefHeight="118.0" prefWidth="352.0" text="Search Donor/Organization" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font>
+      </Label>
+      <Button layoutX="324.0" layoutY="124.0" mnemonicParsing="false" onAction="#pressPrevReq" opacity="0.15" prefHeight="118.0" prefWidth="352.0" text="PrevReq" textFill="#c70000">
          <font>
             <Font size="1.0" />
          </font>
       </Button>
-      <Button layoutX="324.0" layoutY="321.0" mnemonicParsing="false" onAction="#pressNewReq" opacity="0.15" prefHeight="118.0" prefWidth="352.0" text="NewReq" textFill="#c70000">
+      <Button layoutX="324.0" layoutY="275.0" mnemonicParsing="false" onAction="#pressNewReq" opacity="0.15" prefHeight="118.0" prefWidth="352.0" text="NewReq" textFill="#c70000">
+         <font>
+            <Font size="1.0" />
+         </font>
+      </Button>
+      <Button fx:id="SearchButton" layoutX="324.0" layoutY="433.0" mnemonicParsing="false" onAction="#pressSearch" opacity="0.15" prefHeight="118.0" prefWidth="352.0" text="NewReq" textFill="#c70000">
          <font>
             <Font size="1.0" />
          </font>

@@ -11,7 +11,7 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.UserPanelController">
     <children>
-    <ImageView fitHeight="600.0" fitWidth="1000.0" layoutX="1.0" pickOnBounds="true">
+    <ImageView fitHeight="600.0" fitWidth="1000.0" pickOnBounds="true">
         <image>
             <Image url="@images/Presentation1_Proposal.jpg" />
         </image>
@@ -143,38 +143,38 @@
             <Font size="14.0" />
          </font>
       </Label>
-      <Label layoutX="90.0" layoutY="387.0" text="Donation Information" textFill="#c70000">
+      <Label layoutX="97.0" layoutY="387.0" text="Donation Information" textFill="#c70000">
          <font>
             <Font name="Cambria Bold Italic" size="22.0" />
          </font>
       </Label>
-      <Line endX="719.6000366210938" layoutX="190.0" layoutY="415.0" startX="-100.0" stroke="#c70000" />
-      <Label layoutX="90.0" layoutY="430.0" text="Last Donation Date :">
+      <Line endX="719.6000366210938" layoutX="197.0" layoutY="415.0" startX="-100.0" stroke="#c70000" />
+      <Label layoutX="97.0" layoutY="430.0" text="Last Donation Date :">
          <font>
             <Font name="Cambria Bold" size="16.0" />
          </font>
       </Label>
-      <Label fx:id="showLastDonationDate" layoutX="275.0" layoutY="430.0" prefHeight="18.0" prefWidth="154.0">
+      <Label fx:id="showLastDonationDate" layoutX="282.0" layoutY="430.0" prefHeight="18.0" prefWidth="154.0">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <Label layoutX="90.0" layoutY="460.0" text="Last Donation Area :">
+      <Label layoutX="97.0" layoutY="460.0" text="Last Donation Area :">
          <font>
             <Font name="Cambria Bold" size="16.0" />
          </font>
       </Label>
-      <Label fx:id="showLastDonationArea" layoutX="275.0" layoutY="460.0" prefHeight="18.0" prefWidth="154.0">
+      <Label fx:id="showLastDonationArea" layoutX="282.0" layoutY="460.0" prefHeight="18.0" prefWidth="154.0">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <Label layoutX="90.0" layoutY="489.0" text="Last Donation Organization :">
+      <Label layoutX="97.0" layoutY="489.0" text="Last Donation Organization :">
          <font>
             <Font name="Cambria Bold" size="16.0" />
          </font>
       </Label>
-      <Label fx:id="showLastDonationOrg" layoutX="323.0" layoutY="489.0" prefHeight="18.0" prefWidth="154.0">
+      <Label fx:id="showLastDonationOrg" layoutX="330.0" layoutY="489.0" prefHeight="18.0" prefWidth="154.0">
          <font>
             <Font size="14.0" />
          </font>

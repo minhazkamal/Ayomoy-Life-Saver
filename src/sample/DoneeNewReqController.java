@@ -8,17 +8,19 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.sql.*;
+import java.time.LocalDate;
 
 public class DoneeNewReqController {
+
+
+
     ObservableList<String> BGList = FXCollections.observableArrayList("A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-");
+    ObservableList<String> GenderList = FXCollections.observableArrayList("Male", "Female", "Others");
     ObservableList<String> LocList = FXCollections.observableArrayList();
 
     public void getLoc()
@@ -57,7 +59,8 @@ public class DoneeNewReqController {
             alert.showAndWait();
         }
     }
-
+    @FXML
+    private TextField txtUsername;
     @FXML
     private ChoiceBox doneeLocation;
     @FXML
@@ -73,9 +76,13 @@ public class DoneeNewReqController {
     @FXML
     private DatePicker date;
     @FXML
-    private TextField emContact;
+    private TextField PatientName;
     @FXML
     private TextField emMobile;
+    @FXML
+    private TextArea locationDetails;
+    @FXML
+    private ChoiceBox Gender_choice;
 ////    @FXML
 ////    private Button submit;
 
@@ -91,63 +98,160 @@ public class DoneeNewReqController {
 
     public void initialize()
     {
+        txtUsername.setText(LogINpanelController.getUser());
+        String username = "als";
+        String password = "iutcse18";
+        String url = "jdbc:oracle:thin:@localhost:1521/XE";
+        String query = "SELECT NAME, MOBILE FROM PERSONAL_INFO WHERE USERNAME=?";
+
+//        Statement pst = null;
+//        ResultSet rs = null;
+        try{
+            Class.forName("oracle.jdbc.driver.OracleDriver");
+            Connection con = DriverManager.getConnection(url,username,password);
+            PreparedStatement pst = con.prepareStatement(query);
+            pst.setString(1,txtUsername.getText());
+
+            ResultSet rs = pst.executeQuery();
+
+            while(rs.next())
+            {
+                name.setText(rs.getString(1));
+                mobile.setText(rs.getString(2));
+            }
+            rs.close();
+            con.close();
+        } catch (Exception e)
+        {
+//           System.out.println(e);
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Error Dialog");
+            alert.setHeaderText("Look, an Error Dialog");
+            alert.setContentText(String.valueOf(e));
+
+            alert.showAndWait();
+        }
+
         getLoc();
         BG_choice.setItems(BGList);
+        Gender_choice.setItems(GenderList);
         doneeLocation.setItems(LocList);
     }
 
+    static boolean isInt(String s)
+    {
+        try
+        { int i = Integer.parseInt(s); return true; }
+
+        catch(NumberFormatException er)
+        { return false; }
+    }
+
+    public boolean checkAlert()
+    {
+        boolean alertCheck = false;
+
+        if(PatientName.getText().isBlank())
+        {
+            alertCheck = true;
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Error Dialog");
+            alert.setHeaderText("Look, an Error Dialog");
+            alert.setContentText(String.valueOf("Patient Name Field can not be blank"));
+
+            alert.showAndWait();
+        }
+        if(emMobile.getText().length()<11||emMobile.getText().length()>11)
+        {
+            alertCheck = true;
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Error Dialog");
+            alert.setHeaderText("Look, an Error Dialog");
+            alert.setContentText(String.valueOf("Emergency Mobile Number should be 11 digits"));
+
+            alert.showAndWait();
+        }
+        if(date.getValue().compareTo(LocalDate.now())<0)
+        {
+            alertCheck = true;
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Error Dialog");
+            alert.setHeaderText("Look, an Error Dialog");
+            alert.setContentText(String.valueOf("Approximate Date can't be less than current time!!!"));
+
+            alert.showAndWait();
+        }
+        if(locationDetails.getText().isBlank())
+        {
+            alertCheck = true;
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Error Dialog");
+            alert.setHeaderText("Look, an Error Dialog");
+            alert.setContentText(String.valueOf("Location Details Should be added"));
+
+            alert.showAndWait();
+        }
+        if(isInt(quantity.getText())==false)
+        {
+            alertCheck = true;
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Error Dialog");
+            alert.setHeaderText("Look, an Error Dialog");
+            alert.setContentText(String.valueOf("Quantity will be a integer"));
+
+            alert.showAndWait();
+        }
+
+        return alertCheck;
+    }
+
    public void submitNewReq(ActionEvent even) {
-//        System.out.println("Name: "+name.getText());
-//        System.out.println("Mobile: "+mobile.getText());
-//        System.out.println("Location: "+ doneeLocation.getText());
-//        System.out.println("Complications: "+complications.getText());
-//        System.out.println("Blood Group: "+BG_choice.getValue().toString());
-//        System.out.println("Quantity: "+quantity.getText()+" Bag(s)");
-//        System.out.println("Approximate Date: "+date.getValue());
-//        System.out.println("Emergency Contact Name: "+emContact.getText());
-//        System.out.println("Emergency Mobile: "+emMobile.getText());
-       String username = "als";
-       String password = "iutcse18";
-       String url = "jdbc:oracle:thin:@localhost:1521/XE";
-       String query = "INSERT INTO NEW_DONEE (NAME, MOBILE, BLOOD_GROUP, LOCATION, COMPLICATIONS, QUANTITY, APPROX_DATE, EM_PERSON, EM_MOBILE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
-       String query2 = "SELECT * FROM LOCATIONS ORDER BY NAME";
+        if(checkAlert()==false)
+        {
+            String username = "als";
+            String password = "iutcse18";
+            String url = "jdbc:oracle:thin:@localhost:1521/XE";
+            String query = "INSERT INTO REQUEST (USERNAME, BLOOD_GROUP, LOCATION, LOCATION_DETAILS, COMPLICATIONS, QUANTITY, APPROX_DATE, PATIENT, P_GENDER, EM_MOBILE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+            String query2 = "SELECT * FROM LOCATIONS ORDER BY NAME";
 
-       PreparedStatement pst = null;
-       ResultSet rs = null;
-       try{
-           Class.forName("oracle.jdbc.driver.OracleDriver");
-           Connection con = DriverManager.getConnection(url,username,password);
+            PreparedStatement pst = null;
+            ResultSet rs = null;
+            try{
+                Class.forName("oracle.jdbc.driver.OracleDriver");
+                Connection con = DriverManager.getConnection(url,username,password);
 
-           pst = con.prepareStatement(query);
-           pst.setString(1, name.getText());
-           pst.setString(2, mobile.getText());
-           pst.setString(3, BG_choice.getValue().toString());
-           pst.setString(4, doneeLocation.getValue().toString());
-           pst.setString(5, complications.getText());
-           pst.setInt(6, Integer.parseInt(quantity.getText()));
-           pst.setDate(7, Date.valueOf(date.getValue()));
-           pst.setString(8, emContact.getText());
-           pst.setString(9, emMobile.getText());
+                pst = con.prepareStatement(query);
+                pst.setString(1, txtUsername.getText());
+                pst.setString(2, BG_choice.getValue().toString());
+                pst.setString(3, doneeLocation.getValue().toString());
+                pst.setString(4, locationDetails.getText());
+                pst.setString(5, complications.getText());
+                pst.setInt(6, Integer.parseInt(quantity.getText()));
+                pst.setDate(7, Date.valueOf(date.getValue()));
+                pst.setString(8, PatientName.getText());
+                pst.setString(9,Gender_choice.getValue().toString());
+                pst.setString(10, emMobile.getText());
 
-           pst.executeUpdate();
+                pst.executeUpdate();
 
-           Alert alert = new Alert(Alert.AlertType.INFORMATION);
-           alert.setTitle("Request Confirmation");
-           alert.setHeaderText(null);
-           alert.setContentText("Request Successfully Received");
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setTitle("Request Confirmation");
+                alert.setHeaderText(null);
+                alert.setContentText("Request Successfully Received");
 
-           alert.showAndWait();
+                alert.showAndWait();
 
-       } catch (Exception e)
-       {
+            } catch (Exception e)
+            {
 //           System.out.println(e);
-           Alert alert = new Alert(Alert.AlertType.ERROR);
-           alert.setTitle("Error Dialog");
-           alert.setHeaderText("Look, an Error Dialog");
-           alert.setContentText(String.valueOf(e));
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setTitle("Error Dialog");
+                alert.setHeaderText("Look, an Error Dialog");
+                alert.setContentText(String.valueOf(e));
 
-           alert.showAndWait();
-       }
+                alert.showAndWait();
+            }
+        }
 
     }
 }
