@@ -8,7 +8,7 @@
 
 <AnchorPane fx:id="root" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.sampleController">
    <children>
-      <ImageView fx:id="imView" fitHeight="600.0" fitWidth="1000.0" layoutX="-1.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.10000000000002274" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-1.0">
+      <ImageView fx:id="imView" fitHeight="600.0" fitWidth="1000.0" layoutX="-1.0" layoutY="-1.0" pickOnBounds="true" AnchorPane.bottomAnchor="0.10000000000002274" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-1.0">
          <image>
             <Image url="@images/Cover.jpg" />
          </image>

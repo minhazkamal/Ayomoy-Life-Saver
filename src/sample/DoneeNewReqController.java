@@ -55,7 +55,7 @@ public class DoneeNewReqController {
             alert.setTitle("Error Dialog");
             alert.setHeaderText("Look, an Error Dialog");
             alert.setContentText(String.valueOf(e));
-
+            alert.setResizable(false);
             alert.showAndWait();
         }
     }
@@ -93,6 +93,7 @@ public class DoneeNewReqController {
         Parent root = FXMLLoader.load(getClass().getResource("DoneePanel.fxml"));
         primaryStage.setTitle("Ayomoy Life Saver");
         primaryStage.setScene(new Scene(root, 1000, 600));
+        primaryStage.setResizable(false);
         primaryStage.show();
     }
 
@@ -128,7 +129,7 @@ public class DoneeNewReqController {
             alert.setTitle("Error Dialog");
             alert.setHeaderText("Look, an Error Dialog");
             alert.setContentText(String.valueOf(e));
-
+            alert.setResizable(false);
             alert.showAndWait();
         }
 
@@ -158,7 +159,7 @@ public class DoneeNewReqController {
             alert.setTitle("Error Dialog");
             alert.setHeaderText("Look, an Error Dialog");
             alert.setContentText(String.valueOf("Patient Name Field can not be blank"));
-
+            alert.setResizable(false);
             alert.showAndWait();
         }
         if(emMobile.getText().length()<11||emMobile.getText().length()>11)
@@ -168,7 +169,7 @@ public class DoneeNewReqController {
             alert.setTitle("Error Dialog");
             alert.setHeaderText("Look, an Error Dialog");
             alert.setContentText(String.valueOf("Emergency Mobile Number should be 11 digits"));
-
+            alert.setResizable(false);
             alert.showAndWait();
         }
         if(date.getValue().compareTo(LocalDate.now())<0)
@@ -178,7 +179,7 @@ public class DoneeNewReqController {
             alert.setTitle("Error Dialog");
             alert.setHeaderText("Look, an Error Dialog");
             alert.setContentText(String.valueOf("Approximate Date can't be less than current time!!!"));
-
+            alert.setResizable(false);
             alert.showAndWait();
         }
         if(locationDetails.getText().isBlank())
@@ -188,7 +189,7 @@ public class DoneeNewReqController {
             alert.setTitle("Error Dialog");
             alert.setHeaderText("Look, an Error Dialog");
             alert.setContentText(String.valueOf("Location Details Should be added"));
-
+            alert.setResizable(false);
             alert.showAndWait();
         }
         if(isInt(quantity.getText())==false)
@@ -198,7 +199,7 @@ public class DoneeNewReqController {
             alert.setTitle("Error Dialog");
             alert.setHeaderText("Look, an Error Dialog");
             alert.setContentText(String.valueOf("Quantity will be a integer"));
-
+            alert.setResizable(false);
             alert.showAndWait();
         }
 
@@ -238,7 +239,7 @@ public class DoneeNewReqController {
                 alert.setTitle("Request Confirmation");
                 alert.setHeaderText(null);
                 alert.setContentText("Request Successfully Received");
-
+                alert.setResizable(false);
                 alert.showAndWait();
 
             } catch (Exception e)
@@ -248,7 +249,7 @@ public class DoneeNewReqController {
                 alert.setTitle("Error Dialog");
                 alert.setHeaderText("Look, an Error Dialog");
                 alert.setContentText(String.valueOf(e));
-
+                alert.setResizable(false);
                 alert.showAndWait();
             }
         }

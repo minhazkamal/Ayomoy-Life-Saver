@@ -69,7 +69,7 @@ public class LogINpanelController {
             alert.setHeaderText("Look, an Error Dialog");
             alert.setContentText(String.valueOf(e));
             System.out.println(e);
-
+            alert.setResizable(false);
             alert.showAndWait();
         }
         return false;
@@ -83,7 +83,7 @@ public class LogINpanelController {
             alert.setTitle("LogIN Confirmation");
             alert.setHeaderText(null);
             alert.setContentText("Logged IN Successfully");
-
+            alert.setResizable(false);
             alert.showAndWait();
 
             if(type.equals("Person"))
@@ -94,6 +94,7 @@ public class LogINpanelController {
                 Parent root = FXMLLoader.load(getClass().getResource("UserPanel.fxml"));
                 primaryStage.setTitle("Ayomoy Life Saver");
                 primaryStage.setScene(new Scene(root, 1000, 600));
+                primaryStage.setResizable(false);
                 primaryStage.show();
             }
             else if(type.equals("Organization"))
@@ -104,6 +105,7 @@ public class LogINpanelController {
                 Parent root = FXMLLoader.load(getClass().getResource("OrganizationPanel.fxml"));
                 primaryStage.setTitle("Ayomoy Life Saver");
                 primaryStage.setScene(new Scene(root, 1000, 600));
+                primaryStage.setResizable(false);
                 primaryStage.show();
             }
             else if(type.equals("Admin"))
@@ -114,6 +116,7 @@ public class LogINpanelController {
                 Parent root = FXMLLoader.load(getClass().getResource("AdminPanel.fxml"));
                 primaryStage.setTitle("Ayomoy Life Saver");
                 primaryStage.setScene(new Scene(root, 1000, 600));
+                primaryStage.setResizable(false);
                 primaryStage.show();
             }
         }
@@ -124,7 +127,7 @@ public class LogINpanelController {
             alert.setHeaderText("Look, an Error Dialog");
             alert.setContentText(String.valueOf("Username/Password is incorrect"));
             //System.out.println(e);
-
+            alert.setResizable(false);
             alert.showAndWait();
 
             ((Node) even.getSource()).getScene().getWindow().hide();
@@ -133,6 +136,7 @@ public class LogINpanelController {
             Parent root = FXMLLoader.load(getClass().getResource("LogINpanel.fxml"));
             primaryStage.setTitle("Ayomoy Life Saver");
             primaryStage.setScene(new Scene(root, 1000, 600));
+            primaryStage.setResizable(false);
             primaryStage.show();
         }
 
@@ -145,6 +149,7 @@ public class LogINpanelController {
         Parent root = FXMLLoader.load(getClass().getResource("Register.fxml"));
         primaryStage.setTitle("Ayomoy Life Saver");
         primaryStage.setScene(new Scene(root, 1000, 600));
+        primaryStage.setResizable(false);
         primaryStage.show();
 
     }
@@ -157,6 +162,7 @@ public class LogINpanelController {
         Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
         primaryStage.setTitle("Ayomoy Life Saver");
         primaryStage.setScene(new Scene(root, 1000, 600));
+        primaryStage.setResizable(false);
         primaryStage.show();
     }
 }

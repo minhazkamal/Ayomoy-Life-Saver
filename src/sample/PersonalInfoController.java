@@ -72,7 +72,7 @@ public class PersonalInfoController extends RegisterController{
             alert.setTitle("Error Dialog");
             alert.setHeaderText("Look, an Error Dialog");
             alert.setContentText(String.valueOf(e));
-
+            alert.setResizable(false);
             alert.showAndWait();
         }
     }
@@ -87,7 +87,7 @@ public class PersonalInfoController extends RegisterController{
             alert.setTitle("Error Dialog");
             alert.setHeaderText("Look, an Error Dialog");
             alert.setContentText(String.valueOf("Email Address is not correct"));
-
+            alert.setResizable(false);
             alert.showAndWait();
         }
         if(name.getText().isBlank())
@@ -97,7 +97,7 @@ public class PersonalInfoController extends RegisterController{
             alert.setTitle("Error Dialog");
             alert.setHeaderText("Look, an Error Dialog");
             alert.setContentText(String.valueOf("Name Field can not be blank"));
-
+            alert.setResizable(false);
             alert.showAndWait();
         }
         if(MobileNo.getText().length()<11||MobileNo.getText().length()>11)
@@ -107,7 +107,7 @@ public class PersonalInfoController extends RegisterController{
             alert.setTitle("Error Dialog");
             alert.setHeaderText("Look, an Error Dialog");
             alert.setContentText(String.valueOf("Mobile Number should be 11 digits"));
-
+            alert.setResizable(false);
             alert.showAndWait();
         }
         if(DOB.getValue().compareTo(LocalDate.now())>=0)
@@ -117,7 +117,7 @@ public class PersonalInfoController extends RegisterController{
             alert.setTitle("Error Dialog");
             alert.setHeaderText("Look, an Error Dialog");
             alert.setContentText(String.valueOf("DOB can't be greater than current time!!!"));
-
+            alert.setResizable(false);
             alert.showAndWait();
         }
 
@@ -140,6 +140,7 @@ public class PersonalInfoController extends RegisterController{
         Parent root = FXMLLoader.load(getClass().getResource("Register.fxml"));
         primaryStage.setTitle("Ayomoy Life Saver");
         primaryStage.setScene(new Scene(root, 1000, 600));
+        primaryStage.setResizable(false);
         primaryStage.show();
     }
 
@@ -172,8 +173,17 @@ public class PersonalInfoController extends RegisterController{
                 alert.setTitle("Registration Confirmation");
                 alert.setHeaderText(null);
                 alert.setContentText("Registration Completed Successfully");
-
+                alert.setResizable(false);
                 alert.showAndWait();
+
+                ((Node) even.getSource()).getScene().getWindow().hide();
+
+                Stage primaryStage = new Stage();
+                Parent root = FXMLLoader.load(getClass().getResource("LogINpanel.fxml"));
+                primaryStage.setTitle("Ayomoy Life Saver");
+                primaryStage.setScene(new Scene(root, 1000, 600));
+                primaryStage.setResizable(false);
+                primaryStage.show();
 
             } catch (Exception e)
             {
@@ -182,7 +192,7 @@ public class PersonalInfoController extends RegisterController{
                 alert.setTitle("Error Dialog");
                 alert.setHeaderText("Look, an Error Dialog");
                 alert.setContentText(String.valueOf(e));
-
+                alert.setResizable(false);
                 alert.showAndWait();
             }
         }
@@ -194,6 +204,7 @@ public class PersonalInfoController extends RegisterController{
             Parent root = FXMLLoader.load(getClass().getResource("PersonalInfo.fxml"));
             primaryStage.setTitle("Ayomoy Life Saver");
             primaryStage.setScene(new Scene(root, 1000, 600));
+            primaryStage.setResizable(false);
             primaryStage.show();
         }
     }

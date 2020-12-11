@@ -74,7 +74,7 @@ public class RegisterController {
             alert.setHeaderText("Look, an Error Dialog");
             alert.setContentText(String.valueOf(e));
             System.out.println(e);
-
+            alert.setResizable(false);
             alert.showAndWait();
         }
         return false;
@@ -96,7 +96,7 @@ public class RegisterController {
             alert.setTitle("Error Dialog");
             alert.setHeaderText("Look, an Error Dialog");
             alert.setContentText(String.valueOf("Username length should not be empty or greater than 15 characters"));
-
+            alert.setResizable(false);
             alert.showAndWait();
         }
         if(checkUserValid()==false)
@@ -106,7 +106,7 @@ public class RegisterController {
             alert.setTitle("Error Dialog");
             alert.setHeaderText("Look, an Error Dialog");
             alert.setContentText(String.valueOf("Username exists already. Try different one."));
-
+            alert.setResizable(false);
             alert.showAndWait();
         }
         if(txtPassword.getText().length()>15||txtPassword.getText().isBlank())
@@ -116,7 +116,7 @@ public class RegisterController {
             alert.setTitle("Error Dialog");
             alert.setHeaderText("Look, an Error Dialog");
             alert.setContentText(String.valueOf("Password length should not be empty or greater than 15 characters"));
-
+            alert.setResizable(false);
             alert.showAndWait();
         }
         if(checkPassword()==false)
@@ -126,7 +126,7 @@ public class RegisterController {
             alert.setTitle("Error Dialog");
             alert.setHeaderText("Look, an Error Dialog");
             alert.setContentText(String.valueOf("Password didn't match!!!"));
-
+            alert.setResizable(false);
             alert.showAndWait();
         }
         if(choiceType.getValue().toString().isBlank())
@@ -136,7 +136,7 @@ public class RegisterController {
             alert.setTitle("Error Dialog");
             alert.setHeaderText("Look, an Error Dialog");
             alert.setContentText(String.valueOf("Choice type shouldn't be blank"));
-
+            alert.setResizable(false);
             alert.showAndWait();
         }
         return alertCheck;
@@ -168,7 +168,7 @@ public class RegisterController {
                 alert.setTitle("Registration Confirmation");
                 alert.setHeaderText(null);
                 alert.setContentText("To Complete the registration fill up the next form.");
-
+                alert.setResizable(false);
                 alert.showAndWait();
 
                 if(choiceType.getValue().toString().equals("Person"))
@@ -179,6 +179,7 @@ public class RegisterController {
                     Parent root = FXMLLoader.load(getClass().getResource("PersonalInfo.fxml"));
                     primaryStage.setTitle("Ayomoy Life Saver");
                     primaryStage.setScene(new Scene(root, 1000, 600));
+                    primaryStage.setResizable(false);
                     primaryStage.show();
                 }
                 else if(choiceType.getValue().toString().equals("Organization"))
@@ -189,6 +190,7 @@ public class RegisterController {
                     Parent root = FXMLLoader.load(getClass().getResource("OrganizationInfo.fxml"));
                     primaryStage.setTitle("Ayomoy Life Saver");
                     primaryStage.setScene(new Scene(root, 1000, 600));
+                    primaryStage.setResizable(false);
                     primaryStage.show();
                 }
 
@@ -200,7 +202,7 @@ public class RegisterController {
                 alert.setTitle("Error Dialog");
                 alert.setHeaderText("Look, an Error Dialog");
                 alert.setContentText(String.valueOf(e));
-
+                alert.setResizable(false);
                 alert.showAndWait();
             }
 
@@ -213,6 +215,7 @@ public class RegisterController {
             Parent root = FXMLLoader.load(getClass().getResource("Register.fxml"));
             primaryStage.setTitle("Ayomoy Life Saver");
             primaryStage.setScene(new Scene(root, 1000, 600));
+            primaryStage.setResizable(false);
             primaryStage.show();
         }
     }
@@ -225,6 +228,7 @@ public class RegisterController {
         Parent root = FXMLLoader.load(getClass().getResource("LogINpanel.fxml"));
         primaryStage.setTitle("Ayomoy Life Saver");
         primaryStage.setScene(new Scene(root, 1000, 600));
+        primaryStage.setResizable(false);
         primaryStage.show();
     }
 }

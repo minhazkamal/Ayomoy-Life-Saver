@@ -4,6 +4,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -18,15 +19,15 @@
       </ImageView>
       <TableView fx:id="prevReqTable" layoutX="28.0" layoutY="118.0" prefHeight="463.0" prefWidth="898.0">
         <columns>
-          <TableColumn fx:id="col_serial" prefWidth="75.0" text="Serial" />
-          <TableColumn fx:id="col_request" text="Request ID" />
-            <TableColumn fx:id="col_name" prefWidth="188.8000030517578" text="Name" />
-            <TableColumn fx:id="col_location" prefWidth="79.20001220703125" text="Location" />
-            <TableColumn fx:id="col_bg" prefWidth="115.199951171875" text="Blood Group" />
-            <TableColumn fx:id="col_quantity" prefWidth="77.5999755859375" text="Quantity" />
-            <TableColumn fx:id="col_date" prefWidth="161.59991455078125" text="Approximate Date" />
-            <TableColumn fx:id="col_update" prefWidth="60.7999267578125" text="Update" />
-            <TableColumn fx:id="col_search" prefWidth="63.199951171875" text="Search" />
+          <TableColumn fx:id="col_serial" prefWidth="75.0" resizable="false" text="Serial" />
+          <TableColumn fx:id="col_request" resizable="false" text="Request ID" />
+            <TableColumn fx:id="col_name" prefWidth="188.8000030517578" resizable="false" text="Patient Name" />
+            <TableColumn fx:id="col_location" prefWidth="79.20001220703125" resizable="false" text="Location" />
+            <TableColumn fx:id="col_bg" prefWidth="115.199951171875" resizable="false" text="Blood Group" />
+            <TableColumn fx:id="col_quantity" prefWidth="77.5999755859375" resizable="false" text="Quantity" />
+            <TableColumn fx:id="col_date" prefWidth="161.59991455078125" resizable="false" text="Approximate Date" />
+            <TableColumn fx:id="col_update" prefWidth="58.4000244140625" resizable="false" text="Delete" />
+            <TableColumn fx:id="col_search" prefWidth="57.5999755859375" resizable="false" text="Search" />
         </columns>
       </TableView>
        <Button fx:id="back_button" layoutX="27.0" layoutY="25.0" mnemonicParsing="false" onAction="#pressBack" prefHeight="42.0" prefWidth="69.0" text="Back" textFill="#c70000">
@@ -34,10 +35,16 @@
                <Font name="Cambria Bold" size="18.0" />
            </font>
        </Button>
-       <Label fx:id="title_label" layoutX="158.0" layoutY="5.0" prefHeight="82.0" prefWidth="683.0" text="Previous Request of DONEE" textAlignment="JUSTIFY" textFill="#c70000">
+       <Label fx:id="title_label" layoutX="158.0" layoutY="5.0" prefHeight="60.0" prefWidth="683.0" text="Previous Request of DONEE" textAlignment="JUSTIFY" textFill="#c70000">
            <font>
                <Font name="Cambria Bold" size="54.0" />
            </font>
        </Label>
+      <Label layoutX="354.0" layoutY="84.0" text="Username: ">
+         <font>
+            <Font name="Cambria Bold" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtUser" editable="false" layoutX="446.0" layoutY="81.0" />
    </children>
 </AnchorPane>

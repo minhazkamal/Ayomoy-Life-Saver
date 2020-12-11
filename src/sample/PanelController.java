@@ -24,6 +24,7 @@ public class PanelController {
         Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
         primaryStage.setTitle("Ayomoy Life Saver");
         primaryStage.setScene(new Scene(root, 1000, 600));
+        primaryStage.setResizable(false);
         primaryStage.show();
     }
 
@@ -38,6 +39,7 @@ public class PanelController {
         Parent root = FXMLLoader.load(getClass().getResource("DoneePanel.fxml"));
         primaryStage.setTitle("Ayomoy Life Saver");
         primaryStage.setScene(new Scene(root, 1000, 600));
+        primaryStage.setResizable(false);
         primaryStage.show();
     }
 

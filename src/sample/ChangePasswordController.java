@@ -63,7 +63,7 @@ public class ChangePasswordController extends LogINpanelController{
             alert.setHeaderText("Look, an Error Dialog");
             alert.setContentText(String.valueOf(e));
             System.out.println(e);
-
+            alert.setResizable(false);
             alert.showAndWait();
         }
         if(temp.equals(currPass.getText())) return true;
@@ -86,7 +86,7 @@ public class ChangePasswordController extends LogINpanelController{
             alert.setTitle("Error Dialog");
             alert.setHeaderText("Look, an Error Dialog");
             alert.setContentText(String.valueOf("Current Password didn't match!!!"));
-
+            alert.setResizable(false);
             alert.showAndWait();
         }
         if(newPass.getText().length()>15||newPass.getText().isBlank())
@@ -96,7 +96,7 @@ public class ChangePasswordController extends LogINpanelController{
             alert.setTitle("Error Dialog");
             alert.setHeaderText("Look, an Error Dialog");
             alert.setContentText(String.valueOf("Password length should not be empty or greater than 15 characters"));
-
+            alert.setResizable(false);
             alert.showAndWait();
         }
         if(checkPassword()==false)
@@ -106,7 +106,7 @@ public class ChangePasswordController extends LogINpanelController{
             alert.setTitle("Error Dialog");
             alert.setHeaderText("Look, an Error Dialog");
             alert.setContentText(String.valueOf("New Password didn't match!!!"));
-
+            alert.setResizable(false);
             alert.showAndWait();
         }
 
@@ -141,7 +141,7 @@ public class ChangePasswordController extends LogINpanelController{
                 alert.setTitle("Confirmation");
                 alert.setHeaderText(null);
                 alert.setContentText("Password Changed Successfully!!!");
-
+                alert.setResizable(false);
                 alert.showAndWait();
 
                 ((Node) even.getSource()).getScene().getWindow().hide();
@@ -154,7 +154,7 @@ public class ChangePasswordController extends LogINpanelController{
                 alert.setHeaderText("Look, an Error Dialog");
                 alert.setContentText(String.valueOf(e));
                 System.out.println(e);
-
+                alert.setResizable(false);
                 alert.showAndWait();
             }
         }
@@ -165,7 +165,7 @@ public class ChangePasswordController extends LogINpanelController{
             alert.setHeaderText("Look, an Error Dialog");
             alert.setContentText(String.valueOf("Password didn't change. Please try again!!!"));
             //System.out.println(e);
-
+            alert.setResizable(false);
             alert.showAndWait();
         }
     }

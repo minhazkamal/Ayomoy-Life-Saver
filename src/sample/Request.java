@@ -61,12 +61,12 @@ public class Request {
         return date;
     }
 
-    public Button getUp_button() {
-        return up_button;
+    public Button getDelete_button() {
+        return delete_button;
     }
 
-    public void setUp_button(Button up_button) {
-        this.up_button = up_button;
+    public void setDelete_button(Button delete_button) {
+        this.delete_button = delete_button;
     }
 
     public Button getSearch_button() {
@@ -84,10 +84,10 @@ public class Request {
     private String bg;
     private String quantity;
     private String date;
-    private Button up_button;
+    private Button delete_button;
     private Button search_button;
 
-    public Request(String serial, String req_id, String name, String loc, String bg, String quantity, String date) {
+    public Request(String serial, String req_id, String name, String loc, String bg, String quantity, String date, Button d_button, Button s_button) {
         this.serial = serial;
         this.req_id = req_id;
         this.name = name;
@@ -95,8 +95,10 @@ public class Request {
         this.bg = bg;
         this.quantity = quantity;
         this.date = date;
-        this.up_button = new Button("Update");
-        this.search_button = new Button("Search");
+        this.delete_button = d_button;
+        this.search_button = s_button;
+        this.delete_button.setText("Delete");
+        this.search_button.setText("Search");
     }
 
 }

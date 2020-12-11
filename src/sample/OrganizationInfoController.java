@@ -73,7 +73,7 @@ public class OrganizationInfoController extends RegisterController {
             alert.setTitle("Error Dialog");
             alert.setHeaderText("Look, an Error Dialog");
             alert.setContentText(String.valueOf(e));
-
+            alert.setResizable(false);
             alert.showAndWait();
         }
     }
@@ -95,7 +95,7 @@ public class OrganizationInfoController extends RegisterController {
             alert.setTitle("Error Dialog");
             alert.setHeaderText("Look, an Error Dialog");
             alert.setContentText(String.valueOf("Email Address is not correct"));
-
+            alert.setResizable(false);
             alert.showAndWait();
         }
         if(OrgName.getText().isBlank())
@@ -105,7 +105,7 @@ public class OrganizationInfoController extends RegisterController {
             alert.setTitle("Error Dialog");
             alert.setHeaderText("Look, an Error Dialog");
             alert.setContentText(String.valueOf("Organization Name Field can not be blank"));
-
+            alert.setResizable(false);
             alert.showAndWait();
         }
         if(ContactNo.getText().length()<11||ContactNo.getText().length()>11)
@@ -115,7 +115,7 @@ public class OrganizationInfoController extends RegisterController {
             alert.setTitle("Error Dialog");
             alert.setHeaderText("Look, an Error Dialog");
             alert.setContentText(String.valueOf("Mobile Number should be 11 digits"));
-
+            alert.setResizable(false);
             alert.showAndWait();
         }
         if(LicNo.getText().isBlank())
@@ -125,7 +125,7 @@ public class OrganizationInfoController extends RegisterController {
             alert.setTitle("Error Dialog");
             alert.setHeaderText("Look, an Error Dialog");
             alert.setContentText(String.valueOf("License Number Field can not be blank"));
-
+            alert.setResizable(false);
             alert.showAndWait();
         }
         if(ContactPerson.getText().isBlank())
@@ -135,7 +135,7 @@ public class OrganizationInfoController extends RegisterController {
             alert.setTitle("Error Dialog");
             alert.setHeaderText("Look, an Error Dialog");
             alert.setContentText(String.valueOf("Contact Person Field can not be blank"));
-
+            alert.setResizable(false);
             alert.showAndWait();
         }
         if(CPMobile.getText().length()<11||CPMobile.getText().length()>11)
@@ -145,7 +145,7 @@ public class OrganizationInfoController extends RegisterController {
             alert.setTitle("Error Dialog");
             alert.setHeaderText("Look, an Error Dialog");
             alert.setContentText(String.valueOf("Emergency Mobile Number should be 11 digits"));
-
+            alert.setResizable(false);
             alert.showAndWait();
         }
         if(description.getText().length()>250)
@@ -155,7 +155,7 @@ public class OrganizationInfoController extends RegisterController {
             alert.setTitle("Error Dialog");
             alert.setHeaderText("Look, an Error Dialog");
             alert.setContentText(String.valueOf("Description should be in 250 characters"));
-
+            alert.setResizable(false);
             alert.showAndWait();
         }
 
@@ -169,6 +169,7 @@ public class OrganizationInfoController extends RegisterController {
         Parent root = FXMLLoader.load(getClass().getResource("Register.fxml"));
         primaryStage.setTitle("Ayomoy Life Saver");
         primaryStage.setScene(new Scene(root, 1000, 600));
+        primaryStage.setResizable(false);
         primaryStage.show();
     }
 
@@ -202,8 +203,17 @@ public class OrganizationInfoController extends RegisterController {
                 alert.setTitle("Registration Confirmation");
                 alert.setHeaderText(null);
                 alert.setContentText("Registration Completed Successfully");
-
+                alert.setResizable(false);
                 alert.showAndWait();
+
+                ((Node) even.getSource()).getScene().getWindow().hide();
+
+                Stage primaryStage = new Stage();
+                Parent root = FXMLLoader.load(getClass().getResource("LogINpanel.fxml"));
+                primaryStage.setTitle("Ayomoy Life Saver");
+                primaryStage.setScene(new Scene(root, 1000, 600));
+                primaryStage.setResizable(false);
+                primaryStage.show();
 
             } catch (Exception e)
             {
@@ -212,7 +222,7 @@ public class OrganizationInfoController extends RegisterController {
                 alert.setTitle("Error Dialog");
                 alert.setHeaderText("Look, an Error Dialog");
                 alert.setContentText(String.valueOf(e));
-
+                alert.setResizable(false);
                 alert.showAndWait();
             }
         }
@@ -224,6 +234,7 @@ public class OrganizationInfoController extends RegisterController {
             Parent root = FXMLLoader.load(getClass().getResource("OrganizationInfo.fxml"));
             primaryStage.setTitle("Ayomoy Life Saver");
             primaryStage.setScene(new Scene(root, 1000, 600));
+            primaryStage.setResizable(false);
             primaryStage.show();
         }
     }

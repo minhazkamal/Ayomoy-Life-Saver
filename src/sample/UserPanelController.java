@@ -99,7 +99,7 @@ public class UserPanelController extends LogINpanelController{
             alert.setHeaderText("Look, an Error Dialog");
             alert.setContentText(String.valueOf(e));
             System.out.println(e);
-
+            alert.setResizable(false);
             alert.showAndWait();
         }
     }
@@ -116,6 +116,7 @@ public class UserPanelController extends LogINpanelController{
         Parent root = FXMLLoader.load(getClass().getResource("UserProfileUpdate.fxml"));
         primaryStage.setTitle("Ayomoy Life Saver");
         primaryStage.setScene(new Scene(root, 1000, 600));
+        primaryStage.setResizable(false);
         primaryStage.show();
     }
 
@@ -129,6 +130,7 @@ public class UserPanelController extends LogINpanelController{
         Parent root = FXMLLoader.load(getClass().getResource("DoneePanel.fxml"));
         primaryStage.setTitle("Ayomoy Life Saver");
         primaryStage.setScene(new Scene(root, 1000, 600));
+        primaryStage.setResizable(false);
         primaryStage.show();
 
     }
@@ -141,6 +143,7 @@ public class UserPanelController extends LogINpanelController{
         Parent root = FXMLLoader.load(getClass().getResource("LogINpanel.fxml"));
         primaryStage.setTitle("Ayomoy Life Saver");
         primaryStage.setScene(new Scene(root, 1000, 600));
+        primaryStage.setResizable(false);
         primaryStage.show();
     }
 }

@@ -8,20 +8,20 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.Statement;
+import java.sql.*;
+import java.util.Optional;
 
-public class DoneePrevReqController {
+public class DoneePrevReqController extends LogINpanelController{
+    public int count_req;
+    public Button []d_button;
+    public Button []s_button;
+    @FXML
+    private TextField txtUser;
     @FXML
     private TableView<Request> prevReqTable;
     @FXML
@@ -52,34 +52,196 @@ public class DoneePrevReqController {
         Parent root = FXMLLoader.load(getClass().getResource("DoneePanel.fxml"));
         primaryStage.setTitle("Ayomoy Life Saver");
         primaryStage.setScene(new Scene(root, 1000, 600));
+        primaryStage.setResizable(false);
         primaryStage.show();
+    }
+
+    public void countRequest(){
+        String username = "als";
+        String password = "iutcse18";
+        String url = "jdbc:oracle:thin:@localhost:1521/XE";
+        String count_query = "SELECT COUNT(*) FROM REQUEST WHERE USERNAME=?";
+        try {
+            Class.forName("oracle.jdbc.driver.OracleDriver");
+            Connection con = DriverManager.getConnection(url, username, password);
+            PreparedStatement pst1 = con.prepareStatement(count_query);
+            pst1.setString(1, txtUser.getText());
+            ResultSet rs1 = pst1.executeQuery();
+
+            while (rs1.next()) {
+                count_req = rs1.getInt(1);
+                //System.out.println(count_req);
+            }
+            rs1.close();
+            con.close();
+        }
+        catch(Exception e){
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Error Dialog");
+            alert.setHeaderText("Look, an Error Dialog");
+            alert.setContentText(String.valueOf(e));
+            alert.setResizable(false);
+            alert.showAndWait();
+        }
+    }
+
+    public int getReqID(int r_num)
+    {
+        int r_id=0;
+        String username = "als";
+        String password = "iutcse18";
+        String url = "jdbc:oracle:thin:@localhost:1521/XE";
+        String query = "SELECT findDeleteReqID(?, ?) FROM DUAL";
+        try {
+            Class.forName("oracle.jdbc.driver.OracleDriver");
+            Connection con = DriverManager.getConnection(url, username, password);
+            PreparedStatement pst = con.prepareStatement(query);
+            pst.setString(1, txtUser.getText());
+            pst.setInt(2, r_num);
+
+            ResultSet rs = pst.executeQuery();
+
+            while (rs.next()) {
+                r_id = rs.getInt(1);
+                //System.out.println(count_req);
+            }
+            rs.close();
+            con.close();
+
+            return r_id;
+        }
+        catch(Exception e){
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Error Dialog");
+            alert.setHeaderText("Look, an Error Dialog");
+            alert.setContentText(String.valueOf(e));
+            alert.setResizable(false);
+            alert.showAndWait();
+        }
+        return r_id;
+    }
+
+    private void pressDeleteButton(ActionEvent even)
+    {
+        int r_id=0;
+        for(int i=0; i<count_req; i++)
+        {
+            if(even.getSource() == d_button[i])
+            {
+                r_id = getReqID(i+1);
+                break;
+            }
+        }
+        //System.out.println(Integer.toString(r_id) +" delete it");
+        //Alert box and delete operation need to be added
+        Alert alert_confirm = new Alert(Alert.AlertType.CONFIRMATION);
+        alert_confirm.setTitle("Record Delete Confirmation");
+        alert_confirm.setHeaderText("Are you sure want to delete the record of Request ID: "+Integer.toString(r_id)+"?");
+        alert_confirm.setResizable(false);
+        //alert.setContentText("Are you sure want to delete the record of Request ID: "+Integer.toString(r_id)+"?");
+
+        ButtonType buttonTypeYES = new ButtonType("YES");
+        ButtonType buttonTypeNO = new ButtonType("NO", ButtonBar.ButtonData.CANCEL_CLOSE);
+
+        alert_confirm.getButtonTypes().setAll(buttonTypeYES, buttonTypeNO);
+
+        Optional<ButtonType> result = alert_confirm.showAndWait();
+
+        if(result.get()==buttonTypeYES)
+        {
+            String username = "als";
+            String password = "iutcse18";
+            String url = "jdbc:oracle:thin:@localhost:1521/XE";
+            String query = "DELETE FROM REQUEST WHERE USERNAME=? AND ID=?";
+            try {
+                Class.forName("oracle.jdbc.driver.OracleDriver");
+                Connection con = DriverManager.getConnection(url, username, password);
+                PreparedStatement pst = con.prepareStatement(query);
+                pst.setString(1, txtUser.getText());
+                pst.setInt(2, r_id);
+
+                pst.executeUpdate();
+
+                con.close();
+
+                ((Node) even.getSource()).getScene().getWindow().hide();
+
+                Stage primaryStage = new Stage();
+                Parent root;
+                root = FXMLLoader.load(getClass().getResource("DoneePrevReq.fxml"));
+                primaryStage.setTitle("Ayomoy Life Saver");
+                primaryStage.setScene(new Scene(root, 1000, 600));
+                primaryStage.setResizable(false);
+                primaryStage.show();
+
+            }
+            catch(Exception e){
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setTitle("Error Dialog");
+                alert.setHeaderText("Look, an Error Dialog");
+                alert.setContentText(String.valueOf(e));
+                alert.setResizable(false);
+                alert.showAndWait();
+            }
+        }
+    }
+
+
+
+    private void pressSearchButton(ActionEvent even)
+    {
+        for(int i=0; i<count_req; i++)
+        {
+            if(even.getSource() == s_button[i])
+            {
+                System.out.print(i+1);
+                System.out.println(" search button is pressed");
+                return;
+            }
+        }
     }
 
     public void initialize()
     {
+        txtUser.setText(LogINpanelController.getUser());
+        countRequest();
+        d_button = new Button[count_req];
+        s_button = new Button[count_req];
+
+        for(int i=0; i<count_req; i++)
+        {
+            d_button[i] = new Button();
+            d_button[i].setOnAction(this::pressDeleteButton);
+
+            s_button[i] = new Button();
+            s_button[i].setOnAction(this::pressSearchButton);
+        }
+
         String username = "als";
         String password = "iutcse18";
         String url = "jdbc:oracle:thin:@localhost:1521/XE";
-        String query = "SELECT ROWNUM, ID, NAME, LOCATION, BLOOD_GROUP, QUANTITY, APPROX_DATE FROM NEW_DONEE";
-
+        String query = "SELECT ROWNUM, ID, PATIENT, LOCATION, BLOOD_GROUP, QUANTITY, APPROX_DATE FROM REQUEST WHERE USERNAME=?";
 //        Statement pst = null;
 //        ResultSet rs = null;
         try{
             Class.forName("oracle.jdbc.driver.OracleDriver");
-            Connection con = DriverManager.getConnection(url,username,password);
-            Statement pst = con.createStatement();
-
-            ResultSet rs = pst.executeQuery(query);
+            Connection con = DriverManager.getConnection(url, username, password);
+            PreparedStatement pst = con.prepareStatement(query);
+            pst.setString(1, txtUser.getText());
+            ResultSet rs = pst.executeQuery();
 
             while(rs.next())
             {
 //                System.out.println(1);
 //                String a = rs.getString("NAME");
 //                System.out.println(a);
-                oblist.add(new Request(rs.getString(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5), rs.getString(6), rs.getDate(7).toString()));
+                int j = rs.getInt(1);
+                //System.out.println(j);
+                oblist.add(new Request(rs.getString(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5), rs.getString(6), rs.getDate(7).toString(), d_button[j-1], s_button[j-1]));
             }
             rs.close();
             con.close();
+
         } catch (Exception e)
         {
 //           System.out.println(e);
@@ -87,9 +249,10 @@ public class DoneePrevReqController {
             alert.setTitle("Error Dialog");
             alert.setHeaderText("Look, an Error Dialog");
             alert.setContentText(String.valueOf(e));
-
+            alert.setResizable(false);
             alert.showAndWait();
         }
+
         col_serial.setCellValueFactory(new PropertyValueFactory<>("serial"));
         col_name.setCellValueFactory(new PropertyValueFactory<>("name"));
         col_request.setCellValueFactory(new PropertyValueFactory<>("req_id"));
@@ -97,7 +260,7 @@ public class DoneePrevReqController {
         col_bg.setCellValueFactory(new PropertyValueFactory<>("bg"));
         col_location.setCellValueFactory(new PropertyValueFactory<>("loc"));
         col_date.setCellValueFactory(new PropertyValueFactory<>("date"));
-        col_update.setCellValueFactory(new PropertyValueFactory<>("up_button"));
+        col_update.setCellValueFactory(new PropertyValueFactory<>("delete_button"));
         col_search.setCellValueFactory(new PropertyValueFactory<>("search_button"));
 
         prevReqTable.setItems(oblist);
