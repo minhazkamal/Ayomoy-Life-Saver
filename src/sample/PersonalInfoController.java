@@ -151,11 +151,13 @@ public class PersonalInfoController extends RegisterController{
             String password = "iutcse18";
             String url = "jdbc:oracle:thin:@localhost:1521/XE";
             String query = "INSERT INTO PERSONAL_INFO VALUES(?,?,?,?,?,?,?,?)";
+            String query1 = "INSERT INTO DONOR_INFO (USERNAME) VALUES(?)";
 
             try{
                 Class.forName("oracle.jdbc.driver.OracleDriver");
                 Connection con = DriverManager.getConnection(url,username,password);
                 PreparedStatement pst = con.prepareStatement(query);
+
                 pst.setString(1, txtUsername.getText());
                 pst.setString(2, name.getText());
                 pst.setString(3, MobileNo.getText());
@@ -166,6 +168,9 @@ public class PersonalInfoController extends RegisterController{
                 pst.setString(8, BG_choice.getValue().toString());
 
                 pst.executeUpdate();
+
+                PreparedStatement pst1 = con.prepareStatement(query1);
+                pst1.executeUpdate();
 
                 con.close();
 

@@ -17,6 +17,7 @@ import java.sql.*;
 import java.util.Optional;
 
 public class DoneePrevReqController extends LogINpanelController{
+
     public int count_req;
     public Button []d_button;
     public Button []s_button;
@@ -39,7 +40,7 @@ public class DoneePrevReqController extends LogINpanelController{
     @FXML
     private TableColumn<Request, String> col_date;
     @FXML
-    private TableColumn<Request, Button> col_update;
+    private TableColumn<Request, Button> col_delete;
     @FXML
     private TableColumn<Request, Button> col_search;
 
@@ -220,7 +221,7 @@ public class DoneePrevReqController extends LogINpanelController{
         String username = "als";
         String password = "iutcse18";
         String url = "jdbc:oracle:thin:@localhost:1521/XE";
-        String query = "SELECT ROWNUM, ID, PATIENT, LOCATION, BLOOD_GROUP, QUANTITY, APPROX_DATE FROM REQUEST WHERE USERNAME=?";
+        String query = "SELECT ROWNUM, ID, PATIENT, LOCATION, BLOOD_GROUP, QUANTITY, APPROX_DATE FROM REQUEST WHERE USERNAME=? ORDER BY APPROX_DATE DESC";
 //        Statement pst = null;
 //        ResultSet rs = null;
         try{
@@ -237,7 +238,7 @@ public class DoneePrevReqController extends LogINpanelController{
 //                System.out.println(a);
                 int j = rs.getInt(1);
                 //System.out.println(j);
-                oblist.add(new Request(rs.getString(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5), rs.getString(6), rs.getDate(7).toString(), d_button[j-1], s_button[j-1]));
+                oblist.add(new Request(Integer.toString(count_req-j+1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5), rs.getString(6), rs.getDate(7).toString(), d_button[j-1], s_button[j-1]));
             }
             rs.close();
             con.close();
@@ -260,7 +261,7 @@ public class DoneePrevReqController extends LogINpanelController{
         col_bg.setCellValueFactory(new PropertyValueFactory<>("bg"));
         col_location.setCellValueFactory(new PropertyValueFactory<>("loc"));
         col_date.setCellValueFactory(new PropertyValueFactory<>("date"));
-        col_update.setCellValueFactory(new PropertyValueFactory<>("delete_button"));
+        col_delete.setCellValueFactory(new PropertyValueFactory<>("delete_button"));
         col_search.setCellValueFactory(new PropertyValueFactory<>("search_button"));
 
         prevReqTable.setItems(oblist);

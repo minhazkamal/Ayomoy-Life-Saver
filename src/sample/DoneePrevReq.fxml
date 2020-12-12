@@ -26,7 +26,7 @@
             <TableColumn fx:id="col_bg" prefWidth="115.199951171875" resizable="false" text="Blood Group" />
             <TableColumn fx:id="col_quantity" prefWidth="77.5999755859375" resizable="false" text="Quantity" />
             <TableColumn fx:id="col_date" prefWidth="161.59991455078125" resizable="false" text="Approximate Date" />
-            <TableColumn fx:id="col_update" prefWidth="58.4000244140625" resizable="false" text="Delete" />
+            <TableColumn fx:id="col_delete" prefWidth="58.4000244140625" resizable="false" text="Delete" />
             <TableColumn fx:id="col_search" prefWidth="57.5999755859375" resizable="false" text="Search" />
         </columns>
       </TableView>

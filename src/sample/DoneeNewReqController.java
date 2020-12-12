@@ -17,8 +17,6 @@ import java.time.LocalDate;
 
 public class DoneeNewReqController {
 
-
-
     ObservableList<String> BGList = FXCollections.observableArrayList("A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-");
     ObservableList<String> GenderList = FXCollections.observableArrayList("Male", "Female", "Others");
     ObservableList<String> LocList = FXCollections.observableArrayList();
