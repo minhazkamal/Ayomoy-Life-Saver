@@ -47,7 +47,7 @@
                 <Font name="Cambria Bold" size="19.0" />
             </font>
         </Label>
-        <TextField fx:id="complications" editable="false" layoutX="760.0" layoutY="228.0" promptText="Accident" />
+        <TextField fx:id="complications" editable="false" layoutX="760.0" layoutY="228.0" />
         <DatePicker fx:id="d_date" editable="false" layoutX="256.0" layoutY="363.0" prefHeight="26.0" prefWidth="238.0" />
         <Label layoutX="84.0" layoutY="367.0" text="Donation Date" textFill="#c70000">
             <font>

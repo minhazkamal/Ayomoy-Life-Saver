@@ -78,6 +78,16 @@
             <Font name="Cambria Bold Italic" size="20.0" />
          </font>
       </Label>
+      <Label layoutX="79.0" layoutY="284.0" text="Paying Status">
+         <font>
+            <Font name="Cambria Bold" size="25.0" />
+         </font>
+      </Label>
+      <Label fx:id="paying" alignment="CENTER" layoutX="63.0" layoutY="330.0" prefHeight="24.0" prefWidth="188.0" textAlignment="CENTER" textFill="#255bd7">
+         <font>
+            <Font name="Cambria Bold Italic" size="20.0" />
+         </font>
+      </Label>
     </children>
 
 </AnchorPane>
