@@ -152,6 +152,7 @@ public class PersonalInfoController extends RegisterController{
             String url = "jdbc:oracle:thin:@localhost:1521/XE";
             String query = "INSERT INTO PERSONAL_INFO VALUES(?,?,?,?,?,?,?,?)";
             String query1 = "INSERT INTO DONOR_INFO (USERNAME) VALUES(?)";
+            String query2 = "INSERT INTO TEST_REPORTS (USERNAME) VALUES(?)";
 
             try{
                 Class.forName("oracle.jdbc.driver.OracleDriver");
@@ -171,6 +172,9 @@ public class PersonalInfoController extends RegisterController{
 
                 PreparedStatement pst1 = con.prepareStatement(query1);
                 pst1.executeUpdate();
+
+                PreparedStatement pst2 = con.prepareStatement(query2);
+                pst2.executeUpdate();
 
                 con.close();
 

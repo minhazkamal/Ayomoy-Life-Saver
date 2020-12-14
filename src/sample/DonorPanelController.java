@@ -19,6 +19,8 @@ import java.sql.ResultSet;
 public class DonorPanelController extends LogINpanelController{
 
     @FXML
+    private Label paying;
+    @FXML
     private Label eligibility;
     @FXML
     private Label activeness;
@@ -28,7 +30,7 @@ public class DonorPanelController extends LogINpanelController{
         String username = "als";
         String password = "iutcse18";
         String url = "jdbc:oracle:thin:@localhost:1521/XE";
-        String query = "SELECT USERNAME,ELIGIBILITY,ACTIVENESS FROM DONOR_INFO WHERE USERNAME=?";
+        String query = "SELECT USERNAME,ELIGIBILITY,ACTIVENESS,PAYABLE FROM DONOR_INFO WHERE USERNAME=?";
 
         try{
             Class.forName("oracle.jdbc.driver.OracleDriver");
@@ -50,6 +52,7 @@ public class DonorPanelController extends LogINpanelController{
                 //System.out.println(rs.getString(2));
                 activeness.setText(rs.getString(3));
                 //System.out.println(rs.getString(3));
+                paying.setText(rs.getString(4));
             }
 
             pst.close();
@@ -70,7 +73,15 @@ public class DonorPanelController extends LogINpanelController{
 
     }
 
-    public void pressDonorInfo(ActionEvent actionEvent) {
+    public void pressDonorInfo(ActionEvent even) throws IOException{
+        ((Node) even.getSource()).getScene().getWindow().hide();
+
+        Stage primaryStage = new Stage();
+        Parent root = FXMLLoader.load(getClass().getResource("DonorInfo.fxml"));
+        primaryStage.setTitle("Ayomoy Life Saver");
+        primaryStage.setScene(new Scene(root, 1000, 600));
+        primaryStage.setResizable(false);
+        primaryStage.show();
     }
 
     public void pressDonationInfo(ActionEvent even) throws IOException{

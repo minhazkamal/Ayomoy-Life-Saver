@@ -14,6 +14,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.sql.*;
 import java.time.LocalDate;
+import java.time.Period;
 
 public class AddNewDonationController extends LogINpanelController {
 
@@ -83,22 +84,43 @@ public class AddNewDonationController extends LogINpanelController {
 
     public boolean checkDate()
     {
-        int i=0;
+        int i=0, flag=0;
+        LocalDate dob = null;
         String username = "als";
         String password = "iutcse18";
         String url = "jdbc:oracle:thin:@localhost:1521/XE";
         String query = "SELECT D_DATE FROM DONATION_INFO WHERE USERNAME=? AND D_DATE BETWEEN ADD_MONTHS(?, -3) AND ADD_MONTHS(?, 3)";
-
+        String dob_query = "SELECT DOB FROM PERSONAL_INFO WHERE USERNAME=?";
 //        Statement pst = null;
 //        ResultSet rs = null;
         try{
             Class.forName("oracle.jdbc.driver.OracleDriver");
             Connection con = DriverManager.getConnection(url,username,password);
             PreparedStatement pst = con.prepareStatement(query);
+            PreparedStatement pst1 = con.prepareStatement(dob_query);
 
+            pst1.setString(1, txtUser.getText());
             pst.setString(1, txtUser.getText());
             pst.setDate(2, Date.valueOf(d_date.getValue()));
             pst.setDate(3, Date.valueOf(d_date.getValue()));
+
+            ResultSet rs1 = pst1.executeQuery();
+            while(rs1.next())
+            {
+                dob = rs1.getDate(1).toLocalDate();
+                //System.out.println(dob.toString());
+            }
+
+            rs1.close();
+            pst1.close();
+
+            LocalDate current = d_date.getValue();
+
+            Period period = Period.between(dob, current);
+
+            //System.out.println(period.getYears());
+
+            if(period.getYears()<18) flag=1;
 
             ResultSet rs = pst.executeQuery();
 
@@ -120,7 +142,7 @@ public class AddNewDonationController extends LogINpanelController {
             alert.showAndWait();
         }
 
-        if(i==0) return true;
+        if(i==0 && flag==0) return true;
         else return false;
     }
 
@@ -139,6 +161,7 @@ public class AddNewDonationController extends LogINpanelController {
             alert.showAndWait();
         }
 
+        //System.out.println(checkDate());
         if(checkDate()==false)
         {
             alertCheck = true;
