@@ -132,13 +132,13 @@ public class DonorInfoController extends LogINpanelController{
         fc.getExtensionFilters().add(new FileChooser.ExtensionFilter("Image File", extFile));
         fp = fc.showOpenDialog(null);
         //fin = new FileInputStream(f.getAbsolutePath());
+        //System.out.println(f.getName());
 
         if(fc!=null && fp!=null)
         {
             test_report.setText(fp.getName());
             fin = new FileInputStream(fp.getAbsolutePath());
         }
-        else fin = new FileInputStream(f);
     }
 
     private void doSave(ActionEvent even) throws IOException
@@ -165,16 +165,20 @@ public class DonorInfoController extends LogINpanelController{
 
             PreparedStatement pst1 = con.prepareStatement(query1);
 
-            if(fin!=null) pst1.setBinaryStream(1, fin, fin.available());
-            else pst1.setBinaryStream(1, null);
-            if(fp!=null) pst1.setString(2, fp.getName());
-            else if(f!=null) pst1.setString(2, f.getName());
-            else pst1.setString(2,null);
-            pst1.setDate(3, Date.valueOf(LocalDate.now()));
-            pst1.setString(4, LogINpanelController.getUser());
+//            if(fin!=null) pst1.setBinaryStream(1, fin, fin.available());
+//            else pst1.setBinaryStream(1, null);
+            if(fin!=null)
+            {
+                pst1.setBinaryStream(1, fin, fin.available());
+                if(fp!=null) pst1.setString(2, fp.getName());
+                else if(f!=null) pst1.setString(2, f.getName());
+                else pst1.setString(2,null);
+                pst1.setDate(3, Date.valueOf(LocalDate.now()));
+                pst1.setString(4, LogINpanelController.getUser());
 
-            pst1.executeUpdate();
-            pst1.close();
+                pst1.executeUpdate();
+                pst1.close();
+            }
 
             con.close();
 
