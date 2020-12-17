@@ -10,10 +10,12 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class DoneePanelController extends LogINpanelController{
+
 //    private void initialize()
 //    {
 //
 //    }
+
     public void pressBack(ActionEvent even) throws IOException {
         ((Node) even.getSource()).getScene().getWindow().hide();
 
@@ -50,8 +52,16 @@ public class DoneePanelController extends LogINpanelController{
         primaryStage.show();
     }
 
-    public void pressSearch(ActionEvent even) {
+    public void pressSearch(ActionEvent even) throws IOException{
+        ((Node) even.getSource()).getScene().getWindow().hide();
 
+        Stage primaryStage = new Stage();
+        Parent root;
+        root = FXMLLoader.load(getClass().getResource("SearchDonor-Org.fxml"));
+        primaryStage.setTitle("Ayomoy Life Saver");
+        primaryStage.setScene(new Scene(root, 1000, 600));
+        primaryStage.setResizable(false);
+        primaryStage.show();
 
     }
 }

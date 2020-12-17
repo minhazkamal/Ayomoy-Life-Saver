@@ -129,7 +129,7 @@ public class Request {
         this.contact = contact;
         this.details_button = dt_button;
         this.details_button.setText("Details");
-
+        this.details_button.setPrefWidth(72.800048828125);
     }
 
 }

@@ -20,7 +20,6 @@ import java.time.LocalDate;
 
 public class PendingRequestController extends DonorPanelController {
 
-
     public int count_req;
     public Button[]dt_button;
     public static String bg;
@@ -155,7 +154,7 @@ public class PendingRequestController extends DonorPanelController {
         primaryStage.show();
     }
 
-    public void pressFilter() throws IOException{
+    public void pressFilter(ActionEvent event) throws IOException{
 
         Stage primaryStage = new Stage();
         Parent root = FXMLLoader.load(getClass().getResource("FilterRequest.fxml"));
@@ -188,6 +187,8 @@ public class PendingRequestController extends DonorPanelController {
 
                 ResultSet rs = pst.executeQuery();
 
+                count_req = FilterRequestController.getCountf();
+
                 dt_button = new Button[FilterRequestController.getCountf()];
 
                 for(int i=0; i<FilterRequestController.getCountf(); i++)
@@ -209,7 +210,7 @@ public class PendingRequestController extends DonorPanelController {
 //                System.out.println(a);
                     int j = rs.getInt(1);
                     //System.out.println(j);
-                    oblist.add(new Request(Integer.toString(count_req-j+1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5), rs.getDate(6).toString(), rs.getString(7), dt_button[j-1]));
+                    oblist.add(new Request(Integer.toString(count_req-j+1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5), rs.getDate(6).toString(), rs.getString(7), dt_button[count_req-j]));
                 }
                 rs.close();
                 con.close();
@@ -277,7 +278,7 @@ public class PendingRequestController extends DonorPanelController {
 //                System.out.println(a);
                     int j = rs.getInt(1);
                     //System.out.println(j);
-                    oblist.add(new Request(Integer.toString(count_req-j+1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5), rs.getDate(6).toString(), rs.getString(7), dt_button[j-1]));
+                    oblist.add(new Request(Integer.toString(count_req-j+1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5), rs.getDate(6).toString(), rs.getString(7), dt_button[count_req-j]));
                 }
                 rs.close();
                 con.close();
