@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ShowDetailRequestInfoController">
+    <children>
+        <ImageView fitHeight="600.0" fitWidth="1000.0" pickOnBounds="true">
+            <image>
+                <Image url="@images/Presentation1_Proposal.jpg" />
+            </image>
+        </ImageView>
+        <Button fx:id="back_button" layoutX="27.0" layoutY="25.0" mnemonicParsing="false" onAction="#pressBack" prefHeight="42.0" prefWidth="69.0" text="Back" textFill="#c70000">
+            <font>
+                <Font name="Cambria Bold" size="18.0" />
+            </font>
+        </Button>
+        <Label fx:id="title_label" layoutX="257.0" layoutY="5.0" prefHeight="82.0" prefWidth="522.0" text="Request Information" textAlignment="JUSTIFY" textFill="#c70000">
+            <font>
+                <Font name="Cambria Bold" size="54.0" />
+            </font>
+        </Label>
+        <Label layoutX="85.0" layoutY="490.0" prefHeight="23.0" prefWidth="250.0" text="Requester's Mobile Number" textFill="#c70000">
+            <font>
+                <Font name="Cambria Bold" size="19.0" />
+            </font></Label>
+        <Label layoutX="86.0" layoutY="439.0" prefHeight="23.0" prefWidth="166.0" text="Requesting Person" textFill="#c70000">
+            <font>
+                <Font name="Cambria Bold" size="19.0" />
+            </font></Label>
+        <Label layoutX="592.0" layoutY="237.0" text="Blood Group" textFill="#c70000">
+            <font>
+                <Font name="Cambria Bold" size="19.0" />
+            </font></Label>
+        <ChoiceBox fx:id="BG_choice" layoutX="746.0" layoutY="236.0" prefWidth="150.0" />
+        <TextField fx:id="mobile" editable="false" layoutX="361.0" layoutY="489.0" />
+        <TextField fx:id="name" editable="false" layoutX="270.0" layoutY="438.0" prefHeight="26.0" prefWidth="238.0" />
+        <Label layoutX="84.0" layoutY="194.0" text="Location" textFill="#c70000">
+            <font>
+                <Font name="Cambria Bold" size="19.0" />
+            </font>
+        </Label>
+        <Label layoutX="576.0" layoutY="194.0" text="Complications" textFill="#c70000">
+            <font>
+                <Font name="Cambria Bold" size="19.0" />
+            </font>
+        </Label>
+        <Label layoutX="609.0" layoutY="285.0" text="Quantity" textFill="#c70000">
+            <font>
+                <Font name="Cambria Bold" size="19.0" />
+            </font>
+        </Label>
+        <TextField fx:id="complications" editable="false" layoutX="745.0" layoutY="193.0" />
+        <TextField fx:id="quantity" editable="false" layoutX="767.0" layoutY="285.0" prefHeight="26.0" prefWidth="58.0" />
+        <DatePicker fx:id="date" editable="false" layoutX="256.0" layoutY="354.0" prefHeight="26.0" prefWidth="238.0" />
+        <Label layoutX="84.0" layoutY="358.0" text="Approximate Date" textFill="#c70000">
+            <font>
+                <Font name="Cambria Bold" size="19.0" />
+            </font>
+        </Label>
+        <Label layoutX="577.0" layoutY="149.0" text="Mobile Number" textFill="#c70000">
+            <font>
+                <Font name="Cambria Bold" size="19.0" />
+            </font>
+        </Label>
+        <TextField fx:id="emMobile" editable="false" layoutX="744.0" layoutY="148.0" prefHeight="26.0" prefWidth="238.0" />
+        <Label layoutX="84.0" layoutY="150.0" text="Patient Name" textFill="#c70000">
+            <font>
+                <Font name="Cambria Bold" size="19.0" />
+            </font>
+        </Label>
+        <TextField fx:id="PatientName" editable="false" layoutX="250.0" layoutY="149.0" prefHeight="26.0" prefWidth="238.0" />
+        <Label layoutX="837.0" layoutY="289.0" prefHeight="20.0" prefWidth="46.0" text="Bag(s)">
+            <font>
+                <Font name="System Bold Italic" size="14.0" />
+            </font>
+        </Label>
+        <ChoiceBox fx:id="doneeLocation" layoutX="252.0" layoutY="193.0" prefHeight="26.0" prefWidth="238.0" />
+        <Label layoutX="86.0" layoutY="249.0" text="Organization" textFill="#c70000">
+            <font>
+                <Font name="Cambria Bold" size="19.0" />
+            </font>
+        </Label>
+        <TextArea fx:id="locationDetails" editable="false" layoutX="254.0" layoutY="248.0" prefHeight="74.0" prefWidth="238.0" />
+        <Label layoutX="593.0" layoutY="356.0" text="Patient Gender" textFill="#c70000">
+            <font>
+                <Font name="Cambria Bold" size="19.0" />
+            </font>
+        </Label>
+        <ChoiceBox fx:id="Gender_choice" layoutX="745.0" layoutY="355.0" prefWidth="150.0" />
+      <Label layoutX="361.0" layoutY="87.0" text="Request ID" textFill="#c70000">
+         <font>
+            <Font name="Cambria Bold" size="19.0" />
+         </font>
+      </Label>
+      <TextField fx:id="req_id" editable="false" layoutX="479.0" layoutY="85.0" prefHeight="26.0" prefWidth="77.0" />
+    </children>
+
+</AnchorPane>
