@@ -175,7 +175,7 @@ public class PersonalInfoController extends RegisterController{
                 pst1.executeUpdate();
 
                 PreparedStatement pst2 = con.prepareStatement(query2);
-                pst.setString(1, txtUsername.getText());
+                pst2.setString(1, txtUsername.getText());
                 pst2.executeUpdate();
 
                 con.close();

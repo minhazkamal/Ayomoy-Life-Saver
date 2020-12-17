@@ -95,7 +95,15 @@ public class DonorPanelController extends LogINpanelController{
         primaryStage.show();
     }
 
-    public void pressPendingRequest(ActionEvent actionEvent) {
+    public void pressPendingRequest(ActionEvent even) throws IOException{
+        ((Node) even.getSource()).getScene().getWindow().hide();
+
+        Stage primaryStage = new Stage();
+        Parent root = FXMLLoader.load(getClass().getResource("PendingRequest.fxml"));
+        primaryStage.setTitle("Ayomoy Life Saver");
+        primaryStage.setScene(new Scene(root, 1000, 600));
+        primaryStage.setResizable(false);
+        primaryStage.show();
     }
 
     public void pressBack(ActionEvent even) throws IOException {

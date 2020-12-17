@@ -179,7 +179,7 @@ public class UserProfileUpdateController extends UserPanelController{
     public void initialize()
     {
         getLoc();
-        BG_choice.setItems(BGList);
+        //BG_choice.setItems(BGList);
         Gender_Choice.setItems(GenderList);
         AddressLocation.setItems(LocList);
         showPrevInfo();
