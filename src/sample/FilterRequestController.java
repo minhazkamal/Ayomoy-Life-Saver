@@ -100,7 +100,7 @@ public class FilterRequestController<bg> extends PendingRequestController{
         getLoc();
         filterBG.setItems(BGList);
         filterLocation.setItems(LocList);
-        filterBG.setValue(PendingRequestController.getBg());
+        //filterBG.setValue(PendingRequestController.getBg());
         startingDate.setValue(LocalDate.now());
     }
 
@@ -110,7 +110,7 @@ public class FilterRequestController<bg> extends PendingRequestController{
         String password = "iutcse18";
         String url = "jdbc:oracle:thin:@localhost:1521/XE";
         String query = "SELECT BLOOD_GROUP, DOB FROM PERSONAL_INFO WHERE USERNAME=?";
-        String count_query = "SELECT COUNT(*) FROM REQUEST WHERE APPROX_DATE>=? AND APPROX_DATE<=? AND BLOOD_GROUP=? AND LOCATION LIKE ?";
+        String count_query = "SELECT COUNT(*) FROM REQUEST WHERE APPROX_DATE>=? AND APPROX_DATE<=? AND BLOOD_GROUP LIKE ? AND LOCATION LIKE ?";
         try {
             Class.forName("oracle.jdbc.driver.OracleDriver");
             Connection con = DriverManager.getConnection(url, username, password);
@@ -140,8 +140,17 @@ public class FilterRequestController<bg> extends PendingRequestController{
                 end = endingDate.getValue();
             }
 
-            pst1.setString(3, filterBG.getValue().toString());
-            bg = filterBG.getValue().toString();
+            if(filterBG.getValue()==null)
+            {
+                pst1.setString(3, PendingRequestController.getBg());
+                bg = PendingRequestController.getBg();
+            }
+            else
+            {
+                pst1.setString(3, filterBG.getValue().toString());
+                bg = filterBG.getValue().toString();
+            }
+
 
             if(filterLocation.getValue()==null)
             {

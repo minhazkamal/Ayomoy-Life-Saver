@@ -21,6 +21,16 @@ public class DoneePrevReqController extends LogINpanelController{
     public int count_req;
     public Button []d_button;
     public Button []s_button;
+    public static String bg=null;
+
+    public static String getDoneeBg() {
+        return bg;
+    }
+
+    public static void setDoneeBg(String bg) {
+        DoneePrevReqController.bg = bg;
+    }
+
     @FXML
     private TextField txtUser;
     @FXML
@@ -189,17 +199,30 @@ public class DoneePrevReqController extends LogINpanelController{
 
 
 
-    private void pressSearchButton(ActionEvent even)
-    {
+    private void pressSearchButton(ActionEvent even) throws IOException {
         for(int i=0; i<count_req; i++)
         {
             if(even.getSource() == s_button[i])
             {
-                System.out.print(i+1);
-                System.out.println(" search button is pressed");
-                return;
+//                System.out.print(i+1);
+//                System.out.println(" search button is pressed");
+                bg = oblist.get(i).getBg();
+//                System.out.println(bg);
+//                System.out.println(i);
+//                System.out.println(count_req);
+                break;
             }
         }
+
+        ((Node) even.getSource()).getScene().getWindow().hide();
+
+        Stage primaryStage = new Stage();
+        Parent root;
+        root = FXMLLoader.load(getClass().getResource("SearchDonor-Org.fxml"));
+        primaryStage.setTitle("Ayomoy Life Saver");
+        primaryStage.setScene(new Scene(root, 1000, 600));
+        primaryStage.setResizable(false);
+        primaryStage.show();
     }
 
     public void initialize()
@@ -215,13 +238,19 @@ public class DoneePrevReqController extends LogINpanelController{
             d_button[i].setOnAction(this::pressDeleteButton);
 
             s_button[i] = new Button();
-            s_button[i].setOnAction(this::pressSearchButton);
+            s_button[i].setOnAction(even -> {
+                try {
+                    pressSearchButton(even);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            });
         }
 
         String username = "als";
         String password = "iutcse18";
         String url = "jdbc:oracle:thin:@localhost:1521/XE";
-        String query = "SELECT ROWNUM, ID, PATIENT, LOCATION, BLOOD_GROUP, QUANTITY, APPROX_DATE FROM REQUEST WHERE USERNAME=? ORDER BY APPROX_DATE DESC";
+        String query = "SELECT ROWNUM, ID, PATIENT, LOCATION, BLOOD_GROUP, QUANTITY, APPROX_DATE FROM REQUEST WHERE USERNAME=? ORDER BY APPROX_DATE DESC, ID DESC";
 //        Statement pst = null;
 //        ResultSet rs = null;
         try{
@@ -237,8 +266,8 @@ public class DoneePrevReqController extends LogINpanelController{
 //                String a = rs.getString("NAME");
 //                System.out.println(a);
                 int j = rs.getInt(1);
-                //System.out.println(j);
-                oblist.add(new Request(Integer.toString(count_req-j+1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5), rs.getString(6), rs.getDate(7).toString(), d_button[j-1], s_button[j-1]));
+                //System.out.println(rs.getString(2));
+                oblist.add(new Request(Integer.toString(count_req-j+1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5), rs.getString(6), rs.getDate(7).toString(), d_button[count_req-j], s_button[count_req-j]));
             }
             rs.close();
             con.close();
