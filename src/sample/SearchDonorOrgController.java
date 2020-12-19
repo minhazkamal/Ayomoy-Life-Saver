@@ -151,7 +151,16 @@ public class SearchDonorOrgController extends DonorPanelController {
         }
     }
 
-    public void PressSearchOrg(ActionEvent actionEvent) {
+    public void PressSearchOrg(ActionEvent even) throws IOException{
+        ((Node) even.getSource()).getScene().getWindow().hide();
+
+        Stage primaryStage = new Stage();
+        Parent root;
+        root = FXMLLoader.load(getClass().getResource("SearchOrg.fxml"));
+        primaryStage.setTitle("Ayomoy Life Saver");
+        primaryStage.setScene(new Scene(root, 1000, 600));
+        primaryStage.setResizable(false);
+        primaryStage.show();
     }
 
     public void countDonor(){
