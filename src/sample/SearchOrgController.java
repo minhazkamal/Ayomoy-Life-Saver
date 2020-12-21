@@ -14,10 +14,17 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.sql.*;
+import java.time.LocalDate;
 
 public class SearchOrgController {
 
     public static int count_org;
+    public static String user;
+
+    public static String getUser() {
+        return user;
+    }
+
     ObservableList<Organization> oblist = FXCollections.observableArrayList();
     ObservableList<String> LocList = FXCollections.observableArrayList();
     private Button[] dt_button;
@@ -176,8 +183,7 @@ public class SearchOrgController {
        OrgTable.setItems(oblist);
     }
 
-    private void pressDetailsButton(ActionEvent even) {
-        String user;
+    private void pressDetailsButton(ActionEvent even) throws IOException{
         for(int i=0; i<count_org; i++)
         {
             if(even.getSource() == dt_button[i])
@@ -188,10 +194,82 @@ public class SearchOrgController {
             }
         }
 
+        ((Node) even.getSource()).getScene().getWindow().hide();
+
+        Stage primaryStage = new Stage();
+        Parent root;
+        root = FXMLLoader.load(getClass().getResource("ShowDetailOrgInfo.fxml"));
+        primaryStage.setTitle("Ayomoy Life Saver");
+        primaryStage.setScene(new Scene(root, 1000, 600));
+        primaryStage.setResizable(false);
+        primaryStage.show();
 
     }
 
-    public void pressSearch(ActionEvent even) {
+    public void pressSearch(ActionEvent event) throws IOException{
+        oblist.clear();
+        OrgTable.setItems(oblist);
+
+        String username = "als";
+        String password = "iutcse18";
+        String url = "jdbc:oracle:thin:@localhost:1521/XE";
+        String query = "SELECT ROWNUM, ORG_INFO.* FROM ORG_INFO WHERE LOCATION LIKE ?";
+        try{
+            Class.forName("oracle.jdbc.driver.OracleDriver");
+            Connection con = DriverManager.getConnection(url, username, password);
+            PreparedStatement pst = con.prepareStatement(query);
+            if(loc.getValue()==null) pst.setString(1, "%");
+            else pst.setString(1, loc.getValue().toString());
+
+            dt_button = new Button[count_org];
+
+            for(int i=0; i<count_org; i++)
+            {
+                dt_button[i] = new Button();
+                dt_button[i].setOnAction(even -> {
+                    try {
+                        pressDetailsButton(even);
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                });
+            }
+
+            ResultSet rs = pst.executeQuery();
+
+            while(rs.next())
+            {
+//                System.out.println(1);
+//                String a = rs.getString("NAME");
+//                System.out.println(a);
+                int j = rs.getInt(1);
+                //System.out.println(j);
+                oblist.add(new Organization(rs.getString(2), /*Integer.toString(count_req-j+1)*/Integer.toString(j), rs.getString(3), rs.getString(6), rs.getString(4), rs.getString(9), rs.getString(5), dt_button[j-1]));
+            }
+            rs.close();
+            con.close();
+
+        } catch (Exception e)
+        {
+            System.out.println(e);
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Error Dialog");
+            alert.setHeaderText("Look, an Error Dialog");
+            alert.setContentText(String.valueOf(e));
+            alert.setResizable(false);
+            alert.showAndWait();
+        }
+
+        col_serial.setCellValueFactory(new PropertyValueFactory<>("serial"));
+        col_name.setCellValueFactory(new PropertyValueFactory<>("name"));
+        col_location.setCellValueFactory(new PropertyValueFactory<>("loc"));
+        col_details.setCellValueFactory(new PropertyValueFactory<>("details_button"));
+        col_contact.setCellValueFactory(new PropertyValueFactory<>("contact"));
+        col_cpmobile.setCellValueFactory(new PropertyValueFactory<>("cpmobile"));
+        col_email.setCellValueFactory(new PropertyValueFactory<>("email"));
+
+
+        OrgTable.setItems(oblist);
 
     }
 
