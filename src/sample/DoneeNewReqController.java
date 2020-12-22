@@ -101,16 +101,29 @@ public class DoneeNewReqController {
         String username = "als";
         String password = "iutcse18";
         String url = "jdbc:oracle:thin:@localhost:1521/XE";
-        String query = "SELECT NAME, MOBILE FROM PERSONAL_INFO WHERE USERNAME=?";
+        String type_query = "SELECT USER_TYPE FROM REGISTRATION WHERE USERNAME=?";
+        String query = "";
 
 //        Statement pst = null;
 //        ResultSet rs = null;
         try{
             Class.forName("oracle.jdbc.driver.OracleDriver");
             Connection con = DriverManager.getConnection(url,username,password);
-            PreparedStatement pst = con.prepareStatement(query);
-            pst.setString(1,txtUsername.getText());
+            PreparedStatement pst_type = con.prepareStatement(type_query);
+            pst_type.setString(1,txtUsername.getText());
 
+            ResultSet rs_type = pst_type.executeQuery();
+
+            while(rs_type.next())
+            {
+                if(rs_type.getString(1).equals("Person")) query = "SELECT NAME, MOBILE FROM PERSONAL_INFO WHERE USERNAME=?";
+                else if(rs_type.getString(1).equals("Organization")) query = "SELECT NAME, CONTACT FROM ORG_INFO WHERE USERNAME=?";
+            }
+
+            rs_type.close();
+
+            PreparedStatement pst = con.prepareStatement(query);
+            pst.setString(1, txtUsername.getText());
             ResultSet rs = pst.executeQuery();
 
             while(rs.next())

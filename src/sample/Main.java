@@ -39,7 +39,7 @@ public class Main extends Application {
 //
 //            // the path of your tess data folder
 //            // inside the extracted file
-//            text = tesseract.doOCR(new File("C:\\Users\\minha\\Desktop\\Blood-report-of-patient-showing-Protein-S-deficiency.png"));
+//            text = tesseract.doOCR(new File("C:\\Users\\minha\\Desktop\\Screenshot 2020-12-21 131553.png"));
 //
 //            // path of your image file
 //            System.out.print(text);

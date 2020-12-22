@@ -129,7 +129,7 @@ public class UpdateDonationInfoController extends DonationInfoController{
     {
         boolean alertCheck = false;
 
-        if(p_mobile.getText().isBlank()==false && (p_mobile.getText().length()<11||p_mobile.getText().length()>11))
+        if(p_mobile.getText()!=null && (p_mobile.getText().length()<11||p_mobile.getText().length()>11))
         {
             alertCheck = true;
             Alert alert = new Alert(Alert.AlertType.ERROR);
