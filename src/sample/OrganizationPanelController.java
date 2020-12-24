@@ -110,7 +110,15 @@ public class OrganizationPanelController extends LogINpanelController {
         primaryStage.show();
     }
 
-    public void PressAsDonor(ActionEvent actionEvent) {
+    public void PressAsDonor(ActionEvent even) throws IOException {
+        ((Node) even.getSource()).getScene().getWindow().hide();
+
+        Stage primaryStage = new Stage();
+        Parent root = FXMLLoader.load(getClass().getResource("DonorPanel.fxml"));
+        primaryStage.setTitle("Ayomoy Life Saver");
+        primaryStage.setScene(new Scene(root, 1000, 600));
+        primaryStage.setResizable(false);
+        primaryStage.show();
     }
 
     public void PressAsDonee(ActionEvent even) throws IOException {

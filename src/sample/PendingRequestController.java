@@ -102,6 +102,7 @@ public class PendingRequestController extends DonorPanelController {
             con.close();
         }
         catch(Exception e){
+            System.out.println(1);
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Error Dialog");
             alert.setHeaderText("Look, an Error Dialog");
@@ -247,14 +248,23 @@ public class PendingRequestController extends DonorPanelController {
             String username = "als";
             String password = "iutcse18";
             String url = "jdbc:oracle:thin:@localhost:1521/XE";
-            String query = "SELECT ROWNUM, ID, PATIENT, BLOOD_GROUP, LOCATION, APPROX_DATE, EM_MOBILE FROM REQUEST WHERE BLOOD_GROUP=? ORDER BY APPROX_DATE DESC";
+            String query;
+            if(LogINpanelController.getType().equals("Organization"))
+                query = "SELECT ROWNUM, ID, PATIENT, BLOOD_GROUP, LOCATION, APPROX_DATE, EM_MOBILE FROM REQUEST WHERE BLOOD_GROUP LIKE ? AND APPROX_DATE>=? ORDER BY APPROX_DATE DESC";
+            else
+                query = "SELECT ROWNUM, ID, PATIENT, BLOOD_GROUP, LOCATION, APPROX_DATE, EM_MOBILE FROM REQUEST WHERE BLOOD_GROUP=? AND APPROX_DATE>=? ORDER BY APPROX_DATE DESC";
 //        Statement pst = null;
 //        ResultSet rs = null;
             try{
                 Class.forName("oracle.jdbc.driver.OracleDriver");
                 Connection con = DriverManager.getConnection(url, username, password);
                 PreparedStatement pst = con.prepareStatement(query);
-                pst.setString(1, bg);
+                if(LogINpanelController.getType().equals("Organization")==false)
+                    pst.setString(1, bg);
+                else
+                    pst.setString(1, "%");
+
+                pst.setDate(2, Date.valueOf(LocalDate.now()));
                 ResultSet rs = pst.executeQuery();
 
                 dt_button = new Button[count_req];
@@ -303,9 +313,7 @@ public class PendingRequestController extends DonorPanelController {
             col_details.setCellValueFactory(new PropertyValueFactory<>("details_button"));
             col_contact.setCellValueFactory(new PropertyValueFactory<>("contact"));
 
-
             RequestTable.setItems(oblist);
-
     }
 
 }

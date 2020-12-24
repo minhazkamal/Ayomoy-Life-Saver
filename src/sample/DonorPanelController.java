@@ -19,6 +19,12 @@ import java.sql.ResultSet;
 public class DonorPanelController extends LogINpanelController{
 
     @FXML
+    private Label elg_st;
+    @FXML
+    private Label act_st;
+    @FXML
+    private Label pay_st;
+    @FXML
     private Label paying;
     @FXML
     private Label eligibility;
@@ -27,6 +33,12 @@ public class DonorPanelController extends LogINpanelController{
 
     public void initialize()
     {
+        if(LogINpanelController.getType().equals("Organization"))
+        {
+            pay_st.setVisible(false);
+            act_st.setVisible(false);
+            elg_st.setVisible(false);
+        }
         String username = "als";
         String password = "iutcse18";
         String url = "jdbc:oracle:thin:@localhost:1521/XE";
@@ -107,13 +119,28 @@ public class DonorPanelController extends LogINpanelController{
     }
 
     public void pressBack(ActionEvent even) throws IOException {
-        ((Node) even.getSource()).getScene().getWindow().hide();
+        if(LogINpanelController.getType().equals("Organization"))
+        {
+            ((Node) even.getSource()).getScene().getWindow().hide();
 
-        Stage primaryStage = new Stage();
-        Parent root = FXMLLoader.load(getClass().getResource("UserPanel.fxml"));
-        primaryStage.setTitle("Ayomoy Life Saver");
-        primaryStage.setScene(new Scene(root, 1000, 600));
-        primaryStage.setResizable(false);
-        primaryStage.show();
+            Stage primaryStage = new Stage();
+            Parent root = FXMLLoader.load(getClass().getResource("OrganizationPanel.fxml"));
+            primaryStage.setTitle("Ayomoy Life Saver");
+            primaryStage.setScene(new Scene(root, 1000, 600));
+            primaryStage.setResizable(false);
+            primaryStage.show();
+        }
+        else
+        {
+            ((Node) even.getSource()).getScene().getWindow().hide();
+
+            Stage primaryStage = new Stage();
+            Parent root = FXMLLoader.load(getClass().getResource("UserPanel.fxml"));
+            primaryStage.setTitle("Ayomoy Life Saver");
+            primaryStage.setScene(new Scene(root, 1000, 600));
+            primaryStage.setResizable(false);
+            primaryStage.show();
+        }
+
     }
 }

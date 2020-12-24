@@ -19,7 +19,11 @@ import java.sql.ResultSet;
 
 public class LogINpanelController {
     public static String user;
-    public String type;
+    public static String type;
+
+    public static String getType() {
+        return type;
+    }
 
     public static String getUser() {
         return user;
