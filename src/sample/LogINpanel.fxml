@@ -47,7 +47,7 @@
             <Font name="Cambria Bold" size="24.0" />
          </font>
       </Label>
-      <TextField fx:id="txtUsername" layoutX="234.0" layoutY="223.0" promptText="Enter username" text="minhaz9900" />
+      <TextField fx:id="txtUsername" layoutX="234.0" layoutY="223.0" promptText="Enter username" text="bborg" />
       <PasswordField fx:id="txtPassword" layoutX="234.0" layoutY="276.0" promptText="Enter Password" text="140207" />
       <Button fx:id="LogINButton" layoutX="308.0" layoutY="362.0" mnemonicParsing="false" onAction="#pressLogIN" prefHeight="42.0" prefWidth="82.0" text="Log IN" textFill="#c70000">
          <font>
