@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.OrgLicInfoController">
+    <children>
+        <ImageView fitHeight="600.0" fitWidth="1000.0" pickOnBounds="true">
+            <image>
+                <Image url="@images/Presentation1_Proposal.jpg" />
+            </image>
+        </ImageView>
+        <Button fx:id="back_button" layoutX="27.0" layoutY="25.0" mnemonicParsing="false" onAction="#pressBack" prefHeight="42.0" prefWidth="69.0" text="Back" textFill="#c70000">
+            <font>
+                <Font name="Cambria Bold" size="18.0" />
+            </font>
+        </Button>
+        <Label fx:id="title_label" layoutX="318.0" layoutY="5.0" prefHeight="82.0" prefWidth="438.0" text="Organization Info" textAlignment="JUSTIFY" textFill="#c70000">
+            <font>
+                <Font name="Cambria Bold" size="54.0" />
+            </font>
+        </Label>
+        <Label layoutX="290.0" layoutY="169.0" prefHeight="22.0" prefWidth="96.0" text="License" textFill="#c70000">
+            <font>
+                <Font name="Cambria Bold" size="24.0" />
+            </font>
+        </Label>
+        <TextField fx:id="lic" editable="false" layoutX="428.0" layoutY="168.0" />
+        <Button layoutX="599.0" layoutY="168.0" mnemonicParsing="false" onAction="#pressBrowse" prefHeight="26.0" prefWidth="70.0" text="Browse">
+            <font>
+                <Font name="Cambria Bold" size="14.0" />
+            </font>
+        </Button>
+        <Label layoutX="97.0" layoutY="396.0" text="License Status" textFill="#c70000">
+            <font>
+                <Font name="Cambria Bold" size="18.0" />
+            </font>
+        </Label>
+        <Label fx:id="lic_status" layoutX="275.0" layoutY="399.0" prefHeight="22.0" prefWidth="112.0">
+            <font>
+                <Font name="Cambria" size="18.0" />
+            </font>
+        </Label>
+        <Label layoutX="97.0" layoutY="427.0" text="License Approval" textFill="#c70000">
+            <font>
+                <Font name="Cambria Bold" size="18.0" />
+            </font>
+        </Label>
+        <Label fx:id="lic_approval" layoutX="294.0" layoutY="427.0" prefHeight="22.0" prefWidth="112.0">
+            <font>
+                <Font name="Cambria" size="18.0" />
+            </font>
+        </Label>
+        <Label layoutX="97.0" layoutY="453.0" text="Checked By" textFill="#c70000">
+            <font>
+                <Font name="Cambria Bold" size="18.0" />
+            </font>
+        </Label>
+        <Label fx:id="checked_by" layoutX="234.0" layoutY="453.0" prefHeight="22.0" prefWidth="112.0">
+            <font>
+                <Font name="Cambria" size="18.0" />
+            </font>
+        </Label>
+        <Line endX="697.0000610351562" layoutX="195.0" layoutY="382.0" startX="-100.0" stroke="#c70000" />
+        <Label layoutX="97.0" layoutY="347.0" text="Filled By Admin" textFill="#c70000">
+            <font>
+                <Font name="Cambria Bold Italic" size="24.0" />
+            </font>
+        </Label>
+        <Button fx:id="save_button" layoutX="467.0" layoutY="283.0" mnemonicParsing="false" onAction="#pressSave" prefHeight="34.0" prefWidth="70.0" text="Save" textFill="#c70000">
+            <font>
+                <Font name="Cambria Bold" size="18.0" />
+            </font>
+        </Button>
+        <Label layoutX="97.0" layoutY="481.0" text="Comments" textFill="#c70000">
+            <font>
+                <Font name="Cambria Bold" size="18.0" />
+            </font>
+        </Label>
+        <TextArea fx:id="comments" editable="false" layoutX="209.0" layoutY="486.0" prefHeight="95.0" prefWidth="690.0" />
+        <Label layoutX="532.0" layoutY="397.0" text="Date of Checking" textFill="#c70000">
+            <font>
+                <Font name="Cambria Bold" size="18.0" />
+            </font>
+        </Label>
+        <Label fx:id="checkingDate" layoutX="684.0" layoutY="400.0" prefHeight="22.0" prefWidth="169.0">
+            <font>
+                <Font name="Cambria" size="18.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>
