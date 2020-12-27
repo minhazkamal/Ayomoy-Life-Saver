@@ -180,11 +180,14 @@ public class OrganizationInfoController extends RegisterController {
             String password = "iutcse18";
             String url = "jdbc:oracle:thin:@localhost:1521/XE";
             String query = "INSERT INTO ORG_INFO VALUES(?,?,?,?,?,?,?,?,?)";
+            String query1 = "INSERT INTO ORG_LIC_INFO (USERNAME) VALUES (?)";
 
             try{
                 Class.forName("oracle.jdbc.driver.OracleDriver");
                 Connection con = DriverManager.getConnection(url,username,password);
                 PreparedStatement pst = con.prepareStatement(query);
+                PreparedStatement pst1 = con.prepareStatement(query1);
+
                 pst.setString(1, txtUsername.getText());
                 pst.setString(2, OrgName.getText());
                 pst.setString(3, ContactNo.getText());
@@ -196,6 +199,10 @@ public class OrganizationInfoController extends RegisterController {
                 pst.setString(9, description.getText());
 
                 pst.executeUpdate();
+
+                pst1.setString(1, txtUsername.getText());
+
+                pst1.executeUpdate();
 
                 con.close();
 

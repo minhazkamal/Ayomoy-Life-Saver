@@ -134,14 +134,28 @@ public class PendingRequestController extends DonorPanelController {
     }
 
     public void pressBack(ActionEvent even) throws IOException {
-        ((Node) even.getSource()).getScene().getWindow().hide();
+        if(LogINpanelController.getType().equals("Person"))
+        {
+            ((Node) even.getSource()).getScene().getWindow().hide();
 
-        Stage primaryStage = new Stage();
-        Parent root = FXMLLoader.load(getClass().getResource("DonorPanel.fxml"));
-        primaryStage.setTitle("Ayomoy Life Saver");
-        primaryStage.setScene(new Scene(root, 1000, 600));
-        primaryStage.setResizable(false);
-        primaryStage.show();
+            Stage primaryStage = new Stage();
+            Parent root = FXMLLoader.load(getClass().getResource("DonorPanel.fxml"));
+            primaryStage.setTitle("Ayomoy Life Saver");
+            primaryStage.setScene(new Scene(root, 1000, 600));
+            primaryStage.setResizable(false);
+            primaryStage.show();
+        }
+        else if(LogINpanelController.getType().equals("Organization"))
+        {
+            ((Node) even.getSource()).getScene().getWindow().hide();
+
+            Stage primaryStage = new Stage();
+            Parent root = FXMLLoader.load(getClass().getResource("OrganizationDonorPanel.fxml"));
+            primaryStage.setTitle("Ayomoy Life Saver");
+            primaryStage.setScene(new Scene(root, 1000, 600));
+            primaryStage.setResizable(false);
+            primaryStage.show();
+        }
     }
 
     public void pressReset(ActionEvent even) throws IOException{

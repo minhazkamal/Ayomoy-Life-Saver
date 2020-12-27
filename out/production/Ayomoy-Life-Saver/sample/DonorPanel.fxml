@@ -58,12 +58,12 @@
                 <Font size="1.0" />
             </font>
         </Button>
-      <Label layoutX="62.0" layoutY="156.0" text="Eligibility Status">
+      <Label fx:id="elg_st" layoutX="62.0" layoutY="156.0" text="Eligibility Status">
          <font>
             <Font name="Cambria Bold" size="25.0" />
          </font>
       </Label>
-      <Label layoutX="762.0" layoutY="156.0" text="Active Status">
+      <Label fx:id="act_st" layoutX="762.0" layoutY="156.0" text="Active Status">
          <font>
             <Font name="Cambria Bold" size="25.0" />
          </font>
@@ -78,7 +78,7 @@
             <Font name="Cambria Bold Italic" size="20.0" />
          </font>
       </Label>
-      <Label layoutX="79.0" layoutY="284.0" text="Paying Status">
+      <Label fx:id="pay_st" layoutX="79.0" layoutY="284.0" text="Paying Status">
          <font>
             <Font name="Cambria Bold" size="25.0" />
          </font>

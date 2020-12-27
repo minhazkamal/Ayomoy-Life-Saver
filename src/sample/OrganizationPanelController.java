@@ -114,7 +114,7 @@ public class OrganizationPanelController extends LogINpanelController {
         ((Node) even.getSource()).getScene().getWindow().hide();
 
         Stage primaryStage = new Stage();
-        Parent root = FXMLLoader.load(getClass().getResource("DonorPanel.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("OrganizationDonorPanel.fxml"));
         primaryStage.setTitle("Ayomoy Life Saver");
         primaryStage.setScene(new Scene(root, 1000, 600));
         primaryStage.setResizable(false);
