@@ -17,12 +17,12 @@
                 <Image url="@images/Presentation1_Proposal.jpg" />
             </image>
         </ImageView>
-        <Button fx:id="back_button" layoutX="27.0" layoutY="25.0" mnemonicParsing="false" onAction="#pressBack" prefHeight="42.0" prefWidth="69.0" text="Back" textFill="#c70000">
+        <Button fx:id="back_button" layoutX="14.0" layoutY="25.0" mnemonicParsing="false" onAction="#pressBack" prefHeight="42.0" prefWidth="90.0" text="Log Out" textFill="#c70000">
             <font>
                 <Font name="Cambria Bold" size="18.0" />
             </font>
         </Button>
-        <Label fx:id="title_label" layoutX="298.0" layoutY="14.0" prefHeight="82.0" prefWidth="510.0" text="Organization PANEL" textAlignment="JUSTIFY" textFill="#c70000">
+        <Label fx:id="title_label" layoutX="252.0" layoutY="14.0" prefHeight="82.0" prefWidth="510.0" text="Organization PANEL" textAlignment="JUSTIFY" textFill="#c70000">
             <font>
                 <Font name="Cambria Bold" size="54.0" />
             </font>
