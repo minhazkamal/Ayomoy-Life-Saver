@@ -17,16 +17,16 @@
                 <Image url="@images/Presentation1_Proposal.jpg" />
             </image>
         </ImageView>
-        <TableView fx:id="RequestTable" layoutX="18.0" layoutY="123.0" prefHeight="458.0" prefWidth="918.0">
+        <TableView fx:id="DonorApprovalTable" editable="true" layoutX="15.0" layoutY="127.0" prefHeight="458.0" prefWidth="918.0">
             <columns>
                 <TableColumn fx:id="col_serial" prefWidth="59.19997787475586" resizable="false" text="Serial" />
-                <TableColumn fx:id="col_name" prefWidth="164.80003356933594" resizable="false" text="Person Username" />
+                <TableColumn fx:id="col_username" prefWidth="164.80003356933594" resizable="false" text="Person Username" />
                 <TableColumn fx:id="col_date" prefWidth="161.5999755859375" resizable="false" text="Date of Submission" />
-                <TableColumn fx:id="col_BG" prefWidth="94.4000244140625" resizable="false" text="Status" />
-                <TableColumn fx:id="col_location" prefWidth="101.5999755859375" resizable="false" text="Approval" />
-                <TableColumn fx:id="col_contact" prefWidth="218.4000244140625" resizable="false" text="Comment" />
-                <TableColumn fx:id="col_details" prefWidth="62.4000244140625" resizable="false" text="Reports" />
-            <TableColumn fx:id="col_details1" minWidth="7.199951171875" prefWidth="56.0" resizable="false" text="Update" />
+                <TableColumn fx:id="col_stat" prefWidth="94.4000244140625" resizable="false" text="Status" />
+                <TableColumn fx:id="col_approval" prefWidth="101.5999755859375" resizable="false" text="Approval" />
+                <TableColumn fx:id="col_comment" prefWidth="171.20001220703125" resizable="false" text="Comment" />
+                <TableColumn fx:id="col_report" prefWidth="72.0" resizable="false" text="Reports" />
+            <TableColumn fx:id="col_update" minWidth="7.199951171875" prefWidth="90.39990234375" resizable="false" text="Update" />
             </columns>
         </TableView>
         <Button fx:id="back_button" layoutX="27.0" layoutY="25.0" mnemonicParsing="false" onAction="#pressBack" prefHeight="42.0" prefWidth="69.0" text="Back" textFill="#c70000">
@@ -45,7 +45,7 @@
             </font>
         </Label>
         <TextField fx:id="txtUser" editable="false" layoutX="326.0" layoutY="80.0" />
-        <Button fx:id="resetButton" layoutX="758.0" layoutY="72.0" mnemonicParsing="false" onAction="#pressReset" prefHeight="42.0" prefWidth="95.0" text="Refresh" textFill="#c70000">
+        <Button fx:id="refreshButton" layoutX="758.0" layoutY="72.0" mnemonicParsing="false" onAction="#pressRefresh" prefHeight="42.0" prefWidth="95.0" text="Refresh" textFill="#c70000">
             <font>
                 <Font name="Cambria Bold" size="18.0" />
             </font>

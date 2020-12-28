@@ -148,6 +148,7 @@ public class DonorInfoController extends LogINpanelController{
         String url = "jdbc:oracle:thin:@localhost:1521/XE";
         String query = "UPDATE DONOR_INFO SET ACTIVENESS=?, PAYABLE=? WHERE USERNAME=?";
         String query1 = "UPDATE TEST_REPORTS SET REPORT=?,REPORT_NAME=?,DOS=? WHERE USERNAME=?";
+        String query2 = "EXECUTE UPDATETESTREPORTS(?)";
 
 //        Statement pst = null;
 //        ResultSet rs = null;
@@ -179,6 +180,12 @@ public class DonorInfoController extends LogINpanelController{
                 pst1.executeUpdate();
                 pst1.close();
             }
+
+            PreparedStatement pst2 = con.prepareStatement(query2);
+            pst2.setString(1, LogINpanelController.getUser());
+            pst2.execute();
+
+            pst2.close();
 
             con.close();
 
