@@ -24,7 +24,7 @@
                 <TableColumn fx:id="col_date" prefWidth="161.5999755859375" resizable="false" text="Date of Submission" />
                 <TableColumn fx:id="col_stat" prefWidth="94.4000244140625" resizable="false" text="Status" />
                 <TableColumn fx:id="col_approval" prefWidth="101.5999755859375" resizable="false" text="Approval" />
-                <TableColumn fx:id="col_comment" prefWidth="171.20001220703125" resizable="false" text="Comment" />
+                <TableColumn fx:id="col_comment" onEditCommit="#pressComment" prefWidth="171.20001220703125" resizable="false" text="Comment" />
                 <TableColumn fx:id="col_report" prefWidth="72.0" resizable="false" text="Reports" />
             <TableColumn fx:id="col_update" minWidth="7.199951171875" prefWidth="90.39990234375" resizable="false" text="Update" />
             </columns>
