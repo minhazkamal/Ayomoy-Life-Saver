@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.ImageView?>
+
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="642.0" prefWidth="687.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1" fx:controller="sample.ImageShowController">
+   <content>
+      <ImageView fx:id="imageView" fitHeight="640.0" fitWidth="685.0" pickOnBounds="true" preserveRatio="true" />
+   </content>
+</ScrollPane>
