@@ -82,7 +82,7 @@ public class DonorApprovalListController extends LogINpanelController{
             alert.setResizable(false);
             alert.showAndWait();
         }
-        if(c.isBlank())
+        if(c==null)
         {
             alert_check = true;
             Alert alert = new Alert(Alert.AlertType.ERROR);
@@ -144,7 +144,7 @@ public class DonorApprovalListController extends LogINpanelController{
 
                 if(updateCheck(oblist.get(serial).getStatus_choice().getValue().toString(), oblist.get(serial).getApproval_choice().getValue().toString()))
                 {
-                    System.out.println("Yahooo");
+                    //System.out.println("Yahooo");
                     PreparedStatement pst1 = con.prepareStatement(update_query);
                     pst1.setString(1, user);
 

@@ -188,7 +188,7 @@ public class PendingRequestController extends DonorPanelController {
             String username = "als";
             String password = "iutcse18";
             String url = "jdbc:oracle:thin:@localhost:1521/XE";
-            String query = "SELECT ROWNUM, ID, PATIENT, BLOOD_GROUP, LOCATION, APPROX_DATE, EM_MOBILE FROM REQUEST WHERE APPROX_DATE>=? AND APPROX_DATE<=? AND BLOOD_GROUP=? AND LOCATION LIKE ? ORDER BY APPROX_DATE DESC";
+            String query = "SELECT ROWNUM, ID, PATIENT, BLOOD_GROUP, LOCATION, APPROX_DATE, EM_MOBILE FROM REQUEST WHERE APPROX_DATE>=? AND APPROX_DATE<=? AND BLOOD_GROUP LIKE ? AND LOCATION LIKE ? ORDER BY APPROX_DATE ASC";
 //        Statement pst = null;
 //        ResultSet rs = null;
             try{
@@ -225,7 +225,7 @@ public class PendingRequestController extends DonorPanelController {
 //                System.out.println(a);
                     int j = rs.getInt(1);
                     //System.out.println(j);
-                    oblist.add(new Request(Integer.toString(count_req-j+1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5), rs.getDate(6).toString(), rs.getString(7), dt_button[count_req-j]));
+                    oblist.add(new Request(Integer.toString(j), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5), rs.getDate(6).toString(), rs.getString(7), dt_button[j-1]));
                 }
                 rs.close();
                 con.close();
@@ -264,9 +264,9 @@ public class PendingRequestController extends DonorPanelController {
             String url = "jdbc:oracle:thin:@localhost:1521/XE";
             String query;
             if(LogINpanelController.getType().equals("Organization"))
-                query = "SELECT ROWNUM, ID, PATIENT, BLOOD_GROUP, LOCATION, APPROX_DATE, EM_MOBILE FROM REQUEST WHERE BLOOD_GROUP LIKE ? AND APPROX_DATE>=? ORDER BY APPROX_DATE DESC";
+                query = "SELECT ROWNUM, ID, PATIENT, BLOOD_GROUP, LOCATION, APPROX_DATE, EM_MOBILE FROM REQUEST WHERE BLOOD_GROUP LIKE ? AND APPROX_DATE>=? ORDER BY APPROX_DATE ASC";
             else
-                query = "SELECT ROWNUM, ID, PATIENT, BLOOD_GROUP, LOCATION, APPROX_DATE, EM_MOBILE FROM REQUEST WHERE BLOOD_GROUP=? AND APPROX_DATE>=? ORDER BY APPROX_DATE DESC";
+                query = "SELECT ROWNUM, ID, PATIENT, BLOOD_GROUP, LOCATION, APPROX_DATE, EM_MOBILE FROM REQUEST WHERE BLOOD_GROUP=? AND APPROX_DATE>=? ORDER BY APPROX_DATE ASC";
 //        Statement pst = null;
 //        ResultSet rs = null;
             try{
@@ -302,7 +302,8 @@ public class PendingRequestController extends DonorPanelController {
 //                System.out.println(a);
                     int j = rs.getInt(1);
                     //System.out.println(j);
-                    oblist.add(new Request(Integer.toString(count_req-j+1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5), rs.getDate(6).toString(), rs.getString(7), dt_button[count_req-j]));
+                    //System.out.println(count_req-j+1);
+                    oblist.add(new Request(Integer.toString(j), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5), rs.getDate(6).toString(), rs.getString(7), dt_button[j-1]));
                 }
                 rs.close();
                 con.close();

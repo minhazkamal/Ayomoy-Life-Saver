@@ -27,21 +27,35 @@ public class ImageShowController {
         String password = "iutcse18";
         String url = "jdbc:oracle:thin:@localhost:1521/XE";
         String query = "SELECT * FROM TEST_REPORTS WHERE USERNAME=?";
+        String query1 = "SELECT * FROM ORG_LIC_INFO WHERE USERNAME=?";
 //        Statement pst = null;
 //        ResultSet rs = null;
         try{
             Class.forName("oracle.jdbc.driver.OracleDriver");
             Connection con = DriverManager.getConnection(url, username, password);
             PreparedStatement pst = con.prepareStatement(query);
+            PreparedStatement pst1 = con.prepareStatement(query1);
+
             pst.setString(1, DonorApprovalListController.getUser_img());
-            ResultSet rs = pst.executeQuery();
+            pst1.setString(1, OrgApprovalListController.getUser_img());
+
+            ResultSet rs = null;
+
+            if(OrgApprovalListController.getUser_type()==null) rs = pst.executeQuery();
+            else
+            {
+                rs = pst1.executeQuery();
+            }
+
 
             while(rs.next())
             {
 //                System.out.println(1);
 //                String a = rs.getString("NAME");
 //                System.out.println(a);
-                InputStream is = rs.getBinaryStream(2);
+                InputStream is;
+                if(OrgApprovalListController.getUser_type()==null) is = rs.getBinaryStream(2);
+                else is = rs.getBinaryStream(3);
                 Image image = new Image(is);
                 imageView.setImage(image);
                 imageView.setPreserveRatio(true);
@@ -73,6 +87,7 @@ public class ImageShowController {
 //                imageView.setPreserveRatio(true);
 
             }
+            OrgApprovalListController.setUser_type(null);
             rs.close();
             con.close();
 

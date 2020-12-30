@@ -142,8 +142,9 @@ public class FilterRequestController<bg> extends PendingRequestController{
 
             if(filterBG.getValue()==null)
             {
-                pst1.setString(3, PendingRequestController.getBg());
-                bg = PendingRequestController.getBg();
+                pst1.setString(3, "%");
+                //bg = PendingRequestController.getBg();
+                bg = "%";
             }
             else
             {

@@ -123,7 +123,7 @@ public class SearchOrgController {
         String username = "als";
         String password = "iutcse18";
         String url = "jdbc:oracle:thin:@localhost:1521/XE";
-        String query = "SELECT ROWNUM, ORG_INFO.* FROM ORG_INFO";
+        String query = "SELECT ROWNUM, ORG_INFO.*, ELIGIBILITY FROM ORG_INFO, ORG_LIC_INFO WHERE ORG_INFO.USERNAME=ORG_LIC_INFO.USERNAME AND ELIGIBILITY='Eligible'";
 //        Statement pst = null;
 //        ResultSet rs = null;
         try{
@@ -213,7 +213,7 @@ public class SearchOrgController {
         String username = "als";
         String password = "iutcse18";
         String url = "jdbc:oracle:thin:@localhost:1521/XE";
-        String query = "SELECT ROWNUM, ORG_INFO.* FROM ORG_INFO WHERE LOCATION LIKE ?";
+        String query = "SELECT ROWNUM, ORG_INFO.*, ELIGIBILITY FROM ORG_INFO, ORG_LIC_INFO WHERE ORG_INFO.USERNAME=ORG_LIC_INFO.USERNAME AND ELIGIBILITY='Eligible' AND LOCATION LIKE ?";
         try{
             Class.forName("oracle.jdbc.driver.OracleDriver");
             Connection con = DriverManager.getConnection(url, username, password);
