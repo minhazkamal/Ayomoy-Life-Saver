@@ -39,6 +39,8 @@ public class OrganizationPanelController extends LogINpanelController {
     private Label showCPmobile;
     @FXML
     private TextArea description;
+    @FXML
+    private Label eligibility;
 
     public void initialize()
     {
@@ -46,6 +48,7 @@ public class OrganizationPanelController extends LogINpanelController {
         String password = "iutcse18";
         String url = "jdbc:oracle:thin:@localhost:1521/XE";
         String query = "SELECT * FROM ORG_INFO WHERE USERNAME=?";
+        String query1 = "SELECT USERNAME,ELIGIBILITY FROM ORG_LIC_INFO WHERE USERNAME=?";
 
         try{
             Class.forName("oracle.jdbc.driver.OracleDriver");
@@ -68,9 +71,26 @@ public class OrganizationPanelController extends LogINpanelController {
                     showCP.setText(rs.getString(7));
                     showCPmobile.setText(rs.getString(8));
                     description.setText(rs.getString(9));
-                    rs.close();
-                    con.close();
-                    return;
+
+                    PreparedStatement pst1 = con.prepareStatement(query1);
+                    pst1.setString(1, LogINpanelController.getUser());
+                    //System.out.println(LogINpanelController.getUser());
+
+                    ResultSet rs1 = pst1.executeQuery();
+
+//            eligibility.setText(rs.getString(2));
+//            System.out.println(rs.getString(2));
+//            activeness.setText(rs.getString(3));
+//            System.out.println(rs.getString(3));
+
+                    while(rs1.next())
+                    {
+                        eligibility.setText(rs1.getString(2));
+                        //System.out.println(rs.getString(2));
+                    }
+
+                    pst1.close();
+                    rs1.close();
                 }
             }
             rs.close();

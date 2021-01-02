@@ -38,6 +38,12 @@
                 <Font name="Cambria Bold" size="54.0" />
             </font>
         </Label>
+      <Label layoutX="861.0" layoutY="247.0" text="Location" textFill="#c70000">
+         <font>
+            <Font name="Cambria Bold" size="22.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="loc" layoutX="823.0" layoutY="300.0" prefWidth="150.0" />
         <Button fx:id="resetButton" layoutX="828.0" layoutY="388.0" mnemonicParsing="false" onAction="#pressReset" prefHeight="33.0" prefWidth="70.0" text="Reset" textFill="#c70000">
             <font>
                 <Font name="Cambria Bold" size="18.0" />
@@ -48,12 +54,6 @@
                 <Font name="Cambria Bold" size="18.0" />
             </font>
         </Button>
-      <Label layoutX="861.0" layoutY="247.0" text="Location" textFill="#c70000">
-         <font>
-            <Font name="Cambria Bold" size="22.0" />
-         </font>
-      </Label>
-      <ChoiceBox fx:id="loc" layoutX="823.0" layoutY="300.0" prefWidth="150.0" />
     </children>
 
 </AnchorPane>

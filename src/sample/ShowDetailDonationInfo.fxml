@@ -27,44 +27,34 @@
                 <Font name="Cambria Bold" size="42.0" />
             </font>
         </Label>
-        <Label layoutX="591.0" layoutY="174.0" prefHeight="23.0" prefWidth="160.0" text="Patient Mobile No." textFill="#c70000">
-            <font>
-                <Font name="Cambria Bold" size="19.0" />
-            </font></Label>
-        <Label layoutX="88.0" layoutY="174.0" prefHeight="23.0" prefWidth="125.0" text="Patient Name" textFill="#c70000">
-            <font>
-                <Font name="Cambria Bold" size="19.0" />
-            </font></Label>
-        <TextField fx:id="p_mobile" editable="false" layoutX="760.0" layoutY="173.0" />
-        <TextField fx:id="p_name" editable="false" layoutX="257.0" layoutY="173.0" prefHeight="26.0" prefWidth="238.0" />
-        <Label layoutX="88.0" layoutY="232.0" text="Location" textFill="#c70000">
-            <font>
-                <Font name="Cambria Bold" size="19.0" />
-            </font>
-        </Label>
-        <Label layoutX="591.0" layoutY="229.0" text="Complications" textFill="#c70000">
-            <font>
-                <Font name="Cambria Bold" size="19.0" />
-            </font>
-        </Label>
-        <TextField fx:id="complications" editable="false" layoutX="760.0" layoutY="228.0" />
-        <DatePicker fx:id="d_date" editable="false" layoutX="256.0" layoutY="363.0" prefHeight="26.0" prefWidth="238.0" />
-        <Label layoutX="84.0" layoutY="367.0" text="Donation Date" textFill="#c70000">
-            <font>
-                <Font name="Cambria Bold" size="19.0" />
-            </font>
-        </Label>
-        <Button fx:id="update" layoutX="632.0" layoutY="436.0" mnemonicParsing="false" onAction="#pressUpdateDonation" text="Click to Update" textFill="#c70000">
-            <font>
-                <Font name="Cambria Bold" size="18.0" />
-            </font>
-        </Button>
         <Label layoutX="88.0" layoutY="129.0" prefHeight="23.0" prefWidth="97.0" text="Username" textFill="#c70000">
             <font>
                 <Font name="Cambria Bold" size="19.0" />
             </font>
         </Label>
         <TextField fx:id="txtUser" editable="false" layoutX="257.0" layoutY="128.0" prefHeight="26.0" prefWidth="238.0" />
+        <Label layoutX="88.0" layoutY="174.0" prefHeight="23.0" prefWidth="125.0" text="Patient Name" textFill="#c70000">
+            <font>
+                <Font name="Cambria Bold" size="19.0" />
+            </font></Label>
+        <TextField fx:id="p_name" editable="false" layoutX="257.0" layoutY="173.0" prefHeight="26.0" prefWidth="238.0" />
+        <Label layoutX="591.0" layoutY="174.0" prefHeight="23.0" prefWidth="160.0" text="Patient Mobile No." textFill="#c70000">
+            <font>
+                <Font name="Cambria Bold" size="19.0" />
+            </font></Label>
+        <TextField fx:id="p_mobile" editable="false" layoutX="760.0" layoutY="173.0" />
+        <Label layoutX="88.0" layoutY="232.0" text="Location" textFill="#c70000">
+            <font>
+                <Font name="Cambria Bold" size="19.0" />
+            </font>
+        </Label>
+      <TextField fx:id="showLocation" editable="false" layoutX="257.0" layoutY="230.0" prefHeight="26.0" prefWidth="238.0" />
+        <Label layoutX="591.0" layoutY="229.0" text="Complications" textFill="#c70000">
+            <font>
+                <Font name="Cambria Bold" size="19.0" />
+            </font>
+        </Label>
+        <TextField fx:id="complications" editable="false" layoutX="760.0" layoutY="228.0" />
         <Label layoutX="88.0" layoutY="276.0" text="Organization" textFill="#c70000">
             <font>
                 <Font name="Cambria Bold" size="19.0" />
@@ -76,8 +66,18 @@
                 <Font name="Cambria Bold" size="19.0" />
             </font>
         </Label>
-      <TextField fx:id="showLocation" editable="false" layoutX="257.0" layoutY="230.0" prefHeight="26.0" prefWidth="238.0" />
       <TextField fx:id="showGender" editable="false" layoutX="760.0" layoutY="274.0" prefHeight="26.0" prefWidth="149.0" />
+        <Label layoutX="84.0" layoutY="367.0" text="Donation Date" textFill="#c70000">
+            <font>
+                <Font name="Cambria Bold" size="19.0" />
+            </font>
+        </Label>
+        <DatePicker fx:id="d_date" editable="false" layoutX="256.0" layoutY="363.0" prefHeight="26.0" prefWidth="238.0" />
+        <Button fx:id="update" layoutX="632.0" layoutY="436.0" mnemonicParsing="false" onAction="#pressUpdateDonation" text="Click to Update" textFill="#c70000">
+            <font>
+                <Font name="Cambria Bold" size="18.0" />
+            </font>
+        </Button>
     </children>
 
 </AnchorPane>

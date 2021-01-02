@@ -1,8 +1,9 @@
 DROP USER als;
 
 CREATE USER als identified by iutcse18;
+GRANT DBA TO als;
 
-DISC;
+DISCONNECT;
 
 CONN als/iutcse18;
 

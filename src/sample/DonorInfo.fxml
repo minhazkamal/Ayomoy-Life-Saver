@@ -34,6 +34,12 @@
          </font>
       </Label>
       <ChoiceBox fx:id="active" layoutX="234.0" layoutY="176.0" prefWidth="150.0" />
+      <Label layoutX="515.0" layoutY="177.0" prefHeight="23.0" prefWidth="125.0" text="Paying Status" textFill="#c70000">
+         <font>
+            <Font name="Cambria Bold" size="19.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="paying" layoutX="672.0" layoutY="176.0" prefWidth="150.0" />
       <Label layoutX="97.0" layoutY="249.0" text="Test Report" textFill="#c70000">
          <font>
             <Font name="Cambria Bold" size="18.0" />
@@ -43,6 +49,11 @@
       <Button layoutX="406.0" layoutY="248.0" mnemonicParsing="false" onAction="#pressBrowse" prefHeight="26.0" prefWidth="70.0" text="Browse">
          <font>
             <Font name="Cambria Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="save_button" layoutX="560.0" layoutY="300.0" mnemonicParsing="false" onAction="#pressSave" prefHeight="34.0" prefWidth="70.0" text="Save" textFill="#c70000">
+         <font>
+            <Font name="Cambria Bold" size="18.0" />
          </font>
       </Button>
       <Label layoutX="97.0" layoutY="396.0" text="Test Report Status" textFill="#c70000">
@@ -81,17 +92,6 @@
             <Font name="Cambria Bold Italic" size="24.0" />
          </font>
       </Label>
-      <Button fx:id="save_button" layoutX="560.0" layoutY="300.0" mnemonicParsing="false" onAction="#pressSave" prefHeight="34.0" prefWidth="70.0" text="Save" textFill="#c70000">
-         <font>
-            <Font name="Cambria Bold" size="18.0" />
-         </font>
-      </Button>
-      <Label layoutX="515.0" layoutY="177.0" prefHeight="23.0" prefWidth="125.0" text="Paying Status" textFill="#c70000">
-         <font>
-            <Font name="Cambria Bold" size="19.0" />
-         </font>
-      </Label>
-      <ChoiceBox fx:id="paying" layoutX="672.0" layoutY="176.0" prefWidth="150.0" />
       <Label layoutX="97.0" layoutY="481.0" text="Comments" textFill="#c70000">
          <font>
             <Font name="Cambria Bold" size="18.0" />

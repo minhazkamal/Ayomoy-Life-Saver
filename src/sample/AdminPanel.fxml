@@ -37,6 +37,11 @@
                 <Font name="Cambria Bold" size="41.0" />
             </font>
         </Label>
+        <Button fx:id="changePass" layoutX="500.0" layoutY="86.0" mnemonicParsing="false" onAction="#pressChangePass" prefHeight="23.0" prefWidth="174.0" text="Change Password" textFill="#c70000">
+            <font>
+                <Font name="Cambria Bold" size="18.0" />
+            </font>
+        </Button>
         <Button layoutX="324.0" layoutY="172.0" mnemonicParsing="false" onAction="#pressDonorList" opacity="0.15" prefHeight="118.0" prefWidth="352.0" textFill="#c70000">
             <font>
                 <Font size="1.0" />
@@ -45,11 +50,6 @@
         <Button layoutX="324.0" layoutY="372.0" mnemonicParsing="false" onAction="#pressOrgList" opacity="0.15" prefHeight="118.0" prefWidth="352.0" textFill="#c70000">
             <font>
                 <Font size="1.0" />
-            </font>
-        </Button>
-        <Button fx:id="changePass" layoutX="500.0" layoutY="86.0" mnemonicParsing="false" onAction="#pressChangePass" prefHeight="23.0" prefWidth="174.0" text="Change Password" textFill="#c70000">
-            <font>
-                <Font name="Cambria Bold" size="18.0" />
             </font>
         </Button>
     </children>

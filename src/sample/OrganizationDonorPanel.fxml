@@ -47,16 +47,6 @@
                 <Font size="1.0" />
             </font>
         </Button>
-        <Label fx:id="elg_st" layoutX="62.0" layoutY="156.0" text="Eligibility Status">
-            <font>
-                <Font name="Cambria Bold" size="25.0" />
-            </font>
-        </Label>
-        <Label fx:id="eligibility" alignment="CENTER" layoutX="64.0" layoutY="197.0" prefHeight="24.0" prefWidth="188.0" textAlignment="CENTER" textFill="#255bd7">
-            <font>
-                <Font name="Cambria Bold Italic" size="20.0" />
-            </font>
-        </Label>
     </children>
 
 </AnchorPane>

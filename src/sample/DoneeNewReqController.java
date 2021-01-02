@@ -217,7 +217,7 @@ public class DoneeNewReqController {
         return alertCheck;
     }
 
-   public void submitNewReq(ActionEvent even) {
+   public void submitNewReq(ActionEvent even) throws IOException{
         if(checkAlert()==false)
         {
             String username = "als";
@@ -245,6 +245,7 @@ public class DoneeNewReqController {
                 pst.setString(10, emMobile.getText());
 
                 pst.executeUpdate();
+                con.close();
 
                 Alert alert = new Alert(Alert.AlertType.INFORMATION);
                 alert.setTitle("Request Confirmation");
@@ -252,6 +253,15 @@ public class DoneeNewReqController {
                 alert.setContentText("Request Successfully Received");
                 alert.setResizable(false);
                 alert.showAndWait();
+
+                ((Node) even.getSource()).getScene().getWindow().hide();
+
+                Stage primaryStage = new Stage();
+                Parent root = FXMLLoader.load(getClass().getResource("DoneePrevReq.fxml"));
+                primaryStage.setTitle("Ayomoy Life Saver");
+                primaryStage.setScene(new Scene(root, 1000, 600));
+                primaryStage.setResizable(false);
+                primaryStage.show();
 
             } catch (Exception e)
             {

@@ -8,10 +8,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -39,6 +36,8 @@ public class PersonalInfoController extends RegisterController{
     private ChoiceBox Gender_Choice;
     @FXML
     private TextField txtEmail;
+    @FXML
+    private Button back_button;
 
     public void getLoc()
     {
@@ -126,6 +125,7 @@ public class PersonalInfoController extends RegisterController{
 
     public void initialize()
     {
+        back_button.setVisible(false);
         getLoc();
         txtUsername.setText(getTxtUsername());
         BG_choice.setItems(BGList);

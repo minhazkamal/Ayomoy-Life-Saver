@@ -55,29 +55,29 @@
             <Font name="Cambria Bold" size="23.0" />
          </font>
       </Label>
+      <Label layoutX="686.0" layoutY="160.0" text="Starting Date" textFill="#c70000">
+         <font>
+            <Font name="Cambria Bold" size="16.0" />
+         </font>
+      </Label>
       <DatePicker fx:id="startingDate" layoutX="803.0" layoutY="157.0" />
+      <Label layoutX="686.0" layoutY="197.0" text="Ending Date" textFill="#c70000">
+         <font>
+            <Font name="Cambria Bold" size="16.0" />
+         </font>
+      </Label>
       <DatePicker fx:id="endingDate" layoutX="803.0" layoutY="194.0" />
+      <Label layoutX="689.0" layoutY="241.0" text="Location" textFill="#c70000">
+         <font>
+            <Font name="Cambria Bold" size="16.0" />
+         </font>
+      </Label>
       <ChoiceBox fx:id="location_info" layoutX="803.0" layoutY="238.0" prefHeight="26.0" prefWidth="174.0" />
       <Button fx:id="searchButton" layoutX="879.0" layoutY="331.0" mnemonicParsing="false" onAction="#pressSearch" prefHeight="42.0" prefWidth="83.0" text="Search" textFill="#c70000">
          <font>
             <Font name="Cambria Bold" size="18.0" />
          </font>
       </Button>
-      <Label layoutX="686.0" layoutY="160.0" text="Starting Date" textFill="#c70000">
-         <font>
-            <Font name="Cambria Bold" size="16.0" />
-         </font>
-      </Label>
-      <Label layoutX="686.0" layoutY="197.0" text="Ending Date" textFill="#c70000">
-         <font>
-            <Font name="Cambria Bold" size="16.0" />
-         </font>
-      </Label>
-      <Label layoutX="689.0" layoutY="241.0" text="Location" textFill="#c70000">
-         <font>
-            <Font name="Cambria Bold" size="16.0" />
-         </font>
-      </Label>
       <Button fx:id="resetButton" layoutX="783.0" layoutY="331.0" mnemonicParsing="false" onAction="#pressReset" prefHeight="42.0" prefWidth="83.0" text="Reset" textFill="#c70000">
          <font>
             <Font name="Cambria Bold" size="18.0" />

@@ -119,7 +119,7 @@ public class OrgLicInfoController extends LogINpanelController{
         String username = "als";
         String password = "iutcse18";
         String url = "jdbc:oracle:thin:@localhost:1521/XE";
-        String query1 = "UPDATE ORG_LIC_INFO SET LIC=?,LIC_NAME=?,DOS=? WHERE USERNAME=?";
+        String query1 = "UPDATE ORG_LIC_INFO SET LIC=?,LIC_NAME=?,DOS=?, ELIGIBILITY='Ineligible', COMMENT=null WHERE USERNAME=?";
 
 //        Statement pst = null;
 //        ResultSet rs = null;

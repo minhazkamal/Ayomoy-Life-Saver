@@ -8,10 +8,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -40,6 +37,8 @@ public class OrganizationInfoController extends RegisterController {
     private TextField CPMobile;
     @FXML
     private TextArea description;
+    @FXML
+    private Button back_button;
 
     public void getLoc()
     {
@@ -80,6 +79,7 @@ public class OrganizationInfoController extends RegisterController {
 
     public void initialize()
     {
+        back_button.setVisible(false);
         getLoc();
         txtUsername.setText(getTxtUsername());
         AddressLocation.setItems(LocList);

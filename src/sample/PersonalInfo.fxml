@@ -27,6 +27,23 @@
                 <Font name="Cambria Bold" size="54.0" />
             </font>
         </Label>
+      <Label fx:id="title_label1" layoutX="230.0" layoutY="74.0" prefHeight="42.0" prefWidth="540.0" text="If you don't fill up the form or close the window, your registered username will be discarded. Then you have to register again from the begining after 15 minutes." textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="Cambria Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="88.0" layoutY="150.0" text="Userame" textFill="#c70000">
+         <font>
+            <Font name="Cambria Bold" size="19.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtUsername" editable="false" layoutX="245.0" layoutY="148.0" prefHeight="26.0" prefWidth="174.0" />
+      <Label layoutX="573.0" layoutY="149.0" text="Email" textFill="#c70000">
+         <font>
+            <Font name="Cambria Bold" size="19.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtEmail" layoutX="716.0" layoutY="148.0" prefHeight="26.0" prefWidth="174.0" promptText="abc@example.com" />
       <Label layoutX="88.0" layoutY="219.0" text="Name" textFill="#c70000">
          <font>
             <Font name="Cambria Bold" size="19.0" />
@@ -39,46 +56,34 @@
          </font>
       </Label>
       <TextField fx:id="MobileNo" layoutX="716.0" layoutY="218.0" prefHeight="26.0" prefWidth="174.0" promptText="Enter your mobile number" />
-        <Label layoutX="571.0" layoutY="359.0" text="Blood Group" textFill="#c70000">
-            <font>
-                <Font name="Cambria Bold" size="19.0" />
-            </font></Label>
-        <ChoiceBox fx:id="BG_choice" layoutX="715.0" layoutY="358.0" prefHeight="26.0" prefWidth="174.0" />
-        <Label layoutX="573.0" layoutY="289.0" text="Location" textFill="#c70000">
-            <font>
-                <Font name="Cambria Bold" size="19.0" />
-            </font>
-        </Label>
-        <ChoiceBox fx:id="AddressLocation" layoutX="716.0" layoutY="287.0" prefHeight="26.0" prefWidth="174.0" />
       <Label layoutX="88.0" layoutY="290.0" text="Date of Birth" textFill="#c70000">
          <font>
             <Font name="Cambria Bold" size="19.0" />
          </font>
       </Label>
       <DatePicker fx:id="DOB" layoutX="245.0" layoutY="289.0" />
-      <Label layoutX="88.0" layoutY="150.0" text="Userame" textFill="#c70000">
-         <font>
-            <Font name="Cambria Bold" size="19.0" />
-         </font>
-      </Label>
-      <TextField fx:id="txtUsername" editable="false" layoutX="245.0" layoutY="148.0" prefHeight="26.0" prefWidth="174.0" />
+        <Label layoutX="573.0" layoutY="289.0" text="Location" textFill="#c70000">
+            <font>
+                <Font name="Cambria Bold" size="19.0" />
+            </font>
+        </Label>
+        <ChoiceBox fx:id="AddressLocation" layoutX="716.0" layoutY="287.0" prefHeight="26.0" prefWidth="174.0" />
       <Label layoutX="88.0" layoutY="370.0" text="Gender" textFill="#c70000">
          <font>
             <Font name="Cambria Bold" size="19.0" />
          </font>
       </Label>
       <ChoiceBox fx:id="Gender_Choice" layoutX="245.0" layoutY="368.0" prefHeight="26.0" prefWidth="174.0" />
+        <Label layoutX="571.0" layoutY="359.0" text="Blood Group" textFill="#c70000">
+            <font>
+                <Font name="Cambria Bold" size="19.0" />
+            </font></Label>
+        <ChoiceBox fx:id="BG_choice" layoutX="715.0" layoutY="358.0" prefHeight="26.0" prefWidth="174.0" />
       <Button fx:id="SubmitButton" layoutX="442.0" layoutY="465.0" mnemonicParsing="false" onAction="#pressSubmit" prefHeight="42.0" prefWidth="88.0" text="Submit" textFill="#c70000">
          <font>
             <Font name="Cambria Bold" size="18.0" />
          </font>
       </Button>
-      <Label layoutX="573.0" layoutY="149.0" text="Email" textFill="#c70000">
-         <font>
-            <Font name="Cambria Bold" size="19.0" />
-         </font>
-      </Label>
-      <TextField fx:id="txtEmail" layoutX="716.0" layoutY="148.0" prefHeight="26.0" prefWidth="174.0" promptText="abc@example.com" />
     </children>
 
 </AnchorPane>

@@ -9,6 +9,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -179,6 +180,7 @@ public class RegisterController {
                     Parent root = FXMLLoader.load(getClass().getResource("PersonalInfo.fxml"));
                     primaryStage.setTitle("Ayomoy Life Saver");
                     primaryStage.setScene(new Scene(root, 1000, 600));
+                    primaryStage.initModality(Modality.APPLICATION_MODAL);
                     primaryStage.setResizable(false);
                     primaryStage.show();
                 }
@@ -190,6 +192,7 @@ public class RegisterController {
                     Parent root = FXMLLoader.load(getClass().getResource("OrganizationInfo.fxml"));
                     primaryStage.setTitle("Ayomoy Life Saver");
                     primaryStage.setScene(new Scene(root, 1000, 600));
+                    primaryStage.initModality(Modality.APPLICATION_MODAL);
                     primaryStage.setResizable(false);
                     primaryStage.show();
                 }
