@@ -13,18 +13,24 @@
                 <Font name="Cambria Bold" size="30.0" />
             </font>
         </Label>
-        <ChoiceBox fx:id="filterBG" layoutX="255.0" layoutY="76.0" prefWidth="150.0" />
-        <ChoiceBox fx:id="filterLocation" layoutX="255.0" layoutY="126.0" prefHeight="26.0" prefWidth="238.0" />
         <Label layoutX="96.0" layoutY="78.0" text="Blood Group">
             <font>
                 <Font name="Cambria Bold" size="18.0" />
             </font>
         </Label>
+        <ChoiceBox fx:id="filterBG" layoutX="255.0" layoutY="76.0" prefWidth="150.0" />
         <Label layoutX="96.0" layoutY="128.0" text="Location">
             <font>
                 <Font name="Cambria Bold" size="18.0" />
             </font>
         </Label>
+        <ChoiceBox fx:id="filterLocation" layoutX="255.0" layoutY="126.0" prefHeight="26.0" prefWidth="238.0" />
+      <Label layoutX="97.0" layoutY="200.0" text="Paying Condition">
+         <font>
+            <Font name="Cambria Bold" size="18.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="filterPay" layoutX="255.0" layoutY="198.0" prefWidth="150.0" />
         <Button fx:id="search_button" layoutX="460.0" layoutY="339.0" mnemonicParsing="false" onAction="#pressSearchFilter" prefHeight="26.0" prefWidth="82.0" text="Search" textFill="#c70000">
             <font>
                 <Font name="Cambria Bold" size="18.0" />
@@ -35,12 +41,6 @@
                 <Font name="Cambria Bold" size="18.0" />
             </font>
         </Button>
-      <Label layoutX="97.0" layoutY="200.0" text="Paying Condition">
-         <font>
-            <Font name="Cambria Bold" size="18.0" />
-         </font>
-      </Label>
-      <ChoiceBox fx:id="filterPay" layoutX="255.0" layoutY="198.0" prefWidth="150.0" />
     </children>
 
 </AnchorPane>

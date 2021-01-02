@@ -15,36 +15,36 @@
             <Font name="Cambria Bold" size="30.0" />
          </font>
       </Label>
-       <ChoiceBox fx:id="filterBG" layoutX="241.0" layoutY="74.0" prefWidth="150.0" />
-       <ChoiceBox fx:id="filterLocation" layoutX="241.0" layoutY="126.0" prefHeight="26.0" prefWidth="238.0" />
-       <DatePicker fx:id="startingDate" editable="false" layoutX="241.0" layoutY="222.0" />
-       <DatePicker fx:id="endingDate" layoutX="241.0" layoutY="276.0" />
       <Label layoutX="96.0" layoutY="78.0" text="Blood Group">
          <font>
             <Font name="Cambria Bold" size="18.0" />
          </font>
       </Label>
+       <ChoiceBox fx:id="filterBG" layoutX="241.0" layoutY="74.0" prefWidth="150.0" />
       <Label layoutX="96.0" layoutY="128.0" text="Location">
          <font>
             <Font name="Cambria Bold" size="18.0" />
          </font>
       </Label>
-      <Label layoutX="96.0" layoutY="223.0" text="Starting Date">
-         <font>
-            <Font name="Cambria Bold" size="18.0" />
-         </font>
-      </Label>
-      <Label layoutX="96.0" layoutY="277.0" text="Ending Date">
-         <font>
-            <Font name="Cambria Bold" size="18.0" />
-         </font>
-      </Label>
-      <Line endX="226.20001220703125" endY="-1.52587890625E-5" layoutX="197.0" layoutY="208.0" startX="-100.0" stroke="#c70000" />
+       <ChoiceBox fx:id="filterLocation" layoutX="241.0" layoutY="126.0" prefHeight="26.0" prefWidth="238.0" />
       <Label layoutX="209.0" layoutY="183.0" text="Time Span" textFill="#c70000">
          <font>
             <Font name="Cambria Bold" size="19.0" />
          </font>
       </Label>
+      <Line endX="226.20001220703125" endY="-1.52587890625E-5" layoutX="197.0" layoutY="208.0" startX="-100.0" stroke="#c70000" />
+      <Label layoutX="96.0" layoutY="223.0" text="Starting Date">
+         <font>
+            <Font name="Cambria Bold" size="18.0" />
+         </font>
+      </Label>
+       <DatePicker fx:id="startingDate" editable="false" layoutX="241.0" layoutY="222.0" />
+      <Label layoutX="96.0" layoutY="277.0" text="Ending Date">
+         <font>
+            <Font name="Cambria Bold" size="18.0" />
+         </font>
+      </Label>
+       <DatePicker fx:id="endingDate" layoutX="241.0" layoutY="276.0" />
        <Button fx:id="search_button" layoutX="460.0" layoutY="339.0" mnemonicParsing="false" onAction="#pressSearchFilter" prefHeight="26.0" prefWidth="82.0" text="Search" textFill="#c70000">
            <font>
                <Font name="Cambria Bold" size="18.0" />

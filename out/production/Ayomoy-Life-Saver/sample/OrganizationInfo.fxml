@@ -27,6 +27,18 @@
                 <Font name="Cambria Bold" size="54.0" />
             </font>
         </Label>
+        <Label layoutX="169.0" layoutY="149.0" text="Username" textFill="#c70000">
+            <font>
+                <Font name="Cambria Bold" size="19.0" />
+            </font>
+        </Label>
+        <TextField fx:id="txtUsername" editable="false" layoutX="273.0" layoutY="148.0" prefHeight="26.0" prefWidth="174.0" />
+        <Label layoutX="573.0" layoutY="149.0" text="Email" textFill="#c70000">
+            <font>
+                <Font name="Cambria Bold" size="19.0" />
+            </font>
+        </Label>
+        <TextField fx:id="txtEmail" layoutX="716.0" layoutY="148.0" prefHeight="26.0" prefWidth="174.0" promptText="abc@example.com" />
         <Label layoutX="87.0" layoutY="219.0" prefHeight="26.0" prefWidth="174.0" text="Organization Name" textFill="#c70000">
             <font>
                 <Font name="Cambria Bold" size="19.0" />
@@ -45,23 +57,6 @@
             </font>
         </Label>
         <ChoiceBox fx:id="AddressLocation" layoutX="270.0" layoutY="300.0" prefHeight="26.0" prefWidth="174.0" />
-        <Label layoutX="169.0" layoutY="149.0" text="Username" textFill="#c70000">
-            <font>
-                <Font name="Cambria Bold" size="19.0" />
-            </font>
-        </Label>
-        <TextField fx:id="txtUsername" editable="false" layoutX="273.0" layoutY="148.0" prefHeight="26.0" prefWidth="174.0" />
-        <Button fx:id="SubmitButton" layoutX="807.0" layoutY="493.0" mnemonicParsing="false" onAction="#pressSubmit" prefHeight="42.0" prefWidth="88.0" text="Submit" textFill="#c70000">
-            <font>
-                <Font name="Cambria Bold" size="18.0" />
-            </font>
-        </Button>
-        <Label layoutX="573.0" layoutY="149.0" text="Email" textFill="#c70000">
-            <font>
-                <Font name="Cambria Bold" size="19.0" />
-            </font>
-        </Label>
-        <TextField fx:id="txtEmail" layoutX="716.0" layoutY="148.0" prefHeight="26.0" prefWidth="174.0" promptText="abc@example.com" />
       <Label layoutX="573.0" layoutY="301.0" text="License No." textFill="#c70000">
          <font>
             <Font name="Cambria Bold" size="19.0" />
@@ -86,6 +81,16 @@
          </font>
       </Label>
       <TextArea fx:id="description" layoutX="267.0" layoutY="436.0" prefHeight="147.0" prefWidth="493.0" promptText="Tell more about your organization. Give precise location to reach you fast. (Not more than 250 characters)" />
+        <Button fx:id="SubmitButton" layoutX="807.0" layoutY="493.0" mnemonicParsing="false" onAction="#pressSubmit" prefHeight="42.0" prefWidth="88.0" text="Submit" textFill="#c70000">
+            <font>
+                <Font name="Cambria Bold" size="18.0" />
+            </font>
+        </Button>
+      <Label fx:id="title_label1" layoutX="260.0" layoutY="77.0" prefHeight="42.0" prefWidth="540.0" text="If you don't fill up the form or close the window, your registered username will be discarded. Then you have to register again from the begining after 15 minutes." textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="Cambria Bold" size="14.0" />
+         </font>
+      </Label>
     </children>
 
 </AnchorPane>
