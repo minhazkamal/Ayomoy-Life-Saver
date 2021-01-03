@@ -13,9 +13,14 @@
             <Image url="@images/Cover.jpg" />
          </image>
       </ImageView>
-      <Button fx:id="button" layoutX="414.0" layoutY="394.0" mnemonicParsing="false" onAction="#pressToContinue" prefHeight="50.0" prefWidth="242.0" text="Press to Continue">
+      <Button fx:id="button" layoutX="415.0" layoutY="413.0" mnemonicParsing="false" onAction="#pressToContinue" prefHeight="50.0" prefWidth="242.0" text="Press to Access the System" textAlignment="CENTER" wrapText="true">
          <font>
-            <Font name="Cambria Bold" size="25.0" />
+            <Font name="Cambria Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="button1" layoutX="853.0" layoutY="74.0" mnemonicParsing="false" onAction="#pressCredit" prefHeight="31.0" prefWidth="91.0" text="About US" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="Cambria Bold" size="16.0" />
          </font>
       </Button>
    </children>

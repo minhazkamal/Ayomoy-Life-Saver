@@ -67,4 +67,14 @@ public class sampleController implements Initializable {
 
     }
 
+    public void pressCredit(ActionEvent even) throws IOException {
+        ((Node) even.getSource()).getScene().getWindow().hide();
+
+        Stage primaryStage = new Stage();
+        Parent root = FXMLLoader.load(getClass().getResource("AboutUs.fxml"));
+        primaryStage.setTitle("Ayomoy Life Saver");
+        primaryStage.setScene(new Scene(root, 1000, 600));
+        primaryStage.setResizable(false);
+        primaryStage.show();
+    }
 }
