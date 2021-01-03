@@ -19,6 +19,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.sql.*;
 import java.time.LocalDate;
+import java.time.Period;
 
 public class DonorApprovalListController extends LogINpanelController{
 
@@ -58,6 +59,16 @@ public class DonorApprovalListController extends LogINpanelController{
     private ChoiceBox[] status;
 
     private int count_report;
+
+    public Boolean CheckAge(LocalDate DOB)
+    {
+        LocalDate current = LocalDate.now();
+
+        Period period = Period.between(DOB, current);
+
+        if(period.getYears()>=18) return true;
+        else return false;
+    }
 
     private boolean check_alert(String s, String a, String c)
     {
@@ -127,6 +138,7 @@ public class DonorApprovalListController extends LogINpanelController{
             String url = "jdbc:oracle:thin:@localhost:1521/XE";
             String query = "UPDATE TEST_REPORTS SET R_STATUS=?, APPROVAL=?, CHECKER=?, DOC=?, COMMENTS=? WHERE USERNAME=?";
             String update_query = "UPDATE DONOR_INFO SET ELIGIBILITY='Eligible' WHERE USERNAME=?";
+            String dob_query = "SELECT DOB FROM PERSONAL_INFO WHERE USERNAME=?";
 //        Statement pst = null;
 //        ResultSet rs = null;
             try{
@@ -142,7 +154,22 @@ public class DonorApprovalListController extends LogINpanelController{
 
                 pst.executeUpdate();
 
-                if(updateCheck(oblist.get(serial).getStatus_choice().getValue().toString(), oblist.get(serial).getApproval_choice().getValue().toString()))
+                PreparedStatement pst2 = con.prepareStatement(dob_query);
+                pst2.setString(1, user);
+
+                ResultSet rs2 = pst.executeQuery();
+
+                LocalDate dob=null;
+
+                while(rs2.next())
+                {
+                    dob = rs2.getDate(1).toLocalDate();
+                }
+
+                pst2.close();
+                rs2.close();
+
+                if(updateCheck(oblist.get(serial).getStatus_choice().getValue().toString(), oblist.get(serial).getApproval_choice().getValue().toString()) && CheckAge(dob))
                 {
                     //System.out.println("Yahooo");
                     PreparedStatement pst1 = con.prepareStatement(update_query);
