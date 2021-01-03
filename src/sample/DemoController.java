@@ -8,6 +8,7 @@ public class DemoController{
     public void initialize()
     {
         txt.setText(Main.text);
+        System.out.print("Ayomoy Life Saver");
     }
 
 }
