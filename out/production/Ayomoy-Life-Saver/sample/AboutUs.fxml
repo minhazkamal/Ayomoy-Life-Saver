@@ -27,17 +27,17 @@
         </Label>
       <ImageView fitHeight="176.0" fitWidth="176.0" layoutX="91.0" layoutY="124.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@images/Minhaz.jpeg" />
+            <Image url="@images/Minhaz.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="176.0" fitWidth="176.0" layoutX="412.0" layoutY="124.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@images/Nidhi.jpeg" />
+            <Image url="@images/Nidhi.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="176.0" fitWidth="176.0" layoutX="714.0" layoutY="124.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@images/Abdullah.jpeg" />
+            <Image url="@images/Abdullah.png" />
          </image>
       </ImageView>
       <Label layoutX="107.0" layoutY="338.0" text="Minhaz Kamal">
