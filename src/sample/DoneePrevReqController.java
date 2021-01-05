@@ -139,7 +139,7 @@ public class DoneePrevReqController extends LogINpanelController{
         {
             if(even.getSource() == d_button[i])
             {
-                r_id = getReqID(i+1);
+                r_id = Integer.parseInt(oblist.get(i).getReq_id());
                 break;
             }
         }
@@ -260,14 +260,19 @@ public class DoneePrevReqController extends LogINpanelController{
             pst.setString(1, txtUser.getText());
             ResultSet rs = pst.executeQuery();
 
+
+            int k = 1;
             while(rs.next())
             {
 //                System.out.println(1);
 //                String a = rs.getString("NAME");
 //                System.out.println(a);
-                int j = rs.getInt(1);
+                //int j = rs.getInt(1);
+                int j = k;
                 //System.out.println(rs.getString(2));
-                oblist.add(new Request(Integer.toString(count_req-j+1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5), rs.getString(6), rs.getDate(7).toString(), d_button[count_req-j], s_button[count_req-j]));
+                oblist.add(new Request(Integer.toString(j), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5), rs.getString(6), rs.getDate(7).toString(), d_button[j-1], s_button[j-1]));
+
+                k++;
             }
             rs.close();
             con.close();

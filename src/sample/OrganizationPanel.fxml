@@ -35,7 +35,7 @@
         </Label>
         <Button fx:id="updateProfile" layoutX="97.0" layoutY="116.0" mnemonicParsing="false" onAction="#PressUpdateProfile" opacity="0.23" prefHeight="52.0" prefWidth="200.0" />
         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#c70000" height="52.0" layoutX="400.0" layoutY="118.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
-        <Label layoutX="401.0" layoutY="119.0" prefHeight="52.0" prefWidth="200.0" text="Use For Donor" textAlignment="JUSTIFY" textFill="WHITE">
+        <Label layoutX="425.0" layoutY="119.0" prefHeight="52.0" prefWidth="146.0" text="Use as Org" textAlignment="CENTER" textFill="WHITE" wrapText="true">
             <font>
                 <Font name="Cambria Bold" size="30.0" />
             </font>

@@ -119,7 +119,7 @@ public class PendingRequestController extends DonorPanelController {
             if(even.getSource() == dt_button[i])
             {
                 r_id = oblist.get(i).getReq_id();
-                System.out.println(r_id);
+                //System.out.println(r_id);
                 break;
             }
         }
