@@ -13,7 +13,7 @@
             <Image url="@images/Cover.jpg" />
          </image>
       </ImageView>
-      <Button fx:id="button" layoutX="415.0" layoutY="413.0" mnemonicParsing="false" onAction="#pressToContinue" prefHeight="50.0" prefWidth="242.0" text="Press to Access the System" textAlignment="CENTER" wrapText="true">
+      <Button fx:id="button" layoutX="415.0" layoutY="413.0" mnemonicParsing="false" onAction="#pressToContinue" prefHeight="63.0" prefWidth="242.0" text="Press to Access the System" textAlignment="CENTER" wrapText="true">
          <font>
             <Font name="Cambria Bold" size="18.0" />
          </font>
