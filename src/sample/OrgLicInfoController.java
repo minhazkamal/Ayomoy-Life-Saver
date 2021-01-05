@@ -119,7 +119,8 @@ public class OrgLicInfoController extends LogINpanelController{
         String username = "als";
         String password = "iutcse18";
         String url = "jdbc:oracle:thin:@localhost:1521/XE";
-        String query1 = "UPDATE ORG_LIC_INFO SET LIC=?,LIC_NAME=?,DOS=?, ELIGIBILITY='Ineligible', COMMENT=null WHERE USERNAME=?";
+        String query1 = "UPDATE ORG_LIC_INFO SET LIC=?,LIC_NAME=?,DOS=?, ELIGIBILITY='Ineligible' WHERE USERNAME=?";
+        String query2 = "CALL UPDATELICREPORTS(?)";
 
 //        Statement pst = null;
 //        ResultSet rs = null;
@@ -142,6 +143,12 @@ public class OrgLicInfoController extends LogINpanelController{
 
                 pst1.executeUpdate();
                 pst1.close();
+
+                CallableStatement pst2 = con.prepareCall(query2);
+                pst2.setString(1, LogINpanelController.getUser());
+                pst2.executeUpdate();
+
+                pst2.close();
             }
 
             con.close();

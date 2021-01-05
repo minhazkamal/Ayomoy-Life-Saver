@@ -119,6 +119,7 @@ public class PendingRequestController extends DonorPanelController {
             if(even.getSource() == dt_button[i])
             {
                 r_id = oblist.get(i).getReq_id();
+                System.out.println(r_id);
                 break;
             }
         }
@@ -218,14 +219,18 @@ public class PendingRequestController extends DonorPanelController {
                     });
                 }
 
+                int k = 1;
                 while(rs.next())
                 {
 //                System.out.println(1);
 //                String a = rs.getString("NAME");
 //                System.out.println(a);
-                    int j = rs.getInt(1);
+                    //int j = rs.getInt(1);
+                    int j = k;
                     //System.out.println(j);
                     oblist.add(new Request(Integer.toString(j), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5), rs.getDate(6).toString(), rs.getString(7), dt_button[j-1]));
+
+                    k++;
                 }
                 rs.close();
                 con.close();
@@ -295,15 +300,19 @@ public class PendingRequestController extends DonorPanelController {
                     });
                 }
 
+                int k = 1;
                 while(rs.next())
                 {
 //                System.out.println(1);
 //                String a = rs.getString("NAME");
 //                System.out.println(a);
-                    int j = rs.getInt(1);
+                    //int j = rs.getInt(1);
+                    int j = k;
                     //System.out.println(j);
                     //System.out.println(count_req-j+1);
                     oblist.add(new Request(Integer.toString(j), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5), rs.getDate(6).toString(), rs.getString(7), dt_button[j-1]));
+
+                    k++;
                 }
                 rs.close();
                 con.close();

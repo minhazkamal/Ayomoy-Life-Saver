@@ -214,6 +214,23 @@ public class AddNewDonationController extends LogINpanelController {
 
                 pst.executeUpdate();
 
+                pst.close();
+
+                if(LocalDate.now().compareTo(d_date.getValue().plusMonths(3))<=0 && LogINpanelController.getType().equals("Person"))
+                {
+                    String query1 = "UPDATE DONOR_INFO SET ELIGIBILITY='Ineligible' WHERE USERNAME=?";
+
+
+                    PreparedStatement pst1 = con.prepareStatement(query1);
+                    pst1.setString(1, LogINpanelController.getUser());
+
+                    pst1.executeUpdate();
+
+                    pst1.close();
+                }
+
+                con.close();
+
                 Alert alert = new Alert(Alert.AlertType.INFORMATION);
                 alert.setTitle("Request Confirmation");
                 alert.setHeaderText(null);

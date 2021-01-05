@@ -138,7 +138,7 @@ public class DonorApprovalListController extends LogINpanelController{
             String url = "jdbc:oracle:thin:@localhost:1521/XE";
             String query = "UPDATE TEST_REPORTS SET R_STATUS=?, APPROVAL=?, CHECKER=?, DOC=?, COMMENTS=? WHERE USERNAME=?";
             String update_query = "UPDATE DONOR_INFO SET ELIGIBILITY='Eligible' WHERE USERNAME=?";
-            String dob_query = "SELECT DOB FROM PERSONAL_INFO WHERE USERNAME=?";
+            String dob_query = "SELECT DOB, USERNAME FROM PERSONAL_INFO WHERE USERNAME=?";
 //        Statement pst = null;
 //        ResultSet rs = null;
             try{
@@ -157,13 +157,14 @@ public class DonorApprovalListController extends LogINpanelController{
                 PreparedStatement pst2 = con.prepareStatement(dob_query);
                 pst2.setString(1, user);
 
-                ResultSet rs2 = pst.executeQuery();
+                ResultSet rs2 = pst2.executeQuery();
 
                 LocalDate dob=null;
 
                 while(rs2.next())
                 {
                     dob = rs2.getDate(1).toLocalDate();
+                    //System.out.println(dob);
                 }
 
                 pst2.close();
@@ -176,7 +177,11 @@ public class DonorApprovalListController extends LogINpanelController{
                     pst1.setString(1, user);
 
                     pst1.executeUpdate();
+                    //System.out.println("Yahooo");
+
+                    pst1.close();
                 }
+
 
                 con.close();
 
@@ -192,7 +197,7 @@ public class DonorApprovalListController extends LogINpanelController{
             } catch (Exception e)
             {
 //            System.out.println(1);
-                //System.out.println(e);
+                System.out.println(e);
                 Alert alert = new Alert(Alert.AlertType.ERROR);
                 alert.setTitle("Error Dialog");
                 alert.setHeaderText("Look, an Error Dialog");

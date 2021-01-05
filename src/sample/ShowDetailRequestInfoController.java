@@ -40,12 +40,51 @@ public class ShowDetailRequestInfoController {
     @FXML
     private ChoiceBox Gender_choice;
 
+    private String find_type()
+    {
+        String type = null;
+        String username = "als";
+        String password = "iutcse18";
+        String url = "jdbc:oracle:thin:@localhost:1521/XE";
+        String query = "SELECT USERNAME, USER_TYPE FROM REGISTRATION WHERE USERNAME = (SELECT USERNAME FROM REQUEST WHERE REQUEST.ID=?)";
+
+
+        try {
+            Class.forName("oracle.jdbc.driver.OracleDriver");
+            Connection con = DriverManager.getConnection(url, username, password);
+            PreparedStatement pst2 = con.prepareStatement(query);
+            pst2.setInt(1, Integer.parseInt(PendingRequestController.getR_id()));
+
+            ResultSet rs2 = pst2.executeQuery();
+
+            while (rs2.next()) {
+                type = rs2.getString(2);
+            }
+            rs2.close();
+            con.close();
+        }
+        catch(Exception e){
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Error Dialog");
+            alert.setHeaderText("Look, an Error Dialog");
+            alert.setContentText(String.valueOf(e));
+            alert.setResizable(false);
+            alert.showAndWait();
+        }
+        return type;
+    }
+
     public void initialize()
     {
         String username = "als";
         String password = "iutcse18";
         String url = "jdbc:oracle:thin:@localhost:1521/XE";
-        String query = "SELECT * FROM REQUEST, PERSONAL_INFO WHERE REQUEST.USERNAME=PERSONAL_INFO.USERNAME AND REQUEST.ID=?";
+        String query = null;
+        if(find_type().equals("Person"))
+            query = "SELECT * FROM REQUEST, PERSONAL_INFO WHERE REQUEST.USERNAME=PERSONAL_INFO.USERNAME AND REQUEST.ID=?";
+        else if(find_type().equals("Organization"))
+            query = "SELECT * FROM REQUEST, ORG_INFO WHERE REQUEST.USERNAME=ORG_INFO.USERNAME AND REQUEST.ID=?";
+
 
         try {
             Class.forName("oracle.jdbc.driver.OracleDriver");
