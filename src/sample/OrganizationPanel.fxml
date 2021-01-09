@@ -140,7 +140,7 @@
          </font>
       </Label>
       <TextArea fx:id="description" editable="false" layoutX="232.0" layoutY="452.0" prefHeight="126.0" prefWidth="654.0" />
-      <Label layoutX="488.0" layoutY="384.0" prefHeight="52.0" prefWidth="154.0" text="Elligibility:">
+      <Label layoutX="488.0" layoutY="384.0" prefHeight="52.0" prefWidth="154.0" text="Eligibility:">
          <font>
             <Font name="Cambria Bold" size="30.0" />
          </font>
