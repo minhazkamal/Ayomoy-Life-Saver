@@ -18,64 +18,64 @@
                 <Image url="@images/Presentation1_Proposal.jpg" />
             </image>
         </ImageView>
-        <Button fx:id="back_button" layoutX="27.0" layoutY="25.0" mnemonicParsing="false" onAction="#pressBack" prefHeight="42.0" prefWidth="69.0" text="Back" textFill="#c70000">
+        <Button fx:id="back_button" layoutX="27.0" layoutY="25.0" mnemonicParsing="false" onAction="#pressBack" prefHeight="42.0" prefWidth="76.0" text="Back" textFill="#990202">
             <font>
-                <Font name="Cambria Bold" size="18.0" />
+                <Font name="Corbel Bold" size="20.0" />
             </font>
         </Button>
-        <Label fx:id="title_label" layoutX="230.0" layoutY="5.0" prefHeight="82.0" prefWidth="581.0" text="Add Donation Information" textAlignment="JUSTIFY" textFill="#c70000">
+        <Label fx:id="title_label" layoutX="230.0" layoutY="5.0" prefHeight="82.0" prefWidth="594.0" text="Add Donation Information" textAlignment="JUSTIFY" textFill="#990202">
             <font>
-                <Font name="Cambria Bold" size="47.0" />
+                <Font name="Ebrima Bold" size="45.0" />
             </font>
         </Label>
-        <Label layoutX="591.0" layoutY="174.0" prefHeight="23.0" prefWidth="160.0" text="Patient Mobile No." textFill="#c70000">
+        <Label layoutX="577.0" layoutY="160.0" prefHeight="51.0" prefWidth="160.0" text="Patient's Contact &#10;Number" textFill="#990202">
             <font>
-                <Font name="Cambria Bold" size="19.0" />
+                <Font name="Corbel Bold" size="20.0" />
             </font></Label>
-        <Label layoutX="88.0" layoutY="174.0" prefHeight="23.0" prefWidth="125.0" text="Patient Name" textFill="#c70000">
+        <Label layoutX="81.0" layoutY="174.0" prefHeight="23.0" prefWidth="138.0" text="Patient's Name" textFill="#990202">
             <font>
-                <Font name="Cambria Bold" size="19.0" />
+                <Font name="Corbel Bold" size="20.0" />
             </font></Label>
         <TextField fx:id="p_mobile" layoutX="760.0" layoutY="173.0" />
         <TextField fx:id="p_name" layoutX="257.0" layoutY="173.0" prefHeight="26.0" prefWidth="238.0" />
-        <Label layoutX="88.0" layoutY="232.0" text="Location" textFill="#c70000">
+        <Label layoutX="81.0" layoutY="232.0" text="Location" textFill="#990202">
             <font>
-                <Font name="Cambria Bold" size="19.0" />
+                <Font name="Corbel Bold" size="20.0" />
             </font>
         </Label>
-        <Label layoutX="591.0" layoutY="229.0" text="Complications" textFill="#c70000">
+        <Label layoutX="577.0" layoutY="229.0" text="Complications" textFill="#990202">
             <font>
-                <Font name="Cambria Bold" size="19.0" />
+                <Font name="Corbel Bold" size="20.0" />
             </font>
         </Label>
         <TextField fx:id="complications" layoutX="760.0" layoutY="228.0" promptText="Accident" />
         <DatePicker fx:id="d_date" layoutX="256.0" layoutY="363.0" prefHeight="26.0" prefWidth="238.0" />
-        <Label layoutX="84.0" layoutY="367.0" text="Donation Date" textFill="#c70000">
+        <Label layoutX="80.0" layoutY="364.0" text="Donation Date" textFill="#990202">
             <font>
-                <Font name="Cambria Bold" size="19.0" />
+                <Font name="Corbel Bold" size="20.0" />
             </font>
         </Label>
-        <Button fx:id="submit" layoutX="633.0" layoutY="438.0" mnemonicParsing="false" onAction="#pressSubmitDonation" text="Submit" textFill="#c70000">
+        <Button fx:id="submit" layoutX="633.0" layoutY="438.0" mnemonicParsing="false" onAction="#pressSubmitDonation" text="Submit" textFill="#990202">
             <font>
-                <Font name="Cambria Bold" size="18.0" />
+                <Font name="Corbel Bold" size="20.0" />
             </font>
         </Button>
         <ChoiceBox fx:id="p_Location" layoutX="256.0" layoutY="231.0" prefHeight="26.0" prefWidth="238.0" />
-        <Label layoutX="88.0" layoutY="129.0" prefHeight="23.0" prefWidth="97.0" text="Username" textFill="#c70000">
+        <Label layoutX="81.0" layoutY="129.0" prefHeight="23.0" prefWidth="97.0" text="Username" textFill="#990202">
             <font>
-                <Font name="Cambria Bold" size="19.0" />
+                <Font name="Corbel Bold" size="20.0" />
             </font>
         </Label>
         <TextField fx:id="txtUser" editable="false" layoutX="257.0" layoutY="128.0" prefHeight="26.0" prefWidth="238.0" />
-        <Label layoutX="88.0" layoutY="276.0" text="Organization" textFill="#c70000">
+        <Label layoutX="80.0" layoutY="276.0" text="Organization" textFill="#990202">
             <font>
-                <Font name="Cambria Bold" size="19.0" />
+                <Font name="Corbel Bold" size="20.0" />
             </font>
         </Label>
         <TextArea fx:id="p_locationDetails" layoutX="256.0" layoutY="275.0" prefHeight="74.0" prefWidth="238.0" promptText="Give details about location (Not more than 250 characters)." />
-        <Label layoutX="591.0" layoutY="276.0" text="Patient Gender" textFill="#c70000">
+        <Label layoutX="577.0" layoutY="276.0" prefHeight="23.0" prefWidth="150.0" text="Patient's Gender" textFill="#990202">
             <font>
-                <Font name="Cambria Bold" size="19.0" />
+                <Font name="Corbel Bold" size="20.0" />
             </font>
         </Label>
         <ChoiceBox fx:id="p_Gender_choice" layoutX="761.0" layoutY="275.0" prefWidth="150.0" />
