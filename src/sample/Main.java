@@ -10,6 +10,10 @@ import net.sourceforge.tess4j.TesseractException;
 
 import java.io.File;
 
+/**
+ * test
+ */
+
 public class Main extends Application {
 
     public static String text;
