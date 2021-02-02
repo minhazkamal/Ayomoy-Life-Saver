@@ -16,37 +16,133 @@ import java.sql.*;
 import java.time.LocalDate;
 import java.time.Period;
 
+/**
+ * This is a Class for handling the adding new donation. This is a Controller
+ * Class that handles the sample.AddNewDonation.fxml. This Adding new donation
+ * is particularly for a feature for the donor class of user. They can add new
+ * donation by providing the necessary information. This fxml file has the
+ * text-fields and the dropdown boxes. They will be able to queue a donation in
+ * the mother list upon filling this form. This particular class extends the
+ * LogINpanelController that was used to handle the sample.LogIN.fxml.
+ *
+ * @author minhaz231
+ */
+
 public class AddNewDonationController extends LogINpanelController {
 
-    ObservableList<String> GenderList = FXCollections.observableArrayList("Male", "Female", "Others");
-    ObservableList<String> LocList = FXCollections.observableArrayList();
+    /**
+     * This is for the selection of Gender from the Dropdown menu.
+     * Observable List is from JavaFX. It is a list that enables
+     * listeners to track changes when they occur.
+     */
+    ObservableList<String> GenderList;
+
+    {
+        GenderList = FXCollections.observableArrayList("Male", "Female", "Others");
+    }
+
+    /**
+     * This is for the selection of location from the location list.
+     * A list is prebuilt into the system already. User must is made
+     * to select from one of this list.
+     *
+     * Here an Observable list is used. Observable List is from JavaFX.
+     * It is a list that enables listeners to track changes when they occur.
+     *
+     */
+    ObservableList<String> LocList;
+
+    {
+        LocList = FXCollections.observableArrayList();
+    }
+
     @FXML
+    /*
+     * This is to store the mobile number of the Donor,
+     * Made Private for the Privacy issues
+     */
     private TextField p_mobile;
     @FXML
+    /*
+     * This is to store the name of the Donor,
+     * Made Private for the Privacy issues
+     */
     private TextField p_name;
     @FXML
+    /*
+     * This is to store the complications of the Donor,
+     * Made Private for the Privacy issues because this may
+     * contain some medical conditions related to the Donor
+     */
     private TextField complications;
     @FXML
+    /*
+     * This is to store the date of the donation that may take place,
+     * Made Private for the Privacy issues
+     */
     private DatePicker d_date;
     @FXML
+    /*
+     * This is to store the mobile number of the Donor,
+     * Made Private for the Privacy issues
+     */
     private ChoiceBox p_Location;
     @FXML
+    /*
+     * This is to store the location details of the Donor,
+     * Made Private for the Privacy issues. This will act as
+     * the point of contact for the donation to occur between
+     * the respective two parties. This details adds a level of
+     * finer granularity to the information.
+     */
     private TextArea p_locationDetails;
     @FXML
+    /*
+     * This is to store the name of textUser,
+     * Made Private for the Privacy issues
+     */
     private TextField txtUser;
     @FXML
+    /*
+     * This is to store the gender choice of the Donor,
+     * Made Private for the Privacy issues
+     */
     private ChoiceBox p_Gender_choice;
+
+    /**
+     * This is a method to get the Locations that are stored in the database.
+     * The methods is interacting with the database with the
+     * hardcoded credentials and using an SQL Query to
+     * extract the relevant information that are needed
+     *
+     * Here a catch block is used to handle the exceptions
+     * and prevent the program from crashing. These exceptions
+     * are caught in the variable e. In case of any exception
+     * there is a dialogue box that will appear and it will
+     * Show the appropriate string value that is extracted from the
+     * e variable and this will be set as the title of the dialogue box.
+     *
+     * Another good practice is maintained in this method that is the method
+     * is closing the connection rather then waiting for
+     * the garbage collector to close it. This is saving
+     * the program from creating any additional inconsistency
+     * in the stored data. The value in the resizability method is
+     * set false so that distortion in the UI is not possible at all.
+     */
 
     public void getLoc()
     {
-        String username = "als";
-        String password = "iutcse18";
-        String url = "jdbc:oracle:thin:@localhost:1521/XE";
-        String query = "SELECT NAME FROM LOCATIONS ORDER BY NAME";
+        String username;
+        username = "als";
+        String password;
+        password = "iutcse18";
+        String url;
+        url = "jdbc:oracle:thin:@localhost:1521/XE";
+        String query;
+        query = "SELECT NAME FROM LOCATIONS ORDER BY NAME";
 
-//        Statement pst = null;
-//        ResultSet rs = null;
         try{
+
             Class.forName("oracle.jdbc.driver.OracleDriver");
             Connection con = DriverManager.getConnection(url,username,password);
             Statement pst = con.createStatement();
@@ -55,16 +151,13 @@ public class AddNewDonationController extends LogINpanelController {
 
             while(rs.next())
             {
-//                System.out.println(1);
-//                String a = rs.getString("NAME");
-//                System.out.println(a);
                 LocList.add(rs.getString(1));
             }
             rs.close();
             con.close();
         } catch (Exception e)
         {
-//           System.out.println(e);
+
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Error Dialog");
             alert.setHeaderText("Look, an Error Dialog");
@@ -74,6 +167,10 @@ public class AddNewDonationController extends LogINpanelController {
         }
     }
 
+    /**
+     * This is a method without any parameter. The purpose of this is to
+     * initialize and make way for the Observalelists to begin working.
+     */
     public void initialize()
     {
         txtUser.setText(LogINpanelController.getUser());
@@ -91,8 +188,7 @@ public class AddNewDonationController extends LogINpanelController {
         String url = "jdbc:oracle:thin:@localhost:1521/XE";
         String query = "SELECT D_DATE FROM DONATION_INFO WHERE USERNAME=? AND D_DATE BETWEEN ADD_MONTHS(?, -3) AND ADD_MONTHS(?, 3)";
         String dob_query = "SELECT DOB FROM PERSONAL_INFO WHERE USERNAME=?";
-//        Statement pst = null;
-//        ResultSet rs = null;
+
         try{
             Class.forName("oracle.jdbc.driver.OracleDriver");
             Connection con = DriverManager.getConnection(url,username,password);
@@ -108,7 +204,6 @@ public class AddNewDonationController extends LogINpanelController {
             while(rs1.next())
             {
                 dob = rs1.getDate(1).toLocalDate();
-                //System.out.println(dob.toString());
             }
 
             rs1.close();
@@ -118,7 +213,6 @@ public class AddNewDonationController extends LogINpanelController {
 
             Period period = Period.between(dob, current);
 
-            //System.out.println(period.getYears());
 
             if(period.getYears()<18) flag=1;
 
@@ -133,7 +227,7 @@ public class AddNewDonationController extends LogINpanelController {
             con.close();
         } catch (Exception e)
         {
-//           System.out.println(e);
+
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Error Dialog");
             alert.setHeaderText("Look, an Error Dialog");
@@ -161,7 +255,7 @@ public class AddNewDonationController extends LogINpanelController {
             alert.showAndWait();
         }
 
-        //System.out.println(checkDate());
+
         if(checkDate()==false)
         {
             alertCheck = true;
@@ -249,7 +343,7 @@ public class AddNewDonationController extends LogINpanelController {
 
             } catch (Exception e)
             {
-//           System.out.println(e);
+
                 Alert alert = new Alert(Alert.AlertType.ERROR);
                 alert.setTitle("Error Dialog");
                 alert.setHeaderText("Look, an Error Dialog");
@@ -260,6 +354,16 @@ public class AddNewDonationController extends LogINpanelController {
         }
 
     }
+
+    /**
+     * This method is here for the functionality of the "Back" button. This will redirect the user to the
+     * Parent that is the "root" which is sample.fxml
+     *
+     * @throws IOException
+     * which is a checked exception.
+     * Used to identify errors in i/p and o/p of a particular workflow.
+     *
+     */
 
     public void pressBack(ActionEvent even) throws IOException {
         ((Node) even.getSource()).getScene().getWindow().hide();
