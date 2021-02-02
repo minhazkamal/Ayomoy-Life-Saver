@@ -31,7 +31,9 @@ import java.time.Period;
 public class AddNewDonationController extends LogINpanelController {
 
     /**
-     * This is for the selection of Gender from the Dropdown menu
+     * This is for the selection of Gender from the Dropdown menu.
+     * Observable List is from JavaFX. It is a list that enables
+     * listeners to track changes when they occur.
      */
     ObservableList<String> GenderList;
 
@@ -40,8 +42,13 @@ public class AddNewDonationController extends LogINpanelController {
     }
 
     /**
-     * This is for the selection of location from the location list. A list is prebuilt
-     * into the system already. User must is made to select from one of this list.
+     * This is for the selection of location from the location list.
+     * A list is prebuilt into the system already. User must is made
+     * to select from one of this list.
+     *
+     * Here an Observable list is used. Observable List is from JavaFX.
+     * It is a list that enables listeners to track changes when they occur.
+     *
      */
     ObservableList<String> LocList;
 
@@ -81,11 +88,47 @@ public class AddNewDonationController extends LogINpanelController {
      */
     private ChoiceBox p_Location;
     @FXML
+    /*
+     * This is to store the location details of the Donor,
+     * Made Private for the Privacy issues. This will act as
+     * the point of contact for the donation to occur between
+     * the respective two parties. This details adds a level of
+     * finer granularity to the information.
+     */
     private TextArea p_locationDetails;
     @FXML
+    /*
+     * This is to store the name of textUser,
+     * Made Private for the Privacy issues
+     */
     private TextField txtUser;
     @FXML
+    /*
+     * This is to store the gender choice of the Donor,
+     * Made Private for the Privacy issues
+     */
     private ChoiceBox p_Gender_choice;
+
+    /**
+     * This is a method to get the Locations that are stored in the database.
+     * The methods is interacting with the database with the
+     * hardcoded credentials and using an SQL Query to
+     * extract the relevant information that are needed
+     *
+     * Here a catch block is used to handle the exceptions
+     * and prevent the program from crashing. These exceptions
+     * are caught in the variable e. In case of any exception
+     * there is a dialogue box that will appear and it will
+     * Show the appropriate string value that is extracted from the
+     * e variable and this will be set as the title of the dialogue box.
+     *
+     * Another good practice is maintained in this method that is the method
+     * is closing the connection rather then waiting for
+     * the garbage collector to close it. This is saving
+     * the program from creating any additional inconsistency
+     * in the stored data. The value in the resizability method is
+     * set false so that distortion in the UI is not possible at all.
+     */
 
     public void getLoc()
     {
@@ -95,7 +138,8 @@ public class AddNewDonationController extends LogINpanelController {
         password = "iutcse18";
         String url;
         url = "jdbc:oracle:thin:@localhost:1521/XE";
-        String query = "SELECT NAME FROM LOCATIONS ORDER BY NAME";
+        String query;
+        query = "SELECT NAME FROM LOCATIONS ORDER BY NAME";
 
         try{
 
@@ -123,6 +167,10 @@ public class AddNewDonationController extends LogINpanelController {
         }
     }
 
+    /**
+     * This is a method without any parameter. The purpose of this is to
+     * initialize and make way for the Observalelists to begin working.
+     */
     public void initialize()
     {
         txtUser.setText(LogINpanelController.getUser());
