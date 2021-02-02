@@ -10,6 +10,12 @@ import net.sourceforge.tess4j.TesseractException;
 
 import java.io.File;
 
+/**
+ * This is the main class that extends on the application
+ *
+ * @author minhaz231
+ */
+
 public class Main extends Application {
 
     public static String text;
