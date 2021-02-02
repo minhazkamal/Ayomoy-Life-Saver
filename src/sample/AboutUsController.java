@@ -1,6 +1,6 @@
 package sample;
 
-import com.sun.javafx.application.HostServicesDelegate;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -8,14 +8,43 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-import java.awt.*;
-import java.io.IOException;
-import java.net.URI;
-import java.net.URISyntaxException;
-import java.net.URL;
-import java.util.ResourceBundle;
 
+import java.io.IOException;
+
+
+/**
+ * This is the Controller Class that handles the sample.AboutUs.fxml
+ * Here the Developers information are given with attached link of their contact information.
+ * The purpose of this is to learn the how professionally a system acknowledges the developers.
+ *
+ * @author abdullah239
+ */
 public class AboutUsController {
+    /**
+     * This method is here for the functionality of the "Back" button. This will redirect the user to the
+     * Parent that is the "root" which is sample.fxml
+     *
+     * @throws IOException
+     * which is a checked exception.
+     * Used to identify errors in i/p and o/p of a particular workflow.
+     *
+     */
+
+    public void pressBack() throws IOException {
+        pressBack();
+    }
+
+    /**
+     * This method is here for the functionality of the "Back" button. This will redirect the user to the
+     * Parent that is the "root" which is sample.fxml
+     *
+     * @param even
+     * refers to the event of action for the method
+     * @throws IOException
+     * which is a checked exception.
+     * Used to identify errors in i/p and o/p of a particular workflow.
+     */
+
     public void pressBack(ActionEvent even) throws IOException {
         ((Node) even.getSource()).getScene().getWindow().hide();
 
@@ -28,14 +57,17 @@ public class AboutUsController {
 
     }
 
-//    public static void openWebpage(String url) {
-//        try {
-//            new ProcessBuilder("x-www-browser", url).start();
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//    }
-
+    /**
+     * This is a method for the button labeled as Facebook under the developer named Minhaz Kamal
+     * Here the facebook profile link is embedded and upon clicking this button the user will be redirected to the
+     * facebook profile page of Minhaz Kamal by using the default browser in the particular machine.
+     *
+     * @param actionEvent
+     * refers to the event of action for the method
+     * @throws IOException
+     * which is a checked exception.
+     * Used to identify errors in i/p and o/p of a particular workflow.
+     */
     public void minhazFB(ActionEvent actionEvent) throws IOException {
         try{
 //            getHostServices().showDocument("http://www.google.com");
@@ -48,8 +80,29 @@ public class AboutUsController {
             System.out.println(e);
         }
     }
+    /**
+     * This is a method for the button labeled as Facebook under the developer named Chowdhury Mohammad Abdullah
+     * Here the facebook profile link is embedded and upon clicking this button the user will be redirected to the
+     * facebook profile page of Chowdhury Mohammad Abdullah by using the default browser in the particular machine.
+     *
+     * @param actionEvent
+     * refers to the event of action for the method
+     * @throws IOException
+     * which is a checked exception.
+     * Used to identify errors in i/p and o/p of a particular workflow.
+     */
 
     public void abdullahFB(ActionEvent actionEvent) {
+        try{
+//            getHostServices().showDocument("http://www.google.com");
+            Runtime rt = Runtime.getRuntime();
+            String url = "https://www.facebook.com/profile.php?id=100015252342356";
+            rt.exec("rundll32 url.dll,FileProtocolHandler "+url);
+        }
+        catch (Exception e)
+        {
+            System.out.println(e);
+        }
     }
 
     public void minhazGIT(ActionEvent actionEvent) {
