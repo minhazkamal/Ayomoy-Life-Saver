@@ -20,6 +20,8 @@ import java.io.IOException;
  * @author abdullah239
  */
 public class AboutUsController {
+    private ActionEvent actionEvent;
+
     /**
      * This method is here for the functionality of the "Back" button. This will redirect the user to the
      * Parent that is the "root" which is sample.fxml
@@ -70,7 +72,7 @@ public class AboutUsController {
      */
     public void minhazFB(ActionEvent actionEvent) throws IOException {
         try{
-//            getHostServices().showDocument("http://www.google.com");
+
             Runtime rt = Runtime.getRuntime();
             String url = "http://www.facebook.com/minhaz.kamal9900";
             rt.exec("rundll32 url.dll,FileProtocolHandler "+url);
@@ -92,9 +94,9 @@ public class AboutUsController {
      * Used to identify errors in i/p and o/p of a particular workflow.
      */
 
-    public void abdullahFB(ActionEvent actionEvent) {
+    public void abdullahFB(ActionEvent actionEvent) throws IOException {
         try{
-//            getHostServices().showDocument("http://www.google.com");
+
             Runtime rt = Runtime.getRuntime();
             String url = "https://www.facebook.com/profile.php?id=100015252342356";
             rt.exec("rundll32 url.dll,FileProtocolHandler "+url);
@@ -105,9 +107,22 @@ public class AboutUsController {
         }
     }
 
-    public void minhazGIT(ActionEvent actionEvent) {
+    /**
+     * This is a method for the button labeled as Github under the developer named Minhaz Kamal
+     * Here the Github profile link is embedded and upon clicking this button the user will be redirected to the
+     * Github profile page of Minhaz Kamal by using the default browser in the particular machine. This will
+     * Showcase the contributions of the developer.
+     *
+     * @param actionEvent
+     * refers to the event of action for the method
+     * @throws IOException
+     * which is a checked exception.
+     * Used to identify errors in i/p and o/p of a particular workflow.
+     */
+
+    public void minhazGIT(ActionEvent actionEvent) throws IOException {
         try{
-//            getHostServices().showDocument("http://www.google.com");
+
             Runtime rt = Runtime.getRuntime();
             String url = "https://github.com/minhazkamal";
             rt.exec("rundll32 url.dll,FileProtocolHandler "+url);
@@ -118,11 +133,25 @@ public class AboutUsController {
         }
     }
 
-    public void fairuzGIT(ActionEvent actionEvent) {
+    /**
+     * This is a method for the button labeled as Github under the developer named Fairuz Shaira
+     * Here the Github profile link is embedded and upon clicking this button the user will be redirected to the
+     * Github profile page of Fairuz Shaira by using the default browser in the particular machine. This will
+     * Showcase the contributions of the developer.
+     *
+     * @param actionEvent
+     * refers to the event of action for the method
+     * @throws IOException
+     * which is a checked exception.
+     * Used to identify errors in i/p and o/p of a particular workflow.
+     */
+
+    public void fairuzGIT(ActionEvent actionEvent) throws IOException {
         try{
-//            getHostServices().showDocument("http://www.google.com");
+
             Runtime rt = Runtime.getRuntime();
-            String url = "https://github.com/fairuz-shaiara";
+            String url;
+            url = "https://github.com/fairuz-shaiara";
             rt.exec("rundll32 url.dll,FileProtocolHandler "+url);
         }
         catch (Exception e)
@@ -131,9 +160,22 @@ public class AboutUsController {
         }
     }
 
-    public void abdullahGIT(ActionEvent actionEvent) {
+    /**
+     * This is a method for the button labeled as Github under the developer named Chowdhury Mohammad Abdullah
+     * Here the Github profile link is embedded and upon clicking this button the user will be redirected to the
+     * Github profile page of Chowdhury Mohammad Abdullah by using the default browser in the particular machine. This will
+     * Showcase the contributions of the developer.
+     *
+     * @param actionEvent
+     * refers to the event of action for the method
+     * @throws IOException
+     * which is a checked exception.
+     * Used to identify errors in i/p and o/p of a particular workflow.
+     */
+    public void abdullahGIT(ActionEvent actionEvent) throws IOException {
+        this.actionEvent = actionEvent;
         try{
-//            getHostServices().showDocument("http://www.google.com");
+
             Runtime rt = Runtime.getRuntime();
             String url = "https://github.com/intricate-potato";
             rt.exec("rundll32 url.dll,FileProtocolHandler "+url);
@@ -143,10 +185,21 @@ public class AboutUsController {
             System.out.println(e);
         }
     }
-
-    public void minhazLin(ActionEvent actionEvent) {
+    /**
+     * This is a method for the button labeled as LinkedIN under the developer named Minhaz Kamal
+     * Here the LinkedIN profile link is embedded and upon clicking this button the user will be redirected to the
+     * LinkedIN profile page of Minhaz Kamal by using the default browser in the particular machine.
+     * This will showcase the corporate background of the developer.
+     *
+     * @param actionEvent
+     * refers to the event of action for the method
+     * @throws IOException
+     * which is a checked exception.
+     * Used to identify errors in i/p and o/p of a particular workflow.
+     */
+    public void minhazLin(ActionEvent actionEvent) throws IOException {
         try{
-//            getHostServices().showDocument("http://www.google.com");
+
             Runtime rt = Runtime.getRuntime();
             String url = "https://www.linkedin.com/in/minhazkamal";
             rt.exec("rundll32 url.dll,FileProtocolHandler "+url);
@@ -157,7 +210,20 @@ public class AboutUsController {
         }
     }
 
-    public void fairuzLin(ActionEvent actionEvent) {
+    /**
+     * This is a method for the button labeled as LinkedIN under the developer named Fairuz Shaira
+     * Here the LinkedIN profile link is embedded and upon clicking this button the user will be redirected to the
+     * LinkedIN profile page of Fairuz Shaira by using the default browser in the particular machine.
+     * This will showcase the corporate background of the developer.
+     *
+     * @param actionEvent
+     * refers to the event of action for the method
+     * @throws IOException
+     * which is a checked exception.
+     * Used to identify errors in i/p and o/p of a particular workflow.
+     */
+
+    public void fairuzLin(ActionEvent actionEvent) throws IOException {
         try{
 //            getHostServices().showDocument("http://www.google.com");
             Runtime rt = Runtime.getRuntime();
@@ -170,9 +236,22 @@ public class AboutUsController {
         }
     }
 
-    public void abdullahLin(ActionEvent actionEvent) {
+    /**
+     * This is a method for the button labeled as LinkedIN under the developer named Chowdhury Mohammad Abdullah
+     * Here the LinkedIN profile link is embedded and upon clicking this button the user will be redirected to the
+     * LinkedIN profile page of Chowdhury Mohammad Abdullah by using the default browser in the particular machine.
+     * This will showcase the corporate background of the developer.
+     *
+     * @param actionEvent
+     * refers to the event of action for the method
+     * @throws IOException
+     * which is a checked exception.
+     * Used to identify errors in i/p and o/p of a particular workflow.
+     */
+
+    public void abdullahLin(ActionEvent actionEvent) throws IOException {
         try{
-//            getHostServices().showDocument("http://www.google.com");
+
             Runtime rt = Runtime.getRuntime();
             String url = "https://www.linkedin.com/in/chowdhury-mohammad-abdullah-a48473188";
             rt.exec("rundll32 url.dll,FileProtocolHandler "+url);
