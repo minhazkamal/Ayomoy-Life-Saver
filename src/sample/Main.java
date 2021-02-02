@@ -11,7 +11,9 @@ import net.sourceforge.tess4j.TesseractException;
 import java.io.File;
 
 /**
- * test
+ * This is the main class that extends on the application
+ *
+ * @author minhaz231
  */
 
 public class Main extends Application {
