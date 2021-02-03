@@ -147,7 +147,7 @@ public class Donation {
         return update_button;
     }
 
-    // No use 
+    // No use
     public void setUpdate_button(Button update_button) {
         this.update_button = update_button;
     }
