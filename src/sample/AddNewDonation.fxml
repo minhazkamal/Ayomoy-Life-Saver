@@ -1,84 +1,175 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.AddNewDonationController">
     <children>
-        <ImageView fitHeight="600.0" fitWidth="1000.0" pickOnBounds="true">
+        <ImageView accessibleRole="TEXT_AREA" blendMode="OVERLAY" fitHeight="600.0" fitWidth="1000.0" layoutX="-7.0" layoutY="-1.0" pickOnBounds="true">
             <image>
                 <Image url="@images/Presentation1_Proposal.jpg" />
             </image>
         </ImageView>
-        <Button fx:id="back_button" layoutX="27.0" layoutY="25.0" mnemonicParsing="false" onAction="#pressBack" prefHeight="42.0" prefWidth="69.0" text="Back" textFill="#c70000">
+        <Button fx:id="back_button" blendMode="DARKEN" layoutX="27.0" layoutY="25.0" mnemonicParsing="false" onAction="#pressBack" prefHeight="42.0" prefWidth="76.0" text="Back" textFill="#990202">
             <font>
-                <Font name="Cambria Bold" size="18.0" />
+                <Font name="Corbel Bold" size="20.0" />
             </font>
+         <effect>
+            <InnerShadow color="#390303" />
+         </effect>
         </Button>
-        <Label fx:id="title_label" layoutX="230.0" layoutY="5.0" prefHeight="82.0" prefWidth="581.0" text="Add Donation Information" textAlignment="JUSTIFY" textFill="#c70000">
+      <Pane layoutX="27.0" layoutY="25.0" AnchorPane.bottomAnchor="533.0" AnchorPane.leftAnchor="27.0" AnchorPane.rightAnchor="897.0" AnchorPane.topAnchor="25.0">
+         <children>
+              <Button fx:id="back_button" ellipsisString="" mnemonicParsing="false" onAction="#pressBack" prefHeight="42.0" prefWidth="76.0" text="Back" textFill="#990202" wrapText="true">
+                  <font>
+                      <Font name="Corbel Bold" size="20.0" />
+                  </font>
+               <effect>
+                  <DropShadow color="#9d3131" />
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+              </Button>
+         </children>
+      </Pane>
+        <Label fx:id="title_label" layoutX="257.0" layoutY="5.0" prefHeight="82.0" prefWidth="526.0" text="Add Donation Information" textAlignment="JUSTIFY" textFill="#990202">
             <font>
-                <Font name="Cambria Bold" size="47.0" />
+                <Font name="Corbel Bold" size="46.0" />
+            </font>
+         <effect>
+            <Bloom />
+         </effect>
+        </Label>
+        <Label layoutX="87.0" layoutY="129.0" prefHeight="23.0" prefWidth="97.0" text="Username" textFill="#990202">
+            <font>
+                <Font name="Corbel Bold" size="20.0" />
             </font>
         </Label>
-        <Label layoutX="88.0" layoutY="129.0" prefHeight="23.0" prefWidth="97.0" text="Username" textFill="#c70000">
+        <TextField fx:id="txtUser" editable="false" layoutX="257.0" layoutY="128.0" prefHeight="26.0" prefWidth="238.0">
+         <font>
+            <Font name="Corbel Light" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+         <effect>
+            <InnerShadow blurType="GAUSSIAN" color="#9e3232" />
+         </effect></TextField>
+        <Label layoutX="591.0" layoutY="174.0" prefHeight="23.0" prefWidth="160.0" text="Contact Number" textFill="#990202">
             <font>
-                <Font name="Cambria Bold" size="19.0" />
-            </font>
-        </Label>
-        <TextField fx:id="txtUser" editable="false" layoutX="257.0" layoutY="128.0" prefHeight="26.0" prefWidth="238.0" />
-        <Label layoutX="591.0" layoutY="174.0" prefHeight="23.0" prefWidth="160.0" text="Patient Mobile No." textFill="#c70000">
-            <font>
-                <Font name="Cambria Bold" size="19.0" />
+                <Font name="Corbel Bold" size="20.0" />
             </font></Label>
-        <TextField fx:id="p_name" layoutX="257.0" layoutY="173.0" prefHeight="26.0" prefWidth="238.0" />
-        <Label layoutX="88.0" layoutY="174.0" prefHeight="23.0" prefWidth="125.0" text="Patient Name" textFill="#c70000">
+        <TextField fx:id="p_name" layoutX="257.0" layoutY="173.0" prefHeight="26.0" prefWidth="238.0">
+         <effect>
+            <InnerShadow blurType="GAUSSIAN" color="#9d3131" />
+         </effect></TextField>
+        <Label layoutX="88.0" layoutY="174.0" prefHeight="23.0" prefWidth="139.0" text="Patient's Name" textFill="#990202">
             <font>
-                <Font name="Cambria Bold" size="19.0" />
+                <Font name="Corbel Bold" size="20.0" />
             </font></Label>
-        <TextField fx:id="p_mobile" layoutX="760.0" layoutY="173.0" />
-        <Label layoutX="88.0" layoutY="232.0" text="Location" textFill="#c70000">
+        <TextField fx:id="p_mobile" layoutX="760.0" layoutY="173.0" prefHeight="25.0" prefWidth="150.0">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+         <effect>
+            <InnerShadow color="#9d3131" />
+         </effect></TextField>
+        <Label layoutX="88.0" layoutY="232.0" prefWidth="83.0" text="Location" textFill="#990202">
             <font>
-                <Font name="Cambria Bold" size="19.0" />
+                <Font name="Corbel Bold" size="20.0" />
             </font>
         </Label>
-        <ChoiceBox fx:id="p_Location" layoutX="256.0" layoutY="231.0" prefHeight="26.0" prefWidth="238.0" />
-        <Label layoutX="591.0" layoutY="229.0" text="Complications" textFill="#c70000">
+      <AnchorPane layoutX="256.0" layoutY="231.0">
+         <children>
+              <ChoiceBox fx:id="p_Location" prefHeight="26.0" prefWidth="238.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <InnerShadow blurType="GAUSSIAN" color="#9d3131" />
+               </effect>
+            </ChoiceBox>
+         </children>
+      </AnchorPane>
+        <Label layoutX="591.0" layoutY="229.0" text="Complications" textFill="#990202">
             <font>
-                <Font name="Cambria Bold" size="19.0" />
+                <Font name="Corbel Bold" size="20.0" />
             </font>
         </Label>
-        <TextField fx:id="complications" layoutX="760.0" layoutY="228.0" promptText="Accident" />
-        <Label layoutX="88.0" layoutY="276.0" text="Organization" textFill="#c70000">
+        <TextField fx:id="complications" alignment="TOP_LEFT" layoutX="760.0" layoutY="228.0" prefHeight="100.0" prefWidth="150.0" promptText="e.g. accident">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+         <effect>
+            <InnerShadow color="#9d3131" />
+         </effect></TextField>
+        <Label alignment="TOP_LEFT" contentDisplay="TEXT_ONLY" layoutX="87.0" layoutY="276.0" text="Organization" textFill="#990202">
             <font>
-                <Font name="Cambria Bold" size="19.0" />
+                <Font name="Corbel Bold" size="20.0" />
             </font>
         </Label>
-        <TextArea fx:id="p_locationDetails" layoutX="256.0" layoutY="275.0" prefHeight="74.0" prefWidth="238.0" promptText="Give details about location (Not more than 250 characters)." />
-        <Label layoutX="591.0" layoutY="276.0" text="Patient Gender" textFill="#c70000">
+        <TextArea fx:id="p_locationDetails" layoutX="256.0" layoutY="275.0" prefHeight="74.0" prefWidth="238.0" promptText="Give details of location (Not more than 250 characters).">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+         <effect>
+            <InnerShadow color="#9d3131" />
+         </effect></TextArea>
+        <Label layoutX="591.0" layoutY="364.0" text="Patient's Gender" textFill="#990202">
             <font>
-                <Font name="Cambria Bold" size="19.0" />
+                <Font name="Corbel Bold" size="20.0" />
             </font>
         </Label>
-        <ChoiceBox fx:id="p_Gender_choice" layoutX="761.0" layoutY="275.0" prefWidth="150.0" />
-        <Label layoutX="84.0" layoutY="367.0" text="Donation Date" textFill="#c70000">
+        <ChoiceBox fx:id="p_Gender_choice" layoutX="760.0" layoutY="363.0" prefWidth="150.0">
+         <effect>
+            <InnerShadow color="#9d3131" />
+         </effect></ChoiceBox>
+        <Label layoutX="87.0" layoutY="364.0" text="Donation Date" textFill="#990202">
             <font>
-                <Font name="Cambria Bold" size="19.0" />
+                <Font name="Corbel Bold" size="20.0" />
             </font>
         </Label>
-        <DatePicker fx:id="d_date" layoutX="256.0" layoutY="363.0" prefHeight="26.0" prefWidth="238.0" />
-        <Button fx:id="submit" layoutX="633.0" layoutY="438.0" mnemonicParsing="false" onAction="#pressSubmitDonation" text="Submit" textFill="#c70000">
+        <DatePicker fx:id="d_date" layoutX="256.0" layoutY="363.0" prefHeight="26.0" prefWidth="238.0">
+         <effect>
+            <InnerShadow color="#9d3131" />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></DatePicker>
+        <Button fx:id="submit" layoutX="751.0" layoutY="495.0" mnemonicParsing="false" onAction="#pressSubmitDonation" text="Submit" textFill="#990202">
             <font>
-                <Font name="Cambria Bold" size="18.0" />
+                <Font name="Corbel Bold" size="20.0" />
             </font>
+         <effect>
+            <DropShadow color="#9d3131" />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
         </Button>
+      <Label layoutX="256.0" layoutY="389.0" prefHeight="51.0" prefWidth="238.0" text="*Time gap between two donations &#10;  must be more than 3 months." textFill="#990202">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font>
+      </Label>
     </children>
 
 </AnchorPane>
