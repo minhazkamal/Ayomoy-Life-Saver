@@ -17,13 +17,32 @@ import java.io.IOException;
 import java.sql.*;
 import java.time.LocalDate;
 
+/** This Controller class is here to change Control the sample.Donation.fxml
+ *  This class extends the LogINpanelController Class.
+ *
+ * @author minhaz231
+ */
 public class DonationInfoController extends LogINpanelController{
+
+    /**
+     * Observable list are such kinds of list where the changes can be
+     * seen and data can be fetched whenever necessary
+     */
 
     ObservableList<Donation> oblist = FXCollections.observableArrayList();
     ObservableList<String> LocList = FXCollections.observableArrayList();
+
     public Button []u_button;
     public Button []d_button;
+
     int count_req;
+
+
+    /**
+     * These are fxml Related Files that need to be fetching the data from the
+     * user input into the fields and dropdowns
+     */
+
     @FXML
     private TextField txtUser;
     @FXML
@@ -49,22 +68,41 @@ public class DonationInfoController extends LogINpanelController{
 
     private static String update_date;
 
+    /**
+     * Getter function of the adaptation of the date in a donation
+     *
+     * @return update_date
+     */
     public static String getUpdate_date() {
         return update_date;
     }
+
+    /**
+     * setter function of the update date
+     * not used in the system but kept for future references.
+     *
+     * @param update_date shows the updated date.
+     */
 
     public static void setUpdate_date(String update_date) {
         DonationInfoController.update_date = update_date;
     }
 
+    /**
+     * This is for the functionality of the Update Button. Pressing this button
+     * updates the information and overwrites int the database using DML.
+     *
+     * @param even which is an object of ActionEvent class
+     *
+     * @throws IOException
+     * related to i/p and o/p error
+     */
     private void pressUpdateButton(ActionEvent even) throws IOException
     {
         for(int i=0; i<count_req; i++)
         {
             if(even.getSource() == u_button[i])
             {
-//                System.out.print(i+1);
-//                System.out.println(" update button is pressed");
                 update_date = oblist.get(i).getDate();
                 break;
             }
@@ -81,6 +119,17 @@ public class DonationInfoController extends LogINpanelController{
 
     }
 
+    /**
+     * This function is for the functionality of the Details Button.
+     *
+     * This presents the user with all the values of the properties of
+     * the Donation class on a separate window.
+     *
+     * @param even which is an object of ActionEvent class
+     *
+     * @throws IOException
+     * related to i/p and o/p error
+     */
     private void pressDetailsButton(ActionEvent even) throws IOException
     {
         for(int i=0; i<count_req; i++)
@@ -102,15 +151,26 @@ public class DonationInfoController extends LogINpanelController{
 
     }
 
+    /**
+     * This function is the getter function of the Locations.
+     *
+     * Since location is the private attribute so the getter function
+     * is necessary here.
+     *
+     * The catch block is here to handle the exceptions and show then
+     * accordingly on the title of the window.
+     */
     public void getLoc()
     {
         String username = "als";
-        String password = "iutcse18";
-        String url = "jdbc:oracle:thin:@localhost:1521/XE";
-        String query = "SELECT NAME FROM LOCATIONS ORDER BY NAME";
+        String password;
+        password = "iutcse18";
+        String url;
+        url = "jdbc:oracle:thin:@localhost:1521/XE";
+        String query;
+        query = "SELECT NAME FROM LOCATIONS ORDER BY NAME";
 
-//        Statement pst = null;
-//        ResultSet rs = null;
+
         try{
             Class.forName("oracle.jdbc.driver.OracleDriver");
             Connection con = DriverManager.getConnection(url,username,password);
@@ -120,14 +180,14 @@ public class DonationInfoController extends LogINpanelController{
 
             while(rs.next())
             {
-//                System.out.println(1);
-//                String a = rs.getString("NAME");
-//                System.out.println(a);
+
                 LocList.add(rs.getString(1));
                 //System.out.println(rs.getString(1));
             }
+
             rs.close();
             con.close();
+
         } catch (Exception e)
         {
 //           System.out.println(e);
@@ -140,18 +200,32 @@ public class DonationInfoController extends LogINpanelController{
         }
     }
 
+    /**
+     * This is the initializing function of the fxml components.
+     *
+     * When a the window is launched this method initializes these
+     * components. Establishes the connection with the database and
+     * upon fetching the data columns works with the property values.
+     *
+     */
     public void initialize()
     {
         txtUser.setText(LogINpanelController.getUser());
         getLoc();
         location_info.setItems(LocList);
-        String username = "als";
-        String password = "iutcse18";
-        String url = "jdbc:oracle:thin:@localhost:1521/XE";
-        String query = "SELECT ROWNUM, P_NAME, LOCATION, D_DATE FROM DONATION_INFO WHERE USERNAME=? ORDER BY D_DATE ASC";
-        String count_query = "SELECT COUNT(*) FROM DONATION_INFO WHERE USERNAME=?";
+        String username;
+        username = "als";
+        String password;
+        password = "iutcse18";
+        String url;
+        url = "jdbc:oracle:thin:@localhost:1521/XE";
+        String query;
+        query = "SELECT ROWNUM, P_NAME, LOCATION, D_DATE FROM DONATION_INFO WHERE USERNAME=? ORDER BY D_DATE ASC";
+        String count_query;
+        count_query = "SELECT COUNT(*) FROM DONATION_INFO WHERE USERNAME=?";
 
         try{
+
             Class.forName("oracle.jdbc.driver.OracleDriver");
             Connection con = DriverManager.getConnection(url, username, password);
             PreparedStatement pst = con.prepareStatement(query);
@@ -159,7 +233,9 @@ public class DonationInfoController extends LogINpanelController{
             pst.setString(1, txtUser.getText());
             pst1.setString(1, txtUser.getText());
 
-            ResultSet rs1 = pst1.executeQuery();
+            ResultSet rs1;
+            rs1 = pst1.executeQuery();
+
             while(rs1.next())
             {
                 count_req = rs1.getInt(1);
@@ -227,6 +303,12 @@ public class DonationInfoController extends LogINpanelController{
         DonationInfoTable.setItems(oblist);
     }
 
+    /**
+     *
+     * @param even
+     * @throws IOException
+     */
+
     public void pressBack(ActionEvent even) throws IOException {
         ((Node) even.getSource()).getScene().getWindow().hide();
 
@@ -249,6 +331,17 @@ public class DonationInfoController extends LogINpanelController{
         primaryStage.show();
     }
 
+    /**
+     * This functionality facilitates the searching of the donation records.
+     *
+     * There are risk of getting null values for some most of the columns in the
+     * database which are handled using the if-else blocks.
+     *
+     * The catch block captures the exceptions in the variable e and
+     * displays the string value as the title of the window.
+     *
+     * @param event which is an Object of the ActionEvent
+     */
     public void pressSearch(ActionEvent event) {
         oblist.clear();
         DonationInfoTable.setItems(oblist);
@@ -348,9 +441,6 @@ public class DonationInfoController extends LogINpanelController{
 
             while(rs.next())
             {
-//                System.out.println(1);
-//                String a = rs.getString("NAME");
-//                System.out.println(a);
                 int j = rs.getInt(1);
                 //System.out.println(j);
                 oblist.add(new Donation(/*Integer.toString(count_req-j+1)*/rs.getString(1), rs.getString(2), rs.getString(3), rs.getDate(4).toString(),  d_button[j-1], u_button[j-1]));
@@ -379,6 +469,15 @@ public class DonationInfoController extends LogINpanelController{
 
         DonationInfoTable.setItems(oblist);
     }
+
+    /**
+     * Rests the Information of the donations.
+     *
+     * @param even which is an object of the ActionEvent Class
+     *
+     * @throws IOException
+     * checks the i/p and o/p retalted error.
+     */
 
     public void pressReset(ActionEvent even) throws IOException{
         ((Node) even.getSource()).getScene().getWindow().hide();
