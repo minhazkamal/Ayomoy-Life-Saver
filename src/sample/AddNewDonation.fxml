@@ -63,7 +63,7 @@
         <ChoiceBox fx:id="p_Location" layoutX="256.0" layoutY="231.0" prefHeight="26.0" prefWidth="238.0" />
         <Label layoutX="81.0" layoutY="129.0" prefHeight="23.0" prefWidth="97.0" text="Username" textFill="#990202">
             <font>
-                <Font name="Corbel Bold" size="20.0" />
+                <Font name="Arial Bold" size="20.0" />
             </font>
         </Label>
         <TextField fx:id="txtUser" editable="false" layoutX="257.0" layoutY="128.0" prefHeight="26.0" prefWidth="238.0" />
