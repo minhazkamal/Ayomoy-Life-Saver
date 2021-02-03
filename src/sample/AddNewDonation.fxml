@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -18,17 +21,26 @@
                 <Image url="@images/Presentation1_Proposal.jpg" />
             </image>
         </ImageView>
-        <Button fx:id="back_button" layoutX="27.0" layoutY="25.0" mnemonicParsing="false" onAction="#pressBack" prefHeight="42.0" prefWidth="76.0" text="Back" textFill="#990202">
+        <Button fx:id="back_button" blendMode="DARKEN" layoutX="27.0" layoutY="25.0" mnemonicParsing="false" mouseTransparent="true" onAction="#pressBack" prefHeight="42.0" prefWidth="76.0" text="Back" textFill="#990202">
             <font>
                 <Font name="Corbel Bold" size="20.0" />
             </font>
+         <effect>
+            <InnerShadow blurType="GAUSSIAN" choke="0.3" color="#990202" height="10.0" offsetX="1.0" offsetY="1.0" radius="4.25" width="9.0" />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
         </Button>
-        <Label fx:id="title_label" layoutX="230.0" layoutY="5.0" prefHeight="82.0" prefWidth="581.0" text="Add Donation Information" textAlignment="JUSTIFY" textFill="#990202">
+        <Label fx:id="title_label" layoutX="257.0" layoutY="5.0" prefHeight="82.0" prefWidth="526.0" text="Add Donation Information" textAlignment="JUSTIFY" textFill="#990202">
             <font>
                 <Font name="Corbel Bold" size="46.0" />
             </font>
         </Label>
-        <Label layoutX="88.0" layoutY="129.0" prefHeight="23.0" prefWidth="97.0" text="Username" textFill="#990202">
+        <Label layoutX="87.0" layoutY="129.0" prefHeight="23.0" prefWidth="97.0" text="Username" textFill="#990202">
             <font>
                 <Font name="Corbel Bold" size="20.0" />
             </font>
@@ -44,7 +56,7 @@
                 <Font name="Corbel Bold" size="20.0" />
             </font></Label>
         <TextField fx:id="p_mobile" layoutX="760.0" layoutY="173.0" />
-        <Label layoutX="88.0" layoutY="232.0" text="Location" textFill="#990202">
+        <Label layoutX="88.0" layoutY="232.0" prefWidth="83.0" text="Location" textFill="#990202">
             <font>
                 <Font name="Corbel Bold" size="20.0" />
             </font>
@@ -56,7 +68,7 @@
             </font>
         </Label>
         <TextField fx:id="complications" layoutX="760.0" layoutY="228.0" promptText="Accident" />
-        <Label alignment="TOP_LEFT" contentDisplay="TEXT_ONLY" layoutX="80.0" layoutY="276.0" text="Organization" textFill="#990202">
+        <Label alignment="TOP_LEFT" contentDisplay="TEXT_ONLY" layoutX="87.0" layoutY="276.0" text="Organization" textFill="#990202">
             <font>
                 <Font name="Corbel Bold" size="20.0" />
             </font>
@@ -68,16 +80,19 @@
             </font>
         </Label>
         <ChoiceBox fx:id="p_Gender_choice" layoutX="761.0" layoutY="275.0" prefWidth="150.0" />
-        <Label layoutX="84.0" layoutY="367.0" text="Donation Date" textFill="#990202">
+        <Label layoutX="87.0" layoutY="364.0" text="Donation Date" textFill="#990202">
             <font>
                 <Font name="Corbel Bold" size="20.0" />
             </font>
         </Label>
         <DatePicker fx:id="d_date" layoutX="256.0" layoutY="363.0" prefHeight="26.0" prefWidth="238.0" />
-        <Button fx:id="submit" layoutX="633.0" layoutY="438.0" mnemonicParsing="false" onAction="#pressSubmitDonation" text="Submit" textFill="#990202">
+        <Button fx:id="submit" layoutX="751.0" layoutY="495.0" mnemonicParsing="false" onAction="#pressSubmitDonation" text="Submit" textFill="#990202">
             <font>
                 <Font name="Corbel Bold" size="20.0" />
             </font>
+         <effect>
+            <InnerShadow blurType="GAUSSIAN" choke="0.3" color="#990202" height="11.0" offsetX="1.0" offsetY="1.0" radius="4.5" width="9.0" />
+         </effect>
         </Button>
     </children>
 
