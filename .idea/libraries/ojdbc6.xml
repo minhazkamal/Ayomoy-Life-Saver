@@ -3,6 +3,7 @@
     <CLASSES>
       <root url="jar://$PROJECT_DIR$/../Course Details/2-1/DBMS_Lab/JDBC Jar File/ojdbc6.jar!/" />
       <root url="jar://C:/ojdbc6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../../../SEMESTER 3/CSE 4308(DBMS LAB)/LAB-09/ojdbc6.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
