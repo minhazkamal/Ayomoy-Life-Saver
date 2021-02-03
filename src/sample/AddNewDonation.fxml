@@ -19,7 +19,12 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.AddNewDonationController">
     <children>
-        <ImageView accessibleRole="TEXT_AREA" blendMode="OVERLAY" fitHeight="600.0" fitWidth="1000.0" layoutX="-7.0" layoutY="-1.0" pickOnBounds="true">
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="58.0" layoutY="438.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../clipart_addNewDonation.jpg" />
+         </image>
+      </ImageView>
+        <ImageView accessibleRole="TEXT_AREA" blendMode="OVERLAY" fitHeight="600.0" fitWidth="1000.0" layoutY="-1.0" pickOnBounds="true">
             <image>
                 <Image url="@images/Presentation1_Proposal.jpg" />
             </image>
@@ -154,7 +159,7 @@
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></DatePicker>
-        <Button fx:id="submit" layoutX="751.0" layoutY="495.0" mnemonicParsing="false" onAction="#pressSubmitDonation" text="Submit" textFill="#990202">
+        <Button fx:id="submit" layoutX="789.0" layoutY="494.0" mnemonicParsing="false" onAction="#pressSubmitDonation" text="Submit" textFill="#990202">
             <font>
                 <Font name="Corbel Bold" size="20.0" />
             </font>
