@@ -21,7 +21,7 @@
                 <Image url="@images/Presentation1_Proposal.jpg" />
             </image>
         </ImageView>
-        <Button fx:id="back_button" blendMode="DARKEN" layoutX="27.0" layoutY="25.0" mnemonicParsing="false" mouseTransparent="true" onAction="#pressBack" prefHeight="42.0" prefWidth="76.0" text="Back" textFill="#990202">
+        <Button fx:id="back_button" blendMode="DARKEN" layoutX="27.0" layoutY="25.0" mnemonicParsing="false" onAction="#pressBack" prefHeight="42.0" prefWidth="76.0" text="Back" textFill="#990202">
             <font>
                 <Font name="Corbel Bold" size="20.0" />
             </font>
