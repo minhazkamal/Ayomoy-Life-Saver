@@ -56,53 +56,28 @@ public class AddNewDonationController extends LogINpanelController {
         LocList = FXCollections.observableArrayList();
     }
 
-    @FXML
-    /*
-     * This is to store the mobile number of the Donor,
-     * Made Private for the Privacy issues
+    /**
+     * These are fxml related variables used for capturing the
+     * relevant information in the fields taken input from the
+     * user. Made Private for privacy issues.
      */
+
+    @FXML
     private TextField p_mobile;
     @FXML
-    /*
-     * This is to store the name of the Donor,
-     * Made Private for the Privacy issues
-     */
     private TextField p_name;
     @FXML
-    /*
-     * This is to store the complications of the Donor,
-     * Made Private for the Privacy issues because this may
-     * contain some medical conditions related to the Donor
-     */
     private TextField complications;
     @FXML
-    /*
-     * This is to store the date of the donation that may take place,
-     * Made Private for the Privacy issues
-     */
     private DatePicker d_date;
     @FXML
-    /*
-     * This is to store the mobile number of the Donor,
-     * Made Private for the Privacy issues
-     */
     private ChoiceBox p_Location;
     @FXML
-    /*
-     * This is to store the location details of the Donor,
-     * Made Private for the Privacy issues. This will act as
-     * the point of contact for the donation to occur between
-     * the respective two parties. This details adds a level of
-     * finer granularity to the information.
-     */
     private TextArea p_locationDetails;
     @FXML
-    /*
-     * This is to store the name of textUser,
-     * Made Private for the Privacy issues
-     */
     private TextField txtUser;
     @FXML
+
     /*
      * This is to store the gender choice of the Donor,
      * Made Private for the Privacy issues
