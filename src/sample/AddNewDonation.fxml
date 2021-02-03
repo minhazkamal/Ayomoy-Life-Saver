@@ -21,7 +21,7 @@
     <children>
         <ImageView accessibleRole="TEXT_AREA" blendMode="OVERLAY" fitHeight="600.0" fitWidth="1000.0" layoutX="-7.0" layoutY="-1.0" pickOnBounds="true">
             <image>
-                <Image url="@../../../../image1.jpg" />
+                <Image url="@images/Presentation1_Proposal.jpg" />
             </image>
         </ImageView>
         <Button fx:id="back_button" blendMode="DARKEN" layoutX="27.0" layoutY="25.0" mnemonicParsing="false" onAction="#pressBack" prefHeight="42.0" prefWidth="76.0" text="Back" textFill="#990202">
@@ -31,10 +31,10 @@
          <effect>
             <InnerShadow color="#390303" />
          </effect>
-        </ImageView>
+        </Button>
       <Pane layoutX="27.0" layoutY="25.0" AnchorPane.bottomAnchor="533.0" AnchorPane.leftAnchor="27.0" AnchorPane.rightAnchor="897.0" AnchorPane.topAnchor="25.0">
          <children>
-              <Button fx:id="back_button" ellipsisString="" mnemonicParsing="false" mouseTransparent="true" onAction="#pressBack" prefHeight="42.0" prefWidth="76.0" text="Back" textFill="#990202" wrapText="true">
+              <Button fx:id="back_button" ellipsisString="" mnemonicParsing="false" onAction="#pressBack" prefHeight="42.0" prefWidth="76.0" text="Back" textFill="#990202" wrapText="true">
                   <font>
                       <Font name="Corbel Bold" size="20.0" />
                   </font>
