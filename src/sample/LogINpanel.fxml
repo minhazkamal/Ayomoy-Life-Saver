@@ -11,9 +11,9 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.LogINpanelController">
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.LogINpanelController">
    <children>
-      <ImageView fitHeight="600.0" fitWidth="1000.0" layoutX="1.0" pickOnBounds="true">
+      <ImageView blendMode="OVERLAY" fitHeight="600.0" fitWidth="1000.0" layoutX="1.0" pickOnBounds="true">
          <image>
             <Image url="@images/Presentation1_Proposal.jpg" />
          </image>
