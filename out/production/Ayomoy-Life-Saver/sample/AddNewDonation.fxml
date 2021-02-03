@@ -34,7 +34,7 @@
         </Button>
       <Pane layoutX="27.0" layoutY="25.0" AnchorPane.bottomAnchor="533.0" AnchorPane.leftAnchor="27.0" AnchorPane.rightAnchor="897.0" AnchorPane.topAnchor="25.0">
          <children>
-              <Button fx:id="back_button" ellipsisString="" mnemonicParsing="false" mouseTransparent="true" onAction="#pressBack" prefHeight="42.0" prefWidth="76.0" text="Back" textFill="#990202" wrapText="true">
+              <Button fx:id="back_button" ellipsisString="" mnemonicParsing="false" onAction="#pressBack" prefHeight="42.0" prefWidth="76.0" text="Back" textFill="#990202" wrapText="true">
                   <font>
                       <Font name="Corbel Bold" size="20.0" />
                   </font>
