@@ -56,53 +56,28 @@ public class AddNewDonationController extends LogINpanelController {
         LocList = FXCollections.observableArrayList();
     }
 
-    @FXML
-    /*
-     * This is to store the mobile number of the Donor,
-     * Made Private for the Privacy issues
+    /**
+     * These are fxml related variables used for capturing the
+     * relevant information in the fields taken input from the
+     * user. Made Private for privacy issues.
      */
+
+    @FXML
     private TextField p_mobile;
     @FXML
-    /*
-     * This is to store the name of the Donor,
-     * Made Private for the Privacy issues
-     */
     private TextField p_name;
     @FXML
-    /*
-     * This is to store the complications of the Donor,
-     * Made Private for the Privacy issues because this may
-     * contain some medical conditions related to the Donor
-     */
     private TextField complications;
     @FXML
-    /*
-     * This is to store the date of the donation that may take place,
-     * Made Private for the Privacy issues
-     */
     private DatePicker d_date;
     @FXML
-    /*
-     * This is to store the mobile number of the Donor,
-     * Made Private for the Privacy issues
-     */
     private ChoiceBox p_Location;
     @FXML
-    /*
-     * This is to store the location details of the Donor,
-     * Made Private for the Privacy issues. This will act as
-     * the point of contact for the donation to occur between
-     * the respective two parties. This details adds a level of
-     * finer granularity to the information.
-     */
     private TextArea p_locationDetails;
     @FXML
-    /*
-     * This is to store the name of textUser,
-     * Made Private for the Privacy issues
-     */
     private TextField txtUser;
     @FXML
+
     /*
      * This is to store the gender choice of the Donor,
      * Made Private for the Privacy issues
@@ -128,6 +103,7 @@ public class AddNewDonationController extends LogINpanelController {
      * the program from creating any additional inconsistency
      * in the stored data. The value in the resizability method is
      * set false so that distortion in the UI is not possible at all.
+     * 
      */
 
     public void getLoc()
@@ -168,8 +144,11 @@ public class AddNewDonationController extends LogINpanelController {
     }
 
     /**
+     *
      * This is a method without any parameter. The purpose of this is to
      * initialize and make way for the Observalelists to begin working.
+     * here the items are set accordingly to the Lists
+     *
      */
     public void initialize()
     {
@@ -178,6 +157,31 @@ public class AddNewDonationController extends LogINpanelController {
         p_Gender_choice.setItems(GenderList);
         p_Location.setItems(LocList);
     }
+
+    /**
+     *
+     * This methods is here to check the validity of the date of new donation
+     *
+     * Here the Date of Birth of the User  and donation date are fetched from
+     * the database and the result set is compared. For an invalid date this
+     * iterative variable will give 0 value and return false. Also It is checking
+     * Whether the user is less than 18 years old and this also will return a false
+     * result. The donation date keeps track of whether the donor is donating more than
+     * once within the span of 3 months.
+     *
+     * Here a catch block is used to handle the exceptions
+     * and prevent the program from crashing. These exceptions
+     * are caught in the variable e. In case of any exception
+     * there is a dialogue box that will appear and it will
+     * Show the appropriate string value that is extracted from the
+     * e variable and this will be set as the title of the dialogue box.
+     *
+     * @return boolean
+     * which returns true for a valid date and
+     * false for an invalid date and invalid age of the user.
+     * True is return for the opposite case.
+     *
+     */
 
     public boolean checkDate()
     {
@@ -201,15 +205,15 @@ public class AddNewDonationController extends LogINpanelController {
             pst.setDate(3, Date.valueOf(d_date.getValue()));
 
             ResultSet rs1 = pst1.executeQuery();
+
             while(rs1.next())
-            {
                 dob = rs1.getDate(1).toLocalDate();
-            }
 
             rs1.close();
             pst1.close();
 
-            LocalDate current = d_date.getValue();
+            LocalDate current;
+            current = d_date.getValue();
 
             Period period = Period.between(dob, current);
 
@@ -239,6 +243,27 @@ public class AddNewDonationController extends LogINpanelController {
         if(i==0 && flag==0) return true;
         else return false;
     }
+
+    /**
+     *
+     * This functions is for checking all the errors in the add new donations porcess.
+     *
+     * The function is here to show alert on three scenarios.
+     * First of all it checks the text field of the mobile number.
+     * If the mobile number is not given or blank than it will show error.
+     * But for a given mobile number it wil show alert because of the digits less
+     * than the number of 11. ALso it will check for the valid characters inserted.
+     *
+     * Then, using the previous checkDate method it will check the validity
+     * of the date and alert accordingly.
+     *
+     * The location details supports no granularity check rather it sees
+     * whether any details is given or not and alerts the user Otherwise.
+     *
+     * @return boolean
+     * which depends on the value of alert check
+     *
+     */
 
     public boolean checkAlert()
     {
@@ -280,27 +305,63 @@ public class AddNewDonationController extends LogINpanelController {
         return alertCheck;
     }
 
+    /**
+     *
+     * This method is here for the functionality of the submit button, A successful
+     * submission will record the data into the database.
+     *
+     * The method establishes connection the database and accordingly goes for the
+     * the Data Manipulation to write into the database. Now the inserted data are
+     * in the PreparedStatement object to write into the database. If the gender given
+     * is null the system will choose the gender of the user automatically.
+     *
+     * After a pressing the button any sort of anomalies will raise an alert. But
+     * for a proper scenario it will show a confirmation dialogue box to the user
+     * and upon passing "okay" the data will be written. In the catch block it is
+     * capturing any sort of exceptions that may occur and showing the string value
+     * of that on the warning stage.
+     *
+     * @param even
+     * which is ActionEvent object.
+     *
+     * @throws IOException
+     * That is a checked exception. Shows any exceptions that occur
+     * due to the i/p and o/p of the total flow.
+     *
+     * @throws NullPointerException
+     * it is thrown when an application attempts to use an object reference that has the
+     * null value. This is a RunTimeException and handling it is very toilsome.
+     *
+     */
+
 
     public void pressSubmitDonation(ActionEvent even) throws IOException, NullPointerException{
         if(checkAlert()==false)
         {
-            String username = "als";
-            String password = "iutcse18";
-            String url = "jdbc:oracle:thin:@localhost:1521/XE";
-            String query = "INSERT INTO DONATION_INFO VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+            String username;
+            username = "als";
+            String password;
+            password = "iutcse18";
+            String url;
+            url = "jdbc:oracle:thin:@localhost:1521/XE";
+            String query;
+            query = "INSERT INTO DONATION_INFO VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
 
-            PreparedStatement pst = null;
+            PreparedStatement pst;
+            pst = null;
 
             try{
                 Class.forName("oracle.jdbc.driver.OracleDriver");
-                Connection con = DriverManager.getConnection(url,username,password);
+                Connection con = DriverManager.getConnection(url, username, password);
 
                 pst = con.prepareStatement(query);
                 pst.setString(1, txtUser.getText());
                 pst.setString(2, p_Location.getValue().toString());
                 pst.setString(3, p_name.getText());
+
                 if(p_Gender_choice.getValue()==null) pst.setString(4, null);
                 else pst.setString(4, p_Gender_choice.getValue().toString());
+
                 pst.setString(5, complications.getText());
                 pst.setString(6, p_mobile.getText());
                 pst.setDate(7, Date.valueOf(d_date.getValue()));
