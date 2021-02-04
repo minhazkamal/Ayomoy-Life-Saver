@@ -22,6 +22,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+/**
+ * This is a controller class for sample.DonorInfo.fxml
+ *
+ * @author minhaz231
+ */
 public class DonorInfoController extends LogINpanelController{
 
     File f,fp;
@@ -30,7 +35,9 @@ public class DonorInfoController extends LogINpanelController{
     List<String> extFile = new ArrayList<>();
     ObservableList<String> Activeness = FXCollections.observableArrayList("Active", "Inactive");
     ObservableList<String> Payable = FXCollections.observableArrayList("Paid", "NON-Paid");
-
+    /**
+     * FXML related Variables used to fetch i/p from the UI
+     */
     @FXML
     private TextArea comments;
     @FXML
@@ -48,6 +55,14 @@ public class DonorInfoController extends LogINpanelController{
     @FXML
     private Label checked_by;
 
+    /**
+     * This is the initializing function of the fxml components.
+     *
+     * When a the window is launched this method initializes these
+     * components. Establishes the connection with the database and
+     * upon fetching the data columns works with the property values.
+     *
+     */
     public void initialize()
     {
         paying.setItems(Payable);
@@ -115,7 +130,17 @@ public class DonorInfoController extends LogINpanelController{
         }
 
     }
-
+    /**
+     * This method is here for the functionality of the "Back" button. This will redirect the
+     * user to the parent node that is the "root" which is sample.UserPanel.fxml. This hierarchical
+     * structure is for the simplicity of the system.
+     *
+     * @param even which is an object of ActionEvent Class
+     * refers to the event of action for the method
+     * @throws IOException
+     * which is a checked exception.
+     * Used to identify errors in i/p and o/p of a particular workflow.
+     */
     public void pressBack(ActionEvent even) throws IOException {
         ((Node) even.getSource()).getScene().getWindow().hide();
 
@@ -128,6 +153,12 @@ public class DonorInfoController extends LogINpanelController{
         primaryStage.show();
     }
 
+    /**
+     * This is for the bowsing the profiles of the Donor
+     * @param even which is an object of ActionEvent Class
+     * @throws FileNotFoundException, when the File path is n
+     * not incorrect or file not present.
+     */
     public void pressBrowse(ActionEvent even) throws FileNotFoundException {
         FileChooser fc = new FileChooser();
         fc.getExtensionFilters().add(new FileChooser.ExtensionFilter("Image File", extFile));
@@ -142,6 +173,17 @@ public class DonorInfoController extends LogINpanelController{
         }
     }
 
+    /**
+     * This is for the functionality of the Saving of Donor test reports.
+     *
+     * The test reports will be provided in form of image files.
+     *
+     *  @param even which is an object of ActionEvent Class
+     * refers to the event of action for the method
+     * @throws IOException
+     * which is a checked exception.
+     * Used to identify errors in i/p and o/p of a particular workflow.
+     */
     private void doSave(ActionEvent even) throws IOException
     {
         String username = "als";
@@ -219,6 +261,14 @@ public class DonorInfoController extends LogINpanelController{
         }
     }
 
+    /**
+     * This is for the confirmation of the submission of the test reports.
+     *
+     * This confirms that the previous report file has been overwritten in the database.
+     * @param even even which is an object of ActionEvent Class
+     * @throws IOException which is a checked exception.
+     * Used to identify errors in i/p and o/p of a
+     */
     public void pressSave(ActionEvent even) throws IOException{
 
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
