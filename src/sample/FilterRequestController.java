@@ -13,11 +13,23 @@ import java.io.IOException;
 import java.sql.*;
 import java.time.LocalDate;
 
+/**
+ *  This is the controller class for managing the Filter requests.
+ *
+ *  Lot of filters are predefined here in the class in lists to avoid invalid queries
+ *  into the database.
+ *
+ * @author minhaz231
+ * @param <bg>
+ */
 public class FilterRequestController<bg> extends PendingRequestController{
 
     ObservableList<String> BGList = FXCollections.observableArrayList("A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-");
     ObservableList<String> LocList = FXCollections.observableArrayList();
 
+    /**
+     * FXML related Variables, fecthes the data from the UI
+     */
     @FXML
     private ChoiceBox filterBG;
     @FXML
@@ -33,31 +45,51 @@ public class FilterRequestController<bg> extends PendingRequestController{
     public static String loct;
     public static boolean flag = false;
 
+    /**
+     * Getter function of Location, static
+     * @return String, which is the location
+     */
     public static String getLoct() {
         return loct;
     }
 
     public static LocalDate std;
-
+    /**
+     * Getter function of Blood Group, static
+     * @return String, Which is the Blood Group
+     */
     public static String getBg() {
         return bg;
     }
-
+    /**
+     * Getter function of Local Date, static
+     * @return LocalDate, which is the starting date of the Filter imposed
+     */
     public static LocalDate getStd() {
         return std;
     }
-
+    /**
+     * Getter function of Local Date, static
+     * @return LocalDate,  which is the ending of the date of the Filter Imposed
+     */
     public static LocalDate getEnd_d() {
         return end;
     }
-
+    /**
+     * Getter function of count, static
+     * @return int, which is the frequency of the count
+     */
     public static int getCountf() {
         return countf;
     }
 
     public static LocalDate end;
     public static int countf;
-
+    /**
+     * This method fecthes the Locaiton details for a request from the
+     * database directly through queries.
+     *
+     */
     public void getLoc()
     {
         String username = "als";
@@ -95,6 +127,14 @@ public class FilterRequestController<bg> extends PendingRequestController{
         }
     }
 
+    /**
+     * This is the initializing function of the fxml components.
+     *
+     * When a the window is launched this method initializes these
+     * components. Establishes the connection with the database and
+     * upon fetching the data columns works with the property values.
+     *
+     */
     public void initialize()
     {
         getLoc();
@@ -103,7 +143,15 @@ public class FilterRequestController<bg> extends PendingRequestController{
         //filterBG.setValue(PendingRequestController.getBg());
         startingDate.setValue(LocalDate.now());
     }
-
+    /**
+     * This is for Imposing the search filters.
+     *
+     * The method formulates a proper query with the constraints and searches the
+     * database for the results. If else blocks are used for handling the null fields.
+     *
+     * @param even, Object of ActionEvent Class
+     * @throws IOException, checked exception for i/p and o/p
+     */
     public void pressSearchFilter(ActionEvent even) throws IOException {
 
         String username = "als";
@@ -188,6 +236,11 @@ public class FilterRequestController<bg> extends PendingRequestController{
         ((Node) even.getSource()).getScene().getWindow().hide();
     }
 
+    /**
+     * Method fo clearing all the imposed filters on the list.
+     *
+     * @param even, Object of ActionEvent
+     */
     public void pressCancelFilter(ActionEvent even) {
         ((Node) even.getSource()).getScene().getWindow().hide();
     }

@@ -17,6 +17,12 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
+/**
+ * The Organization Can also perform the same Tasks of the Donor. This class is for
+ * facilitating those features of the Organization.
+ *
+ * @author fairuz240
+ */
 public class OrganizationDonorPanelController extends LogINpanelController{
 
 //    @FXML
@@ -67,6 +73,17 @@ public class OrganizationDonorPanelController extends LogINpanelController{
 //
 //    }
 
+    /**
+     * This method is here for the functionality of the "Back" button. This will redirect the
+     * user to the parent node that is the "root" which is sample.UserPanel.fxml. This hierarchical
+     * structure is for the simplicity of the system.
+     *
+     * @param even which is an object of ActionEvent Class
+     * refers to the event of action for the method
+     * @throws IOException
+     * which is a checked exception.
+     * Used to identify errors in i/p and o/p of a particular workflow.
+     */
     public void pressBack(ActionEvent even) throws IOException {
         ((Node) even.getSource()).getScene().getWindow().hide();
 
@@ -79,6 +96,16 @@ public class OrganizationDonorPanelController extends LogINpanelController{
         primaryStage.show();
     }
 
+    /**
+     * This method is for the functionality of the Org Info button. This loads the sample.OrgLicInfo.fxml
+     * file and presents the user with the relevant information and the component.
+     *
+     * @param even which is an object of ActionEvent Class
+     * refers to the event of action for the method
+     * @throws IOException
+     * which is a checked exception.
+     * Used to identify errors in i/p and o/p of a particular workflow.
+     */
     public void pressOrgInfo(ActionEvent even) throws IOException {
         ((Node) even.getSource()).getScene().getWindow().hide();
 
@@ -90,6 +117,17 @@ public class OrganizationDonorPanelController extends LogINpanelController{
         primaryStage.setResizable(false);
         primaryStage.show();
     }
+
+    /**
+     * This method is for the button that enables an Organization to see the pending reqgesusts with
+     * loading the sample.PendingRequest.fxml file. This is the same feature that was implemneted
+     * into the Donor Class.
+     *
+     * @param even which is an object of ActionEvent Class
+     * refers to the event of action for the method
+     * @throws IOException, which is a checked exception.
+     * Used to identify errors in i/p and o/p of a particular workflow.
+     */
 
     public void pressPendingRequest(ActionEvent even) throws IOException{
         ((Node) even.getSource()).getScene().getWindow().hide();

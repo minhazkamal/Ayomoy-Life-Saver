@@ -112,4 +112,9 @@ public class AdminPanelController extends LogINpanelController {
         primaryStage.setResizable(false);
         primaryStage.show();
     }
+
+    public void initialize()
+    {
+
+    }
 }
