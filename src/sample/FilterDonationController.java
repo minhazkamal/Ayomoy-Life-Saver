@@ -11,6 +11,11 @@ import javafx.scene.control.ChoiceBox;
 import java.sql.*;
 import java.time.LocalDate;
 
+/**
+ * This Class is for managing the filters of the Searching in the donation list.
+ *
+ * @author fairuz240
+ */
 public class FilterDonationController {
 
     ObservableList<String> BGList = FXCollections.observableArrayList("A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-");
@@ -22,18 +27,31 @@ public class FilterDonationController {
     public static String pay;
     public static int countf;
 
+    /**
+     * Getter function of Count of Donation, static
+     * @return int, that is the count of frequency
+     */
     public static int getCountf() {
         return countf;
     }
-
+    /**
+     * Getter function of Blood Group, static
+     * @return int. that is the blood group
+     */
     public static String getBg() {
         return bg;
     }
-
+    /**
+     * Getter function of Location, static
+     * @return String, that is the location details
+     */
     public static String getLoct() {
         return loct;
     }
-
+    /**
+     * Getter function of Payment, static
+     * @return String, that shows the monetary exchanges
+     */
     public static String getPay() {
         return pay;
     }
@@ -51,6 +69,9 @@ public class FilterDonationController {
     @FXML
     private ChoiceBox filterPay;
 
+    /**
+     * Method for fetching the Location details from the database
+     */
     public void getLoc()
     {
         String username = "als";
@@ -88,6 +109,14 @@ public class FilterDonationController {
         }
     }
 
+    /**
+     * This is the initializing function of the fxml components.
+     *
+     * When a the window is launched this method initializes these
+     * components. Establishes the connection with the database and
+     * upon fetching the data columns works with the property values.
+     *
+     */
     public void initialize()
     {
         getLoc();
@@ -95,6 +124,15 @@ public class FilterDonationController {
         filterLocation.setItems(LocList);
         filterPay.setItems(Pay_Cond);
     }
+
+    /**
+     * This is for Imposing the search filters.
+     *
+     * The method formulates a proper query with the constraints and searches the
+     * database for the results. If else blocks are used for handeling the null fields.
+     *
+     * @param even, Object of ActionEvent Class
+     */
 
     public void pressSearchFilter(ActionEvent even) {
         String username = "als";

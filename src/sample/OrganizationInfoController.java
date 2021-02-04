@@ -15,9 +15,16 @@ import java.io.IOException;
 import java.sql.*;
 import java.time.LocalDate;
 
+/**
+ * This Class is for Handeing the Organization info During Registration.
+ *
+ * The class extends the RegisterController.
+ * @author minhaz231
+ */
 public class OrganizationInfoController extends RegisterController {
 
     ObservableList<String> LocList = FXCollections.observableArrayList();
+
 
     @FXML
     private TextField OrgName;
@@ -40,6 +47,11 @@ public class OrganizationInfoController extends RegisterController {
     @FXML
     private Button back_button;
 
+    /**
+     * This Methods fetches the Location details from the database.
+     * handles the Exceptions with the help of Catch Block and displays
+     * error on the window title as waging.
+     */
     public void getLoc()
     {
         String username = "als";
@@ -77,6 +89,15 @@ public class OrganizationInfoController extends RegisterController {
         }
     }
 
+
+    /**
+     * This is the initializing function of the fxml components.
+     *
+     * When a the window is launched this method initializes these
+     * components. Establishes the connection with the database and
+     * upon fetching the data columns works with the property values.
+     *
+     */
     public void initialize()
     {
         back_button.setVisible(false);
@@ -85,6 +106,25 @@ public class OrganizationInfoController extends RegisterController {
         AddressLocation.setItems(LocList);
     }
 
+    /**
+     *
+     * This functions is for checking the errors in the add new information and Image files.
+     *
+     * The function is here to show alert on three scenarios.
+     * First of all it checks the text field of the mobile number.
+     * If the mobile number is not given or blank than it will show error.
+     * But for a given mobile number it wil show alert because of the digits less
+     * than the number of 11. ALso it will check for the valid characters inserted.
+     *
+     * Then, using the previous checkDate method it will check the validity
+     * of the date and alert accordingly.
+     *
+     * The location details supports no granularity check rather it sees
+     * whether any details is given or not and alerts the user Otherwise.
+     *
+     * @return boolean which depends on the value of alert check.
+     *
+     */
     public boolean checkAlert()
     {
         boolean alertCheck = false;
@@ -162,6 +202,17 @@ public class OrganizationInfoController extends RegisterController {
         return alertCheck;
     }
 
+    /**
+     * This method is here for the functionality of the "Back" button. This will redirect the
+     * user to the parent node that is the "root" which is sample.UserPanel.fxml. This hierarchical
+     * structure is for the simplicity of the system.
+     *
+     * @param even which is an object of ActionEvent Class
+     * refers to the event of action for the method
+     * @throws IOException
+     * which is a checked exception.
+     * Used to identify errors in i/p and o/p of a particular workflow.
+     */
     public void pressBack(ActionEvent even) throws IOException{
         ((Node) even.getSource()).getScene().getWindow().hide();
 
@@ -174,6 +225,19 @@ public class OrganizationInfoController extends RegisterController {
         primaryStage.show();
     }
 
+    /**
+     * This method is here for the functionality of Submit button in the Ogr mode.
+     *
+     * There are information of Orgs that are Needed to updated frequently (Legal Payers)
+     * and some information are there which might change over time. This button submits
+     * the changed information into the Database using the DML.
+     *
+     * @param even which is an object of ActionEvent Class
+     * refers to the event of action for the method
+     * @throws IOException
+     * which is a checked exception.
+     * Used to identify errors in i/p and o/p of a particular workflow.
+     */
     public void pressSubmit(ActionEvent even) throws IOException {
         if(checkAlert()==false)
         {
