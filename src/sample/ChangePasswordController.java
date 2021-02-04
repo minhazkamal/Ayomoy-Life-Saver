@@ -163,12 +163,22 @@ public class ChangePasswordController extends LogINpanelController{
 
     /**
      * This method is here to initialize the whole process of updating.
+     * This is needed when the window is first opened.
      */
     public void initialize()
     {
         txtUsername.setText(LogINpanelController.getUser());
     }
 
+    /**
+     * This is for the functionality of the Change button in the Change password
+     * window. Pressing this button finalizes the changes and updates them into the
+     * database into the database through proper connections.
+     *
+     * @param even
+     * Which is an ActionEvent object,this events are genrating from mouse click or
+     * pressing
+     */
     public void pressChange(ActionEvent even) {
         if(checkAlert()==false)
         {
