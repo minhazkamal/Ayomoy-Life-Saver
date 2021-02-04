@@ -35,7 +35,6 @@ public class AdminPanelController extends LogINpanelController {
         Parent root = FXMLLoader.load(getClass().getResource("LogINPanel.fxml"));
         primaryStage.setTitle("Ayomoy LifeSaver");
         primaryStage.setScene(new Scene(root, 1000, 600));
-        primaryStage.getScene().getStylesheets().add("sample/alsstyles.css");
         primaryStage.setResizable(false);
         primaryStage.show();
     }
@@ -59,7 +58,6 @@ public class AdminPanelController extends LogINpanelController {
         Parent root = FXMLLoader.load(getClass().getResource("ChangePassword.fxml"));
         primaryStage.setTitle("Ayomoy Life Saver");
         primaryStage.setScene(new Scene(root, 600, 400));
-        primaryStage.getScene().getStylesheets().add("sample/alsstyles.css");
         primaryStage.setResizable(false);
         primaryStage.showAndWait();
     }
@@ -83,7 +81,6 @@ public class AdminPanelController extends LogINpanelController {
         Parent root = FXMLLoader.load(getClass().getResource("DonorApprovalList.fxml"));
         primaryStage.setTitle("Ayomoy Life Saver");
         primaryStage.setScene(new Scene(root, 1000, 600));
-        primaryStage.getScene().getStylesheets().add("sample/alsstyles.css");
         primaryStage.setResizable(false);
         primaryStage.show();
     }
@@ -108,7 +105,6 @@ public class AdminPanelController extends LogINpanelController {
         Parent root = FXMLLoader.load(getClass().getResource("OrgApprovalList.fxml"));
         primaryStage.setTitle("Ayomoy Life Saver");
         primaryStage.setScene(new Scene(root, 1000, 600));
-        primaryStage.getScene().getStylesheets().add("sample/alsstyles.css");
         primaryStage.setResizable(false);
         primaryStage.show();
     }

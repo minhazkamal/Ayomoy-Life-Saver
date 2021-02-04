@@ -1,5 +1,3 @@
-.root{
-    -fx-background-image: url("images/Presentation1_Proposal.jpg");
-    -fx-background-color: rgba(255,255,255,0.05);
+.label{
+    -fx-background-color: black;
 }
-

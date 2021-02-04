@@ -58,7 +58,6 @@ public class sampleController implements Initializable {
         Parent root = FXMLLoader.load(getClass().getResource("LogINpanel.fxml"));
         primaryStage.setTitle("Ayomoy Life Saver");
         primaryStage.setScene(new Scene(root, 1000, 600));
-        primaryStage.getScene().getStylesheets().add("sample/alsstyles.css");
         primaryStage.setResizable(false);
         primaryStage.show();
 
@@ -75,7 +74,6 @@ public class sampleController implements Initializable {
         Parent root = FXMLLoader.load(getClass().getResource("AboutUs.fxml"));
         primaryStage.setTitle("Ayomoy Life Saver");
         primaryStage.setScene(new Scene(root, 1000, 600));
-        primaryStage.getScene().getStylesheets().add("sample/alsstyles.css");
         primaryStage.setResizable(false);
         primaryStage.show();
     }

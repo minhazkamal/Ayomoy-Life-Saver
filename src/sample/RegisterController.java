@@ -180,7 +180,6 @@ public class RegisterController {
                     Parent root = FXMLLoader.load(getClass().getResource("PersonalInfo.fxml"));
                     primaryStage.setTitle("Ayomoy Life Saver");
                     primaryStage.setScene(new Scene(root, 1000, 600));
-                    primaryStage.getScene().getStylesheets().add("sample/alsstyles.css");
                     primaryStage.initModality(Modality.APPLICATION_MODAL);
                     primaryStage.setResizable(false);
                     primaryStage.show();
@@ -193,7 +192,6 @@ public class RegisterController {
                     Parent root = FXMLLoader.load(getClass().getResource("OrganizationInfo.fxml"));
                     primaryStage.setTitle("Ayomoy Life Saver");
                     primaryStage.setScene(new Scene(root, 1000, 600));
-                    primaryStage.getScene().getStylesheets().add("sample/alsstyles.css");
                     primaryStage.initModality(Modality.APPLICATION_MODAL);
                     primaryStage.setResizable(false);
                     primaryStage.show();
@@ -220,7 +218,6 @@ public class RegisterController {
             Parent root = FXMLLoader.load(getClass().getResource("Register.fxml"));
             primaryStage.setTitle("Ayomoy Life Saver");
             primaryStage.setScene(new Scene(root, 1000, 600));
-            primaryStage.getScene().getStylesheets().add("sample/alsstyles.css");
             primaryStage.setResizable(false);
             primaryStage.show();
         }
@@ -234,7 +231,6 @@ public class RegisterController {
         Parent root = FXMLLoader.load(getClass().getResource("LogINpanel.fxml"));
         primaryStage.setTitle("Ayomoy Life Saver");
         primaryStage.setScene(new Scene(root, 1000, 600));
-        primaryStage.getScene().getStylesheets().add("sample/alsstyles.css");
         primaryStage.setResizable(false);
         primaryStage.show();
     }

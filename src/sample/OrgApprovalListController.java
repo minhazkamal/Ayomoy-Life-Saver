@@ -201,7 +201,6 @@ public class OrgApprovalListController extends LogINpanelController {
         Parent root = FXMLLoader.load(getClass().getResource("ImageShow.fxml"));
         primaryStage.setTitle("Ayomoy Life Saver");
         primaryStage.setScene(new Scene(root, 600, 400));
-        primaryStage.getScene().getStylesheets().add("sample/alsstyles.css");
         primaryStage.setResizable(false);
         primaryStage.showAndWait();
 
@@ -330,7 +329,6 @@ public class OrgApprovalListController extends LogINpanelController {
         Parent root = FXMLLoader.load(getClass().getResource("OrgApprovalList.fxml"));
         primaryStage.setTitle("Ayomoy Life Saver");
         primaryStage.setScene(new Scene(root, 1000, 600));
-        primaryStage.getScene().getStylesheets().add("sample/alsstyles.css");
         primaryStage.setResizable(false);
         primaryStage.show();
     }
@@ -342,7 +340,6 @@ public class OrgApprovalListController extends LogINpanelController {
         Parent root = FXMLLoader.load(getClass().getResource("AdminPanel.fxml"));
         primaryStage.setTitle("Ayomoy Life Saver");
         primaryStage.setScene(new Scene(root, 1000, 600));
-        primaryStage.getScene().getStylesheets().add("sample/alsstyles.css");
         primaryStage.setResizable(false);
         primaryStage.show();
     }

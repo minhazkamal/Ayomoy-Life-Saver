@@ -194,7 +194,6 @@ public class UserProfileUpdateController extends UserPanelController{
         Parent root = FXMLLoader.load(getClass().getResource("UserPanel.fxml"));
         primaryStage.setTitle("Ayomoy Life Saver");
         primaryStage.setScene(new Scene(root, 1000, 600));
-        primaryStage.getScene().getStylesheets().add("sample/alsstyles.css");
         primaryStage.setResizable(false);
         primaryStage.show();
     }
@@ -239,7 +238,6 @@ public class UserProfileUpdateController extends UserPanelController{
                 Parent root = FXMLLoader.load(getClass().getResource("UserPanel.fxml"));
                 primaryStage.setTitle("Ayomoy Life Saver");
                 primaryStage.setScene(new Scene(root, 1000, 600));
-                primaryStage.getScene().getStylesheets().add("sample/alsstyles.css");
                 primaryStage.setResizable(false);
                 primaryStage.show();
 
@@ -262,7 +260,6 @@ public class UserProfileUpdateController extends UserPanelController{
             Parent root = FXMLLoader.load(getClass().getResource("UserProfileUpdate.fxml"));
             primaryStage.setTitle("Ayomoy Life Saver");
             primaryStage.setScene(new Scene(root, 1000, 600));
-            primaryStage.getScene().getStylesheets().add("sample/alsstyles.css");
             primaryStage.setResizable(false);
             primaryStage.show();
         }
@@ -275,7 +272,6 @@ public class UserProfileUpdateController extends UserPanelController{
         Parent root = FXMLLoader.load(getClass().getResource("ChangePassword.fxml"));
         primaryStage.setTitle("Ayomoy Life Saver");
         primaryStage.setScene(new Scene(root, 600, 400));
-        primaryStage.getScene().getStylesheets().add("sample/alsstyles.css");
         primaryStage.setResizable(false);
         primaryStage.showAndWait();
     }

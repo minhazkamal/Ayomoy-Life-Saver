@@ -399,7 +399,6 @@ public class AddNewDonationController extends LogINpanelController {
                 Parent root = FXMLLoader.load(getClass().getResource("DonationInfo.fxml"));
                 primaryStage.setTitle("Ayomoy Life Saver");
                 primaryStage.setScene(new Scene(root, 1000, 600));
-                primaryStage.getScene().getStylesheets().add("sample/alsstyles.css");
                 primaryStage.setResizable(false);
                 primaryStage.show();
 
@@ -434,7 +433,6 @@ public class AddNewDonationController extends LogINpanelController {
         Parent root = FXMLLoader.load(getClass().getResource("DonationInfo.fxml"));
         primaryStage.setTitle("Ayomoy Life Saver");
         primaryStage.setScene(new Scene(root, 1000, 600));
-        primaryStage.getScene().getStylesheets().add("sample/alsstyles.css");
         primaryStage.setResizable(false);
         primaryStage.show();
     }
