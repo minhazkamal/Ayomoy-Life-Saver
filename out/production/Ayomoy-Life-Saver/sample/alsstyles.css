@@ -1,3 +1,4 @@
-.label{
-    -fx-background-color: black;
+.button{
+    -fx-effect: dropshadow(three-pass-box,rgb(157,49,49),10,0,0,0);
 }
+
