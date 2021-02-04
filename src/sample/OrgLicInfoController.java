@@ -19,6 +19,12 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+/**
+ * This class is for the Licence information of the Organization .
+ * Extends the LogINpanelController Class.
+ *
+ * @author minhaz231
+ */
 public class OrgLicInfoController extends LogINpanelController{
     File f,fp;
     FileInputStream fin;
@@ -38,6 +44,14 @@ public class OrgLicInfoController extends LogINpanelController{
     @FXML
     private Label checkingDate;
 
+    /**
+     * This is the initializing function of the fxml components.
+     *
+     * When a the window is launched this method initializes these
+     * components. Establishes the connection with the database and
+     * upon fetching the data columns works with the property values.
+     *
+     */
     public void initialize()
     {
         extFile.add("*.jpg");
@@ -88,7 +102,14 @@ public class OrgLicInfoController extends LogINpanelController{
             alert.showAndWait();
         }
     }
-
+    /**
+     * This method is here for the functionality of the "Back" button. This will redirect the
+     * user to the parent node that is the "root" which is sample.UserPanel.fxml. This hierarchical
+     * structure is for the simplicity of the system.
+     *
+     * @param even, object of ActionEvent generated from click or Enter
+     * @throws IOException,  checked exception
+     */
     public void pressBack(ActionEvent even) throws IOException {
         ((Node) even.getSource()).getScene().getWindow().hide();
 
@@ -101,6 +122,14 @@ public class OrgLicInfoController extends LogINpanelController{
         primaryStage.show();
     }
 
+    /**
+     * This is for the button to browsw the Licene files form the Image file.
+     * This is the way they will be able to uplaod the licence file into the
+     * system and select it.
+     *
+     * @param actionEvent object of ActionEvent.
+     * @throws Exception
+     */
     public void pressBrowse(ActionEvent actionEvent) throws Exception{
         FileChooser fc = new FileChooser();
         fc.getExtensionFilters().add(new FileChooser.ExtensionFilter("Image File", extFile));
@@ -115,6 +144,15 @@ public class OrgLicInfoController extends LogINpanelController{
         }
     }
 
+    /**
+     * This method is for the save button which is pressed after the image file is
+     * uploaded. This will then be overwritten on the database
+     * .
+     * @param even
+     * object of action event
+     * @throws IOException
+     * checked exceeption related to i/p and o/p
+     */
     private void doSave(ActionEvent even) throws IOException
     {
         String username = "als";
@@ -183,6 +221,17 @@ public class OrgLicInfoController extends LogINpanelController{
         }
     }
 
+    /**
+     * This method is for the save button which is pressed after the image file is
+     * uploaded. This will then be overwritten on the database. This loads the
+     * sample.OrganizationDonorPanel.fxml file and shows the saved licence. A recursive
+     * call is there for a buttonTypeYes.
+     * .
+     * @param even
+     * object of action event
+     * @throws IOException
+     * checked exceeption related to i/p and o/p
+     */
     public void pressSave(ActionEvent even) throws IOException {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Conirmation Submission");
