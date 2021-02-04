@@ -120,6 +120,7 @@ public class DonorPanelController extends LogINpanelController{
         Parent root = FXMLLoader.load(getClass().getResource("DonorInfo.fxml"));
         primaryStage.setTitle("Ayomoy Life Saver");
         primaryStage.setScene(new Scene(root, 1000, 600));
+        primaryStage.getScene().getStylesheets().add("sample/alsstyles.css");
         primaryStage.setResizable(false);
         primaryStage.show();
     }
@@ -142,6 +143,7 @@ public class DonorPanelController extends LogINpanelController{
         Parent root = FXMLLoader.load(getClass().getResource("DonationInfo.fxml"));
         primaryStage.setTitle("Ayomoy Life Saver");
         primaryStage.setScene(new Scene(root, 1000, 600));
+        primaryStage.getScene().getStylesheets().add("sample/alsstyles.css");
         primaryStage.setResizable(false);
         primaryStage.show();
     }
@@ -162,6 +164,7 @@ public class DonorPanelController extends LogINpanelController{
         Parent root = FXMLLoader.load(getClass().getResource("PendingRequest.fxml"));
         primaryStage.setTitle("Ayomoy Life Saver");
         primaryStage.setScene(new Scene(root, 1000, 600));
+        primaryStage.getScene().getStylesheets().add("sample/alsstyles.css");
         primaryStage.setResizable(false);
         primaryStage.show();
     }
@@ -185,6 +188,7 @@ public class DonorPanelController extends LogINpanelController{
             Parent root = FXMLLoader.load(getClass().getResource("OrganizationPanel.fxml"));
             primaryStage.setTitle("Ayomoy Life Saver");
             primaryStage.setScene(new Scene(root, 1000, 600));
+            primaryStage.getScene().getStylesheets().add("sample/alsstyles.css");
             primaryStage.setResizable(false);
             primaryStage.show();
         }
@@ -196,6 +200,7 @@ public class DonorPanelController extends LogINpanelController{
             Parent root = FXMLLoader.load(getClass().getResource("UserPanel.fxml"));
             primaryStage.setTitle("Ayomoy Life Saver");
             primaryStage.setScene(new Scene(root, 1000, 600));
+            primaryStage.getScene().getStylesheets().add("sample/alsstyles.css");
             primaryStage.setResizable(false);
             primaryStage.show();
         }

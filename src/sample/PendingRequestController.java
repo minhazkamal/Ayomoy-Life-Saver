@@ -130,6 +130,7 @@ public class PendingRequestController extends DonorPanelController {
         Parent root = FXMLLoader.load(getClass().getResource("ShowDetailRequestInfo.fxml"));
         primaryStage.setTitle("Ayomoy Life Saver");
         primaryStage.setScene(new Scene(root, 1000, 600));
+        primaryStage.getScene().getStylesheets().add("sample/alsstyles.css");
         primaryStage.setResizable(false);
         primaryStage.show();
     }
@@ -143,6 +144,7 @@ public class PendingRequestController extends DonorPanelController {
             Parent root = FXMLLoader.load(getClass().getResource("DonorPanel.fxml"));
             primaryStage.setTitle("Ayomoy Life Saver");
             primaryStage.setScene(new Scene(root, 1000, 600));
+            primaryStage.getScene().getStylesheets().add("sample/alsstyles.css");
             primaryStage.setResizable(false);
             primaryStage.show();
         }
@@ -154,6 +156,7 @@ public class PendingRequestController extends DonorPanelController {
             Parent root = FXMLLoader.load(getClass().getResource("OrganizationDonorPanel.fxml"));
             primaryStage.setTitle("Ayomoy Life Saver");
             primaryStage.setScene(new Scene(root, 1000, 600));
+            primaryStage.getScene().getStylesheets().add("sample/alsstyles.css");
             primaryStage.setResizable(false);
             primaryStage.show();
         }
@@ -166,6 +169,7 @@ public class PendingRequestController extends DonorPanelController {
         Parent root = FXMLLoader.load(getClass().getResource("PendingRequest.fxml"));
         primaryStage.setTitle("Ayomoy Life Saver");
         primaryStage.setScene(new Scene(root, 1000, 600));
+        primaryStage.getScene().getStylesheets().add("sample/alsstyles.css");
         primaryStage.setResizable(false);
         primaryStage.show();
     }
@@ -176,6 +180,7 @@ public class PendingRequestController extends DonorPanelController {
         Parent root = FXMLLoader.load(getClass().getResource("FilterRequest.fxml"));
         primaryStage.setTitle("Ayomoy Life Saver");
         primaryStage.setScene(new Scene(root, 600, 400));
+        primaryStage.getScene().getStylesheets().add("sample/alsstyles.css");
         primaryStage.setResizable(false);
         primaryStage.initModality(Modality.APPLICATION_MODAL);
         primaryStage.showAndWait();

@@ -220,6 +220,7 @@ public class OrganizationInfoController extends RegisterController {
         Parent root = FXMLLoader.load(getClass().getResource("Register.fxml"));
         primaryStage.setTitle("Ayomoy Life Saver");
         primaryStage.setScene(new Scene(root, 1000, 600));
+        primaryStage.getScene().getStylesheets().add("sample/alsstyles.css");
         primaryStage.setResizable(false);
         primaryStage.show();
     }
@@ -283,6 +284,7 @@ public class OrganizationInfoController extends RegisterController {
                 Parent root = FXMLLoader.load(getClass().getResource("LogINpanel.fxml"));
                 primaryStage.setTitle("Ayomoy Life Saver");
                 primaryStage.setScene(new Scene(root, 1000, 600));
+                primaryStage.getScene().getStylesheets().add("sample/alsstyles.css");
                 primaryStage.setResizable(false);
                 primaryStage.show();
 
@@ -305,6 +307,7 @@ public class OrganizationInfoController extends RegisterController {
             Parent root = FXMLLoader.load(getClass().getResource("OrganizationInfo.fxml"));
             primaryStage.setTitle("Ayomoy Life Saver");
             primaryStage.setScene(new Scene(root, 1000, 600));
+            primaryStage.getScene().getStylesheets().add("sample/alsstyles.css");
             primaryStage.setResizable(false);
             primaryStage.show();
         }
