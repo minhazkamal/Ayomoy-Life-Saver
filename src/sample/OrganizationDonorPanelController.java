@@ -140,4 +140,9 @@ public class OrganizationDonorPanelController extends LogINpanelController{
         primaryStage.setResizable(false);
         primaryStage.show();
     }
+
+    public void initialize()
+    {
+
+    }
 }
