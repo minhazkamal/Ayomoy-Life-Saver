@@ -8,7 +8,6 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" exported="" name="javafx-sdk-15" level="project" />
-    <orderEntry type="library" exported="" name="ojdbc6" level="project" />
     <orderEntry type="library" exported="" name="opencv-450" level="project" />
     <orderEntry type="module-library" exported="">
       <library>
@@ -47,5 +46,7 @@
         <jarDirectory url="file://$MODULE_DIR$/Tess4J-3.4.8-src/Tess4J/dist" recursive="false" />
       </library>
     </orderEntry>
+    <orderEntry type="library" name="lib" level="project" />
+    <orderEntry type="library" name="ojdbc6" level="project" />
   </component>
 </module>
