@@ -16,11 +16,24 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
+/**
+ * This class is for showing the Image through handling the components of
+ * sample.ImageShow.fxml file.
+ *
+ * @author abdullah239
+ */
 public class ImageShowController {
     @FXML
     private ImageView imageView;
 
-
+    /**
+     * This is the initializing function of the fxml components.
+     *
+     * When a the window is launched this method initializes these
+     * components. Establishes the connection with the database and
+     * upon fetching the data columns works with the property values.
+     *
+     */
     public void initialize()
     {
         String username = "als";

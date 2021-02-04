@@ -20,16 +20,33 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
+/**
+ * This Class Controllers the sample.LogINpanel.fxml file.
+ *
+ * Handles the Log in of the users through fecthing the credentials.
+ *
+ * @author fairuz240
+ */
 public class LogINpanelController {
     ObservableList<String> TypeList = FXCollections.observableArrayList("Admin", "Person", "Organization");
     public static String user;
     public static String type;
 
 
+    /**
+     * Getter function for the type, explicitly mentioned for
+     * optimization. Not needed to parse through the whole user table
+     * because of this. Static Method.
+     * @return String, type of the user.
+     */
     public static String getType() {
         return type;
     }
 
+    /**
+     * Getter function of the User, static method
+     * @return String, which is the user name.
+     */
     public static String getUser() {
         return user;
     }
@@ -41,11 +58,28 @@ public class LogINpanelController {
     @FXML
     private ChoiceBox user_type;
 
+    /**
+     * This is the initializing function of the fxml components.
+     *
+     * When a the window is launched this method initializes these
+     * components. Establishes the connection with the database and
+     * upon fetching the data columns works with the property values.
+     *
+     */
     public void initialize()
     {
         user_type.setItems(TypeList);
     }
 
+    /**
+     * Method for checking the credentials given input.
+     *
+     * The Credentials are taken and query is generated accordingly. Then the database is accessed
+     * to see the existence of a user. No Null entries are possible here in the relations.
+     *
+     * @return boolean, true of credentials match Catch block used for the catching og
+     * of different possible exceptions in runtime or false otherwise.
+     */
     public boolean checkCredentials()
     {
         String username = "als";
@@ -93,6 +127,16 @@ public class LogINpanelController {
         return false;
     }
 
+    /**
+     * This method is for the "Log IN" button in the Log in Panel.
+     *
+     * The upon checking valid credentials this will show a confirmation window
+     * or show error.
+     *
+     * @param even an Object of the ActionEvent Class
+     * @throws IOException which is a checked exception.
+     * Used to identify errors in i/p and o/p of a particular workflow.
+     */
 
     public void pressLogIN(ActionEvent even) throws IOException{
         if(checkCredentials()==true)
@@ -164,6 +208,13 @@ public class LogINpanelController {
 
     }
 
+    /**
+     * This is the method for the Register button on the Log In Panel. This laods the
+     * sample.Register.fxml and presents the form of registration with appropriate fields.
+     * @param even an Object of the ActionEvent Class
+     * @throws IOException which is a checked exception.
+     * Used to identify errors in i/p and o/p of a particular workflow.
+     */
     public void pressRegister(ActionEvent even) throws IOException {
         ((Node) even.getSource()).getScene().getWindow().hide();
 
@@ -176,7 +227,17 @@ public class LogINpanelController {
         primaryStage.show();
 
     }
-
+    /**
+     * This method is here for the functionality of the "Back" button. This will redirect the
+     * user to the parent node that is the "root" which is sample.UserPanel.fxml. This hierarchical
+     * structure is for the simplicity of the system.
+     *
+     * @param even which is an object of ActionEvent Class
+     * refers to the event of action for the method
+     * @throws IOException
+     * which is a checked exception.
+     * Used to identify errors in i/p and o/p of a particular workflow.
+     */
     public void pressBack(ActionEvent even) throws IOException {
 
         ((Node) even.getSource()).getScene().getWindow().hide();
