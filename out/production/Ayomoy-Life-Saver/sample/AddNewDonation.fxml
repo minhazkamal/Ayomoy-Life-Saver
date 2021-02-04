@@ -15,9 +15,10 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.AddNewDonationController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.AddNewDonationController">
     <children>
       <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="58.0" layoutY="438.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -44,7 +45,10 @@
                       <Font name="Corbel Bold" size="20.0" />
                   </font>
                <effect>
-                  <DropShadow color="#9d3131" />
+                  <DropShadow>
+                     <color>
+                        <Color red="0.615686297416687" green="0.1921568661928177" blue="0.1921568661928177" />
+                     </color></DropShadow>
                </effect>
                <cursor>
                   <Cursor fx:constant="HAND" />
@@ -55,7 +59,7 @@
               </Button>
          </children>
       </Pane>
-        <Label fx:id="title_label" layoutX="257.0" layoutY="5.0" prefHeight="82.0" prefWidth="526.0" text="Add Donation Information" textAlignment="JUSTIFY" textFill="#990202">
+        <Label fx:id="title_label" alignment="CENTER" layoutX="257.0" layoutY="5.0" prefHeight="82.0" prefWidth="575.0" text="Add Donation Information" textAlignment="JUSTIFY" textFill="#990202">
             <font>
                 <Font name="Corbel Bold" size="46.0" />
             </font>

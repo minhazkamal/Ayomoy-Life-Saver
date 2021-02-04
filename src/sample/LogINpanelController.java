@@ -28,6 +28,7 @@ import java.sql.ResultSet;
  * @author fairuz240
  */
 public class LogINpanelController {
+
     ObservableList<String> TypeList = FXCollections.observableArrayList("Admin", "Person", "Organization");
     public static String user;
     public static String type;
@@ -177,7 +178,8 @@ public class LogINpanelController {
                 ((Node) even.getSource()).getScene().getWindow().hide();
 
                 Stage primaryStage = new Stage();
-                Parent root = FXMLLoader.load(getClass().getResource("AdminPanel.fxml"));
+                Parent root;
+                root = FXMLLoader.load(getClass().getResource("AdminPanel.fxml"));
                 primaryStage.setTitle("Ayomoy Life Saver");
                 primaryStage.setScene(new Scene(root, 1000, 600));
                 primaryStage.getScene().getStylesheets().add("sample/alsstyles.css");

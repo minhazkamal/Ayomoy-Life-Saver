@@ -23,7 +23,7 @@
                <Font name="Cambria Bold" size="18.0" />
            </font>
        </Button>
-       <Label fx:id="title_label" layoutX="338.0" layoutY="14.0" prefHeight="82.0" prefWidth="326.0" text="LogIN PANEL" textAlignment="JUSTIFY" textFill="#c70000">
+       <Label fx:id="title_label" alignment="CENTER" layoutX="338.0" layoutY="14.0" prefHeight="82.0" prefWidth="371.0" text="LogIN PANEL" textAlignment="JUSTIFY" textFill="#c70000">
            <font>
                <Font name="Cambria Bold" size="54.0" />
            </font>
