@@ -15,21 +15,35 @@ import java.io.IOException;
 import java.sql.*;
 import java.time.LocalDate;
 
+/**
+ * This DonationNewReqController Class is for the components of sample.DonationNewReq.fxml file.
+ *
+ * This page works for the instance of a new donation request from the Done.
+ *
+ * @author abdullah239
+ */
 public class DoneeNewReqController {
 
     ObservableList<String> BGList = FXCollections.observableArrayList("A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-");
     ObservableList<String> GenderList = FXCollections.observableArrayList("Male", "Female", "Others");
     ObservableList<String> LocList = FXCollections.observableArrayList();
 
+    /**
+     * This is the method to get the Location Details from the Database
+     *
+     */
     public void getLoc()
     {
-        String username = "als";
-        String password = "iutcse18";
-        String url = "jdbc:oracle:thin:@localhost:1521/XE";
-        String query = "SELECT NAME FROM LOCATIONS ORDER BY NAME";
+        String username;
+        username = "als";
+        String password;
+        password = "iutcse18";
+        String url;
+        url = "jdbc:oracle:thin:@localhost:1521/XE";
+        String query;
+        query = "SELECT NAME FROM LOCATIONS ORDER BY NAME";
 
-//        Statement pst = null;
-//        ResultSet rs = null;
+
         try{
             Class.forName("oracle.jdbc.driver.OracleDriver");
             Connection con = DriverManager.getConnection(url,username,password);
@@ -57,6 +71,10 @@ public class DoneeNewReqController {
             alert.showAndWait();
         }
     }
+
+    /**
+     * FXML related Variables used to fetch i/p from the UI
+     */
     @FXML
     private TextField txtUsername;
     @FXML
@@ -84,6 +102,16 @@ public class DoneeNewReqController {
 ////    @FXML
 ////    private Button submit;
 
+    /**
+     * This method is here for the functionality of the "Back" button. This will redirect the user to the
+     * Parent that is the "root" which is sample.fxml
+     *
+     * @param even
+     * refers to the event of action for the method
+     * @throws IOException
+     * which is a checked exception.
+     * Used to identify errors in i/p and o/p of a particular workflow.
+     */
     public void pressBack(ActionEvent even) throws IOException {
         ((Node) even.getSource()).getScene().getWindow().hide();
 
@@ -95,6 +123,14 @@ public class DoneeNewReqController {
         primaryStage.show();
     }
 
+    /**
+     * This is the initializing function of the fxml components.
+     *
+     * When a the window is launched this method initializes these
+     * components. Establishes the connection with the database and
+     * upon fetching the data columns works with the property values.
+     *
+     */
     public void initialize()
     {
         txtUsername.setText(LogINpanelController.getUser());
@@ -150,6 +186,14 @@ public class DoneeNewReqController {
         doneeLocation.setItems(LocList);
     }
 
+    /**
+     * This is a static function so that can be used on demand without any instances.
+     *
+     * This methods parses a String and checks whether it is integer or not.
+     *
+     * @param s a String Class object
+     * @return boolean based on the decision whether it is integer or not.
+     */
     static boolean isInt(String s)
     {
         try
@@ -159,6 +203,16 @@ public class DoneeNewReqController {
         { return false; }
     }
 
+    /**
+     * This method is for checking the Alerts of the total process.
+     *
+     * The Fetched data from the database ond the user i/p is
+     * processed here and in case of any anomaly which may crash the
+     * program or create inconsistency, the alert value will be true.
+     *
+     * @return boolean and the value depends on the truth value of
+     * the alert.
+     */
     public boolean checkAlert()
     {
         boolean alertCheck = false;
@@ -217,7 +271,21 @@ public class DoneeNewReqController {
         return alertCheck;
     }
 
-   public void submitNewReq(ActionEvent even) throws IOException{
+    /**
+     * This method is for the functionality of the Submit button of the new request page
+     *
+     * The method establishes connection to the database and using the DML ("INSERT") it
+     * writes the record into the database. It also handles the location ordered in an
+     * alphabetical order.
+     *
+     * @param even
+     * refers to the event of action for the method
+     *
+     * @throws IOException
+     * which is a checked exception.
+     * Used to identify errors in i/p and o/p of a particular workflow.
+     */
+    public void submitNewReq(ActionEvent even) throws IOException{
         if(checkAlert()==false)
         {
             String username = "als";
