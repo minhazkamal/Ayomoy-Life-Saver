@@ -19,6 +19,14 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.time.format.DateTimeFormatter;
 
+/**
+ * This is the Class that handling the Organization Panel controller.
+ *
+ * The Class extends the LogINpanelController and handles the components of
+ * the sample.OrganizationPanel.fxml file.
+ *
+ * @author abdullah239
+ */
 public class OrganizationPanelController extends LogINpanelController {
 
     @FXML
@@ -42,6 +50,14 @@ public class OrganizationPanelController extends LogINpanelController {
     @FXML
     private Label eligibility;
 
+    /**
+     * This is the initializing function of the fxml components.
+     *
+     * When a the window is launched this method initializes these
+     * components. Establishes the connection with the database and
+     * upon fetching the data columns works with the property values.
+     *
+     */
     public void initialize()
     {
         String username = "als";
@@ -108,6 +124,18 @@ public class OrganizationPanelController extends LogINpanelController {
             alert.showAndWait();
         }
     }
+
+    /**
+     * This method is here for the functionality of the "Back" button. This will redirect the
+     * user to the parent node that is the "root" which is sample.UserPanel.fxml. This hierarchical
+     * structure is for the simplicity of the system.
+     *
+     * @param even which is an object of ActionEvent Class
+     * refers to the event of action for the method
+     * @throws IOException
+     * which is a checked exception.
+     * Used to identify errors in i/p and o/p of a particular workflow.
+     */
     public void pressBack(ActionEvent even) throws IOException {
         ((Node) even.getSource()).getScene().getWindow().hide();
 
@@ -119,6 +147,14 @@ public class OrganizationPanelController extends LogINpanelController {
         primaryStage.show();
     }
 
+    /**
+     * This method is for the updating of the Profile of the Organization.
+     *
+     * The button press loads the sample.UpdateOrg.fxml.
+     *
+     * @param even, object of ActionEvent
+     * @throws IOException, checked exception
+     */
     public void PressUpdateProfile(ActionEvent even) throws IOException {
         ((Node) even.getSource()).getScene().getWindow().hide();
 
@@ -130,6 +166,13 @@ public class OrganizationPanelController extends LogINpanelController {
         primaryStage.show();
     }
 
+    /**
+     * Method for pressing the button use as Donor. Enables the features of the
+     * donor for a particular Organization.
+     *
+     * @param even, object of ActionEvent
+     * @throws IOException, checked exception
+     */
     public void PressAsDonor(ActionEvent even) throws IOException {
         ((Node) even.getSource()).getScene().getWindow().hide();
 
@@ -141,6 +184,13 @@ public class OrganizationPanelController extends LogINpanelController {
         primaryStage.show();
     }
 
+    /**
+     * Pressing the Use as Donee button enables the features of Donee
+     * for the Org in particular, Loads the sample.DoneePanel.fxml
+     *
+     * @param even, object of ActionEvent
+     * @throws IOException, checked exception
+     */
     public void PressAsDonee(ActionEvent even) throws IOException {
         //System.out.println(LogINpanelController.getUser());
         ((Node) even.getSource()).getScene().getWindow().hide();

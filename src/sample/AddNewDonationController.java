@@ -246,7 +246,7 @@ public class AddNewDonationController extends LogINpanelController {
 
     /**
      *
-     * This functions is for checking all the errors in the add new donations porcess.
+     * This functions is for checking all the errors in the add new donations Information.
      *
      * The function is here to show alert on three scenarios.
      * First of all it checks the text field of the mobile number.
