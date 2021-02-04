@@ -21,6 +21,7 @@ import java.time.LocalDate;
 /**
  * This Class works with the Approval of the Organization by the Admin.
  * The Class extends the LogINpanelController Class.
+ *
  * @author fairuz240
  */
 
@@ -255,6 +256,15 @@ public class OrgApprovalListController extends LogINpanelController {
 
     }
 
+    /**
+     * This is the initializing function of the fxml components.
+     *
+     * When a the window is launched this method initializes these
+     * components. Establishes the connection with the database and
+     * upon fetching the data columns works with the property values.
+     *
+     */
+
     public void initialize()
     {
         OrgApprovalTable.setEditable(true);
@@ -371,6 +381,13 @@ public class OrgApprovalListController extends LogINpanelController {
         OrgApprovalTable.setItems(oblist);
     }
 
+    /**
+     * This method is for the Refreshing of the list. refreshing the list will give the
+     * new list with updated changes that are not showing in the list.
+     *
+     * @param even, object of ActionEvent, generated from click or enter
+     * @throws IOException, chcked exception.
+     */
     public void pressRefresh(ActionEvent even) throws IOException {
         ((Node) even.getSource()).getScene().getWindow().hide();
 
@@ -383,6 +400,14 @@ public class OrgApprovalListController extends LogINpanelController {
         primaryStage.show();
     }
 
+    /**
+     * This method is here for the functionality of the "Back" button. This will redirect the
+     * user to the parent node that is the "root" which is sample.UserPanel.fxml. This hierarchical
+     * structure is for the simplicity of the system.
+     *
+     * @param even, object of ActionEvent generated from click or Enter
+     * @throws IOException,  checked exception
+     */
     public void pressBack(ActionEvent even) throws IOException {
         ((Node) even.getSource()).getScene().getWindow().hide();
 
@@ -395,6 +420,11 @@ public class OrgApprovalListController extends LogINpanelController {
         primaryStage.show();
     }
 
+    /**
+     * This is the method for the button that enables the Organization to
+     * comment on the approval aspect. This will be showed to the admin later.
+     * @param event
+     */
     public void pressComment(TableColumn.CellEditEvent<UpdateByAdmin, String> event) {
         UpdateByAdmin record1 = OrgApprovalTable.getSelectionModel().getSelectedItem();
         //System.out.println(event.getNewValue());

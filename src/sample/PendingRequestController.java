@@ -18,6 +18,12 @@ import java.io.IOException;
 import java.sql.*;
 import java.time.LocalDate;
 
+/**
+ * This is the controll class that handles the Pending Requests.
+ *
+ * It extends the DonorPanelController Class.
+ * @author fairuz240
+ */
 public class PendingRequestController extends DonorPanelController {
 
     public int count_req;
@@ -32,6 +38,10 @@ public class PendingRequestController extends DonorPanelController {
     private String dob;
     public boolean filter = false;
 
+    /**
+     * Getter Function for Request ID, static
+     * @return String
+     */
     public static String getR_id() {
         return r_id;
     }
@@ -70,6 +80,10 @@ public class PendingRequestController extends DonorPanelController {
 
     ObservableList<Request> oblist = FXCollections.observableArrayList();
 
+    /**
+     * This method is for Counting the Request and the Blood Group in a
+     * Blood donation request.
+     */
     public void countRequestandBG(){
         String username = "als";
         String password = "iutcse18";
@@ -112,6 +126,13 @@ public class PendingRequestController extends DonorPanelController {
         }
     }
 
+    /**
+     * This mehtod is for the functionality of the button "see details" on the
+     * edge of each tuple in the list.
+     *
+     * @param even object of ActionEvent Class.
+     * @throws IOException checked Exception for i/p and o/p/
+     */
     private void pressDetailsButton(ActionEvent even) throws IOException
     {
         for(int i=0; i<count_req; i++)
@@ -135,6 +156,14 @@ public class PendingRequestController extends DonorPanelController {
         primaryStage.show();
     }
 
+    /**
+     * This method is here for the functionality of the "Back" button. This will redirect the
+     * user to the parent node that is the "root" which is sample.UserPanel.fxml. This hierarchical
+     * structure is for the simplicity of the system.
+     *
+     * @param even, object of ActionEvent generated from click or Enter
+     * @throws IOException,  checked exception
+     */
     public void pressBack(ActionEvent even) throws IOException {
         if(LogINpanelController.getType().equals("Person"))
         {
@@ -162,6 +191,12 @@ public class PendingRequestController extends DonorPanelController {
         }
     }
 
+    /**
+     *  This is for the Reset of the Pending reqeusts. The modthod loads the
+     *  sample.PendingRequest.fxml file and restes the list.
+     * @param even
+     * @throws IOException
+     */
     public void pressReset(ActionEvent even) throws IOException{
         ((Node) even.getSource()).getScene().getWindow().hide();
 
@@ -174,6 +209,13 @@ public class PendingRequestController extends DonorPanelController {
         primaryStage.show();
     }
 
+    /**
+     * This is for the imposing od filters into the pending request list.
+     * loads the sample.FilterRequest.fxml file and imposes the filter.
+     *
+     * @param event
+     * @throws IOException
+     */
     public void pressFilter(ActionEvent event) throws IOException{
 
         Stage primaryStage = new Stage();
@@ -265,6 +307,14 @@ public class PendingRequestController extends DonorPanelController {
         }
     }
 
+    /**
+     * This is the initializing function of the fxml components.
+     *
+     * When a the window is launched this method initializes these
+     * components. Establishes the connection with the database and
+     * upon fetching the data columns works with the property values.
+     *
+     */
     public void initialize()
     {
             countRequestandBG();
