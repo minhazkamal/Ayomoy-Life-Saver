@@ -18,18 +18,37 @@ import java.io.IOException;
 import java.sql.*;
 import java.time.LocalDate;
 
+/**
+ * This Class works with the Approval of the Organization by the Admin.
+ * The Class extends the LogINpanelController Class.
+ * @author fairuz240
+ */
+
 public class OrgApprovalListController extends LogINpanelController {
     static String user_img=null;
     public static String user_type=null;
 
+    /** Getter function of the User type, static method.
+     *
+     * @return String, type of the User.
+     */
     public static String getUser_type() {
         return user_type;
     }
 
+    /**
+     * Setter Function of the user type. Static Method.
+     * @param user_type, the user type of the User.
+     */
     public static void setUser_type(String user_type) {
         OrgApprovalListController.user_type = user_type;
     }
-
+    /**
+     * Getter Function of the User Image.
+     * This gest te User Image from the Property values of the Class.
+     *
+     * @return String, the User Image related to the respective the Approval
+     */
     public static String getUser_img() {
         return user_img;
     }
@@ -65,6 +84,16 @@ public class OrgApprovalListController extends LogINpanelController {
 
     private int count_report;
 
+    /**
+     * This is the alert in case user forgets to Select the Status flags
+     * from the dropdown boxes. This prompt the User to again go for the selection
+     * of flags.
+     *
+     * @param s, flag 1
+     * @param a, flag 2
+     * @param c, flag 3
+     * @return boolean, if any alert found then true and false otherwise.
+     */
     private boolean check_alert(String s, String a, String c)
     {
         boolean alert_check=false;
@@ -101,12 +130,25 @@ public class OrgApprovalListController extends LogINpanelController {
         return alert_check;
     }
 
+    /**
+     * Method for updating the Check window in the Org. Approval List.
+     *
+     * @param s, Flag of validity
+     * @param a, Flag of Approvals
+     * @return boolean, True if the flags have positive values and
+     * false if otherwise.
+     */
     private boolean updateCheck(String s, String a)
     {
         if(s.equals("Valid") && a.equals("Approved")) return true;
         else return false;
     }
 
+    /**
+     * Method for the button to update the Approval for the Admin.
+     * @param even, object of ActionEvent generated from click or Enter
+     * @throws IOException, checked exception
+     */
     private void pressUpdateButton(ActionEvent even) throws IOException {
         String user=null;
         int serial=-1;
@@ -182,6 +224,12 @@ public class OrgApprovalListController extends LogINpanelController {
         }
     }
 
+    /**
+     * Method for the functionality of the Report Button. 
+     *
+     * @param even, object of ActionEvent generated from click or Enter.
+     * @throws IOException, checked exception.
+     */
     private void pressReportButton(ActionEvent even) throws IOException {
 
         for(int i=0; i<count_report; i++)
