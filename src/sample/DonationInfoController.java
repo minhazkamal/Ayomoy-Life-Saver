@@ -304,14 +304,9 @@ public class DonationInfoController extends LogINpanelController{
     }
 
     /**
-     * This method is here for the functionality of the "Back" button. This will redirect the user to the
-     * Parent that is the "root" which is sample.fxml
      *
      * @param even
-     * refers to the event of action for the method
      * @throws IOException
-     * which is a checked exception.
-     * Used to identify errors in i/p and o/p of a particular workflow.
      */
 
     public void pressBack(ActionEvent even) throws IOException {

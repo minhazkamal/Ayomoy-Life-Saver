@@ -16,13 +16,6 @@ import java.io.IOException;
 import java.sql.*;
 import java.util.Optional;
 
-/**
- * This Controller Class is for the components of sample.DoneePrevReq.fxml file.
- *
- * The class extends the LogINpanelController Class.
- * @author minhaz231
- */
-
 public class DoneePrevReqController extends LogINpanelController{
 
     public int count_req;
@@ -30,27 +23,14 @@ public class DoneePrevReqController extends LogINpanelController{
     public Button []s_button;
     public static String bg=null;
 
-    /**
-     * A static method to get the blood group of a Donee
-     *
-     * @return bg which means the blood group of the donee.
-     */
     public static String getDoneeBg() {
         return bg;
     }
 
-    /**
-     * A static method to set the blood group of a Donee.
-     *
-     * @param bg which is the inteded blood group to be assigned to a donee.
-     */
     public static void setDoneeBg(String bg) {
         DoneePrevReqController.bg = bg;
     }
 
-    /**
-     * FXML related Variables used to fetch i/p from the UI
-     */
     @FXML
     private TextField txtUser;
     @FXML
@@ -75,16 +55,7 @@ public class DoneePrevReqController extends LogINpanelController{
     private TableColumn<Request, Button> col_search;
 
     ObservableList<Request> oblist = FXCollections.observableArrayList();
-    /**
-     * This method is here for the functionality of the "Back" button. This will redirect the user to the
-     * parent that is the "root" which is sample.DoneePanel.fxml file.
-     *
-     * @param even which is an object of ActionEvent Class
-     * refers to the event of action for the method
-     * @throws IOException
-     * which is a checked exception.
-     * Used to identify errors in i/p and o/p of a particular workflow.
-     */
+
     public void pressBack(ActionEvent even) throws IOException {
         ((Node) even.getSource()).getScene().getWindow().hide();
 
@@ -96,12 +67,6 @@ public class DoneePrevReqController extends LogINpanelController{
         primaryStage.show();
     }
 
-    /**
-     * This is the method for the counting the total number of request
-     *
-     * Uses simple SQL Query for counting the requests for a particular
-     * username. Catch  block is there to cactch the exception properly.
-     */
     public void countRequest(){
         String username = "als";
         String password = "iutcse18";
@@ -131,13 +96,6 @@ public class DoneePrevReqController extends LogINpanelController{
         }
     }
 
-    /**
-     * Getter function for the Request ID that is generated from the database.
-     *
-     * This is for the distinct identification of a particular request.
-     * @param r_num and intiger that is a request number.
-     * @return int which is the request ID.
-     */
     public int getReqID(int r_num)
     {
         int r_id=0;
@@ -174,16 +132,6 @@ public class DoneePrevReqController extends LogINpanelController{
         return r_id;
     }
 
-    /**
-     * This method is for the functionality of the Delte button in the Request of
-     * previous donations.
-     *
-     * The user might want to clear the list of previous donations records for
-     * convenience and this button on each records will help the user to erase
-     * that particular record from the database permanently.
-     *
-     * @param even which is an object of ActionEvent Class
-     */
     private void pressDeleteButton(ActionEvent even)
     {
         int r_id=0;
@@ -250,15 +198,6 @@ public class DoneePrevReqController extends LogINpanelController{
     }
 
 
-    /**
-     * This is the method for the functionality of the search button.
-     * @param even which is an object of ActionEvent Class
-     * refers to the event of action for the method
-     *
-     * @throws IOException
-     * which is a checked exception.
-     * Used to identify errors in i/p and o/p of a particular workflow.
-     */
 
     private void pressSearchButton(ActionEvent even) throws IOException {
         for(int i=0; i<count_req; i++)
@@ -285,14 +224,7 @@ public class DoneePrevReqController extends LogINpanelController{
         primaryStage.setResizable(false);
         primaryStage.show();
     }
-    /**
-     * This is the initializing function of the fxml components.
-     *
-     * When a the window is launched this method initializes these
-     * components. Establishes the connection with the database and
-     * upon fetching the data columns works with the property values.
-     *
-     */
+
     public void initialize()
     {
         txtUser.setText(LogINpanelController.getUser());

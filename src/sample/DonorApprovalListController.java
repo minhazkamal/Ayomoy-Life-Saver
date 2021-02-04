@@ -21,27 +21,14 @@ import java.sql.*;
 import java.time.LocalDate;
 import java.time.Period;
 
-/**
- * This is the class for handling te Approval list of the Donor.
- *
- * Manages the components of the sample.DonorApprovalList.fxml
- * @author fairuz240
- */
 public class DonorApprovalListController extends LogINpanelController{
 
     static String user_img=null;
 
-    /**
-     * Static Method for getting the user Image.
-     * @return String, which is the Test report Image of a Donor.
-     */
     public static String getUser_img() {
         return user_img;
     }
 
-    /**
-     * FXML related Variables used to fetch i/p from the UI
-     */
     @FXML
     private TextField txtUser;
     @FXML
@@ -66,7 +53,6 @@ public class DonorApprovalListController extends LogINpanelController{
     ObservableList<UpdateByAdmin> oblist = FXCollections.observableArrayList();
     ObservableList<String> Aprroval = FXCollections.observableArrayList(null, "Approved", "Rejected");
     ObservableList<String> Status = FXCollections.observableArrayList(null, "Valid", "Invalid");
-
     private Button[] report_button;
     private Button[] update_button;
     private ChoiceBox[] approval;
@@ -74,12 +60,6 @@ public class DonorApprovalListController extends LogINpanelController{
 
     private int count_report;
 
-    /**
-     * Checking the age of the Donor to see is he/ she adult or not
-     * @param DOB, to compare it and get his age from it
-     * @return boolean, if age more than 18 then true and
-     * false if otherwise.
-     */
     public Boolean CheckAge(LocalDate DOB)
     {
         LocalDate current = LocalDate.now();
@@ -90,14 +70,6 @@ public class DonorApprovalListController extends LogINpanelController{
         else return false;
     }
 
-    /**
-     * Checking the alert for the Donor Approval List
-     * @param s
-     * @param a
-     * @param c
-     * @return the checks the alert status and return true for a state of
-     * alert, returns false if otherwise.
-     */
     private boolean check_alert(String s, String a, String c)
     {
         boolean alert_check=false;
@@ -134,27 +106,12 @@ public class DonorApprovalListController extends LogINpanelController{
         return alert_check;
     }
 
-    /**
-     * For a particular check, the approval of the Donor
-     * @param s, Validity flag
-     * @param a, Approval flag
-     * @return boolean, of updated and positive verdict,
-     * true value and false for otherwise.
-     */
     private boolean updateCheck(String s, String a)
     {
         if(s.equals("Valid") && a.equals("Approved")) return true;
         else return false;
     }
 
-    /**
-     * This method is the functionality of the update Button
-     * @param even which is an object of ActionEvent Class
-     * refers to the event of action for the method
-     * @throws IOException
-     * which is a checked exception.
-     * Used to identify errors in i/p and o/p of a particular workflow.
-     */
     private void pressUpdateButton(ActionEvent even) throws IOException {
         String user=null;
         int serial=-1;
@@ -251,18 +208,6 @@ public class DonorApprovalListController extends LogINpanelController{
         }
     }
 
-    /**
-     * This method is for the Report Button of the Approval list from
-     * the admin point of view.
-     *
-     * It uses the sample.ImageShow.fxml file to load components.
-     *
-     * which is an object of ActionEvent Class
-     * refers to the event of action for the method
-     * @throws IOException
-     * which is a checked exception.
-     * Used to identify errors in i/p and o/p of a particular workflow.
-     */
     private void pressReportButton(ActionEvent even) throws IOException {
 
         for(int i=0; i<count_report; i++)
@@ -285,14 +230,7 @@ public class DonorApprovalListController extends LogINpanelController{
         primaryStage.showAndWait();
 
     }
-    /**
-     * This is the initializing function of the fxml components.
-     *
-     * When a the window is launched this method initializes these
-     * components. Establishes the connection with the database and
-     * upon fetching the data columns works with the property values.
-     *
-     */
+
     public void initialize()
     {
         DonorApprovalTable.setEditable(true);
@@ -404,14 +342,6 @@ public class DonorApprovalListController extends LogINpanelController{
         DonorApprovalTable.setItems(oblist);
     }
 
-    /**
-     * This is a method for refreshing the Donor Aproval List from the Admin Panel.
-     * @param even which is an object of ActionEvent Class
-     * refers to the event of action for the method
-     * @throws IOException
-     * which is a checked exception. Used to identify errors in i/p and o/p of a particular workflow.
-     */
-
     public void pressRefresh(ActionEvent even) throws IOException {
         ((Node) even.getSource()).getScene().getWindow().hide();
 
@@ -422,17 +352,7 @@ public class DonorApprovalListController extends LogINpanelController{
         primaryStage.setResizable(false);
         primaryStage.show();
     }
-    /**
-     * This method is here for the functionality of the "Back" button. This will redirect the
-     * user to the parent node that is the "root" which is sample.UserPanel.fxml. This hierarchical
-     * structure is for the simplicity of the system.
-     *
-     * @param even which is an object of ActionEvent Class
-     * refers to the event of action for the method
-     * @throws IOException
-     * which is a checked exception.
-     * Used to identify errors in i/p and o/p of a particular workflow.
-     */
+
     public void pressBack(ActionEvent even) throws IOException {
         ((Node) even.getSource()).getScene().getWindow().hide();
 
@@ -445,11 +365,6 @@ public class DonorApprovalListController extends LogINpanelController{
 
     }
 
-    /**
-     * This is for the Commenting feature of the admin under a particular
-     * session of view form the Admin.
-     * @param event
-     */
     public void pressComment(TableColumn.CellEditEvent<UpdateByAdmin, String> event) {
         //System.out.println("adsafdsfdsga");
         UpdateByAdmin record1 = DonorApprovalTable.getSelectionModel().getSelectedItem();
