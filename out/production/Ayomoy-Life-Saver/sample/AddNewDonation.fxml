@@ -59,7 +59,7 @@
               </Button>
          </children>
       </Pane>
-        <Label fx:id="title_label" layoutX="257.0" layoutY="5.0" prefHeight="82.0" prefWidth="526.0" text="Add Donation Information" textAlignment="JUSTIFY" textFill="#990202">
+        <Label fx:id="title_label" alignment="CENTER" layoutX="257.0" layoutY="5.0" prefHeight="82.0" prefWidth="575.0" text="Add Donation Information" textAlignment="JUSTIFY" textFill="#990202">
             <font>
                 <Font name="Corbel Bold" size="46.0" />
             </font>
