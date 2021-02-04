@@ -290,6 +290,7 @@ public class UpdateOrgController extends OrganizationPanelController{
         Parent root = FXMLLoader.load(getClass().getResource("ChangePassword.fxml"));
         primaryStage.setTitle("Ayomoy Life Saver");
         primaryStage.setScene(new Scene(root, 600, 400));
+        primaryStage.getScene().getStylesheets().add("sample/alsstyles.css");
         primaryStage.setResizable(false);
         primaryStage.showAndWait();
     }
