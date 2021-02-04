@@ -16,8 +16,17 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
+/**
+ * This is the Donor Panel Class for holding the features of the System
+ * while in the donor Mode.
+ *
+ * @author abdullah239
+ */
 public class DonorPanelController extends LogINpanelController{
 
+    /**
+     * FXML related Variables used to fetch i/p from the UI
+     */
     @FXML
     private Label elg_st;
     @FXML
@@ -30,6 +39,14 @@ public class DonorPanelController extends LogINpanelController{
     private Label eligibility;
     @FXML
     private Label activeness;
+    /**
+     * This is the initializing function of the fxml components.
+     *
+     * When a the window is launched this method initializes these
+     * components. Establishes the connection with the database and
+     * upon fetching the data columns works with the property values.
+     *
+     */
 
     public void initialize()
     {
@@ -85,6 +102,17 @@ public class DonorPanelController extends LogINpanelController{
 
     }
 
+    /**
+     * This method shows the donor Info i.e the comprehensive
+     * details fetched from the database. This are given i/p when
+     * a user is registred on the first place.
+     *
+     * @param even which is an object of ActionEvent Class
+     * refers to the event of action for the method
+     * @throws IOException
+     * which is a checked exception.
+     * Used to identify errors in i/p and o/p of a particular workflow.
+     */
     public void pressDonorInfo(ActionEvent even) throws IOException{
         ((Node) even.getSource()).getScene().getWindow().hide();
 
@@ -96,6 +124,17 @@ public class DonorPanelController extends LogINpanelController{
         primaryStage.show();
     }
 
+    /**
+     * This method shows the total details of the Particular donation.
+     *
+     * Loads the sample.DonationInfo.fxml file and shows the details.
+     *
+     * @param even which is an object of ActionEvent Class
+     * refers to the event of action for the method
+     * @throws IOException
+     * which is a checked exception.
+     * Used to identify errors in i/p and o/p of a particular workflow.
+     */
     public void pressDonationInfo(ActionEvent even) throws IOException{
         ((Node) even.getSource()).getScene().getWindow().hide();
 
@@ -107,6 +146,15 @@ public class DonorPanelController extends LogINpanelController{
         primaryStage.show();
     }
 
+    /**
+     * This methods sshows the Pending requests with the sample.PendingRequest.fxml file.
+     *
+     * @param even which is an object of ActionEvent Class
+     * refers to the event of action for the method
+     * @throws IOException
+     * which is a checked exception.
+     * Used to identify errors in i/p and o/p of a particular workflow.
+     */
     public void pressPendingRequest(ActionEvent even) throws IOException{
         ((Node) even.getSource()).getScene().getWindow().hide();
 
@@ -117,7 +165,17 @@ public class DonorPanelController extends LogINpanelController{
         primaryStage.setResizable(false);
         primaryStage.show();
     }
-
+    /**
+     * This method is here for the functionality of the "Back" button. This will redirect the
+     * user to the parent node that is the "root" which is sample.UserPanel.fxml. This hierarchical
+     * structure is for the simplicity of the system.
+     *
+     * @param even which is an object of ActionEvent Class
+     * refers to the event of action for the method
+     * @throws IOException
+     * which is a checked exception.
+     * Used to identify errors in i/p and o/p of a particular workflow.
+     */
     public void pressBack(ActionEvent even) throws IOException {
         if(LogINpanelController.getType().equals("Organization"))
         {
