@@ -47,5 +47,6 @@
         <jarDirectory url="file://$MODULE_DIR$/Tess4J-3.4.8-src/Tess4J/dist" recursive="false" />
       </library>
     </orderEntry>
+    <orderEntry type="library" name="lib" level="project" />
   </component>
 </module>

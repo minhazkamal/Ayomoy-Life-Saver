@@ -61,6 +61,7 @@ public class SearchDonorOrgController extends DonorPanelController {
         root = FXMLLoader.load(getClass().getResource("SearchDonor-Org.fxml"));
         primaryStage.setTitle("Ayomoy Life Saver");
         primaryStage.setScene(new Scene(root, 1000, 600));
+        primaryStage.getScene().getStylesheets().add("sample/alsstyles.css");
         primaryStage.setResizable(false);
         primaryStage.show();
     }
@@ -71,6 +72,7 @@ public class SearchDonorOrgController extends DonorPanelController {
         Parent root = FXMLLoader.load(getClass().getResource("FilterDonation.fxml"));
         primaryStage.setTitle("Ayomoy Life Saver");
         primaryStage.setScene(new Scene(root, 600, 400));
+        primaryStage.getScene().getStylesheets().add("sample/alsstyles.css");
         primaryStage.setResizable(false);
         primaryStage.initModality(Modality.APPLICATION_MODAL);
         primaryStage.showAndWait();
@@ -159,6 +161,7 @@ public class SearchDonorOrgController extends DonorPanelController {
         root = FXMLLoader.load(getClass().getResource("SearchOrg.fxml"));
         primaryStage.setTitle("Ayomoy Life Saver");
         primaryStage.setScene(new Scene(root, 1000, 600));
+        primaryStage.getScene().getStylesheets().add("sample/alsstyles.css");
         primaryStage.setResizable(false);
         primaryStage.show();
     }
@@ -238,6 +241,7 @@ public class SearchDonorOrgController extends DonorPanelController {
             root = FXMLLoader.load(getClass().getResource("DoneePanel.fxml"));
             primaryStage.setTitle("Ayomoy Life Saver");
             primaryStage.setScene(new Scene(root, 1000, 600));
+            primaryStage.getScene().getStylesheets().add("sample/alsstyles.css");
             primaryStage.setResizable(false);
             primaryStage.show();
         }
@@ -248,6 +252,7 @@ public class SearchDonorOrgController extends DonorPanelController {
             root = FXMLLoader.load(getClass().getResource("DoneePrevReq.fxml"));
             primaryStage.setTitle("Ayomoy Life Saver");
             primaryStage.setScene(new Scene(root, 1000, 600));
+            primaryStage.getScene().getStylesheets().add("sample/alsstyles.css");
             primaryStage.setResizable(false);
             primaryStage.show();
         }
@@ -415,6 +420,7 @@ public class SearchDonorOrgController extends DonorPanelController {
         Parent root = FXMLLoader.load(getClass().getResource("ShowDetailDonorInfo.fxml"));
         primaryStage.setTitle("Ayomoy Life Saver");
         primaryStage.setScene(new Scene(root, 1000, 600));
+        primaryStage.getScene().getStylesheets().add("sample/alsstyles.css");
         primaryStage.setResizable(false);
         primaryStage.show();
     }
