@@ -1,5 +1,22 @@
 .button{
     -fx-effect: dropshadow(three-pass-box,rgb(157,49,49),10,0,0,0);
-    -fx-font-family: play;
+    -fx-font-family: Corbel;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
 }
 
+.button:hover
+{
+    -fx-background-color: linear-gradient(to bottom,#9d3131,indianred,lightcoral,rosybrown);
+    -fx-text-fill: darkred;
+    -fx-font-weight: bold;
+    -fx-font-size: 19px;
+}
+
+#title_label
+{
+    -fx-font-family: Corbel;
+    -fx-font-size: 60px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #9d3131;
+}
