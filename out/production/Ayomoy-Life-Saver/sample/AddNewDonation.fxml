@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ChoiceBox?>
@@ -13,9 +14,10 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.AddNewDonationController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.AddNewDonationController">
     <children>
       <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="58.0" layoutY="438.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -32,12 +34,27 @@
                 <Font name="Corbel Bold" size="20.0" />
             </font>
          <effect>
-             <DropShadow color="#9d3131" />
+            <InnerShadow color="#390303" />
          </effect>
-            <cursor>
-                <Cursor fx:constant="HAND" />
-            </cursor>
         </Button>
+      <Pane layoutX="27.0" layoutY="25.0" AnchorPane.bottomAnchor="533.0" AnchorPane.leftAnchor="27.0" AnchorPane.rightAnchor="897.0" AnchorPane.topAnchor="25.0">
+         <children>
+              <Button fx:id="back_button" ellipsisString="" mnemonicParsing="false" onAction="#pressBack" prefHeight="42.0" prefWidth="76.0" text="Back" textFill="#990202" wrapText="true">
+                  <font>
+                      <Font name="Corbel Bold" size="20.0" />
+                  </font>
+               <effect>
+                  <DropShadow color="#9d3131" />
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+              </Button>
+         </children>
+      </Pane>
         <Label fx:id="title_label" layoutX="257.0" layoutY="5.0" prefHeight="82.0" prefWidth="526.0" text="Add Donation Information" textAlignment="JUSTIFY" textFill="#990202">
             <font>
                 <Font name="Corbel Bold" size="46.0" />
@@ -85,7 +102,9 @@
                 <Font name="Corbel Bold" size="20.0" />
             </font>
         </Label>
-              <ChoiceBox fx:id="p_Location" layoutX="256.0" layoutY="230.0" prefHeight="26.0" prefWidth="238.0">
+      <AnchorPane layoutX="256.0" layoutY="231.0">
+         <children>
+              <ChoiceBox fx:id="p_Location" prefHeight="26.0" prefWidth="238.0">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
@@ -93,6 +112,8 @@
                   <InnerShadow blurType="GAUSSIAN" color="#9d3131" />
                </effect>
             </ChoiceBox>
+         </children>
+      </AnchorPane>
         <Label layoutX="591.0" layoutY="229.0" text="Complications" textFill="#990202">
             <font>
                 <Font name="Corbel Bold" size="20.0" />

@@ -11,11 +11,11 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.UserPanelController">
     <children>
-    <ImageView fitHeight="600.0" fitWidth="1000.0" pickOnBounds="true">
-        <image>
-            <Image url="@images/Presentation1_Proposal.jpg" />
-        </image>
-    </ImageView>
+        <ImageView accessibleRole="TEXT_AREA" blendMode="OVERLAY" fitHeight="600.0" fitWidth="1000.0" layoutY="-1.0" pickOnBounds="true">
+            <image>
+                <Image url="@images/Presentation1_Proposal.jpg" />
+            </image>
+        </ImageView>
     <Button fx:id="back_button" layoutX="14.0" layoutY="25.0" mnemonicParsing="false" onAction="#pressBack" prefHeight="42.0" prefWidth="90.0" text="Log Out" textFill="#c70000">
         <font>
             <Font name="Cambria Bold" size="18.0" />

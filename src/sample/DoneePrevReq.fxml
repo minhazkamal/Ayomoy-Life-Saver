@@ -12,11 +12,11 @@
 
 <AnchorPane prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.DoneePrevReqController">
    <children>
-      <ImageView fitHeight="600.0" fitWidth="1000.0" pickOnBounds="true">
-         <image>
-            <Image url="@images/Presentation1_Proposal.jpg" />
-         </image>
-      </ImageView>
+       <ImageView accessibleRole="TEXT_AREA" blendMode="OVERLAY" fitHeight="600.0" fitWidth="1000.0" layoutY="-1.0" pickOnBounds="true">
+           <image>
+               <Image url="@images/Presentation1_Proposal.jpg" />
+           </image>
+       </ImageView>
       <TableView fx:id="prevReqTable" layoutX="28.0" layoutY="118.0" prefHeight="463.0" prefWidth="898.0">
         <columns>
           <TableColumn fx:id="col_serial" prefWidth="75.0" resizable="false" text="Serial" />
