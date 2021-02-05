@@ -18,7 +18,7 @@
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.AddNewDonationController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.AddNewDonationController">
     <children>
       <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="58.0" layoutY="438.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -59,7 +59,7 @@
               </Button>
          </children>
       </Pane>
-        <Label fx:id="title_label" alignment="CENTER" layoutX="257.0" layoutY="5.0" prefHeight="82.0" prefWidth="575.0" text="Add Donation Information" textAlignment="JUSTIFY" textFill="#990202">
+        <Label fx:id="title_addDonationInfo" alignment="CENTER" layoutX="234.0" layoutY="5.0" prefHeight="82.0" prefWidth="645.0" text="Add Donation Information" textAlignment="JUSTIFY" textFill="#990202">
             <font>
                 <Font name="Corbel Bold" size="46.0" />
             </font>
@@ -177,7 +177,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
         </Button>
-      <Label layoutX="256.0" layoutY="389.0" prefHeight="51.0" prefWidth="238.0" text="*Time gap between two donations &#10;  must be more than 3 months." textFill="#990202">
+        <Label fx:id="extraInfo1" layoutX="256.0" layoutY="389.0" prefHeight="51.0" prefWidth="238.0" text="*Time gap between two donations &#10;  must be more than 3 months." textFill="#990202">
          <font>
             <Font name="System Italic" size="12.0" />
          </font>
