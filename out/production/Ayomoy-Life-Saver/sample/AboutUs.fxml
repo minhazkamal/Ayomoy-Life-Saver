@@ -40,19 +40,19 @@
             <Image url="@images/Abdullah.png" />
          </image>
       </ImageView>
-        <Label fx:id="author1" layoutX="111.0" layoutY="338.0" text="Minhaz Kamal">
+        <Label fx:id="author1" layoutX="128.0" layoutY="329.0" text="Minhaz Kamal">
          <font>
             <Font name="Cambria Bold" size="22.0" />
          </font>
       </Label>
-        <Label fx:id="author2" layoutX="430.0" layoutY="338.0" text="Fairuz Shaiara">
+        <Label fx:id="author2" layoutX="441.0" layoutY="329.0" text="Fairuz Shaiara">
          <font>
             <Font name="Cambria Bold" size="22.0" />
          </font>
       </Label>
-      <Label fx:id="author3" layoutX="714.0" layoutY="310.0" prefHeight="82.0" prefWidth="176.0" text="Chowdhury Mohammad Abdullah" textAlignment="CENTER" wrapText="true">
+      <Label fx:id="author3" layoutX="706.0" layoutY="310.0" prefHeight="66.0" prefWidth="184.0" text="Chowdhury Mohammad Abdullah" textAlignment="CENTER" wrapText="true">
          <font>
-            <Font name="Cambria Bold" size="22.0" />
+            <Font name="Cambria Bold" size="18.0" />
          </font>
       </Label>
         <Label layoutX="130.0" layoutY="365.0" prefHeight="27.0" prefWidth="100.0" text="Student of CSE" textAlignment="CENTER" wrapText="true">

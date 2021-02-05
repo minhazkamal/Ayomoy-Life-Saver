@@ -6,11 +6,11 @@
     -fx-effect: dropshadow(three-pass-box,rgb(157,49,49),10,0,0,0);
     -fx-cell-size: 100%;
     -fx-font-family: 'Open Sans', sans-serif;
-    -fx-font-size: 18px;
+    /*-fx-font-size: 18px;*/
     -fx-font-weight: bold;
     -fx-background-color: lightcoral;
     -fx-text-fill: floralwhite;
-    -fx-font-size: 100%;
+    -fx-font-size: 110%;
 }
 
 .button:hover
@@ -19,6 +19,20 @@
     -fx-text-fill: #520707;
     -fx-font-weight: bold;
     -fx-font-size: 125%;
+    -fx-effect: dropshadow(three-pass-box,rgb(157,49,49),10,0,0,0);
+}
+
+#Register_button
+{
+    -fx-font-size: 200%;
+}
+
+#Register_button:hover
+{
+    -fx-background-color: linear-gradient(to bottom,#9d3131,indianred,lightcoral);
+    -fx-text-fill: #520707;
+    -fx-font-weight: bold;
+    -fx-font-size: 250%;
     -fx-effect: dropshadow(three-pass-box,rgb(157,49,49),10,0,0,0);
 }
 
@@ -81,3 +95,22 @@
     -fx-font-size: 50px;
 }
 
+.choice-box
+{
+    -fx-effect: innershadow(three-pass-box,rgb(157, 49, 49),5,0,0,0);
+}
+
+.text-field
+{
+    -fx-effect: innershadow(three-pass-box,rgb(157, 49, 49),5,0,0,0);
+}
+
+.text-area
+{
+    -fx-effect: innershadow(three-pass-box,rgb(157, 49, 49),5,0,0,0);
+}
+
+.password-field
+{
+    -fx-effect: innershadow(three-pass-box,rgb(157, 49, 49),5,0,0,0);
+}
