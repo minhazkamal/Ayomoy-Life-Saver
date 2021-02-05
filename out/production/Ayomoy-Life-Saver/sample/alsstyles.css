@@ -28,3 +28,38 @@
     -fx-text-fill: #9d3131;
 
 }
+
+#als_1
+{
+    -fx-font-family: 'Open Sans', sans-serif;
+    -fx-font-size: 65px;
+    -fx-text-fill: #9d3131;
+}
+
+#als_2
+{
+    -fx-font-family: 'Open Sans', sans-serif;
+    -fx-font-size: 65px;
+    -fx-text-fill: #9d3131;
+}
+#pToCont
+{
+    -fx-font-family: 'Open Sans', sans-serif;
+    -fx-font-size: 23px;
+}
+
+#pToCont:hover
+{
+    -fx-font-size: 24px;
+}
+
+#title_addDonationInfo
+{
+    -fx-font-size: 50px;
+}
+
+#extraInfo1
+{
+    -fx-font-weight: italic;
+    -fx-font-size: 16px;
+}
