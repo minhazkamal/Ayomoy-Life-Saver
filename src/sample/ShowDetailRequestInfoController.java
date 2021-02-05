@@ -13,6 +13,12 @@ import java.io.IOException;
 import java.sql.*;
 import java.time.LocalDate;
 
+/**
+ * This controller Class is for the Showing of Detals of a blood donation
+ * request from the Donor.
+ *
+ * @author fairuz240
+ */
 public class ShowDetailRequestInfoController {
 
     @FXML
@@ -40,6 +46,12 @@ public class ShowDetailRequestInfoController {
     @FXML
     private ChoiceBox Gender_choice;
 
+    /**
+     * This method is for finding the type of user for a particular request id.
+     * Sends SQL Query for the relevant list. Catch block is there for the exceptions.
+     *
+     * @return String, type of the user.
+     */
     private String find_type()
     {
         String type = null;
@@ -74,6 +86,14 @@ public class ShowDetailRequestInfoController {
         return type;
     }
 
+    /**
+     * This is the initializing function of the fxml components.
+     *
+     * When a the window is launched this method initializes these
+     * components. Establishes the connection with the database and
+     * upon fetching the data columns works with the property values.
+     *
+     */
     public void initialize()
     {
         String username = "als";
@@ -121,7 +141,14 @@ public class ShowDetailRequestInfoController {
             alert.showAndWait();
         }
     }
-
+    /**
+     * This method is here for the functionality of the "Back" button. This will redirect the
+     * user to the parent node that is the "root" which is sample.UserPanel.fxml. This hierarchical
+     * structure is for the simplicity of the system.
+     *
+     * @param even, object of ActionEvent generated from click or Enter
+     * @throws IOException,  checked exception
+     */
     public void pressBack(ActionEvent even) throws IOException {
         ((Node) even.getSource()).getScene().getWindow().hide();
 

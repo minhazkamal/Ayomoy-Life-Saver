@@ -67,7 +67,9 @@ public class ShowDetailDonorInfoController extends SearchDonorOrgController{
     }
 
     /**
-     * Method for showing personal information 
+     * Method for showing personal information of the Donor. Fetches the information from
+     * the database. Catches exception into the catch block and shows the error on the
+     * title of the window.
      */
     public void showPersonalInfo()
     {
@@ -119,6 +121,9 @@ public class ShowDetailDonorInfoController extends SearchDonorOrgController{
         }
     }
 
+    /**
+     * Method for showing the donation information fetched from the database.
+     */
     public void showDonationInfo()
     {
         String username = "als";
@@ -157,12 +162,27 @@ public class ShowDetailDonorInfoController extends SearchDonorOrgController{
         }
     }
 
+    /**
+     * This is the initializing function of the fxml components.
+     *
+     * When a the window is launched this method initializes these
+     * components. Establishes the connection with the database and
+     * upon fetching the data columns works with the property values.
+     *
+     */
     public void initialize()
     {
         showPersonalInfo();
         showDonationInfo();
     }
-
+    /**
+     * This method is here for the functionality of the "Back" button. This will redirect the
+     * user to the parent node that is the "root" which is sample.UserPanel.fxml. This hierarchical
+     * structure is for the simplicity of the system.
+     *
+     * @param even, object of ActionEvent generated from click or Enter
+     * @throws IOException,  checked exception
+     */
     public void pressBack(ActionEvent even) throws IOException {
         ((Node) even.getSource()).getScene().getWindow().hide();
 

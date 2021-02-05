@@ -15,6 +15,12 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.sql.*;
 
+/**
+ * This is class is for updating the Graviton information. Extends the
+ * OrganizationPanelController class.
+ *
+ * @author fairuz240
+ */
 public class UpdateOrgController extends OrganizationPanelController{
 
     ObservableList<String> LocList = FXCollections.observableArrayList();
@@ -37,7 +43,10 @@ public class UpdateOrgController extends OrganizationPanelController{
     private TextField CPMobile;
     @FXML
     private TextArea description;
-
+    /**
+     * Method for getting the getting the location details for a Org. details.
+     * catch block for handling the exception due to potential null entries.
+     */
     public void getLoc()
     {
         String username = "als";
@@ -74,7 +83,14 @@ public class UpdateOrgController extends OrganizationPanelController{
             alert.showAndWait();
         }
     }
-
+    /**
+     * This is the initializing function of the fxml components.
+     *
+     * When a the window is launched this method initializes these
+     * components. Establishes the connection with the database and
+     * upon fetching the data columns works with the property values.
+     *
+     */
     public void initialize()
     {
         getLoc();
@@ -126,7 +142,14 @@ public class UpdateOrgController extends OrganizationPanelController{
             alert.showAndWait();
         }
     }
-
+    /**
+     * This method is here for the functionality of the "Back" button. This will redirect the
+     * user to the parent node that is the "root" which is sample.UserPanel.fxml. This hierarchical
+     * structure is for the simplicity of the system.
+     *
+     * @param even, object of ActionEvent generated from click or Enter
+     * @throws IOException,  checked exception
+     */
     public void pressBack(ActionEvent even) throws IOException {
         ((Node) even.getSource()).getScene().getWindow().hide();
 
@@ -138,7 +161,11 @@ public class UpdateOrgController extends OrganizationPanelController{
         primaryStage.setResizable(false);
         primaryStage.show();
     }
-
+    /**
+     * This is for the checking alert while updating the information.
+     * @return boolean, returns true value if there is an alert and
+     * returns false if otherwise.
+     */
     public boolean checkAlert()
     {
         boolean alertCheck = false;
@@ -216,6 +243,14 @@ public class UpdateOrgController extends OrganizationPanelController{
         return alertCheck;
     }
 
+    /**
+     * The Method for the functionality of the update button. The updated information
+     * given here are then sent to the database via DML and overwritten.
+     * catch block is there for handling the exceptions for the null entries.
+     *
+     * @param even, object of ActionEvent Class
+     * @throws IOException, checked exception for i/p and o/p.
+     */
     public void pressUpdate(ActionEvent even) throws IOException{
         if(checkAlert()==false)
         {
@@ -286,6 +321,12 @@ public class UpdateOrgController extends OrganizationPanelController{
         }
     }
 
+    /**
+     * Method for changing the password of Org. Loads the sample.ChangePassword.fxml.
+     *
+     * @param even, object of ActionEvent Class
+     * @throws IOException, checked exception for i/p and o/p.
+     */
     public void pressChangePass(ActionEvent even) throws IOException{
 
         Stage primaryStage = new Stage();

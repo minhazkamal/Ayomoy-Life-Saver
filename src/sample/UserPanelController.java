@@ -22,6 +22,10 @@ import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 import java.util.Date;
 
+/**
+ * This class is for handling the User Panel and extends the LogINpanelController Class.
+ * @author abdullah239
+ */
 public class UserPanelController extends LogINpanelController{
 
     @FXML
@@ -49,6 +53,11 @@ public class UserPanelController extends LogINpanelController{
     @FXML
     private Label showGender;
 
+    /**
+     * Method for finding the age of a user.
+     * @param DOB, the Date of Birth of the User
+     * @return String, the age of the user.
+     */
     public String FindAge(LocalDate DOB)
     {
         LocalDate current = LocalDate.now();
@@ -60,6 +69,10 @@ public class UserPanelController extends LogINpanelController{
         return d;
     }
 
+    /**
+     * Method for showing the Personal information of the user. fetches them from the databse
+     * and shows them to the user on the userland.
+     */
     public void showPersonalInfo()
     {
         String username = "als";
@@ -110,6 +123,10 @@ public class UserPanelController extends LogINpanelController{
         }
     }
 
+    /**
+     * Method for showing the donation information. Fecthes them from the database using SQL query and
+     * shows them on the List.
+     */
     public void showDonationInfo()
     {
         String username = "als";
@@ -146,7 +163,14 @@ public class UserPanelController extends LogINpanelController{
             alert.showAndWait();
         }
     }
-
+    /**
+     * This is the initializing function of the fxml components.
+     *
+     * When a the window is launched this method initializes these
+     * components. Establishes the connection with the database and
+     * upon fetching the data columns works with the property values.
+     *
+     */
     public void initialize()
     {
         showPersonalInfo();
@@ -165,6 +189,12 @@ public class UserPanelController extends LogINpanelController{
         primaryStage.show();
     }
 
+    /**
+     * Method for using the system as a Donor.
+     * Loads the sample.DonorPanel.fxml file.
+     * @param even, object of ActionEvent Class
+     * @throws IOException, checked exception for i/p and o/p.
+     */
     public void PressAsDonor(ActionEvent even) throws IOException {
         ((Node) even.getSource()).getScene().getWindow().hide();
 
@@ -177,6 +207,12 @@ public class UserPanelController extends LogINpanelController{
         primaryStage.show();
     }
 
+    /**
+     * Method for the user to use the system as a Donee.
+     * Loads the sample.DoneePanel.fxml file.
+     * @param even, object of ActionEvent Class
+     * @throws IOException, checked exception for i/p and o/p.
+     */
     public void PressAsDonee(ActionEvent even) throws IOException {
         ((Node) even.getSource()).getScene().getWindow().hide();
 
@@ -189,7 +225,14 @@ public class UserPanelController extends LogINpanelController{
         primaryStage.show();
 
     }
-
+    /**
+     * This method is here for the functionality of the "Back" button. This will redirect the
+     * user to the parent node that is the "root" which is sample.UserPanel.fxml. This hierarchical
+     * structure is for the simplicity of the system.
+     *
+     * @param even, object of ActionEvent generated from click or Enter
+     * @throws IOException,  checked exception
+     */
     public void pressBack(ActionEvent even) throws IOException {
 
         ((Node) even.getSource()).getScene().getWindow().hide();
