@@ -110,10 +110,10 @@ public class ShowDetailDonationInfoController extends LogINpanelController{
     }
 
     /**
-     * Method for the uodate donation button. Loads the sample.UpdateDonationInfo.fxml file
-     * and 
-     * @param even
-     * @throws IOException
+     * Method for the update donation button. Loads the sample.UpdateDonationInfo.fxml file
+     * and lets the user update the donation information if necessary.
+     * @param even, object of ActionEvent Class
+     * @throws IOException, checked rexception for i/p and o/p.
      */
     public void pressUpdateDonation(ActionEvent even) throws IOException {
         ((Node) even.getSource()).getScene().getWindow().hide();
