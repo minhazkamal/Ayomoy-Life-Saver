@@ -14,6 +14,12 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.sql.*;
 
+/**
+ * This controller class is for updating the Donation information. The class
+ * extends on the DonationInfoController Class.
+ *
+ * @author abdullah239
+ */
 public class UpdateDonationInfoController extends DonationInfoController{
 
     ObservableList<String> GenderList = FXCollections.observableArrayList("Male", "Female", "Others");
@@ -36,6 +42,10 @@ public class UpdateDonationInfoController extends DonationInfoController{
     @FXML
     private ChoiceBox p_Gender_choice;
 
+    /**
+     * Method for getting the getting the location details for a donation details.
+     * catch block for handling the exception due to potential null entries.
+     */
     public void getLoc()
     {
         String username = "als";
@@ -73,6 +83,14 @@ public class UpdateDonationInfoController extends DonationInfoController{
         }
     }
 
+    /**
+     * This is the initializing function of the fxml components.
+     *
+     * When a the window is launched this method initializes these
+     * components. Establishes the connection with the database and
+     * upon fetching the data columns works with the property values.
+     *
+     */
     public void initialize()
     {
         txtUser.setText(LogINpanelController.getUser());
@@ -124,7 +142,11 @@ public class UpdateDonationInfoController extends DonationInfoController{
         }
     }
 
-
+    /**
+     * This is for the checking alert while updating the information.
+     * @return boolean, returns true value if there is an alert and
+     * returns false if otherwise.
+     */
     public boolean checkAlert()
     {
         boolean alertCheck = false;
@@ -154,7 +176,13 @@ public class UpdateDonationInfoController extends DonationInfoController{
         return alertCheck;
     }
 
-
+    /**
+     * Method for the Updated donation button. Loads the sample.DonationInfo.fxml file.
+     * Establishes the connection with the database and overwrites them Using DML into
+     * the database.
+     * @param even, object of ActionEvent class
+     * @throws IOException, checked exception for i/p and o/p
+     */
     public void pressUpdateDonation(ActionEvent even) throws IOException {
 
         if(checkAlert()==false)
@@ -215,6 +243,14 @@ public class UpdateDonationInfoController extends DonationInfoController{
 
     }
 
+    /**
+     * This method is here for the functionality of the "Back" button. This will redirect the
+     * user to the parent node that is the "root" which is sample.UserPanel.fxml. This hierarchical
+     * structure is for the simplicity of the system.
+     *
+     * @param even, object of ActionEvent generated from click or Enter
+     * @throws IOException,  checked exception
+     */
     public void pressBack(ActionEvent even) throws IOException {
         ((Node) even.getSource()).getScene().getWindow().hide();
 

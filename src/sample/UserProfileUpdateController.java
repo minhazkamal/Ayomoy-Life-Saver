@@ -20,6 +20,12 @@ import java.sql.*;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
+/**
+ * This Class is for Updating the profile of user.
+ * Extends the UserPanelController Class.
+ *
+ * @author fairuz240
+ */
 public class UserProfileUpdateController extends UserPanelController{
 
     ObservableList<String> BGList = FXCollections.observableArrayList("A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-");
@@ -43,6 +49,11 @@ public class UserProfileUpdateController extends UserPanelController{
     @FXML
     private ChoiceBox Gender_Choice;
 
+    /**
+     * Method to show the already existing information i.e
+     * the previous information in the system. Information
+     * fetched from the databse using SQL query.
+     */
     public void showPrevInfo()
     {
         String username = "als";
@@ -92,6 +103,11 @@ public class UserProfileUpdateController extends UserPanelController{
             alert.showAndWait();
         }
     }
+
+    /**
+     * Method for feting the Location details of a user
+     * from the database using SQL query.
+     */
     public void getLoc()
     {
         String username = "als";
@@ -128,7 +144,11 @@ public class UserProfileUpdateController extends UserPanelController{
             alert.showAndWait();
         }
     }
-
+    /**
+     * This is for the checking alert while updating the information.
+     * @return boolean, returns true value if there is an alert and
+     * returns false if otherwise.
+     */
     public boolean checkAlert()
     {
         boolean alertCheck = false;
@@ -175,7 +195,14 @@ public class UserProfileUpdateController extends UserPanelController{
 
         return alertCheck;
     }
-
+    /**
+     * This is the initializing function of the fxml components.
+     *
+     * When a the window is launched this method initializes these
+     * components. Establishes the connection with the database and
+     * upon fetching the data columns works with the property values.
+     *
+     */
     public void initialize()
     {
         getLoc();
@@ -184,7 +211,14 @@ public class UserProfileUpdateController extends UserPanelController{
         AddressLocation.setItems(LocList);
         showPrevInfo();
     }
-
+    /**
+     * This method is here for the functionality of the "Back" button. This will redirect the
+     * user to the parent node that is the "root" which is sample.UserPanel.fxml. This hierarchical
+     * structure is for the simplicity of the system.
+     *
+     * @param even, object of ActionEvent generated from click or Enter
+     * @throws IOException,  checked exception
+     */
 
 
     public void pressBack(ActionEvent even) throws IOException {
@@ -198,7 +232,14 @@ public class UserProfileUpdateController extends UserPanelController{
         primaryStage.setResizable(false);
         primaryStage.show();
     }
-
+    /**
+     * The Method for the functionality of the update button. The updated information
+     * given here are then sent to the database via DML and overwritten.
+     * catch block is there for handling the exceptions for the null entries.
+     *
+     * @param even, object of ActionEvent Class
+     * @throws IOException, checked exception for i/p and o/p.
+     */
     public void pressUpdate(ActionEvent even) throws IOException{
         if(checkAlert()==false)
         {
@@ -267,7 +308,12 @@ public class UserProfileUpdateController extends UserPanelController{
             primaryStage.show();
         }
     }
-
+    /**
+     * Method for changing the password of Org. Loads the sample.ChangePassword.fxml.
+     *
+     * @param even, object of ActionEvent Class
+     * @throws IOException, checked exception for i/p and o/p.
+     */
     public void pressChangePass(ActionEvent even) throws IOException{
 
         Stage primaryStage = new Stage();
