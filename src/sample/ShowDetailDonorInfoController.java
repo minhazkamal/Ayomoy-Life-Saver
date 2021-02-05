@@ -19,6 +19,11 @@ import java.time.LocalDate;
 import java.time.Period;
 import java.time.format.DateTimeFormatter;
 
+/**
+ * This controller class handles the Donor details. Extends the  SearchDonorOrgController class.
+ *
+ * @author minhaz231
+ */
 public class ShowDetailDonorInfoController extends SearchDonorOrgController{
 
     @FXML
@@ -44,6 +49,12 @@ public class ShowDetailDonorInfoController extends SearchDonorOrgController{
     @FXML
     private Label showLastDonationOrg;
 
+    /**
+     * Finds the age of the Donor.
+     *
+     * @param DOB, the date of birth of user.
+     * @return String, the age of User.
+     */
     public String FindAge(LocalDate DOB)
     {
         LocalDate current = LocalDate.now();
@@ -55,6 +66,9 @@ public class ShowDetailDonorInfoController extends SearchDonorOrgController{
         return d;
     }
 
+    /**
+     * Method for showing personal information 
+     */
     public void showPersonalInfo()
     {
         String username = "als";
