@@ -21,6 +21,13 @@ import java.sql.*;
 import java.time.LocalDate;
 import java.time.Period;
 
+/**
+ * This is the Controller Class for handling the Donor Approval list.
+ * The admin will approve the Donor and they will be placed on the approvol list.
+ *
+ * Extends the LogINpanelController Class.
+ * @author minhaz231
+ */
 public class DonorApprovalListController extends LogINpanelController{
 
     static String user_img=null;
@@ -60,6 +67,12 @@ public class DonorApprovalListController extends LogINpanelController{
 
     private int count_report;
 
+    /**
+     * Method for checing the valid age.
+     *
+     * @param DOB, date of birth of the user.
+     * @return true if above 18 yrs, else return false.
+     */
     public Boolean CheckAge(LocalDate DOB)
     {
         LocalDate current = LocalDate.now();
@@ -70,6 +83,15 @@ public class DonorApprovalListController extends LogINpanelController{
         else return false;
     }
 
+    /**
+     * Method for checing whether all the Flags are set apropiately
+     * or not.
+     *
+     * @param s, status flag
+     * @param a, approved flag
+     * @param c, eligible flag
+     * @return true of alert is there else return false.
+     */
     private boolean check_alert(String s, String a, String c)
     {
         boolean alert_check=false;
@@ -106,12 +128,27 @@ public class DonorApprovalListController extends LogINpanelController{
         return alert_check;
     }
 
+    /**
+     * Methof for checking the update of the Approval form the admin.
+     *
+     * @param s
+     * @param a
+     * @return
+     */
     private boolean updateCheck(String s, String a)
     {
         if(s.equals("Valid") && a.equals("Approved")) return true;
         else return false;
     }
 
+    /**
+     * Method for the admin to update the approval into the
+     * database. This will be then displayed on the Donors Profile
+     * when the user logs in.
+     *
+     * @param even, object of ActionEvent Class
+     * @throws IOException, checked exeption for i/p and o/p.
+     */
     private void pressUpdateButton(ActionEvent even) throws IOException {
         String user=null;
         int serial=-1;
@@ -208,6 +245,12 @@ public class DonorApprovalListController extends LogINpanelController{
         }
     }
 
+    /**
+     * This button is for the Admin to see the test report of the User.
+     * The method uses sample.Image.fxml to show the
+     * @param even, object of ActionEvent Class
+     * @throws IOException, Checked exception for i/p and o/p.
+     */
     private void pressReportButton(ActionEvent even) throws IOException {
 
         for(int i=0; i<count_report; i++)
@@ -231,7 +274,14 @@ public class DonorApprovalListController extends LogINpanelController{
         primaryStage.showAndWait();
 
     }
-
+    /**
+     * This is the initializing function of the fxml components.
+     *
+     * When a the window is launched this method initializes these
+     * components. Establishes the connection with the database and
+     * upon fetching the data columns works with the property values.
+     *
+     */
     public void initialize()
     {
         DonorApprovalTable.setEditable(true);
@@ -343,6 +393,14 @@ public class DonorApprovalListController extends LogINpanelController{
         DonorApprovalTable.setItems(oblist);
     }
 
+    /**
+     * This is the method for refresh button in the apporval list. Refreshing
+     * the list will show the new changes made that were not shown in a
+     * particular session.
+     *
+     * @param even, object of ActionEvent Class
+     * @throws IOException, Checked excetption for i/p and o/p.
+     */
     public void pressRefresh(ActionEvent even) throws IOException {
         ((Node) even.getSource()).getScene().getWindow().hide();
 
@@ -354,7 +412,14 @@ public class DonorApprovalListController extends LogINpanelController{
         primaryStage.setResizable(false);
         primaryStage.show();
     }
-
+    /**
+     * This method is here for the functionality of the "Back" button. This will redirect the
+     * user to the parent node that is the "root" which is sample.UserPanel.fxml. This hierarchical
+     * structure is for the simplicity of the system.
+     *
+     * @param even, object of ActionEvent generated from click or Enter
+     * @throws IOException,  checked exception
+     */
     public void pressBack(ActionEvent even) throws IOException {
         ((Node) even.getSource()).getScene().getWindow().hide();
 
@@ -368,6 +433,13 @@ public class DonorApprovalListController extends LogINpanelController{
 
     }
 
+    /**
+     * Method for the comment button of the admin. The admin will be able
+     * to place a comment as remark and pressing this button will show the
+     * comment to the user later in the approval list.
+     *
+     * @param event, object of ActionEvent
+     */
     public void pressComment(TableColumn.CellEditEvent<UpdateByAdmin, String> event) {
         //System.out.println("adsafdsfdsga");
         UpdateByAdmin record1 = DonorApprovalTable.getSelectionModel().getSelectedItem();

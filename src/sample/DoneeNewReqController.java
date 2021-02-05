@@ -15,12 +15,22 @@ import java.io.IOException;
 import java.sql.*;
 import java.time.LocalDate;
 
+/**
+ * This is the controller class for the new request of Blood
+ * Donation from a Done.
+ *
+ * @author abdullah239
+ */
 public class DoneeNewReqController {
 
     ObservableList<String> BGList = FXCollections.observableArrayList("A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-");
     ObservableList<String> GenderList = FXCollections.observableArrayList("Male", "Female", "Others");
     ObservableList<String> LocList = FXCollections.observableArrayList();
 
+    /**
+     * Method for feting the Location details of a user
+     * from the database using SQL query.
+     */
     public void getLoc()
     {
         String username = "als";
@@ -83,7 +93,14 @@ public class DoneeNewReqController {
     private ChoiceBox Gender_choice;
 ////    @FXML
 ////    private Button submit;
-
+    /**
+     * This method is here for the functionality of the "Back" button. This will redirect the
+     * user to the parent node that is the "root" which is sample.UserPanel.fxml. This hierarchical
+     * structure is for the simplicity of the system.
+     *
+     * @param even, object of ActionEvent generated from click or Enter
+     * @throws IOException,  checked exception
+     */
     public void pressBack(ActionEvent even) throws IOException {
         ((Node) even.getSource()).getScene().getWindow().hide();
 
@@ -95,7 +112,14 @@ public class DoneeNewReqController {
         primaryStage.setResizable(false);
         primaryStage.show();
     }
-
+    /**
+     * This is the initializing function of the fxml components.
+     *
+     * When a the window is launched this method initializes these
+     * components. Establishes the connection with the database and
+     * upon fetching the data columns works with the property values.
+     *
+     */
     public void initialize()
     {
         txtUsername.setText(LogINpanelController.getUser());
@@ -151,6 +175,12 @@ public class DoneeNewReqController {
         doneeLocation.setItems(LocList);
     }
 
+    /**
+     * Method for checking whether string is integer or not
+     * @param s, string value
+     * @return boolean, true if integer
+     * and false if otherwise.
+     */
     static boolean isInt(String s)
     {
         try
@@ -159,7 +189,11 @@ public class DoneeNewReqController {
         catch(NumberFormatException er)
         { return false; }
     }
-
+    /**
+     * This is for the checking alert while updating the information.
+     * @return boolean, returns true value if there is an alert and
+     * returns false if otherwise.
+     */
     public boolean checkAlert()
     {
         boolean alertCheck = false;
@@ -218,6 +252,11 @@ public class DoneeNewReqController {
         return alertCheck;
     }
 
+    /**
+     * Method for submitting a new request from the Donee.
+     * @param even, object of ActionEvent
+     * @throws IOException, checked exception
+     */
    public void submitNewReq(ActionEvent even) throws IOException{
         if(checkAlert()==false)
         {
