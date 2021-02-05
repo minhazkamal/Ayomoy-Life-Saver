@@ -16,11 +16,20 @@ import java.io.IOException;
 import java.sql.*;
 import java.time.LocalDate;
 
+/**
+ * This controller class is for searching the Organization.
+ *
+ * @author abdullah239
+ */
 public class SearchOrgController {
 
     public static int count_org;
     public static String user;
 
+    /**
+     * Getter method of the Username.
+     * @return String, the username.
+     */
     public static String getUser() {
         return user;
     }
@@ -48,6 +57,10 @@ public class SearchOrgController {
     @FXML
     private TableColumn<Organization, String> col_details;
 
+    /**
+     * Method to fetch the Location details from the database.
+     * Fetched lists are sorted alphabetically.
+     */
     public void getLoc()
     {
         String username = "als";
@@ -85,6 +98,10 @@ public class SearchOrgController {
         }
     }
 
+    /**
+     * Method for counting the NUmber of the Organizations that are enlisted.
+     * Uses simple sql quiery with count() function.
+     */
     public void countOrg()
     {
         String username = "als";
@@ -114,6 +131,14 @@ public class SearchOrgController {
         }
     }
 
+    /**
+     * This is the initializing function of the fxml components.
+     *
+     * When a the window is launched this method initializes these
+     * components. Establishes the connection with the database and
+     * upon fetching the data columns works with the property values.
+     *
+     */
     public void initialize()
     {
         getLoc();
@@ -183,6 +208,14 @@ public class SearchOrgController {
        OrgTable.setItems(oblist);
     }
 
+    /**
+     * method for the details button of the Org. Pressing this laods the sample.ShowDetailOrgInfo.fxml
+     * file and presents the profile info of the Org.
+     *
+     * @param even, object of ActionEvent Class.
+     * @throws IOException, checked exception for i/p and o/p.
+     */
+
     private void pressDetailsButton(ActionEvent even) throws IOException{
         for(int i=0; i<count_org; i++)
         {
@@ -207,6 +240,12 @@ public class SearchOrgController {
 
     }
 
+    /**
+     * Method for sending SQL query to the database and fetch a list of Orgs.
+     * Catch block catches the exceptions and shows them into the warning window.
+     * @param event, object of ActionEvent Class
+     * @throws IOException, checked exception for i/p and o/p.
+     */
     public void pressSearch(ActionEvent event) throws IOException{
         oblist.clear();
         OrgTable.setItems(oblist);
@@ -273,7 +312,13 @@ public class SearchOrgController {
         OrgTable.setItems(oblist);
 
     }
-
+    /**
+     * The method for the reset button on the Org. list page. Rests all the
+     * filters and shows the list based on the sorted order. uses sample.SearchOrg.fxml
+     *
+     * @param even, object of ActionEvent Class
+     * @throws IOException, checked Exception for i/p and o/p
+     */
     public void pressReset(ActionEvent even) throws IOException {
         ((Node) even.getSource()).getScene().getWindow().hide();
 
@@ -287,6 +332,14 @@ public class SearchOrgController {
         primaryStage.show();
     }
 
+    /**
+     * This method is here for the functionality of the "Back" button. This will redirect the
+     * user to the parent node that is the "root" which is sample.UserPanel.fxml. This hierarchical
+     * structure is for the simplicity of the system.
+     *
+     * @param even, object of ActionEvent generated from click or Enter
+     * @throws IOException,  checked exception
+     */
     public void pressBack(ActionEvent even) throws IOException {
         ((Node) even.getSource()).getScene().getWindow().hide();
 
