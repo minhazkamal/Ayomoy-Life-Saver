@@ -8,29 +8,29 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.FilterDonationController">
     <children>
-        <Label layoutX="255.0" layoutY="14.0" text="Filters" textFill="#c70000">
+        <Label fx:id="title_label" layoutX="255.0" layoutY="14.0" text="Filters" textFill="#c70000">
             <font>
                 <Font name="Cambria Bold" size="30.0" />
             </font>
         </Label>
-        <Label layoutX="96.0" layoutY="78.0" text="Blood Group">
+        <Label layoutX="101.0" layoutY="115.0" styleClass="panel_label" text="Blood Group">
             <font>
                 <Font name="Cambria Bold" size="18.0" />
             </font>
         </Label>
-        <ChoiceBox fx:id="filterBG" layoutX="255.0" layoutY="76.0" prefWidth="150.0" />
-        <Label layoutX="96.0" layoutY="128.0" text="Location">
+        <ChoiceBox fx:id="filterBG" layoutX="260.0" layoutY="113.0" prefWidth="150.0" />
+        <Label layoutX="101.0" layoutY="165.0" styleClass="panel_label" text="Location">
             <font>
                 <Font name="Cambria Bold" size="18.0" />
             </font>
         </Label>
-        <ChoiceBox fx:id="filterLocation" layoutX="255.0" layoutY="126.0" prefHeight="26.0" prefWidth="238.0" />
-      <Label layoutX="97.0" layoutY="200.0" text="Paying Condition">
+        <ChoiceBox fx:id="filterLocation" layoutX="260.0" layoutY="163.0" prefHeight="26.0" prefWidth="238.0" />
+      <Label layoutX="102.0" layoutY="237.0" styleClass="panel_label" text="Paying Condition">
          <font>
             <Font name="Cambria Bold" size="18.0" />
          </font>
       </Label>
-      <ChoiceBox fx:id="filterPay" layoutX="255.0" layoutY="198.0" prefWidth="150.0" />
+      <ChoiceBox fx:id="filterPay" layoutX="260.0" layoutY="235.0" prefWidth="150.0" />
         <Button fx:id="search_button" layoutX="460.0" layoutY="339.0" mnemonicParsing="false" onAction="#pressSearchFilter" prefHeight="26.0" prefWidth="82.0" text="Search" textFill="#c70000">
             <font>
                 <Font name="Cambria Bold" size="18.0" />

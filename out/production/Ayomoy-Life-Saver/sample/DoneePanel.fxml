@@ -5,7 +5,6 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.DoneePanelController">
@@ -25,35 +24,17 @@
                <Font name="Cambria Bold" size="54.0" />
            </font>
        </Label>
-       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#c70000" height="118.0" layoutX="324.0" layoutY="124.0" stroke="BLACK" strokeType="INSIDE" width="352.0" />
-       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#c70000" height="118.0" layoutX="324.0" layoutY="275.0" stroke="BLACK" strokeType="INSIDE" width="352.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#c70000" height="118.0" layoutX="324.0" layoutY="434.0" stroke="BLACK" strokeType="INSIDE" width="352.0" />
-       <Label layoutX="337.0" layoutY="124.0" prefHeight="118.0" prefWidth="325.0" text="Previous Request" textFill="WHITE">
-           <font>
-               <Font name="System Bold" size="40.0" />
-           </font>
-       </Label>
-       <Label layoutX="369.0" layoutY="275.0" prefHeight="118.0" prefWidth="262.0" text="NEW Request" textFill="WHITE">
-           <font>
-               <Font name="System Bold" size="40.0" />
-           </font>
-       </Label>
-      <Label layoutX="324.0" layoutY="433.0" prefHeight="118.0" prefWidth="352.0" text="Search Donor/Organization" textFill="WHITE">
-         <font>
-            <Font name="System Bold" size="27.0" />
-         </font>
-      </Label>
-      <Button layoutX="324.0" layoutY="124.0" mnemonicParsing="false" onAction="#pressPrevReq" opacity="0.15" prefHeight="118.0" prefWidth="352.0" text="PrevReq" textFill="#c70000">
+      <Button layoutX="324.0" layoutY="124.0" mnemonicParsing="false" onAction="#pressPrevReq" prefHeight="118.0" prefWidth="352.0" styleClass="panel_button" text="Previous Request" textAlignment="CENTER" textFill="#c70000">
          <font>
             <Font size="1.0" />
          </font>
       </Button>
-      <Button layoutX="324.0" layoutY="275.0" mnemonicParsing="false" onAction="#pressNewReq" opacity="0.15" prefHeight="118.0" prefWidth="352.0" text="NewReq" textFill="#c70000">
+      <Button layoutX="324.0" layoutY="275.0" mnemonicParsing="false" onAction="#pressNewReq" prefHeight="118.0" prefWidth="352.0" styleClass="panel_button" text="NEW Request" textAlignment="CENTER" textFill="#c70000">
          <font>
             <Font size="1.0" />
          </font>
       </Button>
-      <Button fx:id="SearchButton" layoutX="324.0" layoutY="433.0" mnemonicParsing="false" onAction="#pressSearch" opacity="0.15" prefHeight="118.0" prefWidth="352.0" text="NewReq" textFill="#c70000">
+      <Button fx:id="SearchButton" layoutX="324.0" layoutY="433.0" mnemonicParsing="false" onAction="#pressSearch" prefHeight="118.0" prefWidth="352.0" styleClass="panel_button" text="Search Donor/Organization" textAlignment="CENTER" textFill="#c70000">
          <font>
             <Font size="1.0" />
          </font>

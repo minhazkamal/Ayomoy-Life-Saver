@@ -25,8 +25,8 @@
                 <TableColumn fx:id="col_name" prefWidth="161.60003662109375" resizable="false" text="Donee Name" />
                 <TableColumn fx:id="col_location" prefWidth="116.0" resizable="false" text="Location" />
                 <TableColumn fx:id="col_date" prefWidth="133.5999755859375" resizable="false" text="Date of Donation" />
-                <TableColumn fx:id="col_details" minWidth="18.0" resizable="false" text="Details" />
-                <TableColumn fx:id="col_update" minWidth="18.0" prefWidth="76.79998779296875" resizable="false" text="Update" />
+                <TableColumn fx:id="col_details" minWidth="18.0" prefWidth="75.20001220703125" resizable="false" text="Details" />
+                <TableColumn fx:id="col_update" minWidth="18.0" prefWidth="81.5999755859375" resizable="false" text="Update" />
             </columns>
         </TableView>
         <Button fx:id="back_button" layoutX="27.0" layoutY="25.0" mnemonicParsing="false" onAction="#pressBack" prefHeight="42.0" prefWidth="69.0" text="Back" textFill="#c70000">
@@ -45,7 +45,7 @@
             </font>
         </Label>
         <TextField fx:id="txtUser" editable="false" layoutX="250.0" layoutY="81.0" />
-      <Button fx:id="newDonation" layoutX="510.0" layoutY="76.0" mnemonicParsing="false" onAction="#pressNewDonation" prefHeight="34.0" prefWidth="149.0" text="Add New Donation" textFill="#c70000">
+      <Button fx:id="newDonation" layoutX="494.0" layoutY="76.0" mnemonicParsing="false" onAction="#pressNewDonation" prefHeight="34.0" prefWidth="174.0" text="Add New Donation" textFill="#c70000">
          <font>
             <Font name="Cambria Bold" size="15.0" />
          </font>

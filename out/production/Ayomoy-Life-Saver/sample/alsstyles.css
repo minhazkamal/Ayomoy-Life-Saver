@@ -5,10 +5,12 @@
 .button{
     -fx-effect: dropshadow(three-pass-box,rgb(157,49,49),10,0,0,0);
     -fx-font-family: 'Open Sans', sans-serif;
-    -fx-font-size: 18px;
+    /*-fx-font-size: 18px;*/
+    -fx-font-size: 110%;
     -fx-font-weight: bold;
     -fx-background-color: lightcoral;
     -fx-text-fill: floralwhite;
+    -fx-cursor: hand;
 }
 
 .button:hover
@@ -16,7 +18,8 @@
     -fx-background-color: linear-gradient(to bottom,#9d3131,indianred,lightcoral);
     -fx-text-fill: #520707;
     -fx-font-weight: bold;
-    -fx-font-size: 22px;
+    /*-fx-font-size: 22px;*/
+    -fx-font-size: 135%;
     -fx-effect: dropshadow(three-pass-box,rgb(157,49,49),10,0,0,0);
 }
 
@@ -41,10 +44,15 @@
 .label
 {
     -fx-font-family: 'Open Sans', sans-serif;
-    -fx-font-size: 16px;
+    -fx-font-size: 15px;
 }
 
-/*#author1,#author2,#author3
+#a_email
+{
+    -fx-font-size: 14px;
+}
+
+#author1,#author2,#author3
 {
     -fx-font-family: Cambria;
     -fx-font-weight: bold;
@@ -54,12 +62,12 @@
 #author3
 {
     -fx-font-size: 16px;
-}*/
+}
 
 #title_label
 {
     -fx-font-family: 'Open Sans', sans-serif;
-    -fx-font-size: 60px;
+    -fx-font-size: 50px;
     -fx-text-fill: #9d3131;
 
 }
@@ -102,22 +110,100 @@
 {
     -fx-font-size: 36px;
 }
+
+#UserPanelButton
+{
+    -fx-font-size: 22px;
+}
+
+#UserPanelButton:hover
+{
+    -fx-font-size: 24px;
+}
+
+.panel_sub_title
+{
+    -fx-font-size: 17px;
+}
+
+.panel_label
+{
+    -fx-text-fill: #c70000;
+}
+
+.panel_button
+{
+    -fx-font-size: 28px;
+}
+
+.panel_button:hover
+{
+    -fx-font-size: 29px;
+}
+
+#SearchButton
+{
+    -fx-font-size: 23px;
+}
+
+#SearchButton:hover
+{
+    -fx-font-size: 24px;
+}
+
+.info_tag
+{
+    -fx-font-size: 18px;
+    -fx-text-alignment: center;
+}
+
+.info_tag_answer
+{
+    -fx-font-size: 22px;
+    -fx-text-alignment: center;
+}
+
+#searchOrg
+{
+    -fx-font-size: 20px;
+    -fx-wrap-text: true;
+    -fx-text-alignment: center;
+}
+
+#searchOrg:hover
+{
+    -fx-font-size: 22px;
+}
+
+#change_password_title_label
+{
+    -fx-font-size: 50px;
+}
+
 .choice-box
 {
-    -fx-effect: innershadow(three-pass-box,rgb(157, 49, 49),5,0,0,0);
+    -fx-effect: innershadow(gaussian,rgb(157, 49, 49),5,0,0,0);
+    -fx-font-family: corbel bold;
 }
 
 .text-field
 {
-    -fx-effect: innershadow(three-pass-box,rgb(157, 49, 49),5,0,0,0);
+    -fx-effect: innershadow(gaussian,rgb(157, 49, 49),5,0,0,0);
+    -fx-font-family: corbel bold;
 }
 
 .text-area
 {
-    -fx-effect: innershadow(three-pass-box,rgb(157, 49, 49),5,0,0,0);
+    -fx-effect: innershadow(gaussian,rgb(157, 49, 49),5,0,0,0);
+    -fx-font-family: corbel bold;
 }
 
 .password-field
 {
-    -fx-effect: innershadow(three-pass-box,rgb(157, 49, 49),5,0,0,0);
+    -fx-effect: innershadow(gaussian,rgb(157, 49, 49),5,0,0,0);
+}
+
+#title_label_update_org
+{
+    -fx-font-size: 40px;
 }

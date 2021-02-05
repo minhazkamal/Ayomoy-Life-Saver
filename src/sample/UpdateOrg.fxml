@@ -27,7 +27,7 @@
                 <Font name="Cambria Bold" size="18.0" />
             </font>
         </Button>
-        <Label fx:id="title_label" layoutX="209.0" layoutY="5.0" prefHeight="82.0" prefWidth="641.0" text="UPDATE Organization Information" textAlignment="JUSTIFY" textFill="#c70000">
+        <Label fx:id="title_label_update_org" layoutX="209.0" layoutY="5.0" prefHeight="82.0" prefWidth="641.0" text="UPDATE Organization Information" textAlignment="JUSTIFY" textFill="#c70000">
             <font>
                 <Font name="Cambria Bold" size="39.0" />
             </font>

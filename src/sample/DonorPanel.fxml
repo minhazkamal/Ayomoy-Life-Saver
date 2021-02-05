@@ -5,7 +5,6 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.DonorPanelController">
@@ -25,65 +24,52 @@
                 <Font name="Cambria Bold" size="54.0" />
             </font>
         </Label>
-        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#c70000" height="118.0" layoutX="324.0" layoutY="124.0" stroke="BLACK" strokeType="INSIDE" width="352.0" />
-        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#c70000" height="118.0" layoutX="324.0" layoutY="275.0" stroke="BLACK" strokeType="INSIDE" width="352.0" />
-        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#c70000" height="118.0" layoutX="324.0" layoutY="434.0" stroke="BLACK" strokeType="INSIDE" width="352.0" />
-        <Label layoutX="323.0" layoutY="124.0" prefHeight="118.0" prefWidth="352.0" text="Donor Information" textFill="WHITE">
-            <font>
-                <Font name="Cambria Bold" size="40.0" />
-            </font>
-        </Label>
         <Label layoutX="324.0" layoutY="275.0" prefHeight="118.0" prefWidth="352.0" text="Donation Information" textFill="WHITE">
             <font>
                 <Font name="Cambria Bold" size="34.0" />
             </font>
         </Label>
-        <Label layoutX="324.0" layoutY="433.0" prefHeight="118.0" prefWidth="352.0" text="See Pending Requests" textFill="WHITE">
-            <font>
-                <Font name="Cambria Bold" size="35.0" />
-            </font>
-        </Label>
-        <Button layoutX="324.0" layoutY="124.0" mnemonicParsing="false" onAction="#pressDonorInfo" opacity="0.15" prefHeight="118.0" prefWidth="352.0" textFill="#c70000">
+        <Button layoutX="324.0" layoutY="124.0" mnemonicParsing="false" onAction="#pressDonorInfo" prefHeight="118.0" prefWidth="352.0" styleClass="panel_button" text="Donor Information" textFill="#c70000">
             <font>
                 <Font size="1.0" />
             </font>
         </Button>
-        <Button layoutX="324.0" layoutY="275.0" mnemonicParsing="false" onAction="#pressDonationInfo" opacity="0.15" prefHeight="118.0" prefWidth="352.0" textFill="#c70000">
+        <Button layoutX="324.0" layoutY="275.0" mnemonicParsing="false" onAction="#pressDonationInfo" prefHeight="118.0" prefWidth="352.0" styleClass="panel_button" text="Donation Information" textFill="#c70000">
             <font>
                 <Font size="1.0" />
             </font>
         </Button>
-        <Button fx:id="PendingReqButton" layoutX="324.0" layoutY="433.0" mnemonicParsing="false" onAction="#pressPendingRequest" opacity="0.15" prefHeight="118.0" prefWidth="352.0" textFill="#c70000">
+        <Button fx:id="PendingReqButton" layoutX="324.0" layoutY="433.0" mnemonicParsing="false" onAction="#pressPendingRequest" prefHeight="118.0" prefWidth="352.0" styleClass="panel_button" text="See Pending Requests" textFill="#c70000">
             <font>
                 <Font size="1.0" />
             </font>
         </Button>
-      <Label fx:id="elg_st" layoutX="62.0" layoutY="156.0" text="Eligibility Status">
+      <Label fx:id="elg_st" layoutX="62.0" layoutY="156.0" styleClass="info_tag" text="Eligibility Status">
          <font>
             <Font name="Cambria Bold" size="25.0" />
          </font>
       </Label>
-      <Label fx:id="act_st" layoutX="762.0" layoutY="156.0" text="Active Status">
+      <Label fx:id="act_st" layoutX="762.0" layoutY="156.0" styleClass="info_tag" text="Active Status">
          <font>
             <Font name="Cambria Bold" size="25.0" />
          </font>
       </Label>
-      <Label fx:id="eligibility" alignment="CENTER" layoutX="64.0" layoutY="197.0" prefHeight="24.0" prefWidth="188.0" textAlignment="CENTER" textFill="#255bd7">
+      <Label fx:id="eligibility" alignment="CENTER" layoutX="64.0" layoutY="197.0" prefHeight="24.0" prefWidth="188.0" styleClass="info_tag_answer" textAlignment="CENTER" textFill="#255bd7">
          <font>
             <Font name="Cambria Bold Italic" size="20.0" />
          </font>
       </Label>
-      <Label fx:id="activeness" alignment="CENTER" layoutX="764.0" layoutY="197.0" prefHeight="24.0" prefWidth="148.0" textAlignment="CENTER" textFill="#255bd7">
+      <Label fx:id="activeness" alignment="CENTER" layoutX="764.0" layoutY="197.0" prefHeight="24.0" prefWidth="148.0" styleClass="info_tag_answer" textAlignment="CENTER" textFill="#255bd7">
          <font>
             <Font name="Cambria Bold Italic" size="20.0" />
          </font>
       </Label>
-      <Label fx:id="pay_st" layoutX="79.0" layoutY="284.0" text="Paying Status">
+      <Label fx:id="pay_st" layoutX="79.0" layoutY="284.0" styleClass="info_tag" text="Paying Status">
          <font>
             <Font name="Cambria Bold" size="25.0" />
          </font>
       </Label>
-      <Label fx:id="paying" alignment="CENTER" layoutX="63.0" layoutY="330.0" prefHeight="24.0" prefWidth="188.0" textAlignment="CENTER" textFill="#255bd7">
+      <Label fx:id="paying" alignment="CENTER" layoutX="63.0" layoutY="330.0" prefHeight="24.0" prefWidth="188.0" styleClass="info_tag_answer" textAlignment="CENTER" textFill="#255bd7">
          <font>
             <Font name="Cambria Bold Italic" size="20.0" />
          </font>

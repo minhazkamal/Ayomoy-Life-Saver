@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
@@ -21,6 +22,9 @@
            <font>
                <Font name="Cambria Bold" size="18.0" />
            </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
        </Button>
        <Label fx:id="title_label" alignment="CENTER" layoutX="338.0" layoutY="14.0" prefHeight="82.0" prefWidth="371.0" text="LogIN PANEL" textAlignment="JUSTIFY" textFill="#c70000">
            <font>
@@ -30,7 +34,10 @@
        <Button fx:id="Register_button" layoutX="617.0" layoutY="228.0" mnemonicParsing="false" onAction="#pressRegister" prefHeight="210.0" prefWidth="216.0" text="Register" textFill="#c70000">
            <font>
                <Font size="1.0" />
-           </font></Button>
+           </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
       <Label layoutX="83.0" layoutY="220.0" text="Username :" textFill="#c70000">
          <font>
             <Font name="Cambria Bold" size="24.0" />
@@ -53,6 +60,9 @@
          <font>
             <Font name="Cambria Bold" size="18.0" />
          </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </Button>
    </children>
 </AnchorPane>
