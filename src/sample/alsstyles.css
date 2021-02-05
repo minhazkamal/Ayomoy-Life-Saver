@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
 .button{
     -fx-effect: dropshadow(three-pass-box,rgb(157,49,49),10,0,0,0);
-    -fx-font-family: Corbel;
+    -fx-font-family: 'Open Sans', sans-serif;
     -fx-font-size: 18px;
     -fx-font-weight: bold;
 }
@@ -13,10 +15,16 @@
     -fx-font-size: 19px;
 }
 
+.label
+{
+    -fx-font-family: 'Open Sans', sans-serif;
+    -fx-font-size: 14px;
+}
+
 #title_label
 {
-    -fx-font-family: Corbel;
+    -fx-font-family: 'Open Sans', sans-serif;
     -fx-font-size: 60px;
-    -fx-font-weight: bold;
     -fx-text-fill: #9d3131;
+
 }
