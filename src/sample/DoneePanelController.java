@@ -14,9 +14,24 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
+/**
+ * This is the Controller for the Donee Pane.
+ * Extends the LogINpanelController.
+ *
+ * @author fairuz240
+ */
 public class DoneePanelController extends LogINpanelController{
 
     private static String type;
+    /**
+     * This is the initializing function of the fxml components.
+     *
+     * When a the window is launched this method initializes these
+     * components. Establishes the connection with the database and
+     * upon fetching the data columns works with the property values.
+     *
+     */
+
     public void initialize()
     {
         String username = "als";
@@ -54,6 +69,14 @@ public class DoneePanelController extends LogINpanelController{
 
     }
 
+    /**
+     * This method is here for the functionality of the "Back" button. This will redirect the
+     * user to the parent node that is the "root" which is sample.UserPanel.fxml. This hierarchical
+     * structure is for the simplicity of the system.
+     *
+     * @param even, object of ActionEvent generated from click or Enter
+     * @throws IOException,  checked exception
+     */
     public void pressBack(ActionEvent even) throws IOException {
 
         if(type.equals("Person"))
@@ -83,6 +106,13 @@ public class DoneePanelController extends LogINpanelController{
 
     }
 
+    /**
+     * This method loads the sample.DoneePrevReq.fxml file and presents
+     * the previous donation in the list for a Donee.
+     *
+     * @param even, object of ActionEvent
+     * @throws IOException, checked exception for i/p and o/p.
+     */
     public void pressPrevReq(ActionEvent even) throws IOException{
         ((Node) even.getSource()).getScene().getWindow().hide();
 
@@ -97,6 +127,12 @@ public class DoneePanelController extends LogINpanelController{
 
     }
 
+    /**
+     * Method for making a new Donation request for the Donee.
+     *
+     * @param even, object of ActionEvent
+     * @throws IOException, checked exception for i/p and o/p.
+     */
     public void pressNewReq(ActionEvent even) throws IOException {
         ((Node) even.getSource()).getScene().getWindow().hide();
 
@@ -110,6 +146,12 @@ public class DoneePanelController extends LogINpanelController{
         primaryStage.show();
     }
 
+    /**
+     * Method for searching Donor. Loads the sample.SearchDonor-Org.fxml file.
+     *
+     * @param even, object of ActionEvent
+     * @throws IOException, checked exception for i/p and o/p.
+     */
     public void pressSearch(ActionEvent even) throws IOException{
         ((Node) even.getSource()).getScene().getWindow().hide();
 
