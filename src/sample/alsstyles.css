@@ -63,3 +63,12 @@
     -fx-font-size: 50px;
 }
 
+#panelButton
+{
+    -fx-font-size: 35px;
+}
+
+#panelButton:hover
+{
+    -fx-font-size: 36px;
+}
