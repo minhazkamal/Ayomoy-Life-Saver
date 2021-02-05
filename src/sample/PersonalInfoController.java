@@ -15,6 +15,12 @@ import java.io.IOException;
 import java.sql.*;
 import java.time.LocalDate;
 
+/**
+ * This class is the handler of the Personal Information of the
+ * Person type users. Extends the RegisterController Class.
+ *
+ * @author fairuz240
+ */
 public class PersonalInfoController extends RegisterController{
     ObservableList<String> BGList = FXCollections.observableArrayList("A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-");
     ObservableList<String> GenderList = FXCollections.observableArrayList("Male", "Female", "Others");
@@ -39,6 +45,9 @@ public class PersonalInfoController extends RegisterController{
     @FXML
     private Button back_button;
 
+    /**
+     * Fetches the Location details from the Database of a Person.
+     */
     public void getLoc()
     {
         String username = "als";
@@ -76,6 +85,16 @@ public class PersonalInfoController extends RegisterController{
         }
     }
 
+    /**
+     * This method is for checking the Alerts of the total process.
+     *
+     * The Fetched data from the database ond the user i/p is
+     * processed here and in case of any anomaly which may crash the
+     * program or create inconsistency, the alert value will be true.
+     *
+     * @return boolean and the value depends on the truth value of
+     * the alert.
+     */
     public boolean checkAlert()
     {
         boolean alertCheck = false;
@@ -123,6 +142,15 @@ public class PersonalInfoController extends RegisterController{
         return alertCheck;
     }
 
+    /**
+     * This is the initializing function of the fxml components.
+     *
+     * When a the window is launched this method initializes these
+     * components. Establishes the connection with the database and
+     * upon fetching the data columns works with the property values.
+     *
+     */
+
     public void initialize()
     {
         back_button.setVisible(false);
@@ -133,6 +161,14 @@ public class PersonalInfoController extends RegisterController{
         AddressLocation.setItems(LocList);
     }
 
+    /**
+     * This method is here for the functionality of the "Back" button. This will redirect the
+     * user to the parent node that is the "root" which is sample.UserPanel.fxml. This hierarchical
+     * structure is for the simplicity of the system.
+     *
+     * @param even, object of ActionEvent generated from click or Enter
+     * @throws IOException,  checked exception
+     */
     public void pressBack(ActionEvent even) throws IOException {
         ((Node) even.getSource()).getScene().getWindow().hide();
 
@@ -145,6 +181,12 @@ public class PersonalInfoController extends RegisterController{
         primaryStage.show();
     }
 
+    /**
+     * This method is for the submit button of the personal information.
+     *
+     * @param even object of ActionEvent
+     * @throws IOException checked exception for i/p and o/p
+     */
     public void pressSubmit(ActionEvent even) throws IOException{
         if(checkAlert()==false)
         {

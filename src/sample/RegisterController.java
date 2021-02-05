@@ -15,6 +15,12 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.sql.*;
 
+/**
+ * This is the Controller Class to handheld the register the Person and the
+ * Organizations of the system.
+ *
+ * @author minhaz231
+ */
 public class RegisterController {
     ObservableList<String> TypeList = FXCollections.observableArrayList("Person", "Organization");
     private static String z;
@@ -25,6 +31,10 @@ public class RegisterController {
     @FXML
     private TextField txtUsername;
 
+    /**
+     * Getter function of the Username.
+     * @return String, the username.
+     */
     public static String getTxtUsername() {
         return z;
     }
@@ -34,11 +44,23 @@ public class RegisterController {
     @FXML
     private PasswordField txtConfirmPassword;
 
+    /**
+     * This is the initializing function of the fxml components.
+     *
+     * When a the window is launched this method initializes these
+     * components. Establishes the connection with the database and
+     * upon fetching the data columns works with the property values.
+     *
+     */
     public void initialize()
     {
         choiceType.setItems(TypeList);
     }
 
+    /**
+     * Method for checking the validity of the user
+     * @return boolean, true if valid user and false otherwise.
+     */
     public boolean checkUserValid()
     {
         String username = "als";
@@ -81,12 +103,28 @@ public class RegisterController {
         return false;
     }
 
+    /**
+     * Method for checking the Reentered password
+     * for confirmations.
+     * @return boolean, truth value based on the
+     * fact whether two strings match or not.
+     */
     public boolean checkPassword()
     {
         if(txtPassword.getText().equals(txtConfirmPassword.getText())) return true;
         else return false;
     }
 
+    /**
+     * This method is for checking the Alerts of the total process.
+     *
+     * The Fetched data from the database ond the user i/p is
+     * processed here and in case of any anomaly which may crash the
+     * program or create inconsistency, the alert value will be true.
+     *
+     * @return boolean and the value depends on the truth value of
+     * the alert.
+     */
     public boolean checkAlert()
     {
         boolean alertCheck = false;
@@ -143,6 +181,15 @@ public class RegisterController {
         return alertCheck;
     }
 
+    /**
+     * This is for the first page of Registrations. After the user gives the
+     * username, password and type, the next button will be pressed. These
+     * information will be written into the database and the next form for
+     * details is presented by the sample.PersonalInfo.fxml file.
+     *
+     * @param even object of ActionEvent Class.
+     * @throws IOException, Checked Exception for i/p and o/p.
+     */
     public void pressNext(ActionEvent even) throws IOException {
         if(checkAlert()==false)
         {
@@ -225,7 +272,14 @@ public class RegisterController {
             primaryStage.show();
         }
     }
-
+    /**
+     * This method is here for the functionality of the "Back" button. This will redirect the
+     * user to the parent node that is the "root" which is sample.UserPanel.fxml. This hierarchical
+     * structure is for the simplicity of the system.
+     *
+     * @param even, object of ActionEvent generated from click or Enter
+     * @throws IOException,  checked exception
+     */
     public void pressBack(ActionEvent even) throws IOException {
 
         ((Node) even.getSource()).getScene().getWindow().hide();

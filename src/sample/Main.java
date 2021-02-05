@@ -11,7 +11,7 @@ import net.sourceforge.tess4j.TesseractException;
 import java.io.File;
 
 /**
- * This is the main class that extends on the application
+ * This is the main class that extends on the Application Class.
  *
  * @author minhaz231
  */
@@ -20,7 +20,11 @@ public class Main extends Application {
 
     public static String text;
 
+
     @Override
+    /**
+     * This is the starting point of the Application.
+     */
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
         primaryStage.setTitle("Ayomoy Life Saver");
@@ -37,6 +41,10 @@ public class Main extends Application {
     }
 
 
+    /**
+     * Main function of the program.
+     * @param args, object of String Class
+     */
     public static void main(String[] args) {
 
 //        Tesseract tesseract = new Tesseract();
