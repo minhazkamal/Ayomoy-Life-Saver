@@ -5,17 +5,14 @@
     -fx-font-family: 'Open Sans', sans-serif;
     -fx-font-size: 18px;
     -fx-font-weight: bold;
-    -fx-background-color: lightcoral;
-    -fx-text-fill: floralwhite;
 }
 
 .button:hover
 {
-    -fx-background-color: linear-gradient(to bottom,#9d3131,indianred,lightcoral);
-    -fx-text-fill: #520707;
+    -fx-background-color: linear-gradient(to bottom,#9d3131,indianred,lightcoral,rosybrown);
+    -fx-text-fill: darkred;
     -fx-font-weight: bold;
     -fx-font-size: 19px;
-    -fx-effect: dropshadow(three-pass-box,rgb(157,49,49),10,0,0,0);
 }
 
 .label
@@ -30,39 +27,4 @@
     -fx-font-size: 60px;
     -fx-text-fill: #9d3131;
 
-}
-
-#als_1
-{
-    -fx-font-family: 'Open Sans', sans-serif;
-    -fx-font-size: 65px;
-    -fx-text-fill: #9d3131;
-}
-
-#als_2
-{
-    -fx-font-family: 'Open Sans', sans-serif;
-    -fx-font-size: 65px;
-    -fx-text-fill: #9d3131;
-}
-#pToCont
-{
-    -fx-font-family: 'Open Sans', sans-serif;
-    -fx-font-size: 23px;
-}
-
-#pToCont:hover
-{
-    -fx-font-size: 24px;
-}
-
-#title_addDonationInfo
-{
-    -fx-font-size: 50px;
-}
-
-#extraInfo1
-{
-    -fx-font-weight: italic;
-    -fx-font-size: 16px;
 }
