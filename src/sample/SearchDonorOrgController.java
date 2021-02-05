@@ -20,12 +20,22 @@ import java.io.IOException;
 import java.sql.*;
 import java.time.LocalDate;
 
+/**
+ * This is for the controller class for Searching of the Donor and the Organizations
+ * for a person a Person type User. Extends the DonorPanelController Class.
+ *
+ * @author minhaz231
+ */
 public class SearchDonorOrgController extends DonorPanelController {
     public int count_req;
     public static String user;
     public boolean back_flag = false;
     public String d_bg;
 
+    /**
+     * Getter function for the User name.
+     * @return
+     */
     public static String getUser() {
         return user;
     }
@@ -50,6 +60,12 @@ public class SearchDonorOrgController extends DonorPanelController {
     ObservableList<Donor> oblist = FXCollections.observableArrayList();
     private Button[] dt_button;
 
+    /**
+     * The method for the reset button on the donor list page. Rests all the
+     * filters and shows the list based on the sorted order.
+     * @param even, object of ActionEvent Class
+     * @throws IOException, checked Exception for i/p and o/p
+     */
     public void pressReset(ActionEvent even) throws IOException{
 
         ((Node) even.getSource()).getScene().getWindow().hide();
@@ -66,6 +82,12 @@ public class SearchDonorOrgController extends DonorPanelController {
         primaryStage.show();
     }
 
+    /**
+     * This is the method for the button to load the filters by the help of sample.FilterDonation.fxml file.
+     * This shows a page where the user can choose the filters and mpose them on the list.
+     * @param event object of ActionEvent Class
+     * @throws IOException, checked exception for i/p and o/p.
+     */
     public void pressFilter(ActionEvent event) throws IOException{
 
         Stage primaryStage = new Stage();
@@ -153,6 +175,12 @@ public class SearchDonorOrgController extends DonorPanelController {
         }
     }
 
+    /**
+     * The method for searching the Organization. Pressing this button loads the sample.SearchOrg.fxml
+     * file and shows the enlisted organizations.
+     * @param even, object of ActionEvent Class
+     * @throws IOException, checked exception for i/p and o/p.
+     */
     public void PressSearchOrg(ActionEvent even) throws IOException{
         ((Node) even.getSource()).getScene().getWindow().hide();
 
@@ -166,6 +194,10 @@ public class SearchDonorOrgController extends DonorPanelController {
         primaryStage.show();
     }
 
+    /**
+     * Method for counting the number of Donor. This also takes into account the activity's and
+     * eligibility status of the Donor.
+     */
     public void countDonor(){
         if(DoneePrevReqController.getDoneeBg()==null)
         {
@@ -230,6 +262,14 @@ public class SearchDonorOrgController extends DonorPanelController {
         }
 
     }
+    /**
+     * This method is here for the functionality of the "Back" button. This will redirect the
+     * user to the parent node that is the "root" which is sample.UserPanel.fxml. This hierarchical
+     * structure is for the simplicity of the system.
+     *
+     * @param even, object of ActionEvent generated from click or Enter
+     * @throws IOException,  checked exception
+     */
     public void pressBack(ActionEvent even) throws IOException {
 
         ((Node) even.getSource()).getScene().getWindow().hide();
@@ -259,6 +299,14 @@ public class SearchDonorOrgController extends DonorPanelController {
 
     }
 
+    /**
+     * This is the initializing function of the fxml components.
+     *
+     * When a the window is launched this method initializes these
+     * components. Establishes the connection with the database and
+     * upon fetching the data columns works with the property values.
+     *
+     */
     public void initialize()
     {
         if(DoneePrevReqController.getDoneeBg()==null)
@@ -403,6 +451,13 @@ public class SearchDonorOrgController extends DonorPanelController {
 
     }
 
+    /**
+     * method for the details button of the Donor. Pressing this laods the sample.ShowDetailDonorInfo.fxml
+     * file and presents the profile info of the Donor.
+     *
+     * @param even, object of ActionEvent Class.
+     * @throws IOException, checked exception for i/p and o/p.
+     */
     private void pressDetailsButton(ActionEvent even) throws IOException {
 //        System.out.println(count_req);
         for(int i=0; i<count_req; i++)
