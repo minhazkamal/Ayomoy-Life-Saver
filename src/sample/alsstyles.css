@@ -95,6 +95,15 @@
     -fx-font-size: 50px;
 }
 
+#panelButton
+{
+    -fx-font-size: 35px;
+}
+
+#panelButton:hover
+{
+    -fx-font-size: 36px;
+}
 .choice-box
 {
     -fx-effect: innershadow(three-pass-box,rgb(157, 49, 49),5,0,0,0);
