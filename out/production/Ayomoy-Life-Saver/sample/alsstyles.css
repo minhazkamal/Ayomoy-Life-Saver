@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300&display=swap');
+
 
 .button{
     -fx-effect: dropshadow(three-pass-box,rgb(157,49,49),10,0,0,0);
@@ -27,7 +29,7 @@
 .label
 {
     -fx-font-family: 'Open Sans', sans-serif;
-    -fx-font-size: 14px;
+    -fx-font-size: 16px;
 }
 
 #author1,#author2,#author3
@@ -79,7 +81,3 @@
     -fx-font-size: 50px;
 }
 
-#extraInfo1
-{
-    -fx-font-size: 16px;
-}
