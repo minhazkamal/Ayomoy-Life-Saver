@@ -8,9 +8,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.AboutUsController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.AboutUsController">
     <children>
-        <ImageView accessibleRole="TEXT_AREA" blendMode="OVERLAY" fitHeight="600.0" fitWidth="1000.0" layoutY="-1.0" pickOnBounds="true">
+        <ImageView accessibleRole="TEXT_AREA" blendMode="OVERLAY" fitHeight="600.0" fitWidth="1000.0" pickOnBounds="true">
             <image>
                 <Image url="@images/Presentation1_Proposal.jpg" />
             </image>
@@ -20,7 +20,7 @@
                 <Font name="Cambria Bold" size="18.0" />
             </font>
         </Button>
-        <Label fx:id="title_label" alignment="CENTER" layoutX="323.0" layoutY="5.0" prefHeight="82.0" prefWidth="437.0" style="-fx-alignment: center;" stylesheets="@alsstyles.css" text="OUR TEAM" textAlignment="JUSTIFY" textFill="#c70000">
+        <Label fx:id="title_label" alignment="CENTER" layoutX="295.0" layoutY="14.0" prefHeight="82.0" prefWidth="437.0" style="-fx-alignment: center;" stylesheets="@alsstyles.css" text="OUR TEAM" textAlignment="JUSTIFY" textFill="#c70000">
             <font>
                 <Font name="Cambria Bold" size="54.0" />
             </font>
@@ -40,12 +40,12 @@
             <Image url="@images/Abdullah.png" />
          </image>
       </ImageView>
-      <Label layoutX="107.0" layoutY="338.0" text="Minhaz Kamal">
+        <Label layoutX="130.0" layoutY="338.0" text="Minhaz Kamal">
          <font>
             <Font name="Cambria Bold" size="22.0" />
          </font>
       </Label>
-      <Label layoutX="427.0" layoutY="338.0" text="Fairuz Shaiara">
+        <Label layoutX="456.0" layoutY="338.0" text="Fairuz Shaiara">
          <font>
             <Font name="Cambria Bold" size="22.0" />
          </font>
@@ -55,138 +55,114 @@
             <Font name="Cambria Bold" size="22.0" />
          </font>
       </Label>
-      <Label layoutX="129.0" layoutY="391.0" prefHeight="27.0" prefWidth="100.0" text="Student of CSE" textAlignment="CENTER" wrapText="true">
+        <Label layoutX="130.0" layoutY="365.0" prefHeight="27.0" prefWidth="100.0" text="Student of CSE" textAlignment="CENTER" wrapText="true">
          <font>
             <Font name="Cambria" size="15.0" />
          </font>
       </Label>
-      <Label layoutX="450.0" layoutY="391.0" prefHeight="27.0" prefWidth="100.0" text="Student of CSE" textAlignment="CENTER" wrapText="true">
+        <Label layoutX="453.0" layoutY="365.0" prefHeight="27.0" prefWidth="100.0" text="Student of CSE" textAlignment="CENTER" wrapText="true">
          <font>
             <Font name="Cambria" size="15.0" />
          </font>
       </Label>
-      <Label layoutX="752.0" layoutY="391.0" prefHeight="27.0" prefWidth="100.0" text="Student of CSE" textAlignment="CENTER" wrapText="true">
+        <Label layoutX="752.0" layoutY="365.0" prefHeight="27.0" prefWidth="100.0" text="Student of CSE" textAlignment="CENTER" wrapText="true">
          <font>
             <Font name="Cambria" size="15.0" />
          </font>
       </Label>
-      <Label layoutX="52.0" layoutY="410.0" prefHeight="27.0" prefWidth="254.0" text="Islamic University of Technology (IUT)" textAlignment="CENTER" wrapText="true">
+      <Label layoutX="52.0" layoutY="384.0" prefHeight="27.0" prefWidth="254.0" text="Islamic University of Technology (IUT)" textAlignment="CENTER" wrapText="true">
          <font>
             <Font name="Cambria" size="15.0" />
          </font>
       </Label>
-      <Label layoutX="384.0" layoutY="410.0" prefHeight="27.0" prefWidth="254.0" text="Islamic University of Technology (IUT)" textAlignment="CENTER" wrapText="true">
+        <Label layoutX="387.0" layoutY="384.0" prefHeight="27.0" prefWidth="254.0" text="Islamic University of Technology (IUT)" textAlignment="CENTER" wrapText="true">
          <font>
             <Font name="Cambria" size="15.0" />
          </font>
       </Label>
-      <Label layoutX="675.0" layoutY="410.0" prefHeight="27.0" prefWidth="254.0" text="Islamic University of Technology (IUT)" textAlignment="CENTER" wrapText="true">
+        <Label layoutX="675.0" layoutY="384.0" prefHeight="27.0" prefWidth="254.0" text="Islamic University of Technology (IUT)" textAlignment="CENTER" wrapText="true">
          <font>
             <Font name="Cambria" size="15.0" />
          </font>
       </Label>
-      <Label layoutX="52.0" layoutY="437.0" text="Email:">
+        <Label layoutX="52.0" layoutY="410.0" text="Email:">
          <font>
             <Font name="Cambria Bold" size="15.0" />
          </font>
       </Label>
-      <Label layoutX="384.0" layoutY="437.0" text="Email:">
+        <Label layoutX="390.0" layoutY="411.0" text="Email:">
          <font>
             <Font name="Cambria Bold" size="15.0" />
          </font>
       </Label>
-      <Label layoutX="675.0" layoutY="437.0" text="Email:">
+        <Label layoutX="682.0" layoutY="411.0" text="Email:">
          <font>
             <Font name="Cambria Bold" size="15.0" />
          </font>
       </Label>
-      <Label layoutX="104.0" layoutY="439.0" text="minhazkamal@iut-dhaka.edu">
+        <Label layoutX="100.0" layoutY="411.0" prefHeight="18.0" prefWidth="207.0" text="minhazkamal@iut-dhaka.edu">
          <font>
             <Font name="Cambria" size="14.0" />
          </font>
       </Label>
-      <Label layoutX="436.0" layoutY="438.0" text="fairuzshaiara@iut-dhaka.edu">
+        <Label layoutX="434.0" layoutY="411.0" prefHeight="18.0" prefWidth="191.0" text="fairuzshaiara@iut-dhaka.edu">
          <font>
             <Font name="Cambria" size="14.0" />
          </font>
       </Label>
-      <Label layoutX="726.0" layoutY="437.0" text="abdullah39@iut-dhaka.edu">
+        <Label layoutX="726.0" layoutY="411.0" text="abdullah39@iut-dhaka.edu">
          <font>
             <Font name="Cambria" size="14.0" />
          </font>
       </Label>
-      <Hyperlink layoutX="91.0" layoutY="478.0" onAction="#minhazFB" prefHeight="42.0" prefWidth="51.0">
-         <graphic>
-            <ImageView fitHeight="64.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
-                <image>
-                    <Image url="@images/facebook_icon.png" />
-                </image>
-            </ImageView>
-         </graphic>
-      </Hyperlink>
-      <Hyperlink layoutX="723.0" layoutY="478.0" onAction="#abdullahFB" prefHeight="42.0" prefWidth="51.0">
-         <graphic>
-            <ImageView fitHeight="64.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
-                <image>
-                    <Image url="@images/facebook_icon.png" />
-                </image>
-            </ImageView>
-         </graphic>
-      </Hyperlink>
-      <Hyperlink layoutX="157.0" layoutY="479.0" onAction="#minhazGIT" prefHeight="42.0" prefWidth="44.0">
-         <graphic>
-            <ImageView fitHeight="43.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
-                <image>
-                    <Image url="@images/github_icon.jpg" />
-                </image>
-            </ImageView>
-         </graphic>
-      </Hyperlink>
-      <Hyperlink layoutX="450.0" layoutY="479.0" onAction="#fairuzGIT" prefHeight="42.0" prefWidth="44.0">
-         <graphic>
-            <ImageView fitHeight="43.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
-                <image>
-                    <Image url="@images/github_icon.jpg" />
-                </image>
-            </ImageView>
-         </graphic>
-      </Hyperlink>
-      <Hyperlink layoutX="789.0" layoutY="479.0" onAction="#abdullahGIT" prefHeight="42.0" prefWidth="44.0">
-         <graphic>
-            <ImageView fitHeight="43.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@images/github_icon.jpg" />
-               </image>
-            </ImageView>
-         </graphic>
-      </Hyperlink>
-      <Hyperlink layoutX="225.0" layoutY="481.0" onAction="#minhazLin" prefHeight="42.0" prefWidth="35.0">
-         <graphic>
-            <ImageView fitHeight="33.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@images/linked_in_icon.png" />
-               </image>
-            </ImageView>
-         </graphic>
-      </Hyperlink>
-      <Hyperlink layoutX="529.0" layoutY="481.0" onAction="#fairuzLin" prefHeight="42.0" prefWidth="35.0">
-         <graphic>
-            <ImageView fitHeight="33.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@images/linked_in_icon.png" />
-               </image>
-            </ImageView>
-         </graphic>
-      </Hyperlink>
-      <Hyperlink layoutX="850.0" layoutY="481.0" onAction="#abdullahLin" prefHeight="42.0" prefWidth="35.0">
-         <graphic>
-            <ImageView fitHeight="33.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@images/linked_in_icon.png" />
-               </image>
-            </ImageView>
-         </graphic>
-      </Hyperlink>
+        <Hyperlink layoutX="80.0" layoutY="439.0" onAction="#minhazFB" prefHeight="42.0" prefWidth="51.0" />
+        <Hyperlink layoutX="723.0" layoutY="433.0" onAction="#abdullahFB" prefHeight="42.0" prefWidth="51.0" />
+        <Hyperlink layoutX="160.0" layoutY="439.0" onAction="#minhazGIT" prefHeight="42.0" prefWidth="44.0" />
+        <Hyperlink layoutX="445.0" layoutY="435.0" onAction="#fairuzGIT" prefHeight="42.0" prefWidth="44.0" />
+        <Hyperlink layoutX="786.0" layoutY="435.0" onAction="#abdullahGIT" prefHeight="42.0" prefWidth="44.0" />
+        <Hyperlink layoutX="241.0" layoutY="439.0" onAction="#minhazLin" prefHeight="42.0" prefWidth="44.0" />
+        <Hyperlink layoutX="529.0" layoutY="435.0" onAction="#fairuzLin" prefHeight="42.0" prefWidth="35.0" />
+        <Hyperlink layoutX="852.0" layoutY="433.0" onAction="#abdullahLin" prefHeight="42.0" prefWidth="35.0" />
+        <ImageView fitHeight="64.0" fitWidth="43.0" layoutX="719.0" layoutY="438.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@images/facebook_icon.png" />
+            </image>
+        </ImageView>
+        <ImageView fitHeight="43.0" fitWidth="37.0" layoutX="784.0" layoutY="440.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@images/github_icon.jpg" />
+            </image>
+        </ImageView>
+        <ImageView fitHeight="33.0" fitWidth="37.0" layoutX="852.0" layoutY="444.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@images/linked_in_icon.png" />
+            </image>
+        </ImageView>
+        <ImageView fitHeight="43.0" fitWidth="37.0" layoutX="448.0" layoutY="436.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@images/github_icon.jpg" />
+            </image>
+        </ImageView>
+        <ImageView fitHeight="33.0" fitWidth="37.0" layoutX="530.0" layoutY="439.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@images/linked_in_icon.png" />
+            </image>
+        </ImageView>
+        <ImageView fitHeight="33.0" fitWidth="37.0" layoutX="246.0" layoutY="444.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@images/linked_in_icon.png" />
+            </image>
+        </ImageView>
+        <ImageView fitHeight="43.0" fitWidth="37.0" layoutX="163.0" layoutY="440.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@images/github_icon.jpg" />
+            </image>
+        </ImageView>
+        <ImageView fitHeight="64.0" fitWidth="43.0" layoutX="84.0" layoutY="438.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@images/facebook_icon.png" />
+            </image>
+        </ImageView>
     </children>
 
 </AnchorPane>
