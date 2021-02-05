@@ -8,7 +8,6 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.LogINpanelController">
@@ -28,13 +27,7 @@
                <Font name="Cambria Bold" size="54.0" />
            </font>
        </Label>
-       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#c70000" height="210.0" layoutX="617.0" layoutY="228.0" stroke="BLACK" strokeType="INSIDE" width="216.0" />
-       <Label layoutX="647.0" layoutY="304.0" text="Register" textFill="WHITE">
-           <font>
-               <Font name="System Bold" size="40.0" />
-           </font>
-       </Label>
-       <Button layoutX="617.0" layoutY="228.0" mnemonicParsing="false" onAction="#pressRegister" opacity="0.15" prefHeight="210.0" prefWidth="216.0" text="pressRegister" textFill="#c70000">
+       <Button fx:id="Register_button" layoutX="617.0" layoutY="228.0" mnemonicParsing="false" onAction="#pressRegister" prefHeight="210.0" prefWidth="216.0" text="Register" textFill="#c70000">
            <font>
                <Font size="1.0" />
            </font></Button>

@@ -16,6 +16,13 @@ import java.io.IOException;
 import java.sql.*;
 import java.util.Optional;
 
+/**
+ * This is the Controller class for handling the Previous Donation
+ * requests of a Done.
+ * Extends the LogINpanelController Class.
+ *
+ * @author abdullah239
+ */
 public class DoneePrevReqController extends LogINpanelController{
 
     public int count_req;
@@ -23,10 +30,18 @@ public class DoneePrevReqController extends LogINpanelController{
     public Button []s_button;
     public static String bg=null;
 
+    /**
+     * Method for getting the Donee Blood Group.
+     * @return String, blood group of the Donee.
+     */
     public static String getDoneeBg() {
         return bg;
     }
 
+    /**
+     * Methid for setting the Blood Group of Donee
+     * @param bg, the Blood group of the Donee.
+     */
     public static void setDoneeBg(String bg) {
         DoneePrevReqController.bg = bg;
     }
@@ -56,6 +71,15 @@ public class DoneePrevReqController extends LogINpanelController{
 
     ObservableList<Request> oblist = FXCollections.observableArrayList();
 
+    /**
+     * This method is here for the functionality of the "Back" button. This will redirect the
+     * user to the parent node that is the "root" which is sample.UserPanel.fxml. This hierarchical
+     * structure is for the simplicity of the system.
+     *
+     * @param even, object of ActionEvent generated from click or Enter
+     * @throws IOException,  checked exception
+     */
+
     public void pressBack(ActionEvent even) throws IOException {
         ((Node) even.getSource()).getScene().getWindow().hide();
 
@@ -68,6 +92,10 @@ public class DoneePrevReqController extends LogINpanelController{
         primaryStage.show();
     }
 
+    /**
+     * Method for counting the number of Requests in the
+     * database for a particular username.
+     */
     public void countRequest(){
         String username = "als";
         String password = "iutcse18";
@@ -96,6 +124,14 @@ public class DoneePrevReqController extends LogINpanelController{
             alert.showAndWait();
         }
     }
+
+    /**
+     * Method for fetching the Donatio Reqeust ID from the
+     * Database.
+     *
+     * @param r_num, serial number of a Donation Request.
+     * @return int, request ID of a Donation Request
+     */
 
     public int getReqID(int r_num)
     {
@@ -133,6 +169,12 @@ public class DoneePrevReqController extends LogINpanelController{
         return r_id;
     }
 
+    /**
+     * Methd for deleting a Donation request in case the Donee
+     * has already found the blood.
+     *
+     * @param even, object of ActionEvent Class
+     */
     private void pressDeleteButton(ActionEvent even)
     {
         int r_id=0;
@@ -199,7 +241,12 @@ public class DoneePrevReqController extends LogINpanelController{
         }
     }
 
-
+    /**
+     * Method for searching the Donation Requests of a Donee.
+     *
+     * @param even, object of ActionEvent Class
+     * @throws IOException, checked exception for i/p and o/p.
+     */
 
     private void pressSearchButton(ActionEvent even) throws IOException {
         for(int i=0; i<count_req; i++)
@@ -227,7 +274,14 @@ public class DoneePrevReqController extends LogINpanelController{
         primaryStage.setResizable(false);
         primaryStage.show();
     }
-
+    /**
+     * This is the initializing function of the fxml components.
+     *
+     * When a the window is launched this method initializes these
+     * components. Establishes the connection with the database and
+     * upon fetching the data columns works with the property values.
+     *
+     */
     public void initialize()
     {
         txtUser.setText(LogINpanelController.getUser());
