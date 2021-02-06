@@ -9,6 +9,7 @@
     -fx-background-color: lightcoral;
     -fx-text-fill: floralwhite;
     -fx-background-radius: 12px;
+    -fx-text-alignment: center;
     /*-fx-font-size: 110%;*/
 }
 
@@ -21,7 +22,7 @@
     -fx-font-size: 135%;
     -fx-effect: dropshadow(three-pass-box,rgb(157,49,49),10,0,0,0);
     -fx-text-alignment: center;
-    -fx-background-radius: 15px;
+    -fx-background-radius: 12px;
 }
 
 #Register_button
@@ -36,6 +37,31 @@
     -fx-font-weight: bold;
     -fx-font-size: 230%;
     -fx-effect: dropshadow(three-pass-box,rgb(157,49,49),10,0,0,0);
+}
+
+.choice-box
+{
+    -fx-pref-height: 5;
+    -fx-background-color: lightcoral;
+    -fx-effect: dropshadow(three-pass-box,rgb(157,49,49),10,0,0,0);
+    -fx-background-radius: 8px;
+    -fx-prompt-text-fill: floralwhite;
+}
+
+.choice-box:hover
+{
+    -fx-pref-height: 5;
+    -fx-background-color: linear-gradient(to bottom,#9d3131,indianred,lightcoral);
+    -fx-background-radius: 8px;
+    -fx-text-fill: #9d3131;
+}
+
+.choice-box.context-menu
+{
+    -fx-background-color: floralwhite;
+    -fx-text-fill: black;
+    -fx-font-family: 'Open Sans', sans-serif;
+    -fx-font-size: 12px;
 }
 
 .table-column {
@@ -71,6 +97,12 @@
     -fx-font-size: 50px;
     -fx-text-fill: #9d3131;
 
+}
+#change_password_title_label
+{
+    -fx-font-family: 'Open Sans', sans-serif;
+    -fx-font-size: 50px;
+    -fx-text-fill: #9d3131;
 }
 
 #als_1
@@ -180,12 +212,6 @@
 #change_password_title_label
 {
     -fx-font-size: 50px;
-}
-
-.choice-box
-{
-    -fx-effect: innershadow(gaussian,rgb(157, 49, 49),5,0,0,0);
-    -fx-font-family: corbel bold;
 }
 
 .text-field
