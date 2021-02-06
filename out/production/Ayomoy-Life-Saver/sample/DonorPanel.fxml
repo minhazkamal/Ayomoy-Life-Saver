@@ -56,12 +56,12 @@
       </Label>
       <Label fx:id="eligibility" layoutX="761.0" layoutY="238.0" prefHeight="24.0" prefWidth="196.0" styleClass="info_tag_answer" textAlignment="CENTER" textFill="#221971">
          <font>
-            <Font name="Cambria Bold Italic" size="20.0" />
+            <Font name="Cambria Bold Italic" size="19.0" />
          </font>
       </Label>
       <Label fx:id="activeness" layoutX="761.0" layoutY="174.0" prefHeight="24.0" prefWidth="148.0" styleClass="info_tag_answer" textAlignment="CENTER" textFill="#221971">
          <font>
-            <Font name="Cambria Bold Italic" size="20.0" />
+            <Font name="Cambria Bold Italic" size="19.0" />
          </font>
       </Label>
       <Label fx:id="pay_st" layoutX="552.0" layoutY="305.0" styleClass="info_tag" text="Paying Status" textFill="#c70000">
@@ -71,7 +71,7 @@
       </Label>
       <Label fx:id="paying" layoutX="761.0" layoutY="304.0" prefHeight="24.0" prefWidth="188.0" styleClass="info_tag_answer" textAlignment="CENTER" textFill="#221971">
          <font>
-            <Font name="Cambria Bold Italic" size="20.0" />
+            <Font name="Cambria Bold Italic" size="19.0" />
          </font>
       </Label>
     </children>
