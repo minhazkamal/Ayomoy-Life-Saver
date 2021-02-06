@@ -9,6 +9,7 @@
     -fx-background-color: lightcoral;
     -fx-text-fill: floralwhite;
     -fx-background-radius: 12px;
+    -fx-text-alignment: center;
     /*-fx-font-size: 110%;*/
 }
 
@@ -21,7 +22,8 @@
     -fx-font-size: 135%;
     -fx-effect: dropshadow(three-pass-box,rgb(157,49,49),10,0,0,0);
     -fx-text-alignment: center;
-    -fx-background-radius: 15px;
+    -fx-background-radius: 12px;
+    -fx-cursor: hand;
 }
 
 #Register_button
@@ -38,6 +40,40 @@
     -fx-effect: dropshadow(three-pass-box,rgb(157,49,49),10,0,0,0);
 }
 
+.choice-box
+{
+    -fx-pref-height: 5;
+    -fx-background-color: lightcoral;
+    -fx-effect: dropshadow(three-pass-box,rgb(157,49,49),10,0,0,0);
+    -fx-background-radius: 8px;
+    -fx-prompt-text-fill: floralwhite;
+    -fx-cursor: hand;
+}
+
+.choice-box:hover
+{
+    -fx-pref-height: 5;
+    -fx-background-color: linear-gradient(to bottom,#9d3131,indianred,lightcoral);
+    -fx-background-radius: 8px;
+    -fx-text-fill: #9d3131;
+    -fx-cursor: hand;
+}
+
+.choice-box.context-menu
+{
+    -fx-background-color: floralwhite;
+    -fx-text-fill: black;
+    -fx-font-family: 'Open Sans', sans-serif;
+    -fx-font-size: 12px;
+}
+
+#change_password_title_label
+{
+    -fx-font-family: 'Open Sans', sans-serif;
+    -fx-font-size: 50px;
+    -fx-text-fill: #9d3131;
+}
+
 .table-column {
     -fx-alignment: CENTER;
 }
@@ -47,23 +83,6 @@
     -fx-font-family: 'Open Sans', sans-serif;
     -fx-font-size: 15px;
 }
-
-/*#a_email
-{
-    -fx-font-size: 14px;
-}
-
-#author1,#author2,#author3
-{
-    -fx-font-family: Cambria;
-    -fx-font-weight: bold;
-    -fx-font-size: 22px;
-}
-
-#author3
-{
-    -fx-font-size: 16px;
-}*/
 
 #title_label
 {
@@ -182,22 +201,18 @@
     -fx-font-size: 50px;
 }
 
-.choice-box
-{
-    -fx-effect: innershadow(gaussian,rgb(157, 49, 49),5,0,0,0);
-    -fx-font-family: corbel bold;
-}
-
 .text-field
 {
     -fx-effect: innershadow(gaussian,rgb(157, 49, 49),5,0,0,0);
     -fx-font-family: corbel bold;
+    -fx-cursor: text;
 }
 
 .text-area
 {
     -fx-effect: innershadow(gaussian,rgb(157, 49, 49),5,0,0,0);
     -fx-font-family: corbel bold;
+    -fx-cursor: text;
 }
 
 .password-field
@@ -235,4 +250,14 @@
 {
     -fx-font-size: 16px;
     -font-weight : bold;
+}
+
+#donpanel
+{
+    -fx-font-size: 22px;
+}
+
+.date-picker
+{
+    -fx-cursor: hand;
 }

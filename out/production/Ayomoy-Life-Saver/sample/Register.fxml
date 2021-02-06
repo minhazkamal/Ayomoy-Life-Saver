@@ -17,41 +17,51 @@
                <Image url="@images/Presentation1_Proposal.jpg" />
            </image>
        </ImageView>
+      <ImageView fitHeight="237.0" fitWidth="323.0" layoutX="129.0" layoutY="377.0" nodeOrientation="RIGHT_TO_LEFT" opacity="0.6" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/signinPanel-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="713.0" layoutY="175.0" opacity="0.6" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/registerpanel.png" />
+         </image>
+      </ImageView>
        <Button fx:id="back_button" layoutX="27.0" layoutY="25.0" mnemonicParsing="false" onAction="#pressBack" prefHeight="42.0" prefWidth="69.0" text="Back" textFill="#c70000">
            <font>
                <Font name="Cambria Bold" size="18.0" />
            </font>
        </Button>
-       <Label fx:id="title_label" layoutX="370.0" layoutY="14.0" prefHeight="82.0" prefWidth="262.0" text="REGISTER" textAlignment="JUSTIFY" textFill="#c70000">
+       <Label fx:id="title_label" layoutX="378.0" layoutY="14.0" prefHeight="82.0" prefWidth="262.0" text="REGISTER" textAlignment="JUSTIFY" textFill="#c70000">
            <font>
                <Font name="Cambria Bold" size="54.0" />
            </font>
        </Label>
-      <Label layoutX="323.0" layoutY="163.0" text="Username :" textFill="#c70000">
+      <Label layoutX="311.0" layoutY="130.0" text="Username :" textFill="#c70000">
          <font>
             <Font name="Cambria Bold" size="20.0" />
          </font>
       </Label>
-      <TextField fx:id="txtUsername" layoutX="456.0" layoutY="162.0" promptText="Enter Username" />
-      <Label layoutX="325.0" layoutY="220.0" text="Password :" textFill="#c70000">
+      <TextField fx:id="txtUsername" layoutX="311.0" layoutY="159.0" prefHeight="31.0" prefWidth="262.0" promptText="Enter Username" />
+      <Label layoutX="309.0" layoutY="202.0" prefHeight="24.0" prefWidth="104.0" text="Password :" textFill="#c70000">
          <font>
             <Font name="Cambria Bold" size="20.0" />
          </font>
       </Label>
-      <PasswordField fx:id="txtPassword" layoutX="456.0" layoutY="219.0" promptText="Enter Password" />
-      <Label layoutX="247.0" layoutY="275.0" text="Confirm Password :" textFill="#c70000">
+      <PasswordField fx:id="txtPassword" layoutX="311.0" layoutY="234.0" prefHeight="31.0" prefWidth="262.0" promptText="Enter Password" />
+      <Label layoutX="311.0" layoutY="272.0" text="Confirm Password :" textFill="#c70000">
          <font>
             <Font name="Cambria Bold" size="20.0" />
          </font>
       </Label>
-      <PasswordField fx:id="txtConfirmPassword" layoutX="455.0" layoutY="274.0" promptText="Confirm Password" />
-      <Label layoutX="370.0" layoutY="331.0" text="Type :" textFill="#c70000">
+      <PasswordField fx:id="txtConfirmPassword" layoutX="311.0" layoutY="302.0" prefHeight="31.0" prefWidth="262.0" promptText="Confirm Password" />
+      <Label layoutX="312.0" layoutY="340.0" text="Type :" textFill="#c70000">
          <font>
             <Font name="Cambria Bold" size="20.0" />
          </font>
       </Label>
-      <ChoiceBox fx:id="choiceType" layoutX="456.0" layoutY="330.0" prefHeight="26.0" prefWidth="105.0" />
-      <Button fx:id="NextButton" layoutX="572.0" layoutY="407.0" mnemonicParsing="false" onAction="#pressNext" prefHeight="39.0" prefWidth="70.0" text="Next" textFill="#c70000">
+      <ChoiceBox fx:id="choiceType" layoutX="312.0" layoutY="371.0" prefHeight="26.0" prefWidth="105.0" />
+      <Button fx:id="NextButton" layoutX="490.0" layoutY="371.0" mnemonicParsing="false" onAction="#pressNext" prefHeight="24.0" prefWidth="81.0" text="Next" textFill="#c70000">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
