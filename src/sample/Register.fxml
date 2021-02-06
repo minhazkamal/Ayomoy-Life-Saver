@@ -32,7 +32,7 @@
                <Font name="Cambria Bold" size="18.0" />
            </font>
        </Button>
-       <Label fx:id="title_label" layoutX="378.0" layoutY="14.0" prefHeight="82.0" prefWidth="262.0" text="REGISTER" textAlignment="JUSTIFY" textFill="#c70000">
+       <Label fx:id="title_label" alignment="CENTER" layoutX="378.0" layoutY="14.0" prefHeight="82.0" prefWidth="262.0" text="Register" textAlignment="JUSTIFY" textFill="#c70000">
            <font>
                <Font name="Cambria Bold" size="54.0" />
            </font>
