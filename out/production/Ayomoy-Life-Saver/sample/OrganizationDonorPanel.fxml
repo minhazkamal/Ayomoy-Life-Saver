@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.OrganizationDonorPanelController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.OrganizationDonorPanelController">
     <children>
         <ImageView accessibleRole="TEXT_AREA" blendMode="OVERLAY" fitHeight="600.0" fitWidth="1000.0" layoutY="-1.0" pickOnBounds="true">
             <image>
@@ -19,21 +19,26 @@
                 <Font name="Cambria Bold" size="18.0" />
             </font>
         </Button>
-        <Label fx:id="title_label" layoutX="212.0" layoutY="14.0" prefHeight="82.0" prefWidth="576.0" text="ORGANIZATION PANEL" textAlignment="JUSTIFY" textFill="#c70000">
+        <Label fx:id="title_label" alignment="CENTER" layoutX="212.0" layoutY="14.0" prefHeight="135.0" prefWidth="581.0" text="Organization&#10; Dashboard" textAlignment="JUSTIFY" textFill="#c70000">
             <font>
                 <Font name="Cambria Bold" size="54.0" />
             </font>
         </Label>
-        <Button layoutX="324.0" layoutY="172.0" mnemonicParsing="false" onAction="#pressOrgInfo" prefHeight="118.0" prefWidth="352.0" styleClass="panel_button" text="Organization Information" textAlignment="CENTER" textFill="#c70000" wrapText="true">
+        <Button fx:id="donpanel" layoutX="154.0" layoutY="248.0" mnemonicParsing="false" onAction="#pressOrgInfo" prefHeight="68.0" prefWidth="311.0" styleClass="panel_button" text="Organization Information" textAlignment="CENTER" textFill="#c70000" wrapText="true">
             <font>
-                <Font size="1.0" />
+                <Font size="22.0" />
             </font>
         </Button>
-        <Button fx:id="PendingReqButton" layoutX="324.0" layoutY="372.0" mnemonicParsing="false" onAction="#pressPendingRequest" prefHeight="118.0" prefWidth="352.0" styleClass="panel_button" text="See Pending Requests" textAlignment="CENTER" textFill="#c70000" wrapText="true">
+        <Button fx:id="donpanel" layoutX="154.0" layoutY="366.0" mnemonicParsing="false" onAction="#pressPendingRequest" prefHeight="68.0" prefWidth="311.0" styleClass="panel_button" text="See Pending Requests" textAlignment="CENTER" textFill="#c70000" wrapText="true">
             <font>
-                <Font size="1.0" />
+                <Font size="23.0" />
             </font>
         </Button>
+      <ImageView fitHeight="226.0" fitWidth="262.0" layoutX="634.0" layoutY="230.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/orgpanel.png" />
+         </image>
+      </ImageView>
     </children>
 
 </AnchorPane>
