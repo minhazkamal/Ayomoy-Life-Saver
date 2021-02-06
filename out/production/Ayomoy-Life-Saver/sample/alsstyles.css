@@ -25,6 +25,10 @@
     -fx-background-radius: 12px;
     -fx-cursor: hand;
 }
+#submit:hover
+{
+    -fx-font-size: 150%;
+}
 
 #Register_button
 {
@@ -260,4 +264,14 @@
 .date-picker
 {
     -fx-cursor: hand;
+}
+
+.table-view .column-header-background
+{
+    -fx-background-color: lightcoral;
+}
+
+#filter
+{
+    -fx-font-size: 20px;
 }

@@ -166,7 +166,7 @@
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></DatePicker>
-        <Button fx:id="submit" layoutX="789.0" layoutY="494.0" mnemonicParsing="false" onAction="#pressSubmitDonation" prefHeight="42.0" prefWidth="91.0" text="Submit" textFill="#990202">
+        <Button fx:id="submit" layoutX="804.0" layoutY="491.0" mnemonicParsing="false" onAction="#pressSubmitDonation" prefHeight="42.0" prefWidth="106.0" text="Submit" textFill="#990202">
             <font>
                 <Font name="Corbel Bold" size="20.0" />
             </font>
