@@ -21,13 +21,13 @@
         <columns>
           <TableColumn fx:id="col_serial" prefWidth="75.0" resizable="false" text="Serial" />
           <TableColumn fx:id="col_request" resizable="false" text="Request ID" />
-            <TableColumn fx:id="col_name" prefWidth="188.8000030517578" resizable="false" text="Patient Name" />
-            <TableColumn fx:id="col_location" prefWidth="79.20001220703125" resizable="false" text="Location" />
-            <TableColumn fx:id="col_bg" prefWidth="115.199951171875" resizable="false" text="Blood Group" />
-            <TableColumn fx:id="col_quantity" prefWidth="77.5999755859375" resizable="false" text="Quantity" />
-            <TableColumn fx:id="col_date" prefWidth="161.59991455078125" resizable="false" text="Approximate Date" />
-            <TableColumn fx:id="col_delete" prefWidth="58.4000244140625" resizable="false" text="Delete" />
-            <TableColumn fx:id="col_search" prefWidth="57.5999755859375" resizable="false" text="Search" />
+            <TableColumn fx:id="col_name" prefWidth="156.0000762939453" resizable="false" text="Patient Name" />
+            <TableColumn fx:id="col_location" prefWidth="86.4000244140625" resizable="false" text="Location" />
+            <TableColumn fx:id="col_bg" prefWidth="110.4000244140625" resizable="false" text="Blood Group" />
+            <TableColumn fx:id="col_quantity" prefWidth="88.800048828125" resizable="false" text="Quantity" />
+            <TableColumn fx:id="col_date" prefWidth="129.60009765625" resizable="false" text="Approximate Date" />
+            <TableColumn fx:id="col_delete" prefWidth="84.800048828125" resizable="false" text="Delete" />
+            <TableColumn fx:id="col_search" prefWidth="85.5999755859375" resizable="false" text="Search" />
         </columns>
       </TableView>
        <Button fx:id="back_button" layoutX="27.0" layoutY="25.0" mnemonicParsing="false" onAction="#pressBack" prefHeight="42.0" prefWidth="69.0" text="Back" textFill="#c70000">

@@ -49,7 +49,7 @@
                 <Font name="Cambria Bold" size="18.0" />
             </font>
         </Button>
-        <Button fx:id="SearchButton" layoutX="905.0" layoutY="387.0" mnemonicParsing="false" onAction="#pressSearch" prefHeight="34.0" prefWidth="80.0" text="Search" textFill="#c70000">
+        <Button layoutX="905.0" layoutY="387.0" mnemonicParsing="false" onAction="#pressSearch" prefHeight="34.0" prefWidth="80.0" text="Search" textFill="#c70000">
             <font>
                 <Font name="Cambria Bold" size="18.0" />
             </font>

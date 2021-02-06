@@ -6,7 +6,6 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Line?>
-<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.UserPanelController">
@@ -26,34 +25,16 @@
             <Font name="Cambria Bold" size="54.0" />
         </font>
     </Label>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#c70000" height="52.0" layoutX="97.0" layoutY="116.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
-      <Label layoutX="98.0" layoutY="117.0" prefHeight="52.0" prefWidth="200.0" text="Update Profile" textFill="WHITE">
-         <font>
-            <Font name="Cambria Bold" size="29.0" />
-         </font>
-      </Label>
-      <Button fx:id="updateProfile" layoutX="97.0" layoutY="116.0" mnemonicParsing="false" onAction="#PressUpdateProfile" opacity="0.23" prefHeight="52.0" prefWidth="200.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#c70000" height="52.0" layoutX="400.0" layoutY="118.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
-      <Label layoutX="401.0" layoutY="119.0" prefHeight="52.0" prefWidth="200.0" text="Use as Donor" textAlignment="JUSTIFY" textFill="WHITE">
-         <font>
-            <Font name="Cambria Bold" size="32.0" />
-         </font>
-      </Label>
-      <Button fx:id="asDonor" layoutX="400.0" layoutY="118.0" mnemonicParsing="false" onAction="#PressAsDonor" opacity="0.23" prefHeight="52.0" prefWidth="200.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#c70000" height="52.0" layoutX="722.0" layoutY="118.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
-      <Label layoutX="723.0" layoutY="119.0" prefHeight="52.0" prefWidth="200.0" text="Use as Donee" textFill="WHITE">
-         <font>
-            <Font name="Cambria Bold" size="32.0" />
-         </font>
-      </Label>
-      <Button fx:id="asDonee" layoutX="722.0" layoutY="118.0" mnemonicParsing="false" onAction="#PressAsDonee" opacity="0.23" prefHeight="52.0" prefWidth="200.0" />
-      <Label layoutX="98.0" layoutY="193.0" text="Personal Information" textFill="#c70000">
+      <Button fx:id="UserPanelButton" layoutX="97.0" layoutY="116.0" mnemonicParsing="false" onAction="#PressUpdateProfile" prefHeight="52.0" prefWidth="200.0" text="Update Profile" />
+      <Button fx:id="UserPanelButton" layoutX="400.0" layoutY="118.0" mnemonicParsing="false" onAction="#PressAsDonor" prefHeight="52.0" prefWidth="200.0" text="Use as Donor" />
+      <Button fx:id="UserPanelButton" layoutX="722.0" layoutY="118.0" mnemonicParsing="false" onAction="#PressAsDonee" prefHeight="52.0" prefWidth="200.0" text="Use as Donee" />
+      <Label styleClass="panel_sub_title" layoutX="98.0" layoutY="193.0" text="Personal Information" textFill="#c70000">
          <font>
             <Font name="Cambria Bold Italic" size="22.0" />
          </font>
       </Label>
       <Line endX="719.6000366210938" layoutX="198.0" layoutY="221.0" startX="-100.0" stroke="#c70000" />
-      <Label layoutX="97.0" layoutY="230.0" text="Username :">
+      <Label styleClass="panel_label" layoutX="97.0" layoutY="230.0" text="Username :">
          <font>
             <Font name="Cambria Bold" size="16.0" />
          </font>
@@ -63,7 +44,7 @@
             <Font size="14.0" />
          </font>
       </Label>
-      <Label layoutX="98.0" layoutY="259.0" prefHeight="19.0" prefWidth="83.0" text="Name         :">
+      <Label styleClass="panel_label" layoutX="98.0" layoutY="259.0" prefHeight="19.0" prefWidth="83.0" text="Name         :">
          <font>
             <Font name="Cambria Bold" size="16.0" />
          </font>
@@ -73,7 +54,7 @@
             <Font size="14.0" />
          </font>
       </Label>
-      <Label layoutX="545.0" layoutY="260.0" prefHeight="19.0" prefWidth="83.0" text="Mobile No :">
+      <Label styleClass="panel_label" layoutX="545.0" layoutY="260.0" prefHeight="19.0" prefWidth="83.0" text="Mobile No :">
          <font>
             <Font name="Cambria Bold" size="16.0" />
          </font>
@@ -83,7 +64,7 @@
             <Font size="14.0" />
          </font>
       </Label>
-      <Label layoutX="98.0" layoutY="290.0" prefHeight="19.0" prefWidth="83.0" text="Email         :">
+      <Label styleClass="panel_label" layoutX="98.0" layoutY="290.0" prefHeight="19.0" prefWidth="83.0" text="Email         :">
          <font>
             <Font name="Cambria Bold" size="16.0" />
          </font>
@@ -93,7 +74,7 @@
             <Font size="14.0" />
          </font>
       </Label>
-      <Label layoutX="523.0" layoutY="291.0" prefHeight="19.0" prefWidth="105.0" text="Date of Birth :">
+      <Label styleClass="panel_label" layoutX="523.0" layoutY="291.0" prefHeight="19.0" prefWidth="105.0" text="Date of Birth :">
          <font>
             <Font name="Cambria Bold" size="16.0" />
          </font>
@@ -103,7 +84,7 @@
             <Font size="14.0" />
          </font>
       </Label>
-      <Label layoutX="97.0" layoutY="321.0" prefHeight="19.0" prefWidth="83.0" text="Age             :">
+      <Label styleClass="panel_label" layoutX="97.0" layoutY="321.0" prefHeight="19.0" prefWidth="83.0" text="Age             :">
          <font>
             <Font name="Cambria Bold" size="16.0" />
          </font>
@@ -113,7 +94,7 @@
             <Font size="14.0" />
          </font>
       </Label>
-      <Label layoutX="553.0" layoutY="322.0" prefHeight="19.0" prefWidth="83.0" text="Location :">
+      <Label styleClass="panel_label" layoutX="553.0" layoutY="322.0" prefHeight="19.0" prefWidth="83.0" text="Location :">
          <font>
             <Font name="Cambria Bold" size="16.0" />
          </font>
@@ -123,7 +104,7 @@
             <Font size="14.0" />
          </font>
       </Label>
-      <Label layoutX="522.0" layoutY="354.0" prefHeight="19.0" prefWidth="106.0" text="Blood Group :">
+      <Label styleClass="panel_label" layoutX="522.0" layoutY="354.0" prefHeight="19.0" prefWidth="106.0" text="Blood Group :">
          <font>
             <Font name="Cambria Bold" size="16.0" />
          </font>
@@ -133,7 +114,7 @@
             <Font size="14.0" />
          </font>
       </Label>
-      <Label layoutX="97.0" layoutY="353.0" prefHeight="19.0" prefWidth="83.0" text="Gender      :">
+      <Label styleClass="panel_label" layoutX="97.0" layoutY="353.0" prefHeight="19.0" prefWidth="83.0" text="Gender      :">
          <font>
             <Font name="Cambria Bold" size="16.0" />
          </font>
@@ -143,13 +124,13 @@
             <Font size="14.0" />
          </font>
       </Label>
-      <Label layoutX="97.0" layoutY="387.0" text="Donation Information" textFill="#c70000">
+      <Label styleClass="panel_sub_title" layoutX="97.0" layoutY="387.0" text="Donation Information" textFill="#c70000">
          <font>
             <Font name="Cambria Bold Italic" size="22.0" />
          </font>
       </Label>
       <Line endX="719.6000366210938" layoutX="197.0" layoutY="415.0" startX="-100.0" stroke="#c70000" />
-      <Label layoutX="97.0" layoutY="430.0" text="Last Donation Date :">
+      <Label styleClass="panel_label" layoutX="97.0" layoutY="430.0" text="Last Donation Date :">
          <font>
             <Font name="Cambria Bold" size="16.0" />
          </font>
@@ -159,7 +140,7 @@
             <Font size="14.0" />
          </font>
       </Label>
-      <Label layoutX="97.0" layoutY="460.0" text="Last Donation Area :">
+      <Label styleClass="panel_label" layoutX="97.0" layoutY="460.0" text="Last Donation Area :">
          <font>
             <Font name="Cambria Bold" size="16.0" />
          </font>
@@ -169,7 +150,7 @@
             <Font size="14.0" />
          </font>
       </Label>
-      <Label layoutX="97.0" layoutY="489.0" text="Last Donation Organization :">
+      <Label styleClass="panel_label" layoutX="97.0" layoutY="489.0" text="Last Donation Organization :">
          <font>
             <Font name="Cambria Bold" size="16.0" />
          </font>

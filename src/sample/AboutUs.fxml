@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.AboutUsController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.AboutUsController">
     <children>
         <ImageView accessibleRole="TEXT_AREA" blendMode="OVERLAY" fitHeight="600.0" fitWidth="1000.0" pickOnBounds="true">
             <image>
@@ -140,7 +140,7 @@
                 <Image url="@images/linked_in_icon.png" />
             </image>
         </ImageView>
-        <ImageView fitHeight="33.0" fitWidth="37.0" layoutX="246.0" layoutY="444.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="33.0" fitWidth="37.0" layoutX="234.0" layoutY="443.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@images/linked_in_icon.png" />
             </image>
@@ -150,17 +150,17 @@
                 <Image url="@images/github_icon.jpg" />
             </image>
         </ImageView>
-        <ImageView fitHeight="64.0" fitWidth="43.0" layoutX="84.0" layoutY="438.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="64.0" fitWidth="43.0" layoutX="91.0" layoutY="438.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@images/facebook_icon.png" />
             </image>
         </ImageView>
-        <Hyperlink layoutX="88.0" layoutY="447.0" onAction="#minhazFB" prefHeight="27.0" prefWidth="34.0" />
+        <Hyperlink layoutX="95.0" layoutY="447.0" onAction="#minhazFB" prefHeight="27.0" prefWidth="34.0" />
         <Hyperlink layoutX="723.0" layoutY="442.0" onAction="#abdullahFB" prefHeight="33.0" prefWidth="34.0" />
         <Hyperlink layoutX="161.0" layoutY="439.0" onAction="#minhazGIT" prefHeight="42.0" prefWidth="43.0" />
         <Hyperlink layoutX="450.0" layoutY="437.0" onAction="#fairuzGIT" prefHeight="40.0" prefWidth="34.0" />
         <Hyperlink layoutX="786.0" layoutY="443.0" onAction="#abdullahGIT" prefHeight="34.0" prefWidth="34.0" />
-        <Hyperlink layoutX="246.0" layoutY="442.0" onAction="#minhazLin" prefHeight="33.0" prefWidth="34.0" />
+        <Hyperlink layoutX="234.0" layoutY="441.0" onAction="#minhazLin" prefHeight="33.0" prefWidth="34.0" />
         <Hyperlink layoutX="529.0" layoutY="437.0" onAction="#fairuzLin" prefHeight="40.0" prefWidth="35.0" />
         <Hyperlink layoutX="852.0" layoutY="442.0" onAction="#abdullahLin" prefHeight="33.0" prefWidth="35.0" />
     </children>

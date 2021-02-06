@@ -56,6 +56,12 @@
             <Font name="Cambria Bold" size="18.0" />
          </font>
       </Button>
+      <Label styleClass="panel_sub_title" layoutX="97.0" layoutY="347.0" text="Filled By Admin" textFill="#c70000">
+         <font>
+            <Font name="Cambria Bold Italic" size="24.0" />
+         </font>
+      </Label>
+      <Line endX="697.0000610351562" layoutX="195.0" layoutY="382.0" startX="-100.0" stroke="#c70000" />
       <Label layoutX="97.0" layoutY="396.0" text="Test Report Status" textFill="#c70000">
          <font>
             <Font name="Cambria Bold" size="18.0" />
@@ -84,12 +90,6 @@
       <Label fx:id="checked_by" layoutX="234.0" layoutY="453.0" prefHeight="22.0" prefWidth="112.0">
          <font>
             <Font name="Cambria" size="18.0" />
-         </font>
-      </Label>
-      <Line endX="697.0000610351562" layoutX="195.0" layoutY="382.0" startX="-100.0" stroke="#c70000" />
-      <Label layoutX="97.0" layoutY="347.0" text="Filled By Admin" textFill="#c70000">
-         <font>
-            <Font name="Cambria Bold Italic" size="24.0" />
          </font>
       </Label>
       <Label layoutX="97.0" layoutY="481.0" text="Comments" textFill="#c70000">
