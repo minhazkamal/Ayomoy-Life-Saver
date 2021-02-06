@@ -224,3 +224,15 @@
 {
     -fx-font-size: 40px;*/
 }
+
+#back_button
+{
+    -fx-font-size: 15px;
+    -font-weight : bold;
+}
+
+#back_button:hover
+{
+    -fx-font-size: 16px;
+    -font-weight : bold;
+}
