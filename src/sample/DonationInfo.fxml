@@ -7,50 +7,59 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.DonationInfoController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.DonationInfoController">
     <children>
         <ImageView accessibleRole="TEXT_AREA" blendMode="OVERLAY" fitHeight="600.0" fitWidth="1000.0" layoutY="-1.0" pickOnBounds="true">
             <image>
                 <Image url="@images/Presentation1_Proposal.jpg" />
             </image>
         </ImageView>
-        <TableView fx:id="DonationInfoTable" layoutX="28.0" layoutY="123.0" prefHeight="458.0" prefWidth="640.0">
+        <TableView fx:id="DonationInfoTable" layoutX="28.0" layoutY="123.0" prefHeight="458.0" prefWidth="640.0" style="-fx-background-color: floralwhite;">
             <columns>
-                <TableColumn fx:id="col_serial" prefWidth="69.60003662109375" resizable="false" text="Serial" />
-                <TableColumn fx:id="col_name" prefWidth="161.60003662109375" resizable="false" text="Donee Name" />
-                <TableColumn fx:id="col_location" prefWidth="116.0" resizable="false" text="Location" />
-                <TableColumn fx:id="col_date" prefWidth="133.5999755859375" resizable="false" text="Date of Donation" />
-                <TableColumn fx:id="col_details" minWidth="18.0" prefWidth="75.20001220703125" resizable="false" text="Details" />
-                <TableColumn fx:id="col_update" minWidth="18.0" prefWidth="81.5999755859375" resizable="false" text="Update" />
+                <TableColumn fx:id="col_serial" prefWidth="69.60003662109375" resizable="false" style="-fx-background-color: floralwhite;" text="Serial" />
+                <TableColumn fx:id="col_name" prefWidth="160.0" resizable="false" style="-fx-background-color: floralwhite;" text="Donee Name" />
+                <TableColumn fx:id="col_location" prefWidth="116.0" resizable="false" style="-fx-background-color: floralwhite;" text="Location" />
+                <TableColumn fx:id="col_date" prefWidth="136.0" resizable="false" style="-fx-background-color: floralwhite;" text="Date of Donation" />
+                <TableColumn fx:id="col_details" minWidth="18.0" prefWidth="75.20001220703125" resizable="false" style="-fx-background-color: floralwhite;" text="Details" />
+                <TableColumn fx:id="col_update" minWidth="18.0" prefWidth="81.5999755859375" resizable="false" style="-fx-background-color: floralwhite;" text="Update" />
             </columns>
+         <effect>
+            <InnerShadow>
+               <color>
+                  <Color red="0.615686297416687" green="0.1921568661928177" blue="0.1921568661928177" />
+               </color>
+            </InnerShadow>
+         </effect>
         </TableView>
         <Button fx:id="back_button" layoutX="27.0" layoutY="25.0" mnemonicParsing="false" onAction="#pressBack" prefHeight="42.0" prefWidth="69.0" text="Back" textFill="#c70000">
             <font>
                 <Font name="Cambria Bold" size="18.0" />
             </font>
         </Button>
-        <Label fx:id="title_label" layoutX="227.0" prefHeight="68.0" prefWidth="546.0" text="Donation Information" textAlignment="JUSTIFY" textFill="#c70000">
+        <Label fx:id="title_label" layoutX="255.0" prefHeight="68.0" prefWidth="546.0" text="Donation Information" textAlignment="JUSTIFY" textFill="#c70000">
             <font>
                 <Font name="Cambria Bold" size="54.0" />
             </font>
         </Label>
-        <Label layoutX="158.0" layoutY="84.0" text="Username: ">
+        <Label layoutX="232.0" layoutY="84.0" text="Username: " textFill="#c70000">
             <font>
-                <Font name="Cambria Bold" size="16.0" />
+                <Font name="Cambria Bold" size="18.0" />
             </font>
         </Label>
-        <TextField fx:id="txtUser" editable="false" layoutX="250.0" layoutY="81.0" />
-      <Button fx:id="newDonation" layoutX="494.0" layoutY="76.0" mnemonicParsing="false" onAction="#pressNewDonation" prefHeight="34.0" prefWidth="174.0" text="Add New Donation" textFill="#c70000">
+        <TextField fx:id="txtUser" editable="false" layoutX="348.0" layoutY="82.0" />
+      <Button fx:id="newDonation" layoutX="767.0" layoutY="456.0" mnemonicParsing="false" onAction="#pressNewDonation" prefHeight="55.0" prefWidth="191.0" text="Add New Donation" textFill="#c70000">
          <font>
-            <Font name="Cambria Bold" size="15.0" />
+            <Font name="Cambria Bold" size="18.0" />
          </font>
       </Button>
-      <Label layoutX="810.0" layoutY="115.0" text="Filters" textFill="#c70000">
+      <Label fx:id="filter" layoutX="803.0" layoutY="109.0" text="Filters" textFill="#c70000">
          <font>
             <Font name="Cambria Bold" size="23.0" />
          </font>
@@ -67,20 +76,20 @@
          </font>
       </Label>
       <DatePicker fx:id="endingDate" layoutX="803.0" layoutY="194.0" />
-      <Label layoutX="689.0" layoutY="241.0" text="Location" textFill="#c70000">
+      <Label layoutX="689.0" layoutY="239.0" text="Location" textFill="#c70000">
          <font>
             <Font name="Cambria Bold" size="16.0" />
          </font>
       </Label>
-      <ChoiceBox fx:id="location_info" layoutX="803.0" layoutY="238.0" prefHeight="26.0" prefWidth="174.0" />
-      <Button fx:id="searchButton" layoutX="879.0" layoutY="331.0" mnemonicParsing="false" onAction="#pressSearch" prefHeight="42.0" prefWidth="83.0" text="Search" textFill="#c70000">
+      <ChoiceBox fx:id="location_info" layoutX="803.0" layoutY="236.0" prefHeight="9.0" prefWidth="174.0" />
+      <Button fx:id="searchButton" layoutX="890.0" layoutY="331.0" mnemonicParsing="false" onAction="#pressSearch" prefHeight="42.0" prefWidth="83.0" text="Search" textFill="#c70000">
          <font>
             <Font name="Cambria Bold" size="18.0" />
          </font>
       </Button>
-      <Button fx:id="resetButton" layoutX="783.0" layoutY="331.0" mnemonicParsing="false" onAction="#pressReset" prefHeight="42.0" prefWidth="83.0" text="Reset" textFill="#c70000">
+      <Button fx:id="resetButton" layoutX="863.0" layoutY="278.0" mnemonicParsing="false" onAction="#pressReset" prefHeight="22.0" prefWidth="114.0" text="Reset Filters" textFill="#c70000">
          <font>
-            <Font name="Cambria Bold" size="18.0" />
+            <Font name="Cambria Bold" size="14.0" />
          </font>
       </Button>
     </children>
