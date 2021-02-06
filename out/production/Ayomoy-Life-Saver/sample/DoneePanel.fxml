@@ -7,36 +7,41 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.DoneePanelController">
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.DoneePanelController">
    <children>
-       <ImageView accessibleRole="TEXT_AREA" blendMode="OVERLAY" fitHeight="600.0" fitWidth="1000.0" layoutY="-1.0" pickOnBounds="true">
+       <ImageView accessibleRole="TEXT_AREA" blendMode="OVERLAY" fitHeight="600.0" fitWidth="1000.0" layoutY="-2.0" pickOnBounds="true">
            <image>
                <Image url="@images/Presentation1_Proposal.jpg" />
            </image>
        </ImageView>
+      <ImageView fitHeight="330.0" fitWidth="351.0" layoutX="555.0" layoutY="123.0" opacity="0.62" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/doneepanel-removebg-preview.png" />
+         </image>
+      </ImageView>
        <Button fx:id="back_button" layoutX="27.0" layoutY="25.0" mnemonicParsing="false" onAction="#pressBack" prefHeight="42.0" prefWidth="69.0" text="Back" textFill="#c70000">
            <font>
                <Font name="Cambria Bold" size="18.0" />
            </font>
        </Button>
-       <Label fx:id="title_label" layoutX="317.0" layoutY="14.0" prefHeight="82.0" prefWidth="365.0" text="DONEE PANEL" textAlignment="JUSTIFY" textFill="#c70000">
+       <Label fx:id="title_label" layoutX="339.0" layoutY="14.0" prefHeight="82.0" prefWidth="365.0" text="DONEE PANEL" textAlignment="JUSTIFY" textFill="#c70000">
            <font>
                <Font name="Cambria Bold" size="54.0" />
            </font>
        </Label>
-      <Button layoutX="324.0" layoutY="124.0" mnemonicParsing="false" onAction="#pressPrevReq" prefHeight="118.0" prefWidth="352.0" styleClass="panel_button" text="Previous Request" textAlignment="CENTER" textFill="#c70000">
+      <Button fx:id="donpanel" layoutX="124.0" layoutY="168.0" mnemonicParsing="false" onAction="#pressPrevReq" prefHeight="68.0" prefWidth="311.0" styleClass="panel_button" text="Previous Request" textAlignment="CENTER" textFill="#c70000">
          <font>
-            <Font size="1.0" />
+            <Font size="27.0" />
          </font>
       </Button>
-      <Button layoutX="324.0" layoutY="275.0" mnemonicParsing="false" onAction="#pressNewReq" prefHeight="118.0" prefWidth="352.0" styleClass="panel_button" text="NEW Request" textAlignment="CENTER" textFill="#c70000">
+      <Button fx:id="donpanel" layoutX="124.0" layoutY="264.0" mnemonicParsing="false" onAction="#pressNewReq" prefHeight="68.0" prefWidth="311.0" styleClass="panel_button" text="New Request" textAlignment="CENTER" textFill="#c70000">
          <font>
-            <Font size="1.0" />
+            <Font size="20.0" />
          </font>
       </Button>
-      <Button fx:id="SearchButton" layoutX="324.0" layoutY="433.0" mnemonicParsing="false" onAction="#pressSearch" prefHeight="118.0" prefWidth="352.0" styleClass="panel_button" text="Search Donor/Organization" textAlignment="CENTER" textFill="#c70000">
+      <Button fx:id="donpanel" layoutX="124.0" layoutY="364.0" mnemonicParsing="false" onAction="#pressSearch" prefHeight="68.0" prefWidth="311.0" styleClass="panel_button" text="Search Donor/Organization" textAlignment="CENTER" textFill="#c70000">
          <font>
-            <Font size="1.0" />
+            <Font size="23.0" />
          </font>
       </Button>
    </children>

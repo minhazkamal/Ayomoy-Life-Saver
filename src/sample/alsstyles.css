@@ -47,6 +47,7 @@
     -fx-effect: dropshadow(three-pass-box,rgb(157,49,49),10,0,0,0);
     -fx-background-radius: 8px;
     -fx-prompt-text-fill: floralwhite;
+    -fx-cursor: hand;
 }
 
 .choice-box:hover
@@ -55,6 +56,7 @@
     -fx-background-color: linear-gradient(to bottom,#9d3131,indianred,lightcoral);
     -fx-background-radius: 8px;
     -fx-text-fill: #9d3131;
+    -fx-cursor: hand;
 }
 
 .choice-box.context-menu
@@ -81,23 +83,6 @@
     -fx-font-family: 'Open Sans', sans-serif;
     -fx-font-size: 15px;
 }
-
-/*#a_email
-{
-    -fx-font-size: 14px;
-}
-
-#author1,#author2,#author3
-{
-    -fx-font-family: Cambria;
-    -fx-font-weight: bold;
-    -fx-font-size: 22px;
-}
-
-#author3
-{
-    -fx-font-size: 16px;
-}*/
 
 #title_label
 {
@@ -216,12 +201,6 @@
     -fx-font-size: 50px;
 }
 
-.choice-box
-{
-    -fx-effect: innershadow(gaussian,rgb(157, 49, 49),5,0,0,0);
-    -fx-font-family: corbel bold;
-}
-
 .text-field
 {
     -fx-effect: innershadow(gaussian,rgb(157, 49, 49),5,0,0,0);
@@ -276,4 +255,9 @@
 #donpanel
 {
     -fx-font-size: 22px;
+}
+
+.date-picker
+{
+    -fx-cursor: hand;
 }

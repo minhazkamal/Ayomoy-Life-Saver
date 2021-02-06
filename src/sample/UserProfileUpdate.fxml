@@ -61,7 +61,7 @@
                 <Font name="Cambria Bold" size="19.0" />
             </font>
         </Label>
-        <DatePicker fx:id="DOB" layoutX="245.0" layoutY="289.0" prefHeight="25.0" prefWidth="181.0" />
+        <DatePicker fx:id="DOB" layoutX="245.0" layoutY="289.0" prefHeight="25.0" prefWidth="174.0" />
         <Label layoutX="573.0" layoutY="289.0" text="Location" textFill="#c70000">
             <font>
                 <Font name="Cambria Bold" size="19.0" />
