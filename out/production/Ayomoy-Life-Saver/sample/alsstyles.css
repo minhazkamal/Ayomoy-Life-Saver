@@ -113,7 +113,7 @@
     -fx-font-size: 36px;
 }
 
-/*#UserPanelButton
+#UserPanelButton
 {
     -fx-font-size: 22px;
 }
@@ -180,7 +180,7 @@
 #change_password_title_label
 {
     -fx-font-size: 50px;
-}*/
+}
 
 .choice-box
 {
