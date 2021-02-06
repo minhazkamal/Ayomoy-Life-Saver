@@ -23,6 +23,7 @@
     -fx-effect: dropshadow(three-pass-box,rgb(157,49,49),10,0,0,0);
     -fx-text-alignment: center;
     -fx-background-radius: 12px;
+    -fx-cursor: hand;
 }
 
 #Register_button
@@ -218,12 +219,14 @@
 {
     -fx-effect: innershadow(gaussian,rgb(157, 49, 49),5,0,0,0);
     -fx-font-family: corbel bold;
+    -fx-cursor: text;
 }
 
 .text-area
 {
     -fx-effect: innershadow(gaussian,rgb(157, 49, 49),5,0,0,0);
     -fx-font-family: corbel bold;
+    -fx-cursor: text;
 }
 
 .password-field
@@ -261,4 +264,9 @@
 {
     -fx-font-size: 16px;
     -font-weight : bold;
+}
+
+#donpanel
+{
+    -fx-font-size: 22px;
 }

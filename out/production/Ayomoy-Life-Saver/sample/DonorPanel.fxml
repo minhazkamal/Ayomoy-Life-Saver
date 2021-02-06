@@ -7,9 +7,14 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.DonorPanelController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.DonorPanelController">
     <children>
-        <ImageView accessibleRole="TEXT_AREA" blendMode="OVERLAY" fitHeight="600.0" fitWidth="1000.0" layoutY="-1.0" pickOnBounds="true">
+      <ImageView fitHeight="183.0" fitWidth="258.0" layoutX="632.0" layoutY="386.0" opacity="0.77" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/donorPanel.jpg" />
+         </image>
+      </ImageView>
+        <ImageView accessibleRole="TEXT_AREA" blendMode="OVERLAY" fitHeight="600.0" fitWidth="1000.0" layoutY="-2.0" pickOnBounds="true">
             <image>
                 <Image url="@images/Presentation1_Proposal.jpg" />
             </image>
@@ -19,57 +24,52 @@
                 <Font name="Cambria Bold" size="18.0" />
             </font>
         </Button>
-        <Label fx:id="title_label" layoutX="317.0" layoutY="14.0" prefHeight="82.0" prefWidth="365.0" text="DONOR PANEL" textAlignment="JUSTIFY" textFill="#c70000">
+        <Label fx:id="title_label" layoutX="331.0" layoutY="14.0" prefHeight="82.0" prefWidth="365.0" text="DONOR PANEL" textAlignment="JUSTIFY" textFill="#c70000">
             <font>
                 <Font name="Cambria Bold" size="54.0" />
             </font>
         </Label>
-        <Label layoutX="324.0" layoutY="275.0" prefHeight="118.0" prefWidth="352.0" text="Donation Information" textFill="WHITE">
+        <Button fx:id="donpanel" alignment="CENTER" layoutX="124.0" layoutY="168.0" mnemonicParsing="false" onAction="#pressDonorInfo" prefHeight="68.0" prefWidth="311.0" styleClass="panel_button" text="Donor Information" textFill="#c70000">
             <font>
-                <Font name="Cambria Bold" size="34.0" />
-            </font>
-        </Label>
-        <Button layoutX="324.0" layoutY="124.0" mnemonicParsing="false" onAction="#pressDonorInfo" prefHeight="118.0" prefWidth="352.0" styleClass="panel_button" text="Donor Information" textFill="#c70000">
-            <font>
-                <Font size="1.0" />
+                <Font size="31.0" />
             </font>
         </Button>
-        <Button layoutX="324.0" layoutY="275.0" mnemonicParsing="false" onAction="#pressDonationInfo" prefHeight="118.0" prefWidth="352.0" styleClass="panel_button" text="Donation Information" textFill="#c70000">
+        <Button fx:id="donpanel" alignment="CENTER" layoutX="124.0" layoutY="264.0" mnemonicParsing="false" onAction="#pressDonationInfo" prefHeight="68.0" prefWidth="311.0" styleClass="panel_button" text="Donation Information" textFill="#c70000">
             <font>
-                <Font size="1.0" />
+                <Font size="27.0" />
             </font>
         </Button>
-        <Button fx:id="PendingReqButton" layoutX="324.0" layoutY="433.0" mnemonicParsing="false" onAction="#pressPendingRequest" prefHeight="118.0" prefWidth="352.0" styleClass="panel_button" text="See Pending Requests" textFill="#c70000">
+        <Button fx:id="donpanel" alignment="CENTER" layoutX="124.0" layoutY="364.0" mnemonicParsing="false" onAction="#pressPendingRequest" prefHeight="68.0" prefWidth="311.0" styleClass="panel_button" text="See Pending Requests" textFill="#c70000">
             <font>
-                <Font size="1.0" />
+                <Font size="25.0" />
             </font>
         </Button>
-      <Label fx:id="elg_st" layoutX="62.0" layoutY="156.0" styleClass="info_tag" text="Eligibility Status">
+      <Label fx:id="elg_st" layoutX="552.0" layoutY="239.0" styleClass="info_tag" text="Eligibility Status" textFill="#c70000">
          <font>
-            <Font name="Cambria Bold" size="25.0" />
+            <Font name="Cambria Bold" size="19.0" />
          </font>
       </Label>
-      <Label fx:id="act_st" layoutX="762.0" layoutY="156.0" styleClass="info_tag" text="Active Status">
+      <Label fx:id="act_st" layoutX="552.0" layoutY="175.0" styleClass="info_tag" text="Active Status" textFill="#c70000">
          <font>
-            <Font name="Cambria Bold" size="25.0" />
+            <Font name="Cambria Bold" size="19.0" />
          </font>
       </Label>
-      <Label fx:id="eligibility" alignment="CENTER" layoutX="64.0" layoutY="197.0" prefHeight="24.0" prefWidth="188.0" styleClass="info_tag_answer" textAlignment="CENTER" textFill="#255bd7">
+      <Label fx:id="eligibility" layoutX="761.0" layoutY="238.0" prefHeight="24.0" prefWidth="196.0" styleClass="info_tag_answer" textAlignment="CENTER" textFill="#221971">
          <font>
             <Font name="Cambria Bold Italic" size="20.0" />
          </font>
       </Label>
-      <Label fx:id="activeness" alignment="CENTER" layoutX="764.0" layoutY="197.0" prefHeight="24.0" prefWidth="148.0" styleClass="info_tag_answer" textAlignment="CENTER" textFill="#255bd7">
+      <Label fx:id="activeness" layoutX="761.0" layoutY="174.0" prefHeight="24.0" prefWidth="148.0" styleClass="info_tag_answer" textAlignment="CENTER" textFill="#221971">
          <font>
             <Font name="Cambria Bold Italic" size="20.0" />
          </font>
       </Label>
-      <Label fx:id="pay_st" layoutX="79.0" layoutY="284.0" styleClass="info_tag" text="Paying Status">
+      <Label fx:id="pay_st" layoutX="552.0" layoutY="305.0" styleClass="info_tag" text="Paying Status" textFill="#c70000">
          <font>
-            <Font name="Cambria Bold" size="25.0" />
+            <Font name="Cambria Bold" size="19.0" />
          </font>
       </Label>
-      <Label fx:id="paying" alignment="CENTER" layoutX="63.0" layoutY="330.0" prefHeight="24.0" prefWidth="188.0" styleClass="info_tag_answer" textAlignment="CENTER" textFill="#255bd7">
+      <Label fx:id="paying" layoutX="761.0" layoutY="304.0" prefHeight="24.0" prefWidth="188.0" styleClass="info_tag_answer" textAlignment="CENTER" textFill="#221971">
          <font>
             <Font name="Cambria Bold Italic" size="20.0" />
          </font>
