@@ -20,77 +20,82 @@
                 <Font name="Cambria Bold" size="18.0" />
             </font>
         </Button>
-        <Label fx:id="title_label" layoutX="298.0" layoutY="14.0" prefHeight="82.0" prefWidth="448.0" text="Organization Info" textAlignment="JUSTIFY" textFill="#c70000">
+        <Label fx:id="title_label" alignment="CENTER" layoutX="218.0" layoutY="14.0" prefHeight="82.0" prefWidth="661.0" text="Organization Information" textAlignment="JUSTIFY" textFill="#c70000">
             <font>
                 <Font name="Cambria Bold" size="54.0" />
             </font>
         </Label>
-        <Label layoutX="97.0" layoutY="204.0" prefHeight="19.0" prefWidth="83.0" text="Name         :">
+        <Label layoutX="151.0" layoutY="151.0" prefHeight="19.0" prefWidth="83.0" text="Name         " textFill="#c70000">
             <font>
                 <Font name="Cambria Bold" size="16.0" />
             </font>
         </Label>
-        <Label fx:id="showName" layoutX="191.0" layoutY="205.0" prefHeight="18.0" prefWidth="154.0">
+        <Label fx:id="showName" layoutX="245.0" layoutY="152.0" prefHeight="18.0" prefWidth="154.0">
             <font>
                 <Font size="14.0" />
             </font>
         </Label>
-        <Label layoutX="533.0" layoutY="205.0" prefHeight="19.0" prefWidth="94.0" text="Contact No. :">
+        <Label layoutX="547.0" layoutY="151.0" prefHeight="19.0" prefWidth="94.0" text="Contact No. " textFill="#c70000">
             <font>
                 <Font name="Cambria Bold" size="16.0" />
             </font>
         </Label>
-        <Label fx:id="showMobileNo" layoutX="638.0" layoutY="206.0" prefHeight="18.0" prefWidth="154.0">
+        <Label fx:id="showMobileNo" layoutX="661.0" layoutY="151.0" prefHeight="18.0" prefWidth="154.0">
             <font>
                 <Font size="14.0" />
             </font>
         </Label>
-        <Label layoutX="97.0" layoutY="244.0" prefHeight="19.0" prefWidth="83.0" text="Email         :">
+        <Label layoutX="91.0" layoutY="178.0" prefHeight="19.0" prefWidth="143.0" text="Email Address        " textFill="#c70000">
             <font>
                 <Font name="Cambria Bold" size="16.0" />
             </font>
         </Label>
-        <Label fx:id="showEmail" layoutX="191.0" layoutY="245.0" prefHeight="20.0" prefWidth="307.0">
+        <Label fx:id="showEmail" layoutX="245.0" layoutY="179.0" prefHeight="20.0" prefWidth="221.0">
             <font>
                 <Font size="14.0" />
             </font>
         </Label>
-        <Label layoutX="552.0" layoutY="244.0" prefHeight="19.0" prefWidth="83.0" text="Location :">
+        <Label layoutX="555.0" layoutY="179.0" prefHeight="19.0" prefWidth="83.0" text="Location    " textFill="#c70000">
             <font>
                 <Font name="Cambria Bold" size="16.0" />
             </font>
         </Label>
-        <Label fx:id="showLocation" layoutX="637.0" layoutY="244.0" prefHeight="18.0" prefWidth="154.0">
+        <Label fx:id="showLocation" layoutX="661.0" layoutY="179.0" prefHeight="18.0" prefWidth="154.0">
             <font>
                 <Font size="14.0" />
             </font>
         </Label>
-      <Label layoutX="62.0" layoutY="301.0" prefHeight="19.0" prefWidth="117.0" text="Contact Person:">
+      <Label layoutX="89.0" layoutY="214.0" prefHeight="19.0" prefWidth="143.0" text="Contact Person       " textFill="#c70000">
          <font>
             <Font name="Cambria Bold" size="16.0" />
          </font>
       </Label>
-      <Label fx:id="cp" layoutX="191.0" layoutY="301.0" prefHeight="18.0" prefWidth="154.0">
+      <Label fx:id="cp" layoutX="245.0" layoutY="214.0" prefHeight="18.0" prefWidth="154.0">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <Label layoutX="498.0" layoutY="274.0" prefHeight="75.0" prefWidth="134.0" text="Contact Person's Mobile No." wrapText="true">
+      <Label layoutX="507.0" layoutY="213.0" prefHeight="42.0" prefWidth="134.0" text="Contact Person's Mobile No." textFill="#c70000" wrapText="true">
          <font>
             <Font name="Cambria Bold" size="16.0" />
          </font>
       </Label>
-      <Label fx:id="cp_mobile" layoutX="638.0" layoutY="302.0" prefHeight="18.0" prefWidth="154.0">
+      <Label fx:id="cp_mobile" layoutX="661.0" layoutY="233.0" prefHeight="18.0" prefWidth="154.0">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <Label layoutX="97.0" layoutY="385.0" prefHeight="19.0" prefWidth="94.0" text="Description:">
+      <Label layoutX="96.0" layoutY="306.0" prefHeight="19.0" prefWidth="94.0" text="Description" textFill="#c70000">
          <font>
             <Font name="Cambria Bold" size="16.0" />
          </font>
       </Label>
-      <TextArea fx:id="description" editable="false" layoutX="208.0" layoutY="385.0" prefHeight="112.0" prefWidth="670.0" />
+      <TextArea editable="false" layoutX="200.0" layoutY="306.0" prefHeight="112.0" prefWidth="670.0" />
+      <ImageView fitHeight="150.0" fitWidth="296.0" layoutX="122.0" layoutY="429.0" opacity="0.58" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/orginfo.png" />
+         </image>
+      </ImageView>
     </children>
 
 </AnchorPane>
