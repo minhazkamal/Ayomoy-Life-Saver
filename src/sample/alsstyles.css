@@ -208,15 +208,23 @@
 .text-field
 {
     -fx-effect: innershadow(gaussian,rgb(157, 49, 49),5,0,0,0);
-    -fx-font-family: corbel bold;
     -fx-cursor: text;
+    -fx-background-color:transparent;
+    -fx-border-color: #9d3131;
+    -fx-border-radius: 8px;
+    -fx-font-family: 'Open Sans', sans-serif;
+    -fx-font-size: 12px;
 }
 
 .text-area
 {
     -fx-effect: innershadow(gaussian,rgb(157, 49, 49),5,0,0,0);
-    -fx-font-family: corbel bold;
     -fx-cursor: text;
+    -fx-background-color:transparent;
+    -fx-border-color: #9d3131;
+    -fx-border-radius: 8px;
+    -fx-font-family: 'Open Sans', sans-serif;
+    -fx-font-size: 12px;
 }
 
 .password-field
@@ -264,6 +272,7 @@
 .date-picker
 {
     -fx-cursor: hand;
+    -fx-background-color: transparent;
 }
 
 .table-view .column-header-background
