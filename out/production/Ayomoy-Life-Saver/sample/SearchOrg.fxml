@@ -53,12 +53,12 @@
          </font>
       </Label>
       <ChoiceBox fx:id="loc" layoutX="836.0" layoutY="300.0" prefWidth="150.0" />
-        <Button fx:id="resetButton" layoutX="850.0" layoutY="343.0" mnemonicParsing="false" onAction="#pressReset" prefHeight="25.0" prefWidth="59.0" text="Reset" textFill="#c70000">
+        <Button fx:id="resetButton" layoutX="850.0" layoutY="345.0" mnemonicParsing="false" onAction="#pressReset" prefHeight="25.0" prefWidth="59.0" text="Reset" textFill="#c70000">
             <font>
                 <Font name="Cambria Bold" size="14.0" />
             </font>
         </Button>
-        <Button layoutX="917.0" layoutY="343.0" mnemonicParsing="false" onAction="#pressSearch" prefHeight="27.0" prefWidth="69.0" text="Search" textFill="#c70000">
+        <Button layoutX="917.0" layoutY="345.0" mnemonicParsing="false" onAction="#pressSearch" prefHeight="27.0" prefWidth="69.0" text="Search" textFill="#c70000">
             <font>
                 <Font name="Cambria Bold" size="14.0" />
             </font>
