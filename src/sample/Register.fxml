@@ -60,7 +60,7 @@
             <Font name="Cambria Bold" size="20.0" />
          </font>
       </Label>
-      <ChoiceBox fx:id="choiceType" layoutX="312.0" layoutY="371.0" prefHeight="26.0" prefWidth="105.0" />
+      <ChoiceBox fx:id="choiceType" layoutX="312.0" layoutY="371.0" prefHeight="26.0" prefWidth="129.0" />
       <Button fx:id="NextButton" layoutX="490.0" layoutY="371.0" mnemonicParsing="false" onAction="#pressNext" prefHeight="24.0" prefWidth="81.0" text="Next" textFill="#c70000">
          <font>
             <Font name="System Bold" size="18.0" />

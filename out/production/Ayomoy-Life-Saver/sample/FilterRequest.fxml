@@ -4,55 +4,62 @@
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.FilterRequestController">
    <children>
-      <Label layoutX="255.0" layoutY="14.0" text="Filters" textFill="#c70000">
+      <ImageView blendMode="OVERLAY" fitHeight="461.0" fitWidth="714.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/Presentation1_Proposal.jpg" />
+         </image>
+      </ImageView>
+      <Label fx:id="title_label" layoutX="242.0" layoutY="14.0" text="Filters" textFill="#c70000">
          <font>
             <Font name="Cambria Bold" size="30.0" />
          </font>
       </Label>
-      <Label layoutX="96.0" layoutY="78.0" text="Blood Group">
+      <Label layoutX="96.0" layoutY="102.0" text="Blood Group" textFill="#c70000">
          <font>
             <Font name="Cambria Bold" size="18.0" />
          </font>
       </Label>
-       <ChoiceBox fx:id="filterBG" layoutX="241.0" layoutY="74.0" prefWidth="150.0" />
-      <Label layoutX="96.0" layoutY="128.0" text="Location">
+       <ChoiceBox fx:id="filterBG" layoutX="241.0" layoutY="100.0" prefWidth="150.0" />
+      <Label layoutX="96.0" layoutY="145.0" text="Location" textFill="#c70000">
          <font>
             <Font name="Cambria Bold" size="18.0" />
          </font>
       </Label>
-       <ChoiceBox fx:id="filterLocation" layoutX="241.0" layoutY="126.0" prefHeight="26.0" prefWidth="238.0" />
-      <Label layoutX="209.0" layoutY="183.0" text="Time Span" textFill="#c70000">
+       <ChoiceBox fx:id="filterLocation" layoutX="241.0" layoutY="143.0" prefHeight="26.0" prefWidth="238.0" />
+      <Label layoutX="96.0" layoutY="200.0" text="Time Span" textFill="#c70000">
          <font>
             <Font name="Cambria Bold" size="19.0" />
          </font>
       </Label>
-      <Line endX="226.20001220703125" endY="-1.52587890625E-5" layoutX="197.0" layoutY="208.0" startX="-100.0" stroke="#c70000" />
-      <Label layoutX="96.0" layoutY="223.0" text="Starting Date">
+      <Line endX="323.6666259765625" endY="1.52587890625E-5" layoutX="197.0" layoutY="225.0" startX="-105.00000762939453" startY="1.52587890625E-5" stroke="#c70000" />
+      <Label layoutX="96.0" layoutY="240.0" text="Starting Date" textFill="#c70000">
          <font>
             <Font name="Cambria Bold" size="18.0" />
          </font>
       </Label>
-       <DatePicker fx:id="startingDate" editable="false" layoutX="241.0" layoutY="222.0" />
-      <Label layoutX="96.0" layoutY="277.0" text="Ending Date">
+       <DatePicker fx:id="startingDate" editable="false" layoutX="241.0" layoutY="239.0" prefHeight="25.0" prefWidth="176.0" />
+      <Label layoutX="96.0" layoutY="281.0" text="Ending Date" textFill="#c70000">
          <font>
             <Font name="Cambria Bold" size="18.0" />
          </font>
       </Label>
-       <DatePicker fx:id="endingDate" layoutX="241.0" layoutY="276.0" />
-       <Button fx:id="search_button" layoutX="460.0" layoutY="339.0" mnemonicParsing="false" onAction="#pressSearchFilter" prefHeight="26.0" prefWidth="82.0" text="Search" textFill="#c70000">
+       <DatePicker fx:id="endingDate" layoutX="241.0" layoutY="279.0" prefHeight="25.0" prefWidth="176.0" />
+       <Button fx:id="search_button" layoutX="344.0" layoutY="313.0" mnemonicParsing="false" onAction="#pressSearchFilter" prefHeight="28.0" prefWidth="72.0" text="Search" textFill="#c70000">
            <font>
-               <Font name="Cambria Bold" size="18.0" />
+               <Font name="Cambria Bold" size="14.0" />
            </font>
        </Button>
-      <Button fx:id="cancel_button" layoutX="360.0" layoutY="339.0" mnemonicParsing="false" onAction="#pressCancelFilter" prefHeight="26.0" prefWidth="82.0" text="Cancel" textFill="#c70000">
+      <Button fx:id="cancel_button" layoutX="261.0" layoutY="313.0" mnemonicParsing="false" onAction="#pressCancelFilter" prefHeight="28.0" prefWidth="72.0" text="Cancel" textFill="#c70000">
          <font>
-            <Font name="Cambria Bold" size="18.0" />
+            <Font name="Cambria Bold" size="14.0" />
          </font>
       </Button>
    </children>

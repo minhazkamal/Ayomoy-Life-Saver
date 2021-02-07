@@ -22,68 +22,73 @@
                 <Font name="Cambria Bold" size="18.0" />
             </font>
         </Button>
-        <Label fx:id="title_label" layoutX="230.0" layoutY="5.0" prefHeight="82.0" prefWidth="540.0" text="Personal Information" textAlignment="JUSTIFY" textFill="#c70000">
+        <Label fx:id="title_label" layoutX="284.0" layoutY="5.0" prefHeight="82.0" prefWidth="540.0" text="Personal Information" textAlignment="JUSTIFY" textFill="#c70000">
             <font>
                 <Font name="Cambria Bold" size="54.0" />
             </font>
         </Label>
-      <Label fx:id="title_label1" layoutX="230.0" layoutY="74.0" prefHeight="42.0" prefWidth="540.0" text="If you don't fill up the form or close the window, your registered username will be discarded. Then you have to register again from the begining after 15 minutes." textAlignment="CENTER" wrapText="true">
-         <font>
-            <Font name="Cambria Bold" size="14.0" />
-         </font>
-      </Label>
-      <Label layoutX="88.0" layoutY="150.0" text="Username" textFill="#c70000">
+      <Label layoutX="153.0" layoutY="137.0" text="Username" textFill="#c70000">
          <font>
             <Font name="Cambria Bold" size="19.0" />
          </font>
       </Label>
-      <TextField fx:id="txtUsername" editable="false" layoutX="245.0" layoutY="148.0" prefHeight="26.0" prefWidth="174.0" />
-      <Label layoutX="573.0" layoutY="149.0" text="Email" textFill="#c70000">
+      <TextField fx:id="txtUsername" editable="false" layoutX="301.0" layoutY="136.0" prefHeight="26.0" prefWidth="174.0" />
+      <Label layoutX="617.0" layoutY="137.0" text="Email" textFill="#c70000">
          <font>
             <Font name="Cambria Bold" size="19.0" />
          </font>
       </Label>
-      <TextField fx:id="txtEmail" layoutX="716.0" layoutY="148.0" prefHeight="26.0" prefWidth="174.0" promptText="abc@example.com" />
-      <Label layoutX="88.0" layoutY="219.0" text="Name" textFill="#c70000">
+      <TextField fx:id="txtEmail" layoutX="714.0" layoutY="136.0" prefHeight="26.0" prefWidth="174.0" promptText="abc@example.com" />
+      <Label layoutX="182.0" layoutY="207.0" text="Name" textFill="#c70000">
          <font>
             <Font name="Cambria Bold" size="19.0" />
          </font>
       </Label>
-      <TextField fx:id="name" layoutX="245.0" layoutY="218.0" prefHeight="26.0" prefWidth="174.0" promptText="Enter your full name" />
-      <Label layoutX="573.0" layoutY="219.0" text="Mobile No" textFill="#c70000">
+      <TextField fx:id="name" layoutX="301.0" layoutY="206.0" prefHeight="26.0" prefWidth="174.0" promptText="Enter your full name" />
+      <Label layoutX="582.0" layoutY="195.0" text="Mobile No" textFill="#c70000">
          <font>
             <Font name="Cambria Bold" size="19.0" />
          </font>
       </Label>
-      <TextField fx:id="MobileNo" layoutX="716.0" layoutY="218.0" prefHeight="26.0" prefWidth="174.0" promptText="Enter your mobile number" />
-      <Label layoutX="88.0" layoutY="290.0" text="Date of Birth" textFill="#c70000">
+      <TextField fx:id="MobileNo" layoutX="714.0" layoutY="193.0" prefHeight="26.0" prefWidth="174.0" promptText="Enter your mobile number" />
+      <Label layoutX="133.0" layoutY="262.0" text="Date of Birth" textFill="#c70000">
          <font>
             <Font name="Cambria Bold" size="19.0" />
          </font>
       </Label>
-      <DatePicker fx:id="DOB" layoutX="245.0" layoutY="289.0" />
-        <Label layoutX="573.0" layoutY="289.0" text="Location" textFill="#c70000">
+      <DatePicker fx:id="DOB" layoutX="301.0" layoutY="261.0" />
+        <Label layoutX="594.0" layoutY="250.0" text="Location" textFill="#c70000">
             <font>
                 <Font name="Cambria Bold" size="19.0" />
             </font>
         </Label>
-        <ChoiceBox fx:id="AddressLocation" layoutX="716.0" layoutY="287.0" prefHeight="26.0" prefWidth="174.0" />
-      <Label layoutX="88.0" layoutY="370.0" text="Gender" textFill="#c70000">
+        <ChoiceBox fx:id="AddressLocation" layoutX="714.0" layoutY="248.0" prefHeight="26.0" prefWidth="174.0" />
+      <Label layoutX="168.0" layoutY="325.0" text="Gender" textFill="#c70000">
          <font>
             <Font name="Cambria Bold" size="19.0" />
          </font>
       </Label>
-      <ChoiceBox fx:id="Gender_Choice" layoutX="245.0" layoutY="368.0" prefHeight="26.0" prefWidth="174.0" />
-        <Label layoutX="571.0" layoutY="359.0" text="Blood Group" textFill="#c70000">
+      <ChoiceBox fx:id="Gender_Choice" layoutX="300.0" layoutY="324.0" prefHeight="26.0" prefWidth="174.0" />
+        <Label layoutX="562.0" layoutY="301.0" text="Blood Group" textFill="#c70000">
             <font>
                 <Font name="Cambria Bold" size="19.0" />
             </font></Label>
-        <ChoiceBox fx:id="BG_choice" layoutX="715.0" layoutY="358.0" prefHeight="26.0" prefWidth="174.0" />
-      <Button fx:id="SubmitButton" layoutX="442.0" layoutY="465.0" mnemonicParsing="false" onAction="#pressSubmit" prefHeight="42.0" prefWidth="88.0" text="Submit" textFill="#c70000">
+        <ChoiceBox fx:id="BG_choice" layoutX="714.0" layoutY="300.0" prefHeight="26.0" prefWidth="174.0" />
+      <Button fx:id="SubmitButton" layoutX="799.0" layoutY="490.0" mnemonicParsing="false" onAction="#pressSubmit" prefHeight="42.0" prefWidth="89.0" text="Submit" textFill="#c70000">
          <font>
             <Font name="Cambria Bold" size="18.0" />
          </font>
       </Button>
+      <Label layoutX="301.0" layoutY="160.0" prefHeight="23.0" prefWidth="174.0" style="-fx-font-family: Corbel; -fx-font-style: italic; -fx-text-fill: #c70000; -fx-font-size: 12px;" text="*Username cannot be changed.">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="94.0" layoutY="396.0" opacity="0.54" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/personalInfo.png" />
+         </image>
+      </ImageView>
     </children>
 
 </AnchorPane>

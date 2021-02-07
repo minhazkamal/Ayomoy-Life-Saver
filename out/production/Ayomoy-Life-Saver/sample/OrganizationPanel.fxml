@@ -60,12 +60,12 @@
                 <Font size="14.0" />
             </font>
         </Label>
-        <Label layoutX="574.0" layoutY="259.0" prefHeight="19.0" prefWidth="83.0" styleClass="panel_label" text="Mobile No :">
+        <Label layoutX="571.0" layoutY="230.0" prefHeight="19.0" prefWidth="83.0" styleClass="panel_label" text="Mobile No :">
             <font>
                 <Font name="Cambria Bold" size="16.0" />
             </font>
         </Label>
-        <Label fx:id="showMobileNo" layoutX="668.0" layoutY="260.0" prefHeight="18.0" prefWidth="154.0">
+        <Label fx:id="showMobileNo" layoutX="665.0" layoutY="231.0" prefHeight="18.0" prefWidth="154.0">
             <font>
                 <Font size="14.0" />
             </font>
@@ -80,17 +80,17 @@
                 <Font size="14.0" />
             </font>
         </Label>
-        <Label layoutX="571.0" layoutY="291.0" prefHeight="19.0" prefWidth="90.0" styleClass="panel_label" text="License No :">
+        <Label layoutX="571.0" layoutY="260.0" prefHeight="19.0" prefWidth="90.0" styleClass="panel_label" text="License No :">
             <font>
                 <Font name="Cambria Bold" size="16.0" />
             </font>
         </Label>
-        <Label fx:id="showLic" layoutX="668.0" layoutY="291.0" prefHeight="20.0" prefWidth="250.0">
+        <Label fx:id="showLic" layoutX="669.0" layoutY="260.0" prefHeight="20.0" prefWidth="250.0">
             <font>
                 <Font size="14.0" />
             </font>
         </Label>
-        <Label layoutX="96.0" layoutY="373.0" prefHeight="19.0" prefWidth="140.0" styleClass="panel_label" text="Name                      :">
+        <Label layoutX="96.0" layoutY="373.0" prefHeight="19.0" prefWidth="140.0" styleClass="panel_label" text="Name                     :">
             <font>
                 <Font name="Cambria Bold" size="16.0" />
             </font>
@@ -100,12 +100,12 @@
                 <Font size="14.0" />
             </font>
         </Label>
-        <Label layoutX="582.0" layoutY="321.0" prefHeight="19.0" prefWidth="83.0" styleClass="panel_label" text="Location  :">
+        <Label layoutX="579.0" layoutY="290.0" prefHeight="19.0" prefWidth="83.0" styleClass="panel_label" text="Location  :">
             <font>
                 <Font name="Cambria Bold" size="16.0" />
             </font>
         </Label>
-        <Label fx:id="showLocation" layoutX="668.0" layoutY="320.0" prefHeight="18.0" prefWidth="154.0">
+        <Label fx:id="showLocation" layoutX="665.0" layoutY="289.0" prefHeight="18.0" prefWidth="154.0">
             <font>
                 <Font size="14.0" />
             </font>
@@ -129,12 +129,12 @@
          <font>
             <Font size="14.0" />
          </font></TextArea>
-      <Label layoutX="566.0" layoutY="377.0" prefHeight="27.0" prefWidth="99.0" styleClass="info_tag" text="Eligibility    :" textFill="#c70000">
+      <Label layoutX="567.0" layoutY="396.0" prefHeight="27.0" prefWidth="99.0" styleClass="info_tag" text="Eligibility    :" textFill="#c70000">
          <font>
             <Font name="Cambria Bold" size="16.0" />
          </font>
       </Label>
-      <Label fx:id="eligibility" alignment="CENTER" layoutX="668.0" layoutY="379.0" prefHeight="24.0" prefWidth="200.0" styleClass="info_tag_answer" textAlignment="CENTER" textFill="#221971">
+      <Label fx:id="eligibility" alignment="CENTER" layoutX="669.0" layoutY="395.0" prefHeight="24.0" prefWidth="200.0" styleClass="info_tag_answer" textAlignment="CENTER" textFill="#221971">
          <font>
             <Font name="Cambria Bold Italic" size="20.0" />
          </font>

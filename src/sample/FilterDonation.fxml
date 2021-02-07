@@ -3,40 +3,52 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.FilterDonationController">
     <children>
-        <Label fx:id="title_label" layoutX="255.0" layoutY="14.0" text="Filters" textFill="#c70000">
+      <ImageView blendMode="OVERLAY" fitHeight="406.0" fitWidth="710.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/Presentation1_Proposal.jpg" />
+         </image>
+      </ImageView>
+        <Label fx:id="title_label" alignment="CENTER" layoutX="211.0" layoutY="14.0" prefHeight="38.0" prefWidth="180.0" text="Filters" textFill="#c70000">
             <font>
                 <Font name="Cambria Bold" size="30.0" />
             </font>
         </Label>
-        <Label layoutX="101.0" layoutY="115.0" styleClass="panel_label" text="Blood Group">
+        <Label layoutX="87.0" layoutY="139.0" styleClass="panel_label" text="Blood Group">
             <font>
                 <Font name="Cambria Bold" size="18.0" />
             </font>
         </Label>
-        <ChoiceBox fx:id="filterBG" layoutX="260.0" layoutY="113.0" prefWidth="150.0" />
-        <Label layoutX="101.0" layoutY="165.0" styleClass="panel_label" text="Location">
+        <ChoiceBox fx:id="filterBG" layoutX="218.0" layoutY="137.0" prefWidth="150.0" />
+        <Label layoutX="87.0" layoutY="238.0" styleClass="panel_label" text="Location">
             <font>
                 <Font name="Cambria Bold" size="18.0" />
             </font>
         </Label>
-        <ChoiceBox fx:id="filterLocation" layoutX="260.0" layoutY="163.0" prefHeight="26.0" prefWidth="238.0" />
-      <Label layoutX="102.0" layoutY="237.0" styleClass="panel_label" text="Paying Condition">
+        <ChoiceBox fx:id="filterLocation" layoutX="218.0" layoutY="236.0" prefHeight="26.0" prefWidth="229.0" />
+      <Label layoutX="87.0" layoutY="184.0" styleClass="panel_label" text="Monetary Flag">
          <font>
             <Font name="Cambria Bold" size="18.0" />
          </font>
       </Label>
-      <ChoiceBox fx:id="filterPay" layoutX="260.0" layoutY="235.0" prefWidth="150.0" />
-        <Button fx:id="search_button" layoutX="460.0" layoutY="339.0" mnemonicParsing="false" onAction="#pressSearchFilter" prefHeight="26.0" prefWidth="82.0" text="Search" textFill="#c70000">
+      <ChoiceBox fx:id="filterPay" layoutX="218.0" layoutY="182.0" prefWidth="150.0" />
+        <Button fx:id="search_button" layoutX="364.0" layoutY="285.0" mnemonicParsing="false" onAction="#pressSearchFilter" prefHeight="26.0" prefWidth="82.0" text="Search" textFill="#c70000">
             <font>
                 <Font name="Cambria Bold" size="18.0" />
             </font>
         </Button>
-        <Button fx:id="cancel_button" layoutX="360.0" layoutY="339.0" mnemonicParsing="false" onAction="#pressCancelFilter" prefHeight="26.0" prefWidth="82.0" text="Cancel" textFill="#c70000">
+      <ImageView fitHeight="74.0" fitWidth="82.0" layoutX="448.0" layoutY="137.0" opacity="0.68" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/search3.png" />
+         </image>
+      </ImageView>
+        <Button fx:id="cancel_button" layoutX="265.0" layoutY="285.0" mnemonicParsing="false" onAction="#pressCancelFilter" prefHeight="26.0" prefWidth="82.0" text="Cancel" textFill="#c70000">
             <font>
                 <Font name="Cambria Bold" size="18.0" />
             </font>
