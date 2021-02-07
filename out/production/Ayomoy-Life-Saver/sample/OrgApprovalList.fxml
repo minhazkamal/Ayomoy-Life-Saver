@@ -34,12 +34,12 @@
                 <Font name="Cambria Bold" size="18.0" />
             </font>
         </Button>
-        <Label fx:id="title_label" layoutX="151.0" prefHeight="68.0" prefWidth="758.0" text="Organization List for Approval" textAlignment="JUSTIFY" textFill="#c70000">
+        <Label fx:id="title_label" layoutX="153.0" prefHeight="68.0" prefWidth="758.0" text="Organization List for Approval" textAlignment="JUSTIFY" textFill="#c70000">
             <font>
                 <Font name="Cambria Bold" size="54.0" />
             </font>
         </Label>
-        <Label layoutX="392.0" layoutY="89.0" text="Username: ">
+        <Label layoutX="392.0" layoutY="89.0" text="Username: " textFill="#c70000">
             <font>
                 <Font name="Cambria Bold" size="16.0" />
             </font>

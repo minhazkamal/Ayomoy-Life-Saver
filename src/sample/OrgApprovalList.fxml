@@ -39,7 +39,7 @@
                 <Font name="Cambria Bold" size="54.0" />
             </font>
         </Label>
-        <Label layoutX="392.0" layoutY="89.0" text="Username: ">
+        <Label layoutX="392.0" layoutY="89.0" text="Username: " textFill="#c70000">
             <font>
                 <Font name="Cambria Bold" size="16.0" />
             </font>
