@@ -43,7 +43,7 @@
                 <Font name="Cambria Bold" size="14.0" />
             </font>
         </Button>
-        <Button fx:id="save_button" layoutX="252.0" layoutY="202.0" mnemonicParsing="false" onAction="#pressSave" prefHeight="34.0" prefWidth="70.0" text="Save" textFill="#c70000">
+        <Button fx:id="save_button" layoutX="252.0" layoutY="204.0" mnemonicParsing="false" onAction="#pressSave" prefHeight="34.0" prefWidth="70.0" text="Save" textFill="#c70000">
             <font>
                 <Font name="Cambria Bold" size="18.0" />
             </font>
