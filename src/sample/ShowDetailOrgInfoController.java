@@ -78,7 +78,7 @@ public class ShowDetailOrgInfoController {
         } catch (Exception e)
         {
 //            System.out.println(1);
-//           System.out.println(e);
+           System.out.println(e);
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Error Dialog");
             alert.setHeaderText("Look, an Error Dialog");
