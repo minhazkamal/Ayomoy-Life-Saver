@@ -4,55 +4,59 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.InnerShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SearchDonorOrgController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SearchDonorOrgController">
     <children>
         <ImageView accessibleRole="TEXT_AREA" blendMode="OVERLAY" fitHeight="600.0" fitWidth="1000.0" layoutY="-1.0" pickOnBounds="true">
             <image>
                 <Image url="@images/Presentation1_Proposal.jpg" />
             </image>
         </ImageView>
-        <TableView fx:id="DonorTable" layoutX="32.0" layoutY="126.0" prefHeight="458.0" prefWidth="717.0">
+        <TableView fx:id="DonorTable" layoutX="39.0" layoutY="126.0" prefHeight="458.0" prefWidth="717.0" style="-fx-background-color: floralwhite;">
             <columns>
-                <TableColumn fx:id="col_serial" prefWidth="61.60000228881836" resizable="false" text="Serial" />
-                <TableColumn fx:id="col_name" prefWidth="141.5999755859375" resizable="false" text="Donor Name" />
-                <TableColumn fx:id="col_BG" prefWidth="98.39997863769531" resizable="false" text="Blood Group" />
-                <TableColumn fx:id="col_location" prefWidth="104.79998779296875" resizable="false" text="Location" />
-                <TableColumn fx:id="col_contact" prefWidth="95.99993896484375" resizable="false" text="Contact" />
-            <TableColumn fx:id="col_pay" prefWidth="115.20001220703125" resizable="false" text="Paying Condition" />
-                <TableColumn fx:id="col_details" prefWidth="93.60003662109375" resizable="false" text="Details" />
+                <TableColumn fx:id="col_serial" prefWidth="61.60000228881836" resizable="false" style="-fx-background-color: floralwhite;" text="Serial" />
+                <TableColumn fx:id="col_name" prefWidth="141.5999755859375" resizable="false" style="-fx-background-color: floralwhite;" text="Donor Name" />
+                <TableColumn fx:id="col_BG" prefWidth="98.39997863769531" resizable="false" style="-fx-background-color: floralwhite;" text="Blood Group" />
+                <TableColumn fx:id="col_location" prefWidth="104.79998779296875" resizable="false" style="-fx-background-color: floralwhite;" text="Location" />
+                <TableColumn fx:id="col_contact" prefWidth="95.99993896484375" resizable="false" style="-fx-background-color: floralwhite;" text="Contact" />
+            <TableColumn fx:id="col_pay" prefWidth="115.20001220703125" resizable="false" style="-fx-background-color: floralwhite;" text="  Paying &#10;Condition" />
+                <TableColumn fx:id="col_details" prefWidth="96.66664632161462" resizable="false" style="-fx-background-color: floralwhite;" text="Details" />
             </columns>
+         <effect>
+            <InnerShadow>
+               <color>
+                  <Color red="0.615686297416687" green="0.1921568661928177" blue="0.1921568661928177" />
+               </color>
+            </InnerShadow>
+         </effect>
         </TableView>
-        <Button fx:id="back_button" layoutX="27.0" layoutY="25.0" mnemonicParsing="false" onAction="#pressBack" prefHeight="42.0" prefWidth="69.0" text="Back" textFill="#c70000">
+        <Button fx:id="back_button" layoutX="39.0" layoutY="26.0" mnemonicParsing="false" onAction="#pressBack" prefHeight="42.0" prefWidth="69.0" text="Back" textFill="#c70000">
             <font>
                 <Font name="Cambria Bold" size="18.0" />
             </font>
         </Button>
-        <Label fx:id="title_label" layoutX="328.0" prefHeight="68.0" prefWidth="343.0" text="Search Donor" textAlignment="JUSTIFY" textFill="#c70000">
+        <Label fx:id="title_label" layoutX="197.0" prefHeight="68.0" prefWidth="701.0" text="Search Donor/Organization" textAlignment="JUSTIFY" textFill="#c70000">
             <font>
                 <Font name="Cambria Bold" size="54.0" />
             </font>
         </Label>
-        <Button fx:id="resetButton" layoutX="544.0" layoutY="72.0" mnemonicParsing="false" onAction="#pressReset" prefHeight="42.0" prefWidth="83.0" text="Reset" textFill="#c70000">
+        <Button fx:id="resetButton" layoutX="540.0" layoutY="83.0" mnemonicParsing="false" onAction="#pressReset" prefHeight="31.0" prefWidth="83.0" text="Reset" textFill="#c70000">
             <font>
-                <Font name="Cambria Bold" size="18.0" />
+                <Font name="Cambria Bold" size="16.0" />
             </font>
         </Button>
-        <Button fx:id="filterButton" layoutX="642.0" layoutY="72.0" mnemonicParsing="false" onAction="#pressFilter" prefHeight="42.0" prefWidth="83.0" text="Filters" textFill="#c70000">
+        <Button fx:id="filterButton" layoutX="634.0" layoutY="83.0" mnemonicParsing="false" onAction="#pressFilter" prefHeight="31.0" prefWidth="121.0" text="Apply Filters" textFill="#c70000">
             <font>
-                <Font name="Cambria Bold" size="18.0" />
+                <Font name="Cambria Bold" size="16.0" />
             </font>
         </Button>
-        <Label layoutX="779.0" layoutY="212.0" prefHeight="198.0" prefWidth="200.0" text="Search Organization" textAlignment="CENTER" textFill="WHITE" wrapText="true">
-            <font>
-                <Font name="Cambria Bold" size="29.0" />
-            </font>
-        </Label>
-        <Button fx:id="searchOrg" layoutX="786.0" layoutY="239.0" mnemonicParsing="false" onAction="#PressSearchOrg" prefHeight="170.0" prefWidth="200.0" styleClass="panel_button" text="Search Organization" />
+        <Button fx:id="searchOrg" layoutX="779.0" layoutY="328.0" mnemonicParsing="false" onAction="#PressSearchOrg" prefHeight="81.0" prefWidth="200.0" styleClass="panel_button" text="  Search &#10;Organization" />
     </children>
 
 </AnchorPane>
