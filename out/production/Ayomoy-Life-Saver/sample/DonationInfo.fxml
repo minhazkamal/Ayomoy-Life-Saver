@@ -23,7 +23,7 @@
         </ImageView>
         <TableView fx:id="DonationInfoTable" layoutX="28.0" layoutY="123.0" prefHeight="458.0" prefWidth="640.0" style="-fx-background-color: floralwhite;">
             <columns>
-                <TableColumn fx:id="col_serial" prefWidth="69.60003662109375" resizable="false" style="-fx-background-color: floralwhite;" text="Serial" />
+                <TableColumn fx:id="col_serial" prefWidth="65.0" resizable="false" style="-fx-background-color: floralwhite;" text="Serial" />
                 <TableColumn fx:id="col_name" prefWidth="160.0" resizable="false" style="-fx-background-color: floralwhite;" text="Donee Name" />
                 <TableColumn fx:id="col_location" prefWidth="116.0" resizable="false" style="-fx-background-color: floralwhite;" text="Location" />
                 <TableColumn fx:id="col_date" prefWidth="136.0" resizable="false" style="-fx-background-color: floralwhite;" text="Date of Donation" />
