@@ -41,7 +41,7 @@
                 <Font name="Cambria Bold" size="18.0" />
             </font>
         </Button>
-        <Label fx:id="title_label" layoutX="197.0" prefHeight="68.0" prefWidth="701.0" text="Search Donor/Organization" textAlignment="JUSTIFY" textFill="#c70000">
+        <Label fx:id="title_label" layoutX="369.0" prefHeight="68.0" prefWidth="341.0" text="Search Donor" textAlignment="JUSTIFY" textFill="#c70000">
             <font>
                 <Font name="Cambria Bold" size="54.0" />
             </font>
