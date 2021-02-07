@@ -11,9 +11,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.UpdateDonationInfoController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.UpdateDonationInfoController">
     <children>
-        <ImageView accessibleRole="TEXT_AREA" blendMode="OVERLAY" fitHeight="600.0" fitWidth="1000.0" layoutY="-1.0" pickOnBounds="true">
+        <ImageView accessibleRole="TEXT_AREA" blendMode="OVERLAY" fitHeight="600.0" fitWidth="1000.0" layoutX="1.0" layoutY="-1.0" pickOnBounds="true">
             <image>
                 <Image url="@images/Presentation1_Proposal.jpg" />
             </image>
@@ -23,12 +23,12 @@
                 <Font name="Cambria Bold" size="18.0" />
             </font>
         </Button>
-        <Label fx:id="title_label" layoutX="230.0" layoutY="5.0" prefHeight="82.0" prefWidth="581.0" text="Update Donation Information" textAlignment="JUSTIFY" textFill="#c70000">
+        <Label fx:id="title_label" alignment="CENTER" layoutX="187.0" layoutY="14.0" prefHeight="82.0" prefWidth="733.0" text="Update Donation Information" textAlignment="JUSTIFY" textFill="#c70000">
             <font>
                 <Font name="Cambria Bold" size="42.0" />
             </font>
         </Label>
-        <Label layoutX="88.0" layoutY="129.0" prefHeight="23.0" prefWidth="97.0" text="Username" textFill="#c70000">
+        <Label layoutX="117.0" layoutY="129.0" prefHeight="23.0" prefWidth="89.0" text="Username" textFill="#c70000">
             <font>
                 <Font name="Cambria Bold" size="19.0" />
             </font>
@@ -39,46 +39,54 @@
                 <Font name="Cambria Bold" size="19.0" />
             </font></Label>
         <TextField fx:id="p_name" layoutX="257.0" layoutY="173.0" prefHeight="26.0" prefWidth="238.0" />
-        <Label layoutX="591.0" layoutY="174.0" prefHeight="23.0" prefWidth="160.0" text="Patient Mobile No." textFill="#c70000">
+        <Label layoutX="563.0" layoutY="129.0" prefHeight="23.0" prefWidth="160.0" text="Patient Mobile No." textFill="#c70000">
             <font>
                 <Font name="Cambria Bold" size="19.0" />
             </font></Label>
-        <TextField fx:id="p_mobile" layoutX="760.0" layoutY="173.0" />
-        <Label layoutX="88.0" layoutY="232.0" text="Location" textFill="#c70000">
+        <TextField fx:id="p_mobile" layoutX="760.0" layoutY="128.0" />
+        <Label layoutX="130.0" layoutY="232.0" text="Location" textFill="#c70000">
             <font>
                 <Font name="Cambria Bold" size="19.0" />
             </font>
         </Label>
-        <ChoiceBox fx:id="p_Location" layoutX="256.0" layoutY="231.0" prefHeight="26.0" prefWidth="238.0" />
-        <Label layoutX="591.0" layoutY="229.0" text="Complications" textFill="#c70000">
+        <ChoiceBox fx:id="p_Location" layoutX="257.0" layoutY="231.0" prefHeight="26.0" prefWidth="238.0" />
+        <Label layoutX="594.0" layoutY="174.0" text="Complications" textFill="#c70000">
             <font>
                 <Font name="Cambria Bold" size="19.0" />
             </font>
         </Label>
-        <TextField fx:id="complications" layoutX="760.0" layoutY="228.0" promptText="Accident" />
-        <Label layoutX="88.0" layoutY="276.0" text="Organization" textFill="#c70000">
+        <TextField fx:id="complications" alignment="TOP_LEFT" layoutX="760.0" layoutY="173.0" prefHeight="96.0" prefWidth="149.0" promptText="e.g.accident">
+         <font>
+            <Font name="Corbel" size="12.0" />
+         </font></TextField>
+        <Label layoutX="94.0" layoutY="276.0" text="Organization" textFill="#c70000">
             <font>
                 <Font name="Cambria Bold" size="19.0" />
             </font>
         </Label>
-        <TextArea fx:id="p_locationDetails" layoutX="256.0" layoutY="275.0" prefHeight="74.0" prefWidth="238.0" promptText="Give details about location (Not more than 250 characters)." />
-        <Label layoutX="591.0" layoutY="276.0" text="Patient Gender" textFill="#c70000">
+        <TextArea fx:id="p_locationDetails" layoutX="257.0" layoutY="275.0" prefHeight="74.0" prefWidth="238.0" promptText="Give details about location (Not more than 250 characters)." />
+        <Label layoutX="590.0" layoutY="288.0" text="Patient Gender" textFill="#c70000">
             <font>
                 <Font name="Cambria Bold" size="19.0" />
             </font>
         </Label>
-        <ChoiceBox fx:id="p_Gender_choice" layoutX="761.0" layoutY="275.0" prefWidth="150.0" />
+        <ChoiceBox fx:id="p_Gender_choice" layoutX="759.0" layoutY="287.0" prefWidth="150.0" />
         <Label layoutX="84.0" layoutY="367.0" text="Donation Date" textFill="#c70000">
             <font>
                 <Font name="Cambria Bold" size="19.0" />
             </font>
         </Label>
-        <DatePicker fx:id="d_date" editable="false" layoutX="256.0" layoutY="363.0" prefHeight="26.0" prefWidth="238.0" />
-        <Button fx:id="update" layoutX="633.0" layoutY="438.0" mnemonicParsing="false" onAction="#pressUpdateDonation" text="Update" textFill="#c70000">
+        <DatePicker fx:id="d_date" editable="false" layoutX="257.0" layoutY="363.0" prefHeight="26.0" prefWidth="238.0" />
+        <Button fx:id="update" layoutX="673.0" layoutY="430.0" mnemonicParsing="false" onAction="#pressUpdateDonation" prefHeight="42.0" prefWidth="97.0" text="Update" textFill="#c70000">
             <font>
                 <Font name="Cambria Bold" size="18.0" />
             </font>
         </Button>
+      <ImageView fitHeight="158.0" fitWidth="166.0" layoutX="109.0" layoutY="418.0" opacity="0.48" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/updateinfo.png" />
+         </image>
+      </ImageView>
     </children>
 
 </AnchorPane>
