@@ -5,44 +5,53 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.DoneePrevReqController">
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.DoneePrevReqController">
    <children>
        <ImageView accessibleRole="TEXT_AREA" blendMode="OVERLAY" fitHeight="600.0" fitWidth="1000.0" layoutY="-1.0" pickOnBounds="true">
            <image>
                <Image url="@images/Presentation1_Proposal.jpg" />
            </image>
        </ImageView>
-      <TableView fx:id="prevReqTable" layoutX="28.0" layoutY="118.0" prefHeight="463.0" prefWidth="898.0">
+      <TableView fx:id="prevReqTable" layoutX="51.0" layoutY="114.0" prefHeight="463.0" prefWidth="898.0" style="-fx-background-color: floralwhite;">
         <columns>
-          <TableColumn fx:id="col_serial" prefWidth="75.0" resizable="false" text="Serial" />
-          <TableColumn fx:id="col_request" resizable="false" text="Request ID" />
-            <TableColumn fx:id="col_name" prefWidth="156.0000762939453" resizable="false" text="Patient Name" />
-            <TableColumn fx:id="col_location" prefWidth="86.4000244140625" resizable="false" text="Location" />
-            <TableColumn fx:id="col_bg" prefWidth="110.4000244140625" resizable="false" text="Blood Group" />
-            <TableColumn fx:id="col_quantity" prefWidth="88.800048828125" resizable="false" text="Quantity" />
-            <TableColumn fx:id="col_date" prefWidth="129.60009765625" resizable="false" text="Approximate Date" />
-            <TableColumn fx:id="col_delete" prefWidth="84.800048828125" resizable="false" text="Delete" />
-            <TableColumn fx:id="col_search" prefWidth="85.5999755859375" resizable="false" text="Search" />
+          <TableColumn fx:id="col_serial" prefWidth="75.0" resizable="false" style="-fx-background-color: floralwhite;" text="Serial" />
+          <TableColumn fx:id="col_request" resizable="false" style="-fx-background-color: floralwhite;" text="Request ID" />
+            <TableColumn fx:id="col_name" prefWidth="156.0000762939453" resizable="false" style="-fx-background-color: floralwhite;" text="Patient Name" />
+            <TableColumn fx:id="col_location" prefWidth="86.4000244140625" resizable="false" style="-fx-background-color: floralwhite;" text="Location" />
+            <TableColumn fx:id="col_bg" prefWidth="110.4000244140625" resizable="false" style="-fx-background-color: floralwhite;" text="Blood Group" />
+            <TableColumn fx:id="col_quantity" prefWidth="88.800048828125" resizable="false" style="-fx-background-color: floralwhite;" text="Quantity" />
+            <TableColumn fx:id="col_date" prefWidth="129.60009765625" resizable="false" style="-fx-background-color: floralwhite;" text="Approximate &#10;      Date" />
+            <TableColumn fx:id="col_delete" prefWidth="84.800048828125" resizable="false" style="-fx-background-color: floralwhite;" text="Delete" />
+            <TableColumn fx:id="col_search" prefWidth="85.5999755859375" resizable="false" style="-fx-background-color: floralwhite;" text="Search" />
         </columns>
+         <effect>
+            <InnerShadow>
+               <color>
+                  <Color red="0.615686297416687" green="0.1921568661928177" blue="0.1921568661928177" />
+               </color>
+            </InnerShadow>
+         </effect>
       </TableView>
        <Button fx:id="back_button" layoutX="27.0" layoutY="25.0" mnemonicParsing="false" onAction="#pressBack" prefHeight="42.0" prefWidth="69.0" text="Back" textFill="#c70000">
            <font>
                <Font name="Cambria Bold" size="18.0" />
            </font>
        </Button>
-       <Label fx:id="title_label" layoutX="158.0" layoutY="5.0" prefHeight="60.0" prefWidth="683.0" text="Previous Request of DONEE" textAlignment="JUSTIFY" textFill="#c70000">
+       <Label fx:id="title_label" alignment="CENTER" layoutX="196.0" prefHeight="60.0" prefWidth="683.0" text="Previous Request of Donee" textAlignment="JUSTIFY" textFill="#c70000">
            <font>
                <Font name="Cambria Bold" size="54.0" />
            </font>
        </Label>
-      <Label layoutX="354.0" layoutY="84.0" text="Username: ">
+      <Label layoutX="352.0" layoutY="83.0" text="Username: " textFill="#c70000">
          <font>
-            <Font name="Cambria Bold" size="16.0" />
+            <Font name="Cambria Bold" size="18.0" />
          </font>
       </Label>
       <TextField fx:id="txtUser" editable="false" layoutX="446.0" layoutY="81.0" />
