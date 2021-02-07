@@ -78,9 +78,9 @@
             </font>
         </Label>
         <TextField fx:id="PatientName" editable="false" layoutX="249.0" layoutY="185.0" prefHeight="26.0" prefWidth="238.0" />
-        <Label layoutX="808.0" layoutY="336.0" prefHeight="20.0" prefWidth="46.0" text="Bag(s)" textFill="#c70000">
+        <Label layoutX="808.0" layoutY="336.0" prefHeight="20.0" prefWidth="46.0" style="-fx-font-family: Corbel; -fx-font-size: 14px; -fx-text-fill: #c70000; -fx-font-style: italic;" text="Bag(s)" textFill="#c70000">
             <font>
-                <Font name="System Bold Italic" size="14.0" />
+                <Font name="System Italic" size="14.0" />
             </font>
         </Label>
         <ChoiceBox fx:id="doneeLocation" layoutX="249.0" layoutY="224.0" prefHeight="26.0" prefWidth="238.0" />

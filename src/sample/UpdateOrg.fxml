@@ -10,9 +10,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.UpdateOrgController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.UpdateOrgController">
     <children>
-        <ImageView accessibleRole="TEXT_AREA" blendMode="OVERLAY" fitHeight="600.0" fitWidth="1000.0" layoutY="-1.0" pickOnBounds="true">
+        <ImageView accessibleRole="TEXT_AREA" blendMode="OVERLAY" fitHeight="600.0" fitWidth="1000.0" layoutY="2.0" pickOnBounds="true">
             <image>
                 <Image url="@images/Presentation1_Proposal.jpg" />
             </image>
@@ -22,75 +22,80 @@
                 <Font name="Cambria Bold" size="18.0" />
             </font>
         </Button>
-        <Button fx:id="changePass" layoutX="715.0" layoutY="87.0" mnemonicParsing="false" onAction="#pressChangePass" prefHeight="23.0" prefWidth="174.0" text="Change Password" textFill="#c70000">
+        <Button fx:id="changePass" layoutX="270.0" layoutY="296.0" mnemonicParsing="false" onAction="#pressChangePass" prefHeight="34.0" prefWidth="99.0" text="Change " textFill="#c70000">
             <font>
                 <Font name="Cambria Bold" size="18.0" />
             </font>
         </Button>
-        <Label fx:id="title_label_update_org" layoutX="209.0" layoutY="5.0" prefHeight="82.0" prefWidth="641.0" text="UPDATE Organization Information" textAlignment="JUSTIFY" textFill="#c70000">
+        <Label fx:id="title_label" alignment="CENTER" layoutX="134.0" layoutY="5.0" prefHeight="82.0" prefWidth="815.0" text="Update Organization Information" textAlignment="JUSTIFY" textFill="#c70000">
             <font>
                 <Font name="Cambria Bold" size="39.0" />
             </font>
         </Label>
-        <Label layoutX="169.0" layoutY="149.0" text="Username" textFill="#c70000">
+        <Label layoutX="163.0" layoutY="120.0" text="Username" textFill="#c70000">
             <font>
                 <Font name="Cambria Bold" size="19.0" />
             </font>
         </Label>
-        <TextField fx:id="txtUsername" editable="false" layoutX="273.0" layoutY="148.0" prefHeight="26.0" prefWidth="174.0" />
-        <Label layoutX="573.0" layoutY="149.0" text="Email" textFill="#c70000">
+        <TextField fx:id="txtUsername" editable="false" layoutX="268.0" layoutY="119.0" prefHeight="26.0" prefWidth="174.0" />
+        <Label layoutX="617.0" layoutY="120.0" text="Email" textFill="#c70000">
             <font>
                 <Font name="Cambria Bold" size="19.0" />
             </font>
         </Label>
-        <TextField fx:id="txtEmail" layoutX="716.0" layoutY="148.0" prefHeight="26.0" prefWidth="174.0" promptText="abc@example.com" />
-        <Label layoutX="87.0" layoutY="219.0" prefHeight="26.0" prefWidth="174.0" text="Organization Name" textFill="#c70000">
+        <TextField fx:id="txtEmail" layoutX="709.0" layoutY="119.0" prefHeight="26.0" prefWidth="174.0" promptText="abc@example.com" />
+        <Label layoutX="91.0" layoutY="165.0" prefHeight="26.0" prefWidth="174.0" text="Organization Name" textFill="#c70000">
             <font>
                 <Font name="Cambria Bold" size="19.0" />
             </font>
         </Label>
-        <TextField fx:id="OrgName" layoutX="273.0" layoutY="218.0" prefHeight="26.0" prefWidth="174.0" promptText="Enter organization name" />
-        <Label layoutX="573.0" layoutY="219.0" text="Contact No" textFill="#c70000">
+        <TextField fx:id="OrgName" layoutX="268.0" layoutY="165.0" prefHeight="26.0" prefWidth="174.0" promptText="Enter organization name" />
+        <Label layoutX="576.0" layoutY="166.0" text="Contact No" textFill="#c70000">
             <font>
                 <Font name="Cambria Bold" size="19.0" />
             </font>
         </Label>
-        <TextField fx:id="ContactNo" layoutX="716.0" layoutY="218.0" prefHeight="26.0" prefWidth="174.0" promptText="Enter mobile number" />
-        <Label layoutX="175.0" layoutY="301.0" text="Location" textFill="#c70000">
+        <TextField fx:id="ContactNo" layoutX="709.0" layoutY="165.0" prefHeight="26.0" prefWidth="174.0" promptText="Enter mobile number" />
+        <Label layoutX="174.0" layoutY="211.0" text="Location" textFill="#c70000">
             <font>
                 <Font name="Cambria Bold" size="19.0" />
             </font>
         </Label>
-        <ChoiceBox fx:id="AddressLocation" layoutX="270.0" layoutY="300.0" prefHeight="26.0" prefWidth="174.0" />
-        <Label layoutX="573.0" layoutY="301.0" text="License No." textFill="#c70000">
+        <ChoiceBox fx:id="AddressLocation" layoutX="269.0" layoutY="210.0" prefHeight="26.0" prefWidth="174.0" />
+        <Label layoutX="575.0" layoutY="211.0" text="License No." textFill="#c70000">
             <font>
                 <Font name="Cambria Bold" size="19.0" />
             </font>
         </Label>
-        <TextField fx:id="LicNo" layoutX="716.0" layoutY="300.0" prefHeight="26.0" prefWidth="174.0" promptText="Enter License Number" />
-        <Label layoutX="113.0" layoutY="370.0" prefHeight="26.0" prefWidth="138.0" text="Contact Person" textFill="#c70000">
+        <TextField fx:id="LicNo" layoutX="709.0" layoutY="210.0" prefHeight="26.0" prefWidth="174.0" promptText="Enter License Number" />
+        <Label layoutX="124.0" layoutY="253.0" prefHeight="26.0" prefWidth="138.0" text="Contact Person" textFill="#c70000">
             <font>
                 <Font name="Cambria Bold" size="19.0" />
             </font>
         </Label>
-        <TextField fx:id="ContactPerson" layoutX="267.0" layoutY="370.0" prefHeight="26.0" prefWidth="174.0" promptText="Enter your full name" />
-        <Label layoutX="496.0" layoutY="371.0" prefHeight="23.0" prefWidth="191.0" text="Emergency Mobile No" textFill="#c70000">
+        <TextField fx:id="ContactPerson" layoutX="268.0" layoutY="253.0" prefHeight="26.0" prefWidth="174.0" promptText="Enter your full name" />
+        <Label layoutX="499.0" layoutY="251.0" prefHeight="23.0" prefWidth="191.0" text="Emergency Mobile No" textFill="#c70000">
             <font>
                 <Font name="Cambria Bold" size="19.0" />
             </font>
         </Label>
-        <TextField fx:id="CPMobile" layoutX="716.0" layoutY="370.0" prefHeight="26.0" prefWidth="174.0" promptText="Contact Person's Mobile Number" />
-        <Label layoutX="144.0" layoutY="430.0" prefHeight="23.0" prefWidth="106.0" text="Description" textFill="#c70000">
+        <TextField fx:id="CPMobile" layoutX="709.0" layoutY="250.0" prefHeight="26.0" prefWidth="174.0" promptText="Contact Person's Mobile Number" />
+        <Label layoutX="147.0" layoutY="412.0" prefHeight="23.0" prefWidth="106.0" text="Description" textFill="#c70000">
             <font>
                 <Font name="Cambria Bold" size="19.0" />
             </font>
         </Label>
-        <TextArea fx:id="description" layoutX="267.0" layoutY="436.0" prefHeight="147.0" prefWidth="493.0" promptText="Tell more about your organization. Give precise location to reach you fast. (Not more than 250 characters)" />
-        <Button fx:id="SubmitButton" layoutX="807.0" layoutY="493.0" mnemonicParsing="false" onAction="#pressUpdate" prefHeight="42.0" prefWidth="88.0" text="Update" textFill="#c70000">
+        <TextArea fx:id="description" layoutX="268.0" layoutY="412.0" prefHeight="147.0" prefWidth="493.0" promptText="Tell more about your organization. Give precise location to reach you fast. (Not more than 250 characters)" />
+        <Button fx:id="SubmitButton" layoutX="793.0" layoutY="462.0" mnemonicParsing="false" onAction="#pressUpdate" prefHeight="42.0" prefWidth="95.0" text="Update" textFill="#c70000">
             <font>
                 <Font name="Cambria Bold" size="18.0" />
             </font>
         </Button>
+      <Label layoutX="166.0" layoutY="301.0" text="Password" textFill="#c70000">
+         <font>
+            <Font name="Cambria Bold" size="19.0" />
+         </font>
+      </Label>
     </children>
 
 </AnchorPane>
