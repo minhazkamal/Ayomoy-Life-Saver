@@ -28,7 +28,7 @@
                 <TableColumn fx:id="col_location" prefWidth="116.0" resizable="false" style="-fx-background-color: floralwhite;" text="Location" />
                 <TableColumn fx:id="col_date" prefWidth="136.0" resizable="false" style="-fx-background-color: floralwhite;" text="Date of Donation" />
                 <TableColumn fx:id="col_details" minWidth="18.0" prefWidth="75.20001220703125" resizable="false" style="-fx-background-color: floralwhite;" text="Details" />
-                <TableColumn fx:id="col_update" minWidth="18.0" prefWidth="81.5999755859375" resizable="false" style="-fx-background-color: floralwhite;" text="Update" />
+                <TableColumn fx:id="col_update" minWidth="18.0" prefWidth="86.0" resizable="false" style="-fx-background-color: floralwhite;" text="Update" />
             </columns>
          <effect>
             <InnerShadow>

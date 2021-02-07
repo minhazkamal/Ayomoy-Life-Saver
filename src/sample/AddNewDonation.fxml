@@ -67,7 +67,7 @@
             <Bloom />
          </effect>
         </Label>
-        <Label layoutX="87.0" layoutY="129.0" prefHeight="23.0" prefWidth="97.0" text="Username" textFill="#990202">
+        <Label layoutX="87.0" layoutY="129.0" prefHeight="23.0" prefWidth="97.0" text="Username" textFill="#c70000">
             <font>
                 <Font name="Corbel Bold" size="20.0" />
             </font>
@@ -82,7 +82,7 @@
          <effect>
             <InnerShadow blurType="GAUSSIAN" color="#9e3232" />
          </effect></TextField>
-        <Label layoutX="591.0" layoutY="174.0" prefHeight="23.0" prefWidth="160.0" text="Contact Number" textFill="#990202">
+        <Label layoutX="591.0" layoutY="174.0" prefHeight="23.0" prefWidth="160.0" text="Contact Number" textFill="#c70000">
             <font>
                 <Font name="Corbel Bold" size="20.0" />
             </font></Label>
@@ -90,7 +90,7 @@
          <effect>
             <InnerShadow blurType="GAUSSIAN" color="#9d3131" />
          </effect></TextField>
-        <Label layoutX="88.0" layoutY="174.0" prefHeight="23.0" prefWidth="139.0" text="Patient's Name" textFill="#990202">
+        <Label layoutX="88.0" layoutY="174.0" prefHeight="23.0" prefWidth="139.0" text="Patient's Name" textFill="#c70000">
             <font>
                 <Font name="Corbel Bold" size="20.0" />
             </font></Label>
@@ -101,7 +101,7 @@
          <effect>
             <InnerShadow color="#9d3131" />
          </effect></TextField>
-        <Label layoutX="88.0" layoutY="232.0" prefWidth="83.0" text="Location" textFill="#990202">
+        <Label layoutX="88.0" layoutY="232.0" prefWidth="83.0" text="Location" textFill="#c70000">
             <font>
                 <Font name="Corbel Bold" size="20.0" />
             </font>
@@ -118,7 +118,7 @@
             </ChoiceBox>
          </children>
       </AnchorPane>
-        <Label layoutX="591.0" layoutY="229.0" text="Complications" textFill="#990202">
+        <Label layoutX="591.0" layoutY="229.0" text="Complications" textFill="#c70000">
             <font>
                 <Font name="Corbel Bold" size="20.0" />
             </font>
@@ -130,7 +130,7 @@
          <effect>
             <InnerShadow color="#9d3131" />
          </effect></TextField>
-        <Label alignment="TOP_LEFT" contentDisplay="TEXT_ONLY" layoutX="87.0" layoutY="276.0" text="Organization" textFill="#990202">
+        <Label alignment="TOP_LEFT" contentDisplay="TEXT_ONLY" layoutX="87.0" layoutY="276.0" text="Organization" textFill="#c70000">
             <font>
                 <Font name="Corbel Bold" size="20.0" />
             </font>
@@ -142,7 +142,7 @@
          <effect>
             <InnerShadow color="#9d3131" />
          </effect></TextArea>
-        <Label layoutX="591.0" layoutY="364.0" text="Patient's Gender" textFill="#990202">
+        <Label layoutX="591.0" layoutY="364.0" text="Patient's Gender" textFill="#c70000">
             <font>
                 <Font name="Corbel Bold" size="20.0" />
             </font>
@@ -154,7 +154,7 @@
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></ChoiceBox>
-        <Label layoutX="87.0" layoutY="364.0" text="Donation Date" textFill="#990202">
+        <Label layoutX="87.0" layoutY="364.0" text="Donation Date" textFill="#c70000">
             <font>
                 <Font name="Corbel Bold" size="20.0" />
             </font>
