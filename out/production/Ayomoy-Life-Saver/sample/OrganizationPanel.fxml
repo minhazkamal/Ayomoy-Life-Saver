@@ -80,7 +80,7 @@
                 <Font size="14.0" />
             </font>
         </Label>
-        <Label layoutX="572.0" layoutY="260.0" prefHeight="19.0" prefWidth="90.0" styleClass="panel_label" text="License No :">
+        <Label layoutX="571.0" layoutY="260.0" prefHeight="19.0" prefWidth="90.0" styleClass="panel_label" text="License No :">
             <font>
                 <Font name="Cambria Bold" size="16.0" />
             </font>
