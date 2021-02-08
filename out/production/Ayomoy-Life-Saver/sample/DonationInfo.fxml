@@ -59,7 +59,7 @@
             <Font name="Cambria Bold" size="18.0" />
          </font>
       </Button>
-      <Label fx:id="filter" layoutX="803.0" layoutY="109.0" text="Filters" textFill="#c70000">
+      <Label fx:id="filter" layoutX="803.0" layoutY="109.0" text="Apply Filters" textFill="#c70000">
          <font>
             <Font name="Cambria Bold" size="23.0" />
          </font>

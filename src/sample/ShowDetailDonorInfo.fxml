@@ -20,7 +20,7 @@
                 <Font name="Cambria Bold" size="18.0" />
             </font>
         </Button>
-        <Label fx:id="title_label" layoutX="352.0" layoutY="14.0" prefHeight="82.0" prefWidth="297.0" text="Donor Info" textAlignment="JUSTIFY" textFill="#c70000">
+        <Label fx:id="title_label" alignment="CENTER" layoutX="307.0" layoutY="14.0" prefHeight="82.0" prefWidth="515.0" text="Donor Information" textAlignment="JUSTIFY" textFill="#c70000">
             <font>
                 <Font name="Cambria Bold" size="54.0" />
             </font>
@@ -31,7 +31,7 @@
             </font>
         </Label>
         <Line endX="719.6000366210938" layoutX="197.0" layoutY="166.0" startX="-100.0" stroke="#c70000" />
-        <Label layoutX="97.0" layoutY="204.0" prefHeight="19.0" prefWidth="83.0" text="Name         :">
+        <Label layoutX="97.0" layoutY="204.0" prefHeight="19.0" prefWidth="83.0" text="Name         :" textFill="#c70000">
             <font>
                 <Font name="Cambria Bold" size="16.0" />
             </font>
@@ -41,7 +41,7 @@
                 <Font size="14.0" />
             </font>
         </Label>
-        <Label layoutX="544.0" layoutY="205.0" prefHeight="19.0" prefWidth="83.0" text="Mobile No :">
+        <Label layoutX="544.0" layoutY="205.0" prefHeight="19.0" prefWidth="83.0" text="Mobile No :" textFill="#c70000">
             <font>
                 <Font name="Cambria Bold" size="16.0" />
             </font>
@@ -51,7 +51,7 @@
                 <Font size="14.0" />
             </font>
         </Label>
-        <Label layoutX="97.0" layoutY="235.0" prefHeight="19.0" prefWidth="83.0" text="Email         :">
+        <Label layoutX="97.0" layoutY="235.0" prefHeight="19.0" prefWidth="83.0" text="Email         :" textFill="#c70000">
             <font>
                 <Font name="Cambria Bold" size="16.0" />
             </font>
@@ -61,7 +61,7 @@
                 <Font size="14.0" />
             </font>
         </Label>
-        <Label layoutX="522.0" layoutY="236.0" prefHeight="19.0" prefWidth="105.0" text="Date of Birth :">
+        <Label layoutX="522.0" layoutY="236.0" prefHeight="19.0" prefWidth="105.0" text="Date of Birth :" textFill="#c70000">
             <font>
                 <Font name="Cambria Bold" size="16.0" />
             </font>
@@ -71,7 +71,7 @@
                 <Font size="14.0" />
             </font>
         </Label>
-        <Label layoutX="96.0" layoutY="266.0" prefHeight="19.0" prefWidth="83.0" text="Age             :">
+        <Label layoutX="96.0" layoutY="266.0" prefHeight="19.0" prefWidth="83.0" text="Age             :" textFill="#c70000">
             <font>
                 <Font name="Cambria Bold" size="16.0" />
             </font>
@@ -81,7 +81,7 @@
                 <Font size="14.0" />
             </font>
         </Label>
-        <Label layoutX="552.0" layoutY="267.0" prefHeight="19.0" prefWidth="83.0" text="Location :">
+        <Label layoutX="552.0" layoutY="267.0" prefHeight="19.0" prefWidth="83.0" text="Location :" textFill="#c70000">
             <font>
                 <Font name="Cambria Bold" size="16.0" />
             </font>
@@ -91,7 +91,7 @@
                 <Font size="14.0" />
             </font>
         </Label>
-        <Label layoutX="521.0" layoutY="299.0" prefHeight="19.0" prefWidth="106.0" text="Blood Group :">
+        <Label layoutX="521.0" layoutY="299.0" prefHeight="19.0" prefWidth="106.0" text="Blood Group :" textFill="#c70000">
             <font>
                 <Font name="Cambria Bold" size="16.0" />
             </font>
@@ -101,7 +101,7 @@
                 <Font size="14.0" />
             </font>
         </Label>
-        <Label layoutX="96.0" layoutY="298.0" prefHeight="19.0" prefWidth="83.0" text="Gender      :">
+        <Label layoutX="96.0" layoutY="298.0" prefHeight="19.0" prefWidth="83.0" text="Gender      :" textFill="#c70000">
             <font>
                 <Font name="Cambria Bold" size="16.0" />
             </font>
@@ -117,7 +117,7 @@
             </font>
         </Label>
         <Line endX="719.6000366210938" layoutX="197.0" layoutY="415.0" startX="-100.0" stroke="#c70000" />
-        <Label layoutX="97.0" layoutY="430.0" text="Last Donation Date :">
+        <Label layoutX="97.0" layoutY="430.0" text="Last Donation Date :" textFill="#c70000">
             <font>
                 <Font name="Cambria Bold" size="16.0" />
             </font>
@@ -127,7 +127,7 @@
                 <Font size="14.0" />
             </font>
         </Label>
-        <Label layoutX="97.0" layoutY="460.0" text="Last Donation Area :">
+        <Label layoutX="97.0" layoutY="460.0" text="Last Donation Area :" textFill="#c70000">
             <font>
                 <Font name="Cambria Bold" size="16.0" />
             </font>
@@ -137,7 +137,7 @@
                 <Font size="14.0" />
             </font>
         </Label>
-        <Label layoutX="97.0" layoutY="489.0" text="Last Donation Organization :">
+        <Label layoutX="97.0" layoutY="489.0" text="Last Donation Organization :" textFill="#c70000">
             <font>
                 <Font name="Cambria Bold" size="16.0" />
             </font>
