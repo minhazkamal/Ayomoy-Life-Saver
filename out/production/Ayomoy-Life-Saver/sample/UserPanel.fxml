@@ -25,13 +25,13 @@
             <Font name="Cambria Bold" size="18.0" />
         </font>
     </Button>
-    <Label fx:id="title_label" layoutX="352.0" layoutY="14.0" prefHeight="82.0" prefWidth="297.0" text="User PANEL" textAlignment="JUSTIFY" textFill="#c70000">
+    <Label fx:id="title_label" alignment="CENTER" layoutX="314.0" layoutY="14.0" prefHeight="82.0" prefWidth="444.0" text="User Dashboard" textAlignment="JUSTIFY" textFill="#c70000">
         <font>
             <Font name="Cambria Bold" size="54.0" />
         </font>
     </Label>
       <Button fx:id="UserPanelButton" layoutX="97.0" layoutY="116.0" mnemonicParsing="false" onAction="#PressUpdateProfile" prefHeight="52.0" prefWidth="200.0" text="Update Profile" />
-      <Button fx:id="UserPanelButton" layoutX="400.0" layoutY="118.0" mnemonicParsing="false" onAction="#PressAsDonor" prefHeight="52.0" prefWidth="200.0" text="Use as Donor" />
+      <Button fx:id="UserPanelButton" layoutX="408.0" layoutY="118.0" mnemonicParsing="false" onAction="#PressAsDonor" prefHeight="52.0" prefWidth="200.0" text="Use as Donor" />
       <Button fx:id="UserPanelButton" layoutX="722.0" layoutY="118.0" mnemonicParsing="false" onAction="#PressAsDonee" prefHeight="52.0" prefWidth="200.0" text="Use as Donee" />
       <Label layoutX="98.0" layoutY="193.0" styleClass="panel_sub_title" text="Personal Information" textFill="#c70000">
          <font>
@@ -59,7 +59,7 @@
             <Font size="14.0" />
          </font>
       </Label>
-      <Label layoutX="545.0" layoutY="260.0" prefHeight="19.0" prefWidth="83.0" styleClass="panel_label" text="Mobile No :">
+      <Label layoutX="536.0" layoutY="260.0" prefHeight="19.0" prefWidth="90.0" styleClass="panel_label" text="Contact No :">
          <font>
             <Font name="Cambria Bold" size="16.0" />
          </font>

@@ -24,7 +24,7 @@
                 <Font name="Cambria Bold" size="18.0" />
             </font>
         </Button>
-        <Label fx:id="title_label" layoutX="331.0" layoutY="14.0" prefHeight="82.0" prefWidth="365.0" text="DONOR PANEL" textAlignment="JUSTIFY" textFill="#c70000">
+        <Label fx:id="title_label" alignment="CENTER" layoutX="348.0" layoutY="14.0" prefHeight="82.0" prefWidth="365.0" text="Donor Panel" textAlignment="JUSTIFY" textFill="#c70000">
             <font>
                 <Font name="Cambria Bold" size="54.0" />
             </font>
