@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ShowDetailOrgInfoController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ShowDetailOrgInfoController">
     <children>
         <ImageView accessibleRole="TEXT_AREA" blendMode="OVERLAY" fitHeight="600.0" fitWidth="1000.0" layoutY="-1.0" pickOnBounds="true">
             <image>
@@ -90,7 +90,7 @@
             <Font name="Cambria Bold" size="16.0" />
          </font>
       </Label>
-      <TextArea editable="false" layoutX="200.0" layoutY="306.0" prefHeight="112.0" prefWidth="670.0" />
+      <TextArea fx:id="description" editable="false" layoutX="200.0" layoutY="306.0" prefHeight="112.0" prefWidth="670.0" />
       <ImageView fitHeight="150.0" fitWidth="296.0" layoutX="122.0" layoutY="429.0" opacity="0.58" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@images/orginfo.png" />
