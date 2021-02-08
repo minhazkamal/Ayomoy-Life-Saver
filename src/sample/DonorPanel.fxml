@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.DonorPanelController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.DonorPanelController">
     <children>
       <ImageView fitHeight="183.0" fitWidth="258.0" layoutX="632.0" layoutY="386.0" opacity="0.77" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -24,7 +24,7 @@
                 <Font name="Cambria Bold" size="18.0" />
             </font>
         </Button>
-        <Label fx:id="title_label" layoutX="331.0" layoutY="14.0" prefHeight="82.0" prefWidth="365.0" text="DONOR PANEL" textAlignment="JUSTIFY" textFill="#c70000">
+        <Label fx:id="title_label" alignment="CENTER" layoutX="348.0" layoutY="14.0" prefHeight="82.0" prefWidth="365.0" text="Donor Panel" textAlignment="JUSTIFY" textFill="#c70000">
             <font>
                 <Font name="Cambria Bold" size="54.0" />
             </font>
