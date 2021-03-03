@@ -8,8 +8,9 @@ refer to the folder *Documentations*.
 ![Status](https://img.shields.io/badge/Status-Complete-brightgreen)
 ![IDE](https://img.shields.io/badge/IDE-IntelliJ%20IDEA-blue)
 ![License](https://img.shields.io/badge/license-MIT-orange.svg)
-![doc]()
-![UI]()
+![doc](https://img.shields.io/badge/Documentation-Javadoc-blue)
+![UI](https://img.shields.io/badge/UI-JavaFX-brightgreen)
+
 
 
 ## Team Members:
