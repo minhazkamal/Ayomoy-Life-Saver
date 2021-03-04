@@ -72,7 +72,30 @@ Here the Donor will by default see the pending *Requests for blood donations* th
 ![Alt text](https://github.com/minhazkamal/Ayomoy-Life-Saver/blob/main/src/sample/images/seependingrequest.png)
 
 Also the *apply filer* button can extract other types of requests in case the user is interested.<br/><br/>
+
+
+## Donee Panel
+Here are three buttons for the Donee to make use of. 
 ![Alt text]()
 
-## Donee Panel 
-First of all the Donee can search for *Donor* or *Organization*. Also, there is an option submit a donation request beforehand. Submitting a new reqeust to  
+First of all the Donee can search for *Donor* or *Organization*. Also, there is an option submit a donation request beforehand.  
+![Alt text]()
+
+Submitting a new reqeust will enqueue it to the system and then it will automatically redirect to the *Previous Request* page.
+![Alt text]()
+
+## Organization Dashboard 
+Here the *Update Profile* and *Use as Donee* buttons provide the same funcutionality as stated earlier in the person section. 
+![Alt text]()
+
+The *Use as Organizaton* button gives us the Organization Panel.
+![Alt text]()
+
+Here *See Pending Request* is same as seen before on the *Person* section. The *Organization Information* is there for the updating of the Licencse periodically so that later the *Admin* can review them and asses theri validity. 
+![Alt text]()
+
+## Admin
+This is a *hardcoded super profile* for the system administration and the main task of the profile is to update the eligbilty of the *Person* and the *Organazitaiton*. The *Admin Panel* has three buttons. *Change Password* is same as before. Then comes the *Donor's List* where the *admin* will be able to review the test reports and give him/ her eligibilty flags. Also there is a *comment* section where *admin* can pass on some important remarks if necessary. The *view* button shows the test report that was updated by the *Person* earlier. 
+![Alt text]()
+
+Same mechanism is there for the *Organizations List* where the *admin* looks into the Licence of the *Organization* and gives the eligibilty flags.
