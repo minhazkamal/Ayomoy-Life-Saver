@@ -10,6 +10,7 @@ refer to the folder *Documentations*.
 ![License](https://img.shields.io/badge/license-MIT-orange.svg)
 ![doc](https://img.shields.io/badge/Documentation-Javadoc-blue)
 ![UI](https://img.shields.io/badge/UI-JavaFX-brightgreen)
+![Database](<img alt="Oracle" src ="https://img.shields.io/badge/oracle%20-%23F00000.svg?&style=for-the-badge&logo=oracle&logoColor=white" />)
 
 
 
